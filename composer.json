@@ -1,0 +1,19 @@
+{
+    "name": "se7enxweb/explayouts-ui-api",
+    "description": "JSON HTTP API and SPA shell for the Exponential Layouts admin UI, served under /explayouts_ui_api/app.",
+    "type": "ezpublish-legacy-extension",
+    "homepage": "https://se7enx.com",
+    "license": "GNU General Public License v2.0 (or any later version)",
+    "require": {
+        "php": "^8.1 || ^8.2 || ^8.3 || ^8.4"
+    },
+    "extra": {
+        "ezpublish-legacy-extension-name": "explayouts_ui_api"
+    },
+    "authors": [
+        {
+            "name": "7x",
+            "homepage": "https://se7enx.com"
+        }
+    ]
+}

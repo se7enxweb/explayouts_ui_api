@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requires="ezpublish 6.0">
+  <name>explayouts_ui_api</name>
+  <summary>JSON HTTP API and SPA shell for the Exponential Layouts admin UI, served under /explayouts_ui_api/app.</summary>
+  <version>1.0.0</version>
+  <copyright>7x</copyright>
+  <license>GNU General Public License v2.0 (or any later version)</license>
+  <author>7x</author>
+</extension>
