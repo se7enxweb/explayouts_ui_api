@@ -286,11 +286,9 @@ class expLayoutsUIApplicationApi
         $zones = expLayoutsZone::fetchByLayout( $layoutId, null );
         foreach ( $zones as $zone )
         {
-            $blocks = expLayoutsBlock::fetchByZone( (int)$zone->attribute( 'id' ), null );
-            foreach ( $blocks as $block )
+            foreach ( self::fetchTopLevelBlocksForZone( $zone ) as $block )
             {
-                if ( (int)$block->attribute( 'parent_id' ) === 0 )
-                    $zoneBlocks[] = $block;
+                $zoneBlocks[] = $block;
             }
         }
 
@@ -702,6 +700,17 @@ class expLayoutsUIApplicationApi
                 $richContent = '<p></p>';
             $content .= '<div class="rich-text-editor" data-attr="content" data-ck-editor="1">' . $richContent . '</div>';
         }
+        elseif ( $definition === 'twig_block' )
+        {
+            $blockName = isset( $values['block_name'] ) ? (string)$values['block_name'] : '';
+            if ( $blockName === '' )
+                $blockName = '..........................';
+            $content .= '<div class="twig-block-info" data-attr="block_name">' .
+                '<span class="twig-block-icon"><i class="material-icons">code</i></span>' .
+                '<span class="twig-block-label">Template block:</span> ' .
+                '<strong>' . htmlspecialchars( $blockName ) . '</strong>' .
+            '</div>';
+        }
         elseif ( $definition === 'text' )
         {
             $textContent = isset( $values['content'] ) ? (string)$values['content'] : '';
@@ -783,6 +792,70 @@ class expLayoutsUIApplicationApi
                 return $zone;
         }
         return false;
+    }
+
+    protected static function resolveLinkedZone( $zone )
+    {
+        $sourceZone = $zone;
+        $linkedLayoutId = (int)$zone->attribute( 'linked_layout_id' );
+        $seen = array();
+
+        while ( $linkedLayoutId > 0 && !isset( $seen[$linkedLayoutId] ) )
+        {
+            $seen[$linkedLayoutId] = true;
+            $targetZone = false;
+            $fallbackZone = false;
+            foreach ( expLayoutsZone::fetchByLayout( $linkedLayoutId, null ) as $candidate )
+            {
+                if ( (string)$candidate->attribute( 'identifier' ) === (string)$zone->attribute( 'identifier' ) )
+                {
+                    $targetZone = $candidate;
+                    break;
+                }
+                if ( (string)$candidate->attribute( 'identifier' ) === 'main' )
+                    $fallbackZone = $candidate;
+            }
+
+            if ( !$targetZone && $fallbackZone )
+                $targetZone = $fallbackZone;
+
+            if ( !$targetZone )
+                break;
+
+            $sourceZone = $targetZone;
+            $linkedLayoutId = (int)$sourceZone->attribute( 'linked_layout_id' );
+        }
+
+        return $sourceZone;
+    }
+
+    protected static function fetchTopLevelBlocksForZone( $zone )
+    {
+        $sourceZone = self::resolveLinkedZone( $zone );
+        $blocks = expLayoutsBlock::fetchByZone( (int)$sourceZone->attribute( 'id' ), null );
+
+        $topLevel = array();
+        foreach ( $blocks as $block )
+        {
+            if ( (int)$block->attribute( 'parent_id' ) !== 0 )
+                continue;
+
+            $definition = (string)$block->attribute( 'definition_identifier' );
+            if ( $definition === '' )
+                continue;
+
+            $topLevel[] = $block;
+        }
+
+        usort( $topLevel, function( $a, $b ) {
+            $posA = (int)$a->attribute( 'position' );
+            $posB = (int)$b->attribute( 'position' );
+            if ( $posA !== $posB )
+                return $posA - $posB;
+            return (int)$a->attribute( 'id' ) - (int)$b->attribute( 'id' );
+        } );
+
+        return $topLevel;
     }
 
     protected static function deleteBlock( $block )
@@ -1266,8 +1339,7 @@ class expLayoutsUIApplicationApi
 
             $zone = $existingZones[$zoneIdentifier];
             $blockIds = array();
-            $blocks = expLayoutsBlock::fetchByZone( (int)$zone->attribute( 'id' ), null );
-            foreach ( $blocks as $block )
+            foreach ( self::fetchTopLevelBlocksForZone( $zone ) as $block )
             {
                 $blockIds[] = (int)$block->attribute( 'id' );
             }
