@@ -418,6 +418,30 @@ class expLayoutsUIApplicationApi
         {
             $content .= '<p>' . nl2br( htmlspecialchars( (string)$values['content'] ) ) . '</p>';
         }
+        elseif ( isset( $values['items'] ) && is_array( $values['items'] ) && !empty( $values['items'] ) )
+        {
+            $content .= '<ul class="block-items">';
+            foreach ( $values['items'] as $item )
+            {
+                $title = '';
+                if ( is_object( $item ) && method_exists( $item, 'attribute' ) )
+                {
+                    $title = (string)$item->attribute( 'name' );
+                    if ( $title === '' && method_exists( $item, 'Name' ) )
+                        $title = (string)$item->Name;
+                }
+                elseif ( is_array( $item ) && isset( $item['name'] ) )
+                {
+                    $title = (string)$item['name'];
+                }
+
+                if ( $title === '' )
+                    continue;
+
+                $content .= '<li>' . htmlspecialchars( $title ) . '</li>';
+            }
+            $content .= '</ul>';
+        }
         elseif ( !empty( $values ) )
         {
             foreach ( $values as $key => $value )

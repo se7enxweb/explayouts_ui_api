@@ -22,6 +22,21 @@
             {/if}
         </div>
     {/foreach}
+
+    {if count( $collection_items )}
+        <div class="form-group">
+            <label>Manual collection items</label>
+            <ul class="list-unstyled">
+                {foreach $collection_items as $item}
+                    <li>
+                        <strong>{$item.name|wash()}</strong><br />
+                        <small>node ID: {$item.node_id} | parent node ID: {$item.parent_node_id}</small>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+    {/if}
+
     <button type="button" class="btn btn-primary js-save-block" style="margin-top:10px;">Save block</button>
 </form>
 {literal}<script>

@@ -12,6 +12,9 @@
         .ngl-preview { max-width: 1200px; margin: 0 auto; background: #fff; padding: 20px; }
         .zone-preview { min-height: 80px; border: 1px dashed #ccc; margin-bottom: 20px; padding: 10px; }
         .block-preview { margin: 10px 0; }
+        .block-content { background: #fff; color: #333; padding: 8px; }
+        .block-items { margin: 0; padding-left: 1.2em; }
+        .block-items li { background: #fff; color: #333; padding: 2px 0; }
     </style>
     {/literal}
 </head>

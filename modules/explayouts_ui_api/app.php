@@ -166,12 +166,40 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
         $parameterValues[(string)$param->attribute( 'name' )] = (string)$param->attribute( 'value' );
     }
 
+    foreach ( $parameterValues as $paramName => $paramValue )
+    {
+        if ( !isset( $parameters[$paramName] ) )
+        {
+            $parameters[$paramName] = array(
+                'name' => ucwords( str_replace( array( '_', ':' ), ' ', $paramName ) ),
+                'type' => ( strpos( $paramValue, "\n" ) !== false || strlen( $paramValue ) > 120 ) ? 'textarea' : 'text',
+            );
+        }
+    }
+
+    $collectionItems = array();
+    $collection = expLayoutsCollection::fetchByBlock( $blockId );
+    if ( $collection && (string)$collection->attribute( 'collection_type' ) === 'manual' )
+    {
+        foreach ( expLayoutsCollectionItem::fetchByCollection( (int)$collection->attribute( 'id' ) ) as $item )
+        {
+            $nodeId = (int)$item->attribute( 'value_id' );
+            $node = $nodeId > 0 ? eZContentObjectTreeNode::fetch( $nodeId ) : null;
+            $collectionItems[] = array(
+                'node_id' => $nodeId,
+                'parent_node_id' => $node instanceof eZContentObjectTreeNode ? (int)$node->attribute( 'parent_node_id' ) : 0,
+                'name' => $node instanceof eZContentObjectTreeNode ? (string)$node->attribute( 'name' ) : 'Unknown node ' . $nodeId,
+            );
+        }
+    }
+
     $tpl->setVariable( 'block', $block );
     $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId" );
     $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
     $tpl->setVariable( 'view_types', $viewTypes );
     $tpl->setVariable( 'parameters', $parameters );
     $tpl->setVariable( 'parameter_values', $parameterValues );
+    $tpl->setVariable( 'collection_items', $collectionItems );
 
     $Result = array();
     $Result['pagelayout'] = false;

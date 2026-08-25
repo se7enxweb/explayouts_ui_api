@@ -36,6 +36,9 @@
         .zone { min-height: 80px; position: relative; }
         .zone::before { content: attr(data-zone); display: block; color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 8px; pointer-events: none; }
         .zone-body { min-height: 60px; }
+        .block-content { background: #fff; color: #333; padding: 8px; }
+        .block-items { margin: 0; padding-left: 1.2em; }
+        .block-items li { background: #fff; color: #333; padding: 2px 0; }
         #ng-cancel-link:not(.btn) { position: fixed; top: 10px; right: 10px; z-index: 10000; display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.6rem 1rem; border-radius: 4px; background: #2563eb; color: #fff; font-family: Roboto, Helvetica Neue, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; line-height: 1; cursor: pointer; border: 0; }
         #ng-cancel-link:not(.btn):hover { background: #1d4ed8; }
     </style>{/literal}
