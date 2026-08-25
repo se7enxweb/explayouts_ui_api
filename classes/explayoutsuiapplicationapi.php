@@ -690,7 +690,14 @@ class expLayoutsUIApplicationApi
         if ( $definition === 'title' && !empty( $values['title'] ) )
         {
             $level = isset( $values['level'] ) ? max( 1, min( 6, (int)$values['level'] ) ) : 2;
-            $content .= '<h' . $level . '>' . htmlspecialchars( (string)$values['title'] ) . '</h' . $level . '>';
+            $content .= '<h' . $level . ' data-inline-child data-attr="title">' . (string)$values['title'] . '</h' . $level . '>';
+        }
+        elseif ( $definition === 'rich_text' )
+        {
+            $richContent = isset( $values['content'] ) ? (string)$values['content'] : '';
+            if ( $richContent === '' )
+                $richContent = '<p></p>';
+            $content .= '<div class="rich-text-editor" data-attr="content" data-ck-editor="1">' . $richContent . '</div>';
         }
         elseif ( $definition === 'text' && !empty( $values['content'] ) )
         {
