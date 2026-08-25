@@ -120,7 +120,7 @@ class expLayoutsUIApplicationApi
                 'definition_identifier' => (string)$identifier,
                 'group_name' => $group,
                 'enabled' => true,
-                'is_container' => !empty( $info['has_collection'] ),
+                'is_container' => !empty( $info['is_container'] ),
                 'icon' => '',
                 'parameters' => '{}',
                 'defaults' => array(),
@@ -232,15 +232,32 @@ class expLayoutsUIApplicationApi
             if ( !$layout )
                 return self::response( array( 'error' => 'Layout not found.' ), 404 );
 
+            $parentBlockId = isset( $_POST['parent_block_id'] ) ? (int)$_POST['parent_block_id'] : 0;
+            $parentPlaceholder = isset( $_POST['parent_placeholder'] ) ? trim( $_POST['parent_placeholder'] ) : '';
+
             $zoneObject = null;
-            foreach ( expLayoutsZone::fetchByLayout( $layoutId, null ) as $z )
+            if ( $parentBlockId > 0 )
             {
-                if ( (string)$z->attribute( 'identifier' ) === $zone )
+                $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                if ( $parentBlock )
                 {
-                    $zoneObject = $z;
-                    break;
+                    $zoneObject = expLayoutsZone::fetch( (int)$parentBlock->attribute( 'zone_id' ) );
+                    $layoutId = (int)$parentBlock->attribute( 'layout_id' );
                 }
             }
+
+            if ( !$zoneObject && $zone !== '' )
+            {
+                foreach ( expLayoutsZone::fetchByLayout( $layoutId, null ) as $z )
+                {
+                    if ( (string)$z->attribute( 'identifier' ) === $zone )
+                    {
+                        $zoneObject = $z;
+                        break;
+                    }
+                }
+            }
+
             if ( !$zoneObject )
                 return self::response( array( 'error' => 'Zone not found.' ), 404 );
 
@@ -251,6 +268,11 @@ class expLayoutsUIApplicationApi
                 isset( $_POST['name'] ) ? trim( $_POST['name'] ) : ''
             );
             $block->setAttribute( 'position', 0 );
+            if ( $parentBlockId > 0 )
+            {
+                $block->setAttribute( 'parent_id', $parentBlockId );
+                $block->setAttribute( 'placeholder', $parentPlaceholder );
+            }
             $block->store();
 
             return self::response( self::blockToArray( $block ), 201 );
@@ -267,7 +289,8 @@ class expLayoutsUIApplicationApi
             $blocks = expLayoutsBlock::fetchByZone( (int)$zone->attribute( 'id' ), null );
             foreach ( $blocks as $block )
             {
-                $zoneBlocks[] = $block;
+                if ( (int)$block->attribute( 'parent_id' ) === 0 )
+                    $zoneBlocks[] = $block;
             }
         }
 
@@ -305,14 +328,32 @@ class expLayoutsUIApplicationApi
             if ( !$zoneObject )
                 return self::response( array( 'error' => 'Zone not found.' ), 404 );
 
+            $parentBlockId = isset( $data['parent_block_id'] ) ? (int)$data['parent_block_id'] : 0;
+            $parentPlaceholder = isset( $data['parent_placeholder'] ) ? trim( $data['parent_placeholder'] ) : '';
+
+            if ( $parentBlockId > 0 )
+            {
+                $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                if ( $parentBlock )
+                {
+                    $zoneObject = expLayoutsZone::fetch( (int)$parentBlock->attribute( 'zone_id' ) );
+                    $layoutId = (int)$parentBlock->attribute( 'layout_id' );
+                }
+            }
+
             $block = expLayoutsBlock::create(
-                (int)$zoneObject->attribute( 'id' ),
+                $zoneObject ? (int)$zoneObject->attribute( 'id' ) : 0,
                 $layoutId,
                 $definitionIdentifier,
                 isset( $data['name'] ) ? trim( $data['name'] ) : ''
             );
             $block->setAttribute( 'status', (int)$layout->attribute( 'status' ) );
             $block->setAttribute( 'position', isset( $data['parent_position'] ) ? (int)$data['parent_position'] : 0 );
+            if ( $parentBlockId > 0 )
+            {
+                $block->setAttribute( 'parent_id', $parentBlockId );
+                $block->setAttribute( 'placeholder', $parentPlaceholder );
+            }
             $block->store();
 
             self::saveBlockParameters( $block, isset( $data['parameters'] ) && is_array( $data['parameters'] ) ? $data['parameters'] : array() );
@@ -342,15 +383,35 @@ class expLayoutsUIApplicationApi
             if ( $method === 'POST' && $sub === 'copy' )
             {
                 $data = self::requestData();
+                $parentBlockId = isset( $data['parent_block_id'] ) ? (int)$data['parent_block_id'] : 0;
+                $parentPlaceholder = isset( $data['parent_placeholder'] ) ? trim( $data['parent_placeholder'] ) : '';
+
+                $newZoneId = (int)$block->attribute( 'zone_id' );
+                $newLayoutId = (int)$block->attribute( 'layout_id' );
+                if ( $parentBlockId > 0 )
+                {
+                    $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                    if ( $parentBlock )
+                    {
+                        $newZoneId = (int)$parentBlock->attribute( 'zone_id' );
+                        $newLayoutId = (int)$parentBlock->attribute( 'layout_id' );
+                    }
+                }
+
                 $newBlock = expLayoutsBlock::create(
-                    (int)$block->attribute( 'zone_id' ),
-                    (int)$block->attribute( 'layout_id' ),
+                    $newZoneId,
+                    $newLayoutId,
                     (string)$block->attribute( 'definition_identifier' ),
                     (string)$block->attribute( 'name' )
                 );
                 $newBlock->setAttribute( 'view_type', (string)$block->attribute( 'view_type' ) );
                 $newBlock->setAttribute( 'position', isset( $data['parent_position'] ) ? (int)$data['parent_position'] : (int)$block->attribute( 'position' ) );
                 $newBlock->setAttribute( 'status', (int)$block->attribute( 'status' ) );
+                if ( $parentBlockId > 0 )
+                {
+                    $newBlock->setAttribute( 'parent_id', $parentBlockId );
+                    $newBlock->setAttribute( 'placeholder', $parentPlaceholder );
+                }
                 $newBlock->store();
 
                 foreach ( expLayoutsBlockParameter::fetchByBlock( (int)$block->attribute( 'id' ) ) as $param )
@@ -373,10 +434,39 @@ class expLayoutsUIApplicationApi
                         $block->setAttribute( 'zone_id', (int)$zone->attribute( 'id' ) );
                     }
                 }
+
                 if ( isset( $data['parent_position'] ) )
                     $block->setAttribute( 'position', (int)$data['parent_position'] );
                 elseif ( isset( $data['position'] ) )
                     $block->setAttribute( 'position', (int)$data['position'] );
+
+                if ( isset( $data['parent_block_id'] ) )
+                {
+                    $parentBlockId = (int)$data['parent_block_id'];
+                    if ( $parentBlockId > 0 )
+                    {
+                        $block->setAttribute( 'parent_id', $parentBlockId );
+                        $block->setAttribute( 'placeholder', isset( $data['parent_placeholder'] ) ? trim( $data['parent_placeholder'] ) : '' );
+
+                        $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                        if ( $parentBlock )
+                        {
+                            $block->setAttribute( 'zone_id', (int)$parentBlock->attribute( 'zone_id' ) );
+                            $block->setAttribute( 'layout_id', (int)$parentBlock->attribute( 'layout_id' ) );
+                        }
+                    }
+                    else
+                    {
+                        $block->setAttribute( 'parent_id', 0 );
+                        $block->setAttribute( 'placeholder', '' );
+                    }
+                }
+                else
+                {
+                    $block->setAttribute( 'parent_id', 0 );
+                    $block->setAttribute( 'placeholder', '' );
+                }
+
                 $block->setAttribute( 'modified', time() );
                 $block->store();
 
@@ -536,7 +626,7 @@ class expLayoutsUIApplicationApi
         return self::response( array( 'error' => 'Unsupported collection items request.' ), 405 );
     }
 
-    public static function renderBlockHtml( $block )
+    public static function renderBlockHtml( $block, $placeholders = array() )
     {
         $name = (string)$block->attribute( 'name' );
         $prepared = expLayoutsRenderer::prepareBlock( $block );
@@ -546,6 +636,54 @@ class expLayoutsUIApplicationApi
         if ( $name === '' )
         {
             $name = ucwords( str_replace( '_', ' ', $definition ) );
+        }
+
+        if ( is_array( $placeholders ) && !empty( $placeholders ) )
+        {
+            $viewType = (string)$block->attribute( 'view_type' );
+            $content = '<div class="block-content container-content" style="display:flex;gap:8px;">';
+
+            foreach ( $placeholders as $placeholder )
+            {
+                $identifier = htmlspecialchars( (string)$placeholder['identifier'] );
+                $style = '';
+                if ( $definition === 'two_columns' )
+                {
+                    if ( $viewType === 'two_columns_66_33' )
+                        $style = $identifier === 'left' ? 'flex:2' : 'flex:1';
+                    elseif ( $viewType === 'two_columns_33_66' )
+                        $style = $identifier === 'left' ? 'flex:1' : 'flex:2';
+                    else
+                        $style = 'flex:1';
+                }
+                else
+                {
+                    $style = 'flex:1';
+                }
+
+                $content .= '<div class="column-placeholder" data-placeholder="' . $identifier . '" style="' . $style . ';"></div>';
+            }
+
+            $content .= '</div>';
+
+            return
+                '<div class="block-header">' .
+                    '<div class="handle" title="Move block"><i class="material-icons">drag_handle</i></div>' .
+                    '<div class="template_name">' . htmlspecialchars( $viewType ) . '</div>' .
+                    '<div class="name">' . htmlspecialchars( $name ) . '</div>' .
+                    '<div class="dropdown">' .
+                        '<button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' .
+                            '<i class="material-icons">more_horiz</i>' .
+                        '</button>' .
+                        '<ul class="dropdown-menu dropdown-menu-right">' .
+                            '<li class="js-modal-mode"><a title="Edit in modal">Edit in modal</a></li>' .
+                            '<li class="divider"></li>' .
+                            '<li class="js-revert"><a title="Revert block">Revert block</a></li>' .
+                            '<li class="js-copy"><a title="Duplicate block">Duplicate block</a></li>' .
+                            '<li class="js-destroy"><a title="Delete block">Delete block</a></li>' .
+                        '</ul>' .
+                    '</div>' .
+                '</div>' . $content;
         }
 
         $content = '';
@@ -649,6 +787,9 @@ class expLayoutsUIApplicationApi
             $collection->remove();
         }
 
+        foreach ( expLayoutsBlock::fetchChildren( $blockId, null ) as $child )
+            self::deleteBlock( $child );
+
         $block->remove();
     }
 
@@ -682,7 +823,7 @@ class expLayoutsUIApplicationApi
         $blockId = (int)$block->attribute( 'id' );
         $definitionIdentifier = (string)$block->attribute( 'definition_identifier' );
         $blockInfo = expLayoutsBlockHandlerFactory::getBlockInfo( $definitionIdentifier );
-        $isContainer = is_array( $blockInfo ) && !empty( $blockInfo['has_collection'] );
+        $isContainer = is_array( $blockInfo ) && !empty( $blockInfo['is_container'] );
 
         $zone = expLayoutsZone::fetch( (int)$block->attribute( 'zone_id' ) );
         $zoneIdentifier = $zone ? (string)$zone->attribute( 'identifier' ) : '';
@@ -702,11 +843,40 @@ class expLayoutsUIApplicationApi
         {
             $collections[] = self::collectionToArray( $collection, $block );
         }
-        elseif ( $isContainer )
+        elseif ( is_array( $blockInfo ) && !empty( $blockInfo['has_collection'] ) )
         {
             $collection = expLayoutsCollection::create( $blockId, 'manual' );
             $collection->store();
             $collections[] = self::collectionToArray( $collection, $block );
+        }
+
+        $placeholders = array();
+        if ( $isContainer )
+        {
+            $children = expLayoutsBlock::fetchChildren( $blockId, null );
+            $placeholderNames = is_array( $blockInfo ) && !empty( $blockInfo['placeholders'] ) ? $blockInfo['placeholders'] : array( 'main' );
+            $childrenByPlaceholder = array();
+            foreach ( $placeholderNames as $placeholderName )
+                $childrenByPlaceholder[$placeholderName] = array();
+
+            foreach ( $children as $child )
+            {
+                $placeholderName = (string)$child->attribute( 'placeholder' );
+                if ( $placeholderName === '' )
+                    $placeholderName = 'main';
+                if ( !isset( $childrenByPlaceholder[$placeholderName] ) )
+                    $childrenByPlaceholder[$placeholderName] = array();
+                $childrenByPlaceholder[$placeholderName][] = self::blockToArray( $child );
+            }
+
+            foreach ( $childrenByPlaceholder as $placeholderName => $placeholderBlocks )
+            {
+                $placeholders[] = array(
+                    'identifier' => $placeholderName,
+                    'name' => $placeholderName,
+                    'blocks' => $placeholderBlocks,
+                );
+            }
         }
 
         return array(
@@ -719,11 +889,14 @@ class expLayoutsUIApplicationApi
             'locale' => 'eng',
             'zone_identifier' => $zoneIdentifier,
             'layout_id' => (int)$block->attribute( 'layout_id' ),
+            'parent_block_id' => (int)$block->attribute( 'parent_id' ),
+            'parent_placeholder' => (string)$block->attribute( 'placeholder' ),
             'is_container' => $isContainer,
             'has_published_state' => false,
             'parameters' => $parameters,
-            'html' => self::renderBlockHtml( $block ),
+            'html' => self::renderBlockHtml( $block, $placeholders ),
             'collections' => $collections,
+            'placeholders' => $placeholders,
         );
     }
 
