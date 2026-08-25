@@ -424,7 +424,7 @@ class expLayoutsUIApplicationApi
             return self::response( self::collectionResult( $collection, $block ) );
         }
 
-        if ( $sub === 'change_type' && $method === 'POST' )
+        if ( $sub === 'change_type' && ( $method === 'POST' || $method === 'PATCH' ) )
         {
             $data = self::requestData();
             if ( isset( $data['collection_type'] ) && trim( $data['collection_type'] ) !== '' )

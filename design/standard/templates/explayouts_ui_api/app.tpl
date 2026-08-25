@@ -387,6 +387,21 @@
             e.stopImmediatePropagation();
             openModal(view);
         }, true);
+
+        $(document).on('change', '.js-collection-type', function(){
+            var $select = $(this);
+            var $form = $select.closest('form');
+            var action = $form.attr('action');
+            if (!action) return;
+            var m = action.match(/\/blocks\/(\d+)$/);
+            if (!m) return;
+            var blockId = parseInt(m[1]);
+            var block = Core.g.layout.blocks.get(blockId);
+            if (!block) return;
+            var collection = block.default_bm_collection();
+            if (!collection) return;
+            collection.sync_change_type({ collection_type: $select.val() });
+        });
         }
     })();
     </script>{/literal}

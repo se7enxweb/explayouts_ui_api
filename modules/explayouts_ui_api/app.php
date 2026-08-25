@@ -200,6 +200,7 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
     $tpl->setVariable( 'parameters', $parameters );
     $tpl->setVariable( 'parameter_values', $parameterValues );
     $tpl->setVariable( 'collection_items', $collectionItems );
+    $tpl->setVariable( 'collection', $collection );
 
     $Result = array();
     $Result['pagelayout'] = false;

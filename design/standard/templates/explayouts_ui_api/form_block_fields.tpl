@@ -5,6 +5,13 @@
         <input type="text" name="name" value="{$block.name|wash()}" class="form-control" />
     </div>
     <div class="form-group">
+        <label>Collection type</label>
+        <select name="collection_type" class="form-control js-skip-on-change js-collection-type">
+            <option value="manual" {if eq($collection.collection_type,'manual')}selected="selected"{/if}>Manual</option>
+            <option value="dynamic" {if eq($collection.collection_type,'dynamic')}selected="selected"{/if}>Dynamic</option>
+        </select>
+    </div>
+    <div class="form-group">
         <label>View type</label>
         <select name="view_type" class="form-control">
             {foreach $view_types as $view_type}
@@ -22,5 +29,4 @@
             {/if}
         </div>
     {/foreach}
-    <button type="submit" class="btn btn-primary" style="margin-top:10px;">Save block</button>
 </form>
