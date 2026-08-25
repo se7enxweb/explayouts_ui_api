@@ -1,7 +1,7 @@
 <div id="aside-tabs" class="aside-tabs">
     <ul class="nav nav-tabs" role="tablist">
-        <li class="active"><a href="#" id="tab-block" role="tab" aria-controls="tab-block-tab">Block</a></li>
-        <li><a href="#" id="tab-collection" role="tab" aria-controls="tab-collection-tab">Collection</a></li>
+        <li class="active"><a href="#tab-block-tab" id="tab-block" role="tab" aria-controls="tab-block-tab" data-toggle="tab">Block</a></li>
+        <li><a href="#tab-collection-tab" id="tab-collection" role="tab" aria-controls="tab-collection-tab" data-toggle="tab">Collection</a></li>
     </ul>
 
     <div class="tab-content">

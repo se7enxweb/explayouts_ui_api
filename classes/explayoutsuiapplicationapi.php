@@ -1303,10 +1303,18 @@ class expLayoutsUIApplicationApi
 
     protected static function handleCollections( $parts )
     {
-        $id = isset( $parts[0] ) ? (int)$parts[0] : 0;
+        $id = isset( $parts[0] ) ? $parts[0] : '';
         $sub = isset( $parts[1] ) ? $parts[1] : '';
-        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : 'GET';
+        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( $_SERVER['REQUEST_METHOD'] ) : 'GET';
 
+        if ( $id === 'items' )
+        {
+            $itemId = isset( $parts[1] ) ? (int)$parts[1] : 0;
+            $action = isset( $parts[2] ) ? $parts[2] : '';
+            return self::handleCollectionItemById( $itemId, $action );
+        }
+
+        $id = (int)$id;
         if ( $sub === 'items' && $id > 0 )
             return self::handleCollectionItems( $id, array_slice( $parts, 2 ) );
 
@@ -1369,10 +1377,72 @@ class expLayoutsUIApplicationApi
         return self::response( array( 'error' => 'Unsupported method.' ), 405 );
     }
 
+    protected static function handleCollectionItemById( $itemId, $action )
+    {
+        if ( $itemId <= 0 )
+            return self::response( array( 'error' => 'Missing collection item id.' ), 400 );
+
+        $def = expLayoutsCollectionItem::definition();
+        $item = eZPersistentObject::fetchObject( $def, null, array( 'id' => $itemId ) );
+        if ( !$item instanceof expLayoutsCollectionItem )
+            return self::response( array( 'error' => 'Collection item not found.' ), 404 );
+
+        $collectionId = (int)$item->attribute( 'collection_id' );
+        $collection = eZPersistentObject::fetchObject( expLayoutsCollection::definition(), null, array( 'id' => $collectionId ) );
+        if ( !$collection instanceof expLayoutsCollection )
+            return self::response( array( 'error' => 'Collection not found.' ), 404 );
+
+        $block = expLayoutsBlock::fetch( (int)$collection->attribute( 'block_id' ) );
+        if ( !$block )
+            $block = new stdClass();
+
+        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( $_SERVER['REQUEST_METHOD'] ) : 'GET';
+
+        if ( $method === 'GET' )
+            return self::response( self::resolveCollectionItem( $item, $collection ) );
+
+        if ( $method === 'PUT' )
+        {
+            $data = self::requestData();
+            if ( isset( $data['value'] ) )
+                $item->setAttribute( 'value_id', (int)$data['value'] );
+            if ( isset( $data['value_type'] ) )
+                $item->setAttribute( 'value_type', $data['value_type'] );
+            if ( isset( $data['item_type'] ) )
+                $item->setAttribute( 'item_type', $data['item_type'] );
+            if ( isset( $data['position'] ) )
+                $item->setAttribute( 'position', (int)$data['position'] );
+            $item->store();
+            return self::response( self::resolveCollectionItem( $item, $collection ) );
+        }
+
+        if ( $method === 'POST' || $method === 'PATCH' )
+        {
+            if ( $action === 'move' )
+            {
+                $data = self::requestData();
+                if ( isset( $data['position'] ) )
+                {
+                    $item->setAttribute( 'position', (int)$data['position'] );
+                    $item->store();
+                }
+                return self::response( self::resolveCollectionItem( $item, $collection ) );
+            }
+        }
+
+        if ( $method === 'DELETE' )
+        {
+            $item->remove();
+            return self::response( self::collectionResult( $collection, $block ) );
+        }
+
+        return self::response( array( 'error' => 'Unsupported collection item request.' ), 405 );
+    }
+
     protected static function handleCollectionItems( $collectionId, $parts )
     {
         $itemId = isset( $parts[0] ) ? (int)$parts[0] : 0;
-        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : 'GET';
+        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( $_SERVER['REQUEST_METHOD'] ) : 'GET';
         $def = expLayoutsCollectionItem::definition();
 
         if ( $itemId > 0 )
@@ -1410,6 +1480,21 @@ class expLayoutsUIApplicationApi
         {
             $list = expLayoutsCollectionItem::fetchByCollection( $collectionId );
             return self::response( self::listToArrays( $list ) );
+        }
+
+        if ( $method === 'DELETE' )
+        {
+            $collection = eZPersistentObject::fetchObject( expLayoutsCollection::definition(), null, array( 'id' => (int)$collectionId ) );
+            if ( !$collection instanceof expLayoutsCollection )
+                return self::response( array( 'error' => 'Collection not found.' ), 404 );
+
+            $db = eZDB::instance();
+            $db->query( 'DELETE FROM explayouts_collection_item WHERE collection_id = ' . (int)$collectionId );
+
+            $block = expLayoutsBlock::fetch( (int)$collection->attribute( 'block_id' ) );
+            if ( !$block )
+                $block = new stdClass();
+            return self::response( self::collectionResult( $collection, $block ) );
         }
 
         if ( $method === 'POST' )
