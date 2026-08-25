@@ -687,10 +687,13 @@ class expLayoutsUIApplicationApi
         }
 
         $content = '';
-        if ( $definition === 'title' && !empty( $values['title'] ) )
+        $isInlineDefinition = in_array( $definition, array( 'title', 'text', 'rich_text' ) );
+        if ( $definition === 'title' )
         {
             $level = isset( $values['level'] ) ? max( 1, min( 6, (int)$values['level'] ) ) : 2;
-            $content .= '<h' . $level . ' data-inline-child data-attr="title">' . (string)$values['title'] . '</h' . $level . '>';
+            $titleContent = !empty( $values['title'] ) ? (string)$values['title'] : '';
+            $titleHint = !empty( $values['title'] ) ? '' : ' data-hint="Title"';
+            $content .= '<h' . $level . ' data-inline-child data-attr="title"' . $titleHint . '>' . $titleContent . '</h' . $level . '>';
         }
         elseif ( $definition === 'rich_text' )
         {
@@ -699,9 +702,11 @@ class expLayoutsUIApplicationApi
                 $richContent = '<p></p>';
             $content .= '<div class="rich-text-editor" data-attr="content" data-ck-editor="1">' . $richContent . '</div>';
         }
-        elseif ( $definition === 'text' && !empty( $values['content'] ) )
+        elseif ( $definition === 'text' )
         {
-            $content .= '<p>' . nl2br( htmlspecialchars( (string)$values['content'] ) ) . '</p>';
+            $textContent = isset( $values['content'] ) ? (string)$values['content'] : '';
+            $textHint = $textContent === '' ? ' data-hint="No content"' : '';
+            $content .= '<span data-inline-child data-attr="content"' . $textHint . '>' . ( $textContent === '' ? '' : nl2br( htmlspecialchars( $textContent ) ) ) . '</span>';
         }
         elseif ( isset( $values['items'] ) && is_array( $values['items'] ) && !empty( $values['items'] ) )
         {
@@ -741,7 +746,7 @@ class expLayoutsUIApplicationApi
             }
         }
 
-        if ( trim( strip_tags( $content ) ) === '' )
+        if ( $content === '' || ( trim( strip_tags( $content ) ) === '' && !$isInlineDefinition ) )
         {
             $content = '<p class="block-empty" style="color:#888; font-style:italic;">No content</p>';
         }
