@@ -319,6 +319,11 @@ class expLayoutsUIApplicationApi
 
         $sub = isset( $parts[$blocksIndex + 2] ) ? $parts[$blocksIndex + 2] : '';
 
+        if ( $id > 0 && $sub === 'collections' )
+        {
+            return self::handleBlockCollections( $parts, $blocksIndex );
+        }
+
         if ( $id > 0 )
         {
             $block = expLayoutsBlock::fetch( $id );
@@ -394,6 +399,130 @@ class expLayoutsUIApplicationApi
         }
 
         return self::response( array( 'error' => 'Unknown block request.' ), 404 );
+    }
+
+    protected static function handleBlockCollections( $parts, $blocksIndex )
+    {
+        $blockId = isset( $parts[$blocksIndex + 1] ) ? (int)$parts[$blocksIndex + 1] : 0;
+        $collectionIdentifier = isset( $parts[$blocksIndex + 3] ) ? $parts[$blocksIndex + 3] : '';
+        $sub = isset( $parts[$blocksIndex + 4] ) ? $parts[$blocksIndex + 4] : '';
+        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( $_SERVER['REQUEST_METHOD'] ) : 'GET';
+
+        $block = expLayoutsBlock::fetch( $blockId );
+        if ( !$block )
+            return self::response( array( 'error' => 'Block not found.' ), 404 );
+
+        $collection = self::getCollectionByIdentifier( $blockId, $collectionIdentifier );
+        if ( !$collection )
+            return self::response( array( 'error' => 'Collection not found.' ), 404 );
+
+        if ( $sub === 'result' && $method === 'GET' )
+        {
+            return self::response( self::collectionResult( $collection, $block ) );
+        }
+
+        if ( $sub === 'change_type' && $method === 'POST' )
+        {
+            $data = self::requestData();
+            if ( isset( $data['collection_type'] ) && trim( $data['collection_type'] ) !== '' )
+            {
+                $collection->setAttribute( 'collection_type', trim( $data['collection_type'] ) );
+                $collection->store();
+            }
+            return self::response( self::collectionResult( $collection, $block ) );
+        }
+
+        if ( $sub === 'items' )
+        {
+            $itemId = isset( $parts[$blocksIndex + 5] ) ? (int)$parts[$blocksIndex + 5] : 0;
+            $action = isset( $parts[$blocksIndex + 6] ) ? $parts[$blocksIndex + 6] : '';
+            return self::handleBlockCollectionItems( $collection, $block, $itemId, $action );
+        }
+
+        return self::response( array( 'error' => 'Unknown collection request.' ), 404 );
+    }
+
+    protected static function handleBlockCollectionItems( $collection, $block, $itemId, $action )
+    {
+        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( $_SERVER['REQUEST_METHOD'] ) : 'GET';
+        $collectionId = (int)$collection->attribute( 'id' );
+
+        if ( $itemId > 0 )
+        {
+            $def = expLayoutsCollectionItem::definition();
+            $item = eZPersistentObject::fetchObject( $def, null, array( 'id' => $itemId ) );
+            if ( !$item instanceof expLayoutsCollectionItem )
+                return self::response( array( 'error' => 'Collection item not found.' ), 404 );
+
+            if ( $item->attribute( 'collection_id' ) != $collectionId )
+                return self::response( array( 'error' => 'Item does not belong to this collection.' ), 404 );
+
+            if ( $method === 'GET' )
+                return self::response( self::resolveCollectionItem( $item, $collection ) );
+
+            if ( $method === 'PUT' )
+            {
+                $data = self::requestData();
+                if ( isset( $data['position'] ) )
+                    $item->setAttribute( 'position', (int)$data['position'] );
+                if ( isset( $data['value'] ) )
+                    $item->setAttribute( 'value_id', (int)$data['value'] );
+                if ( isset( $data['value_type'] ) )
+                    $item->setAttribute( 'value_type', trim( $data['value_type'] ) );
+                if ( isset( $data['item_type'] ) )
+                    $item->setAttribute( 'item_type', trim( $data['item_type'] ) );
+                $item->store();
+                return self::response( self::resolveCollectionItem( $item, $collection ) );
+            }
+
+            if ( $method === 'DELETE' )
+            {
+                $item->remove();
+                return self::response( self::collectionResult( $collection, $block ) );
+            }
+
+            return self::response( array( 'error' => 'Unsupported method.' ), 405 );
+        }
+
+        if ( $method === 'GET' )
+        {
+            return self::response( self::collectionResult( $collection, $block ) );
+        }
+
+        if ( $method === 'POST' )
+        {
+            $data = self::requestData();
+            $created = array();
+
+            if ( isset( $data['items'] ) && is_array( $data['items'] ) )
+            {
+                foreach ( $data['items'] as $itemData )
+                {
+                    $valueId = isset( $itemData['value'] ) ? (int)$itemData['value'] : 0;
+                    $valueType = isset( $itemData['value_type'] ) ? $itemData['value_type'] : 'ez_content';
+                    $itemType = isset( $itemData['item_type'] ) ? $itemData['item_type'] : 'manual';
+                    $position = isset( $itemData['position'] ) ? (int)$itemData['position'] : 0;
+                    if ( $valueId <= 0 )
+                        continue;
+
+                    $newItem = expLayoutsCollectionItem::create( $collectionId, $valueId, $valueType, $itemType );
+                    $newItem->setAttribute( 'position', $position );
+                    $newItem->store();
+                    $created[] = self::resolveCollectionItem( $newItem, $collection );
+                }
+            }
+
+            return self::response( self::collectionResult( $collection, $block ) );
+        }
+
+        if ( $method === 'DELETE' && $action === 'remove_all' )
+        {
+            $db = eZDB::instance();
+            $db->query( 'DELETE FROM explayouts_collection_item WHERE collection_id = ' . $collectionId );
+            return self::response( self::collectionResult( $collection, $block ) );
+        }
+
+        return self::response( array( 'error' => 'Unsupported collection items request.' ), 405 );
     }
 
     public static function renderBlockHtml( $block )
@@ -535,6 +664,19 @@ class expLayoutsUIApplicationApi
             $parameters[(string)$param->attribute( 'name' )] = json_decode( (string)$param->attribute( 'value' ), true ) !== null ? json_decode( (string)$param->attribute( 'value' ), true ) : (string)$param->attribute( 'value' );
         }
 
+        $collections = array();
+        $collection = expLayoutsCollection::fetchByBlock( $blockId );
+        if ( $collection instanceof expLayoutsCollection )
+        {
+            $collections[] = self::collectionToArray( $collection, $block );
+        }
+        elseif ( $isContainer )
+        {
+            $collection = expLayoutsCollection::create( $blockId, 'manual' );
+            $collection->store();
+            $collections[] = self::collectionToArray( $collection, $block );
+        }
+
         return array(
             'id' => $blockId,
             'identifier' => $definitionIdentifier,
@@ -549,8 +691,161 @@ class expLayoutsUIApplicationApi
             'has_published_state' => false,
             'parameters' => $parameters,
             'html' => self::renderBlockHtml( $block ),
-            'collections' => array(),
+            'collections' => $collections,
         );
+    }
+
+    protected static function getCollectionByIdentifier( $blockId, $identifier )
+    {
+        if ( $identifier === '' || $identifier === 'default' )
+        {
+            $collection = expLayoutsCollection::fetchByBlock( (int)$blockId );
+            if ( $collection instanceof expLayoutsCollection )
+                return $collection;
+        }
+
+        $list = eZPersistentObject::fetchObjectList(
+            expLayoutsCollection::definition(),
+            null,
+            array( 'block_id' => (int)$blockId ),
+            null,
+            null,
+            true
+        );
+        foreach ( $list as $collection )
+        {
+            if ( (string)$collection->attribute( 'collection_type' ) === $identifier
+                 || (string)$collection->attribute( 'id' ) === $identifier )
+                return $collection;
+        }
+        return false;
+    }
+
+    protected static function collectionToArray( $collection, $block )
+    {
+        if ( !$collection instanceof expLayoutsCollection )
+            return null;
+
+        $collectionId = (int)$collection->attribute( 'id' );
+        return array(
+            'id' => $collectionId,
+            'collection_id' => $collectionId,
+            'identifier' => 'default',
+            'block_id' => (int)$collection->attribute( 'block_id' ),
+            'type' => (string)$collection->attribute( 'collection_type' ),
+            'collection_type' => (string)$collection->attribute( 'collection_type' ),
+            'offset' => (int)$collection->attribute( 'offset_value' ),
+            'limit' => (int)$collection->attribute( 'limit_value' ),
+            'offset_value' => (int)$collection->attribute( 'offset_value' ),
+            'limit_value' => (int)$collection->attribute( 'limit_value' ),
+            'status' => (int)$collection->attribute( 'status' ),
+            'items' => array(),
+            'overflow_items' => array(),
+        );
+    }
+
+    protected static function resolveCollectionItem( $item, $collection = null )
+    {
+        if ( !$item instanceof expLayoutsCollectionItem )
+            return null;
+
+        $valueId = (int)$item->attribute( 'value_id' );
+        $valueType = (string)$item->attribute( 'value_type' );
+        $name = 'Unknown ' . $valueType . ' ' . $valueId;
+        $cmsVisible = false;
+        $cmsUrl = '';
+        $urlAlias = '';
+
+        if ( $valueId > 0 && in_array( $valueType, array( 'ez_content', 'ez_location' ) ) )
+        {
+            $node = null;
+            $object = null;
+
+            if ( $valueType === 'ez_location' )
+            {
+                $node = eZContentObjectTreeNode::fetch( $valueId );
+            }
+            else
+            {
+                $object = eZContentObject::fetch( $valueId );
+                if ( $object instanceof eZContentObject )
+                {
+                    $mainNode = $object->attribute( 'main_node' );
+                    if ( $mainNode instanceof eZContentObjectTreeNode )
+                        $node = $mainNode;
+                }
+            }
+
+            if ( $node instanceof eZContentObjectTreeNode )
+            {
+                if ( !$object instanceof eZContentObject )
+                    $object = $node->object();
+                if ( $object instanceof eZContentObject )
+                {
+                    $name = (string)$object->attribute( 'name' );
+                    $cmsVisible = true;
+                    $cmsUrl = '/content/edit/' . (int)$object->attribute( 'id' );
+                }
+                $urlAlias = (string)$node->urlAlias();
+            }
+        }
+
+        return array(
+            'id' => (int)$item->attribute( 'id' ),
+            'collection_id' => (int)$item->attribute( 'collection_id' ),
+            'value' => $valueId,
+            'value_id' => $valueId,
+            'value_type' => $valueType,
+            'item_type' => (string)$item->attribute( 'item_type' ),
+            'position' => (int)$item->attribute( 'position' ),
+            'name' => $name,
+            'is_dynamic' => false,
+            'visible' => true,
+            'cms_visible' => $cmsVisible,
+            'can_remove_item' => true,
+            'cms_url' => $cmsUrl,
+            'url' => $urlAlias,
+            'slot_id' => null,
+        );
+    }
+
+    protected static function collectionResult( $collection, $block )
+    {
+        $collectionId = (int)$collection->attribute( 'id' );
+        $offset = (int)$collection->attribute( 'offset_value' );
+        $limit = (int)$collection->attribute( 'limit_value' );
+
+        $allItems = array();
+        foreach ( expLayoutsCollectionItem::fetchByCollection( $collectionId ) as $item )
+        {
+            $resolved = self::resolveCollectionItem( $item, $collection );
+            if ( $resolved )
+                $allItems[] = $resolved;
+        }
+
+        // Alpha only supports manual collections with simple offset/limit slicing.
+        // Query collections would run expLayoutsQueryType here.
+        $total = count( $allItems );
+        if ( $limit > 0 )
+        {
+            $items = array_slice( $allItems, $offset, $limit );
+            $overflowBefore = array_slice( $allItems, 0, $offset );
+            $overflowAfter = array_slice( $allItems, $offset + $limit );
+            $overflowItems = array_merge( $overflowBefore, $overflowAfter );
+        }
+        else
+        {
+            $items = $allItems;
+            $overflowItems = array();
+        }
+
+        $result = self::collectionToArray( $collection, $block );
+        $result['items'] = $items;
+        $result['overflow_items'] = $overflowItems;
+        $result['total_count'] = $total;
+        $result['item_count'] = count( $items );
+
+        return $result;
     }
 
     protected static function handleRules( $parts )
