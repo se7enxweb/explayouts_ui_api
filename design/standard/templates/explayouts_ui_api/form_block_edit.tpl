@@ -11,7 +11,7 @@
         <div class="tab-pane" id="tab-collection-tab">
             <div class="collection-items">
                 <select class="js-browser-item-type" style="display: none;">
-                    <option value="ez_content" data-min="0" data-max="100">eZ content</option>
+                    <option value="ez_location" data-min="0" data-max="100">eZ location</option>
                 </select>
                 <div class="body"></div>
             </div>

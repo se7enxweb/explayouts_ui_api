@@ -41,6 +41,9 @@ class expLayoutsUIApplicationApi
         if ( $resource === 'collections' )
             return self::handleCollections( array_slice( $parts, 1 ) );
 
+        if ( $resource === 'content_browser' )
+            return self::handleContentBrowser( array_slice( $parts, 1 ) );
+
         if ( $resource === 'forms' )
             return self::handleForms( array_slice( $parts, 1 ) );
 
@@ -1299,6 +1302,41 @@ class expLayoutsUIApplicationApi
         }
 
         return $layout;
+    }
+
+    protected static function handleContentBrowser( $parts )
+    {
+        $parentNodeId = isset( $_GET['parent_node_id'] ) ? (int)$_GET['parent_node_id'] : 2;
+        $search = isset( $_GET['search'] ) ? trim( $_GET['search'] ) : '';
+        $offset = isset( $_GET['offset'] ) ? (int)$_GET['offset'] : 0;
+        $limit = isset( $_GET['limit'] ) ? (int)$_GET['limit'] : 25;
+
+        if ( !class_exists( 'expLayoutsContentBrowserCoreBackend' ) )
+            require_once 'extension/explayouts_content_browser_core/classes/explayoutscontentbrowsercorebackend.php';
+        if ( !class_exists( 'expLayoutsContentBrowserItem' ) )
+            require_once 'extension/explayouts_content_browser/classes/explayoutscontentbrowseritem.php';
+
+        $backend = new expLayoutsContentBrowserCoreBackend( array(), array() );
+
+        if ( $search !== '' )
+        {
+            $items = $backend->searchItems( $search, $parentNodeId, $offset, $limit );
+            $total = $backend->searchItemsCount( $search, $parentNodeId );
+        }
+        else
+        {
+            $items = $backend->getSubItems( $parentNodeId, $offset, $limit );
+            $total = $backend->getSubItemsCount( $parentNodeId );
+        }
+
+        return self::response( array(
+            'values' => array_map( function( $item ) { return $item->toArray(); }, $items ),
+            'total' => $total,
+            'offset' => $offset,
+            'limit' => $limit,
+            'has_next' => $total > $offset + count( $items ),
+            'parent_node_id' => $parentNodeId,
+        ) );
     }
 
     protected static function handleCollections( $parts )
