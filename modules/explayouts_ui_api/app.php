@@ -131,8 +131,13 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/edit$#', $apiPath, $m ) )
 {
     $locale = $m[1];
     $blockId = (int)$m[2];
+    $block = expLayoutsBlock::fetch( $blockId );
+    $collection = $block ? expLayoutsCollection::fetchByBlock( $blockId ) : null;
+
     $tpl->setVariable( 'form_url', "/explayouts_ui_api/app/$locale/blocks/$blockId/form" );
     $tpl->setVariable( 'block_id', $blockId );
+    $tpl->setVariable( 'block', $block );
+    $tpl->setVariable( 'collection', $collection );
 
     $Result = array();
     $Result['pagelayout'] = false;

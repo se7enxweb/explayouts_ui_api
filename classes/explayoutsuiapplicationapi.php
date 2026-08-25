@@ -427,9 +427,17 @@ class expLayoutsUIApplicationApi
         if ( $sub === 'change_type' && ( $method === 'POST' || $method === 'PATCH' ) )
         {
             $data = self::requestData();
+            $collectionType = '';
             if ( isset( $data['collection_type'] ) && trim( $data['collection_type'] ) !== '' )
+                $collectionType = trim( $data['collection_type'] );
+            elseif ( isset( $data['new_type'] ) && trim( $data['new_type'] ) !== '' )
+                $collectionType = trim( $data['new_type'] );
+            elseif ( isset( $data['block_collection']['new_type'] ) && trim( $data['block_collection']['new_type'] ) !== '' )
+                $collectionType = trim( $data['block_collection']['new_type'] );
+
+            if ( $collectionType !== '' )
             {
-                $collection->setAttribute( 'collection_type', trim( $data['collection_type'] ) );
+                $collection->setAttribute( 'collection_type', $collectionType );
                 $collection->store();
             }
             return self::response( self::collectionResult( $collection, $block ) );
@@ -593,7 +601,28 @@ class expLayoutsUIApplicationApi
             $content = '<p class="block-empty" style="color:#888; font-style:italic;">No content</p>';
         }
 
-        return '<div class="block-header"><span class="name">' . htmlspecialchars( $name ) . '</span></div><div class="block-content">' . $content . '</div>';
+        $viewTypeName = htmlspecialchars( (string)$block->attribute( 'view_type' ) );
+
+        $header =
+            '<div class="block-header">' .
+                '<div class="handle" title="Move block"><i class="material-icons">drag_handle</i></div>' .
+                '<div class="template_name">' . $viewTypeName . '</div>' .
+                '<div class="name">' . htmlspecialchars( $name ) . '</div>' .
+                '<div class="dropdown">' .
+                    '<button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' .
+                        '<i class="material-icons">more_horiz</i>' .
+                    '</button>' .
+                    '<ul class="dropdown-menu dropdown-menu-right">' .
+                        '<li class="js-modal-mode"><a title="Edit in modal">Edit in modal</a></li>' .
+                        '<li class="divider"></li>' .
+                        '<li class="js-revert"><a title="Revert block">Revert block</a></li>' .
+                        '<li class="js-copy"><a title="Duplicate block">Duplicate block</a></li>' .
+                        '<li class="js-destroy"><a title="Delete block">Delete block</a></li>' .
+                    '</ul>' .
+                '</div>' .
+            '</div>';
+
+        return $header . '<div class="block-content">' . $content . '</div>';
     }
 
     protected static function findZoneByIdentifier( $layoutId, $zoneIdentifier )
