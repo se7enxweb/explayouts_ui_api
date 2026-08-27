@@ -27,6 +27,7 @@
     {/foreach}
 
     <link rel="stylesheet" href="{'stylesheets/netgen-layouts.css'|ezdesign('no')}">
+    <link rel="stylesheet" href="{'stylesheets/netgen-layouts-admin.css'|ezdesign('no')}">
     {literal}<style>
         #ngc-size-warning { display: none !important; }
         .left-toolbar .button.js-open.active + .left-toolbar-panels .left-panel { display: block !important; }
@@ -41,6 +42,61 @@
         .block-items li { background: #fff; color: #333; padding: 2px 0; }
         #ng-cancel-link:not(.btn) { position: fixed; top: 10px; right: 10px; z-index: 10000; display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.6rem 1rem; border-radius: 4px; background: #2563eb; color: #fff; font-family: Roboto, Helvetica Neue, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; line-height: 1; cursor: pointer; border: 0; }
         #ng-cancel-link:not(.btn):hover { background: #1d4ed8; }
+
+        /* Design tab form overrides to match Nexus dark sidebar */
+        #tab-design-tab .layouts-form .row-input { margin-bottom: 1em; }
+        #tab-design-tab .layouts-form .row-input label { display: block; font-size: 13px; color: #ddd; margin-bottom: 4px; font-weight: normal; }
+        #tab-design-tab .layouts-form .row-input select,
+        #tab-design-tab .layouts-form .row-input input[type="text"],
+        #tab-design-tab .layouts-form .row-input input[type="number"],
+        #tab-design-tab .layouts-form .row-input textarea {
+            width: 100%; height: 36px; padding: 0 8px; background: #555; border: 1px solid #777; color: #fff; border-radius: 2px; font-size: 13px; box-sizing: border-box;
+        }
+        #tab-design-tab .layouts-form .row-input select { appearance: none; -webkit-appearance: none; padding-right: 2em;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEuNDEiPjxwYXRoIGQ9Ik01LjUzIDcuNDlMLjIgMi4xNWEuNjYuNjYgMCAwIDEgMC0uOTNMLjgyLjU5YS42Ni42NiAwIDAgMS45MyAwTDYgNC44MiAxMC4yNS42YS42Ni42NiAwIDAxLjkzIDBsLjYzLjYzYy4yNS4yNS4yNS42NyAwIC45M0w2LjQ3IDcuNDlhLjY2LjY2IDAgMDEtLjk0IDB6IiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=');
+            background-repeat: no-repeat; background-position: right .75em center; background-size: .75em auto;
+        }
+        #tab-design-tab .layouts-form .row-input input[type="checkbox"] { position: absolute; left: -9999em; }
+        #tab-design-tab .layouts-form .row-input input[type="checkbox"] + label { position: relative; padding-left: 1.75em; cursor: pointer; }
+        #tab-design-tab .layouts-form .row-input input[type="checkbox"] + label::before { content: ''; position: absolute; left: 0; top: 0; width: 1.25em; height: 1.25em; border: 1px solid #777; background: #555; }
+        #tab-design-tab .layouts-form .row-input input[type="checkbox"]:checked + label::before { background: #4a90e2; border-color: #4a90e2; }
+        #tab-design-tab .layouts-form .row-input input[type="checkbox"]:checked + label::after { content: '✓'; position: absolute; left: 0.25em; top: 0.05em; color: #fff; font-size: 1em; }
+        #tab-design-tab .layouts-form .children { display: none; margin-left: 1.5em; margin-top: 0.5em; }
+        #tab-design-tab .layouts-form input[type="checkbox"]:checked ~ .children { display: block; }
+        #tab-design-tab .layouts-form select option.hidden { display: none; }
+
+        /* Content tab query builder form */
+        #tab-content-tab { box-sizing: border-box; padding: 0 1em; }
+        #tab-content-tab .layouts-form .row-input { margin-bottom: 1em; }
+        #tab-content-tab .layouts-form .row-input label { display: block; font-size: 13px; color: #ddd; margin-bottom: 4px; font-weight: normal; }
+        #tab-content-tab .layouts-form .row-input select,
+        #tab-content-tab .layouts-form .row-input input[type="text"],
+        #tab-content-tab .layouts-form .row-input textarea {
+            width: 100%; height: 36px; padding: 0 8px; background: #fff; border: 1px solid #777; color: #333; border-radius: 2px; font-size: 13px; box-sizing: border-box;
+        }
+        #tab-content-tab .layouts-form .row-input select { appearance: none; -webkit-appearance: none; padding-right: 2em;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEuNDEiPjxwYXRoIGQ9Ik01LjUzIDcuNDlMLjIgMi4xNWEuNjYuNjYgMCAwIDEgMC0uOTNMLjgyLjU5YS42Ni42NiAwIDAgMS45MyAwTDYgNC44MiAxMC4yNS42YS42Ni42NiAwIDAxLjkzIDBsLjYzLjYzYy4yNS4yNS4yNS42NyAwIC45M0w2LjQ3IDcuNDlhLjY2LjY2IDAgMDEtLjk0IDB6IiBmaWxsPSIjMzMzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=');
+            background-repeat: no-repeat; background-position: right .75em center; background-size: .75em auto;
+        }
+        #tab-content-tab .layouts-form .row-input select[multiple] { height: auto; min-height: 140px; }
+        #tab-content-tab .layouts-form .row-input input[type="checkbox"] { position: absolute; left: -9999em; }
+        #tab-content-tab .layouts-form .row-input input[type="checkbox"] + label { position: relative; padding-left: 1.75em; cursor: pointer; color: #ddd; line-height: 1.4; }
+        #tab-content-tab .layouts-form .row-input input[type="checkbox"] + label::before { content: ''; position: absolute; left: 0; top: 0; width: 1.25em; height: 1.25em; border: 1px solid #777; background: #555; }
+        #tab-content-tab .layouts-form .row-input input[type="checkbox"]:checked + label::before { background: #4a90e2; border-color: #4a90e2; }
+        #tab-content-tab .layouts-form .row-input input[type="checkbox"]:checked + label::after { content: '✓'; position: absolute; left: 0.25em; top: 0.05em; color: #fff; font-size: 1em; }
+        #tab-content-tab .layouts-form .children { display: none; margin-left: 0; margin-top: 0.5em; }
+        #tab-content-tab .layouts-form input[type="checkbox"]:checked ~ .children { display: block; }
+        #tab-content-tab .layouts-form [data-compound-reverse] .children { display: block; }
+        #tab-content-tab .layouts-form [data-compound-reverse] input[type="checkbox"]:checked ~ .children { display: none; }
+        #tab-content-tab .sidebar-panel { margin-bottom: 0.75em; }
+        #tab-content-tab .sidebar-panel .toggle-link { display: block; padding: 0.5em 0; color: #ddd; font-size: 13px; text-transform: uppercase; border-bottom: 1px solid #555; text-decoration: none; }
+        #tab-content-tab .input-browse { background: #fff; border: 1px solid #777; border-radius: 2px; height: 36px; box-sizing: border-box; margin: 0; }
+        #tab-content-tab .input-browse .js-trigger { color: #333; text-decoration: none; align-items: center; }
+        #tab-content-tab .input-browse .js-name { font-size: 13px; color: #333; }
+        #tab-content-tab .input-browse .js-clear { color: #333; align-items: center; }
+        .input-browse .material-icons { font-size: 20px; color: #666; pointer-events: none; }
+        #tab-content-tab .js-view-cms { display: inline-block; margin-top: 4px; font-size: 12px; color: #4a90e2; text-decoration: none; }
+        #tab-content-tab .js-view-cms:hover { text-decoration: underline; }
     </style>{/literal}
 </head>
 <body>
@@ -278,7 +334,7 @@
             '</div></div></div>';
 
         var $modal;
-        var state = { parentId: 2, search: '', path: [{ node_id: 2, name: 'Content' }] };
+        var state = { parentId: 2, search: '', path: [{ node_id: 2, name: 'Content' }], singleSelect: false, callback: null };
         var pendingView = null;
 
         function ensureModal() {
@@ -314,9 +370,12 @@
                 } else {
                     html += '<table class="table table-condensed"><tbody>';
                     data.values.forEach(function(item){
+                        var cbId = 'exp-cb-' + item.node_id;
+                        var inputType = state.singleSelect ? 'radio' : 'checkbox';
+                        var inputName = state.singleSelect ? ' name="exp-cb-single"' : '';
                         html += '<tr>';
-                        html += '<td style="width:30px;"><input type="checkbox" class="js-cb-select" data-node-id="' + item.node_id + '" /></td>';
-                        html += '<td>' + $('<div>').text(item.name).html() + ' <small>(' + item.class_name + ')</small></td>';
+                        html += '<td><input type="' + inputType + '"' + inputName + ' id="' + cbId + '" class="js-cb-select" data-node-id="' + item.node_id + '" data-object-id="' + item.object_id + '" data-name="' + $('<div>').text(item.name).html() + '" />';
+                        html += '<label for="' + cbId + '">' + $('<div>').text(item.name).html() + ' <small>(' + item.class_name + ')</small></label></td>';
                         html += '<td style="width:100px;">';
                         if (item.is_container) {
                             html += '<a href="#" class="js-cb-browse" data-node-id="' + item.node_id + '" data-name="' + $('<div>').text(item.name).html() + '">Open</a>';
@@ -334,7 +393,27 @@
 
         function openModal(view) {
             pendingView = view;
+            state.singleSelect = false;
+            state.callback = null;
             ensureModal();
+            $modal.find('.modal-title').text('Add content to collection');
+            $modal.find('.exp-cb-apply').text('Add selected');
+            state.parentId = 2;
+            state.search = '';
+            state.path = [{ node_id: 2, name: 'Content' }];
+            $modal.find('.exp-cb-search input').val('');
+            load();
+            $modal.modal('show');
+        }
+
+        function openSingleSelectModal(callback, options) {
+            options = options || {};
+            pendingView = null;
+            state.singleSelect = true;
+            state.callback = callback;
+            ensureModal();
+            $modal.find('.modal-title').text(options.title || 'Select content');
+            $modal.find('.exp-cb-apply').text(options.buttonText || 'Select');
             state.parentId = 2;
             state.search = '';
             state.path = [{ node_id: 2, name: 'Content' }];
@@ -344,12 +423,25 @@
         }
 
         function onApply() {
-            if (!pendingView) return;
             var selected = [];
             $modal.find('.exp-cb-list .js-cb-select:checked').each(function(){
-                selected.push(parseInt($(this).data('node-id')));
+                selected.push($(this));
             });
             if (selected.length === 0) { $modal.modal('hide'); return; }
+
+            if (state.singleSelect && typeof state.callback === 'function') {
+                var $sel = selected[0];
+                state.callback({
+                    nodeId: parseInt($sel.data('node-id')),
+                    objectId: parseInt($sel.data('object-id')),
+                    name: String($sel.data('name') || '')
+                });
+                $modal.modal('hide');
+                return;
+            }
+
+            if (!pendingView) return;
+            selected = selected.map(function($el){ return parseInt($el.data('node-id')); });
 
             var model = pendingView.model;
             var blockId = model.get('block_id');
@@ -369,9 +461,10 @@
                 data: JSON.stringify({ items: items }),
                 headers: { 'X-CSRF-Token': Core.g && Core.g.config ? Core.g.config.get('csrf_token') : '' }
             }).done(function(){
-                if (model.fetch_results) model.fetch_results();
                 $modal.modal('hide');
+                if (model.fetch_results) model.fetch_results();
             }).fail(function(){
+                $modal.modal('hide');
                 alert('Failed to add items.');
             });
         }
@@ -386,6 +479,49 @@
             e.preventDefault();
             e.stopImmediatePropagation();
             openModal(view);
+        }, true);
+
+        function triggerBrowserChange($wrap) {
+            $wrap.find('input.js-value').trigger('change');
+            $wrap[0].dispatchEvent(new CustomEvent('browser:change', { bubbles: true, detail: { instance: $wrap[0] } }));
+        }
+
+        document.addEventListener('click', function(e){
+            if (!e.target.closest) return;
+            var trigger = e.target.closest('.exp-input-browse .js-trigger');
+            var clear = e.target.closest('.exp-input-browse .js-clear');
+            if (!trigger && !clear) return;
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            var $wrap = $(trigger || clear).closest('.exp-input-browse');
+            var $input = $wrap.find('input.js-value');
+            var $name = $wrap.find('.js-name');
+            var $row = $wrap.closest('.row-input');
+            var $cms = $row.find('.js-view-cms');
+            var itemType = $wrap.find('input.js-item-type').val() || 'ibexa_content';
+
+            if (clear) {
+                $input.val('').trigger('change');
+                $name.text($name.data('empty-note') || 'Select item');
+                $wrap.addClass('item-empty');
+                $cms.hide();
+                triggerBrowserChange($wrap);
+                return;
+            }
+
+            var title = 'Select content';
+            var $label = $row.find('label').first();
+            if ($label.length) title = 'Select ' + $label.text().trim();
+
+            openSingleSelectModal(function(data){
+                var value = (itemType === 'ibexa_location') ? data.nodeId : data.objectId;
+                $input.val(value).trigger('change');
+                $name.text(data.name);
+                $wrap.removeClass('item-empty');
+                $cms.attr('href', '/content/view/full/' + data.nodeId).show();
+                triggerBrowserChange($wrap);
+            }, { title: title, buttonText: 'Select' });
         }, true);
 
 }

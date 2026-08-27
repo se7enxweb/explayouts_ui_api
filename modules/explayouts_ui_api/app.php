@@ -19,6 +19,7 @@ if ( strpos( $apiPath, 'api/' ) === 0 )
 }
 
 $tpl = eZTemplate::factory();
+$tpl->resetVariables();
 
 if ( $apiPath === 'layouts/form/create' )
 {
@@ -134,14 +135,50 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/edit$#', $apiPath, $m ) )
     $block = expLayoutsBlock::fetch( $blockId );
     $collection = $block ? expLayoutsCollection::fetchByBlock( $blockId ) : null;
 
+    if ( $collection )
+    {
+        $collectionData = expLayoutsUIApplicationApi::collectionToArray( $collection, $block );
+        $tpl->setVariable( 'collection', $collectionData );
+        $tpl->setVariable( 'query_form_url', "/explayouts_ui_api/app/$locale/blocks/$blockId/collections/default/query/form" );
+    }
+    else
+    {
+        $tpl->setVariable( 'collection', null );
+        $tpl->setVariable( 'query_form_url', '' );
+    }
+
     $tpl->setVariable( 'form_url', "/explayouts_ui_api/app/$locale/blocks/$blockId/form" );
+    $tpl->setVariable( 'content_form_url', "/explayouts_ui_api/app/$locale/blocks/$blockId/form/edit/content" );
     $tpl->setVariable( 'block_id', $blockId );
     $tpl->setVariable( 'block', $block );
-    $tpl->setVariable( 'collection', $collection );
+    $tpl->setVariable( 'block_name', $block ? (string)$block->attribute( 'name' ) : '' );
 
     $Result = array();
     $Result['pagelayout'] = false;
     $Result['content'] = $tpl->fetch( 'design:explayouts_ui_api/form_block_edit.tpl' );
+    return $Result;
+}
+
+if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form/edit/content$#', $apiPath, $m ) )
+{
+    $locale = $m[1];
+    $blockId = (int)$m[2];
+    $block = expLayoutsBlock::fetch( $blockId );
+    if ( !$block )
+    {
+        $Result = array();
+        $Result['pagelayout'] = false;
+        $Result['content'] = 'Block not found.';
+        return $Result;
+    }
+
+    $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId" );
+    $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
+    $tpl->setVariable( 'block_name', (string)$block->attribute( 'name' ) );
+
+    $Result = array();
+    $Result['pagelayout'] = false;
+    $Result['content'] = $tpl->fetch( 'design:explayouts_ui_api/form_block_content.tpl' );
     return $Result;
 }
 
@@ -166,20 +203,21 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
     $parameters = $handler ? $handler->getParameters() : array();
 
     $parameterValues = array();
+    foreach ( $parameters as $paramName => $paramDef )
+    {
+        $parameterValues[$paramName] = isset( $paramDef['default'] ) ? $paramDef['default'] : '';
+    }
     foreach ( expLayoutsBlockParameter::fetchByBlock( $blockId ) as $param )
     {
         $parameterValues[(string)$param->attribute( 'name' )] = (string)$param->attribute( 'value' );
     }
 
-    foreach ( $parameterValues as $paramName => $paramValue )
+    // Drop legacy query parameters from the design form; they are handled by
+    // the Content tab query builder or block fetchItems, not by design settings.
+    $legacyQueryParams = array( 'query_type', 'parent_node_id', 'node_id', 'limit', 'offset', 'class_filter', 'sort' );
+    foreach ( $legacyQueryParams as $legacy )
     {
-        if ( !isset( $parameters[$paramName] ) )
-        {
-            $parameters[$paramName] = array(
-                'name' => ucwords( str_replace( array( '_', ':' ), ' ', $paramName ) ),
-                'type' => ( strpos( $paramValue, "\n" ) !== false || strlen( $paramValue ) > 120 ) ? 'textarea' : 'text',
-            );
-        }
+        unset( $parameterValues[$legacy] );
     }
 
     $collectionItems = array();
@@ -201,7 +239,10 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
     $tpl->setVariable( 'block', $block );
     $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId" );
     $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
+    $itemViewTypes = method_exists( $handler, 'getItemViewTypes' ) ? $handler->getItemViewTypes() : array();
+
     $tpl->setVariable( 'view_types', $viewTypes );
+    $tpl->setVariable( 'item_view_types', $itemViewTypes );
     $tpl->setVariable( 'parameters', $parameters );
     $tpl->setVariable( 'parameter_values', $parameterValues );
     $tpl->setVariable( 'collection_items', $collectionItems );
@@ -210,6 +251,56 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
     $Result = array();
     $Result['pagelayout'] = false;
     $Result['content'] = $tpl->fetch( 'design:explayouts_ui_api/form_block_fields.tpl' );
+    return $Result;
+}
+
+if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/collections/([^/]+)/query/form$#', $apiPath, $m ) )
+{
+    $locale = $m[1];
+    $blockId = (int)$m[2];
+    $collectionIdentifier = $m[3];
+
+    $block = expLayoutsBlock::fetch( $blockId );
+    $collection = $block ? expLayoutsCollection::fetchByBlock( $blockId ) : null;
+    if ( !$collection )
+    {
+        $Result = array();
+        $Result['pagelayout'] = false;
+        $Result['content'] = 'Collection not found.';
+        return $Result;
+    }
+
+    $collectionId = (int)$collection->attribute( 'id' );
+    $query = expLayoutsCollectionQuery::fetchByCollection( $collectionId, true );
+    $queryType = $query ? (string)$query->attribute( 'query_type' ) : 'ibexa_content_search';
+
+    $handler = expLayoutsQueryHandlerFactory::get( $queryType );
+    if ( !$handler )
+        $handler = expLayoutsQueryHandlerFactory::get( 'ibexa_content_search' );
+
+    $parameterDefinitions = method_exists( $handler, 'getParameters' ) ? $handler->getParameters() : array();
+    $parameterValues = $query ? @json_decode( (string)$query->attribute( 'parameters' ), true ) : array();
+    if ( !is_array( $parameterValues ) )
+        $parameterValues = array();
+
+    $defaults = array();
+    foreach ( $parameterDefinitions as $name => $definition )
+        $defaults[$name] = isset( $definition['default'] ) ? $definition['default'] : '';
+    $parameterValues = array_merge( $defaults, $parameterValues );
+
+    $queryTree = expLayoutsUIApplicationApi::buildQueryParameterTree( $handler );
+
+    $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId/collections/$collectionIdentifier/query" );
+    $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
+    $tpl->setVariable( 'query_type', $queryType );
+    $tpl->setVariable( 'parameters', $queryTree['tree'] );
+    $tpl->setVariable( 'basic_params', $queryTree['basic'] );
+    $tpl->setVariable( 'advanced_params', $queryTree['advanced'] );
+    $tpl->setVariable( 'parameter_values', $parameterValues );
+
+    $Result = array();
+    $Result['pagelayout'] = false;
+    $Result['content'] = $tpl->fetch( 'design:explayouts_ui_api/form_query_edit.tpl' );
     return $Result;
 }
 
