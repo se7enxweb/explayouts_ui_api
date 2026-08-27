@@ -169,38 +169,23 @@ class expLayoutsUIApplicationApi
 
         if ( $id > 0 && $sub === 'publish' && $method === 'POST' )
         {
-            $layout = $service->load( $id );
+            $layout = $service->publish( $id );
             if ( !$layout )
-                return self::response( array( 'error' => 'Layout not found.' ), 404 );
-            $layout->publish();
-            return self::response( self::layoutToArray( $service->load( $id ) ) );
+                return self::response( array( 'error' => 'Layout not found or could not be published.' ), 404 );
+            return self::response( self::layoutToArray( $layout ) );
         }
 
         if ( $id > 0 && $sub === 'draft' && $method === 'DELETE' )
         {
-            $layout = $service->load( $id );
-            if ( !$layout )
-                return self::response( array( 'error' => 'Layout not found.' ), 404 );
-            $layout->setAttribute( 'status', 2 );
-            $layout->setAttribute( 'modified', time() );
-            $layout->store();
+            $layout = $service->discard( $id );
             return self::response( self::layoutToArray( $layout ), 200 );
         }
 
         if ( $id > 0 && $sub === 'draft' && $method === 'POST' )
         {
-            $layout = $service->load( $id );
+            $layout = $service->createDraft( $id );
             if ( !$layout )
                 return self::response( array( 'error' => 'Layout not found.' ), 404 );
-
-            if ( (int)$layout->attribute( 'status' ) === 2 )
-            {
-                expLayoutsLayout::removeDraft( (string)$layout->attribute( 'identifier' ) );
-                $layout->setAttribute( 'status', 1 );
-                $layout->setAttribute( 'modified', time() );
-                $layout->store();
-            }
-
             return self::response( self::layoutToArray( $layout ), 201 );
         }
 
@@ -478,6 +463,8 @@ class expLayoutsUIApplicationApi
                     $block->setAttribute( 'name', trim( $data['name'] ) );
                 if ( isset( $data['view_type'] ) )
                     $block->setAttribute( 'view_type', trim( $data['view_type'] ) );
+                if ( isset( $data['item_view_type'] ) )
+                    $block->setAttribute( 'item_view_type', trim( $data['item_view_type'] ) );
                 if ( isset( $data['position'] ) )
                     $block->setAttribute( 'position', (int)$data['position'] );
                 $block->setAttribute( 'modified', time() );
@@ -507,6 +494,8 @@ class expLayoutsUIApplicationApi
         if ( !$collection )
             return self::response( array( 'error' => 'Collection not found.' ), 404 );
 
+        $collectionId = (int)$collection->attribute( 'id' );
+
         if ( $sub === 'result' && $method === 'GET' )
         {
             return self::response( self::collectionResult( $collection, $block ) );
@@ -525,10 +514,69 @@ class expLayoutsUIApplicationApi
 
             if ( $collectionType !== '' )
             {
+                $oldType = (string)$collection->attribute( 'collection_type' );
+
+                $queryType = '';
+                if ( isset( $data['block_collection']['query_type'] ) && trim( $data['block_collection']['query_type'] ) !== '' )
+                    $queryType = trim( $data['block_collection']['query_type'] );
+                elseif ( isset( $data['query_type'] ) && trim( $data['query_type'] ) !== '' )
+                    $queryType = trim( $data['query_type'] );
+
                 $collection->setAttribute( 'collection_type', $collectionType );
                 $collection->store();
+
+                if ( $collectionType === 'dynamic' )
+                {
+                    if ( $queryType === '' )
+                        $queryType = 'ibexa_content_search';
+
+                    $query = expLayoutsCollectionQuery::fetchByCollection( $collectionId, true );
+
+                    if ( $oldType !== 'dynamic' || !$query || $query->attribute( 'query_type' ) !== $queryType )
+                    {
+                        $handler = expLayoutsQueryHandlerFactory::get( $queryType );
+                        $defaultParameters = self::defaultQueryParameters( $handler );
+
+                        if ( $query && $query->attribute( 'query_type' ) === $queryType )
+                        {
+                            $existing = @json_decode( (string)$query->attribute( 'parameters' ), true );
+                            if ( is_array( $existing ) )
+                                $defaultParameters = array_merge( $defaultParameters, $existing );
+                        }
+
+                        expLayoutsCollectionQuery::set( $collectionId, $queryType, json_encode( $defaultParameters ) );
+                    }
+                }
+                elseif ( $oldType === 'dynamic' )
+                {
+                    expLayoutsCollectionQuery::removeByCollection( $collectionId );
+                }
             }
             return self::response( self::collectionResult( $collection, $block ) );
+        }
+
+        if ( $sub === 'query' && ( $method === 'POST' || $method === 'PATCH' ) )
+        {
+            $data = self::requestData();
+            if ( (string)$collection->attribute( 'collection_type' ) !== 'dynamic' )
+            {
+                $collection->setAttribute( 'collection_type', 'dynamic' );
+                $collection->store();
+            }
+
+            $queryType = 'ibexa_content_search';
+            if ( isset( $data['query_type'] ) && trim( $data['query_type'] ) !== '' )
+                $queryType = trim( $data['query_type'] );
+
+            $parameters = isset( $data['parameters'] ) && is_array( $data['parameters'] ) ? $data['parameters'] : array();
+            if ( isset( $data['query_edit']['parameters'] ) && is_array( $data['query_edit']['parameters'] ) )
+                $parameters = $data['query_edit']['parameters'];
+
+            $handler = expLayoutsQueryHandlerFactory::get( $queryType );
+            $parameters = self::normalizeQueryParameters( $handler, $parameters );
+            expLayoutsCollectionQuery::set( $collectionId, $queryType, json_encode( $parameters ) );
+
+            return self::response( self::blockToArray( $block ) );
         }
 
         if ( $sub === 'items' )
@@ -633,7 +681,7 @@ class expLayoutsUIApplicationApi
 
         if ( $name === '' )
         {
-            $name = ucwords( str_replace( '_', ' ', $definition ) );
+            $name = $definition === 'twig_block' ? 'TPL Block' : ucwords( str_replace( '_', ' ', $definition ) );
         }
 
         if ( is_array( $placeholders ) && !empty( $placeholders ) )
@@ -760,7 +808,8 @@ class expLayoutsUIApplicationApi
             $content = '<p class="block-empty" style="color:#888; font-style:italic;">No content</p>';
         }
 
-        $viewTypeName = htmlspecialchars( (string)$block->attribute( 'view_type' ) );
+        $viewType = (string)$block->attribute( 'view_type' );
+        $viewTypeName = htmlspecialchars( $viewType === 'twig_block' ? 'TPL_BLOCK' : $viewType );
 
         $header =
             '<div class="block-header">' .
@@ -886,7 +935,24 @@ class expLayoutsUIApplicationApi
         $blockId = (int)$block->attribute( 'id' );
         foreach ( $parameters as $name => $value )
         {
-            expLayoutsBlockParameter::set( $blockId, trim( $name ), is_scalar( $value ) ? (string)$value : json_encode( $value ) );
+            if ( is_array( $value ) )
+            {
+                if ( isset( $value['_self'] ) )
+                    expLayoutsBlockParameter::set( $blockId, trim( $name ), (string)$value['_self'] );
+
+                foreach ( $value as $childName => $childValue )
+                {
+                    if ( $childName === '_self' )
+                        continue;
+                    if ( is_array( $childValue ) )
+                        $childValue = json_encode( $childValue );
+                    expLayoutsBlockParameter::set( $blockId, trim( $childName ), (string)$childValue );
+                }
+            }
+            else
+            {
+                expLayoutsBlockParameter::set( $blockId, trim( $name ), (string)$value );
+            }
         }
     }
 
@@ -1011,12 +1077,26 @@ class expLayoutsUIApplicationApi
         return false;
     }
 
-    protected static function collectionToArray( $collection, $block )
+    public static function collectionToArray( $collection, $block )
     {
         if ( !$collection instanceof expLayoutsCollection )
             return null;
 
         $collectionId = (int)$collection->attribute( 'id' );
+        $queryType = '';
+        $queryParameters = array();
+        if ( (string)$collection->attribute( 'collection_type' ) === 'dynamic' )
+        {
+            $query = expLayoutsCollectionQuery::fetchByCollection( $collectionId, true );
+            if ( $query )
+            {
+                $queryType = (string)$query->attribute( 'query_type' );
+                $queryParameters = @json_decode( (string)$query->attribute( 'parameters' ), true );
+                if ( !is_array( $queryParameters ) )
+                    $queryParameters = array();
+            }
+        }
+
         return array(
             'id' => $collectionId,
             'collection_id' => $collectionId,
@@ -1024,6 +1104,8 @@ class expLayoutsUIApplicationApi
             'block_id' => (int)$collection->attribute( 'block_id' ),
             'type' => (string)$collection->attribute( 'collection_type' ),
             'collection_type' => (string)$collection->attribute( 'collection_type' ),
+            'query_type' => $queryType,
+            'query_parameters' => $queryParameters,
             'offset' => (int)$collection->attribute( 'offset_value' ),
             'limit' => (int)$collection->attribute( 'limit_value' ),
             'offset_value' => (int)$collection->attribute( 'offset_value' ),
@@ -1074,7 +1156,7 @@ class expLayoutsUIApplicationApi
                 {
                     $name = (string)$object->attribute( 'name' );
                     $cmsVisible = true;
-                    $cmsUrl = '/content/edit/' . (int)$object->attribute( 'id' );
+                    $cmsUrl = '/content/view/full/' . (int)$node->attribute( 'node_id' );
                 }
                 $urlAlias = (string)$node->urlAlias();
             }
@@ -1099,43 +1181,274 @@ class expLayoutsUIApplicationApi
         );
     }
 
-    protected static function collectionResult( $collection, $block )
+    public static function collectionResult( $collection, $block )
     {
         $collectionId = (int)$collection->attribute( 'id' );
         $offset = (int)$collection->attribute( 'offset_value' );
         $limit = (int)$collection->attribute( 'limit_value' );
+        $collectionType = (string)$collection->attribute( 'collection_type' );
 
         $allItems = array();
-        foreach ( expLayoutsCollectionItem::fetchByCollection( $collectionId ) as $item )
-        {
-            $resolved = self::resolveCollectionItem( $item, $collection );
-            if ( $resolved )
-                $allItems[] = $resolved;
-        }
+        $total = 0;
 
-        // Alpha only supports manual collections with simple offset/limit slicing.
-        // Query collections would run expLayoutsQueryType here.
-        $total = count( $allItems );
-        if ( $limit > 0 )
+        if ( $collectionType === 'dynamic' )
         {
-            $items = array_slice( $allItems, $offset, $limit );
-            $overflowBefore = array_slice( $allItems, 0, $offset );
-            $overflowAfter = array_slice( $allItems, $offset + $limit );
-            $overflowItems = array_merge( $overflowBefore, $overflowAfter );
+            $dynamicResult = expLayoutsDynamicCollection::fetch( $collection );
+            if ( is_array( $dynamicResult ) && isset( $dynamicResult['items'] ) )
+            {
+                $total = isset( $dynamicResult['total'] ) ? (int)$dynamicResult['total'] : count( $dynamicResult['items'] );
+                $pos = (int)$offset;
+                foreach ( $dynamicResult['items'] as $node )
+                {
+                    $pos++;
+                    $resolved = self::resolveCollectionNode( $node, $collection, true, $pos );
+                    if ( $resolved )
+                        $allItems[] = $resolved;
+                }
+            }
         }
         else
         {
-            $items = $allItems;
-            $overflowItems = array();
+            $params = array(
+                'collection_id' => $collectionId,
+                'offset' => $offset,
+                'limit' => $limit,
+            );
+
+            if ( $block instanceof expLayoutsBlock )
+            {
+                foreach ( expLayoutsBlockParameter::fetchByBlock( (int)$block->attribute( 'id' ) ) as $param )
+                {
+                    $name = (string)$param->attribute( 'name' );
+                    $value = (string)$param->attribute( 'value' );
+                    $decoded = @json_decode( $value, true );
+                    $params[$name] = $decoded !== null ? $decoded : $value;
+                }
+            }
+
+            $queryType = isset( $params['query_type'] ) && trim( $params['query_type'] ) !== '' ? trim( $params['query_type'] ) : 'manual';
+
+            if ( $queryType === 'manual' )
+            {
+                $rawItems = expLayoutsCollectionItem::fetchByCollection( $collectionId, true );
+                $wrappers = array();
+                foreach ( $rawItems as $item )
+                {
+                    $valueId = (int)$item->attribute( 'value_id' );
+                    if ( $valueId <= 0 )
+                        continue;
+
+                    $node = eZContentObjectTreeNode::fetch( $valueId );
+                    if ( $node )
+                        $wrappers[] = array( 'node' => $node, 'item_id' => (int)$item->attribute( 'id' ) );
+                }
+
+                $total = count( $wrappers );
+                if ( $offset > 0 || $limit > 0 )
+                    $wrappers = array_slice( $wrappers, $offset, $limit > 0 ? $limit : null );
+
+                $pos = (int)$offset;
+                foreach ( $wrappers as $wrapper )
+                {
+                    $resolved = self::resolveCollectionNode( $wrapper, $collection, false, $pos );
+                    if ( $resolved )
+                        $allItems[] = $resolved;
+                    $pos++;
+                }
+            }
+            else
+            {
+                $handler = expLayoutsQueryHandlerFactory::get( $queryType );
+                if ( !$handler )
+                    $handler = new expLayoutsManualQueryHandler();
+
+                $queryResult = $handler->fetch( $params );
+                if ( is_array( $queryResult ) && isset( $queryResult['items'] ) )
+                {
+                    $total = isset( $queryResult['total'] ) ? (int)$queryResult['total'] : count( $queryResult['items'] );
+                    $pos = (int)$offset;
+                    foreach ( $queryResult['items'] as $node )
+                    {
+                        $resolved = self::resolveCollectionNode( $node, $collection, true, $pos );
+                        if ( $resolved )
+                            $allItems[] = $resolved;
+                        $pos++;
+                    }
+                }
+            }
         }
 
         $result = self::collectionToArray( $collection, $block );
-        $result['items'] = $items;
-        $result['overflow_items'] = $overflowItems;
+        $result['items'] = $allItems;
+        $result['overflow_items'] = array();
         $result['total_count'] = $total;
-        $result['item_count'] = count( $items );
+        $result['item_count'] = count( $allItems );
 
         return $result;
+    }
+
+    protected static function resolveCollectionNode( $node, $collection = null, $isDynamic = false, $position = 0 )
+    {
+        $collectionItemId = 0;
+
+        if ( is_array( $node ) && isset( $node['node'] ) )
+        {
+            $collectionItemId = isset( $node['item_id'] ) ? (int)$node['item_id'] : 0;
+            $node = $node['node'];
+        }
+
+        if ( !$node instanceof eZContentObjectTreeNode )
+        {
+            if ( is_object( $node ) && $node->hasAttribute( 'node_id' ) )
+                $node = eZContentObjectTreeNode::fetch( (int)$node->attribute( 'node_id' ) );
+            elseif ( is_array( $node ) && isset( $node['node_id'] ) )
+                $node = eZContentObjectTreeNode::fetch( (int)$node['node_id'] );
+        }
+
+        if ( !$node instanceof eZContentObjectTreeNode )
+            return null;
+
+        $object = $node->object();
+        $name = ( $object instanceof eZContentObject ) ? (string)$object->attribute( 'name' ) : (string)$node->attribute( 'name' );
+        $cmsVisible = $object instanceof eZContentObject;
+        $cmsUrl = '/content/view/full/' . (int)$node->attribute( 'node_id' );
+        $urlAlias = (string)$node->urlAlias();
+        $nodeId = (int)$node->attribute( 'node_id' );
+
+        return array(
+            'id' => $collectionItemId > 0 ? $collectionItemId : $nodeId,
+            'collection_id' => ( $collection instanceof expLayoutsCollection ) ? (int)$collection->attribute( 'id' ) : 0,
+            'value' => $nodeId,
+            'value_id' => $nodeId,
+            'value_type' => 'ez_location',
+            'item_type' => $isDynamic ? 'dynamic' : 'manual',
+            'position' => (int)$position,
+            'name' => $name,
+            'is_dynamic' => $isDynamic,
+            'visible' => true,
+            'cms_visible' => $cmsVisible,
+            'can_remove_item' => !$isDynamic,
+            'cms_url' => $cmsUrl,
+            'url' => $urlAlias,
+            'slot_id' => null,
+        );
+    }
+
+    protected static function defaultQueryParameters( $handler )
+    {
+        $parameters = array();
+        if ( $handler && method_exists( $handler, 'getParameters' ) )
+        {
+            foreach ( $handler->getParameters() as $name => $definition )
+            {
+                $parameters[$name] = isset( $definition['default'] ) ? $definition['default'] : '';
+            }
+        }
+        return $parameters;
+    }
+
+    protected static function normalizeQueryParameters( $handler, $parameters )
+    {
+        $normalized = array();
+        if ( $handler && method_exists( $handler, 'getParameters' ) )
+        {
+            foreach ( $handler->getParameters() as $name => $definition )
+            {
+                $type = isset( $definition['type'] ) ? $definition['type'] : 'text';
+                if ( $type === 'checkbox' )
+                {
+                    $normalized[$name] = isset( $parameters[$name] ) && ( $parameters[$name] === '1' || $parameters[$name] === 1 || $parameters[$name] === true || $parameters[$name] === 'on' ) ? '1' : '0';
+                }
+                elseif ( $type === 'multiselect' )
+                {
+                    $value = isset( $parameters[$name] ) ? $parameters[$name] : array();
+                    $normalized[$name] = is_array( $value ) ? array_values( $value ) : ( $value !== '' ? array( $value ) : array() );
+                }
+                else
+                {
+                    $normalized[$name] = isset( $parameters[$name] ) ? trim( (string)$parameters[$name] ) : ( isset( $definition['default'] ) ? $definition['default'] : '' );
+                }
+            }
+        }
+        else
+        {
+            $normalized = $parameters;
+        }
+        return $normalized;
+    }
+
+    public static function buildQueryParameterTree( $handler )
+    {
+        $definitions = ( $handler && method_exists( $handler, 'getParameters' ) ) ? $handler->getParameters() : array();
+
+        $compoundMap = array(
+            'use_topic_from_current_content' => array( 'reverse' => true, 'children' => array( 'topic_content_id' ) ),
+            'use_current_location' => array( 'reverse' => true, 'children' => array( 'parent_location_id' ) ),
+            'filter_by_content_type' => array( 'reverse' => false, 'children' => array( 'content_types', 'content_types_filter' ) ),
+            'filter_by_section' => array( 'reverse' => false, 'children' => array( 'sections' ) ),
+            'filter_by_object_state' => array( 'reverse' => false, 'children' => array( 'object_states' ) ),
+        );
+
+        $basic = array( 'use_topic_from_current_content', 'use_current_location', 'sort_type', 'sort_direction' );
+        $advanced = array();
+
+        $tree = array();
+        $used = array();
+
+        // Mark compound children as used so they are rendered only inside their parent.
+        foreach ( $compoundMap as $parentName => $compoundInfo )
+        {
+            if ( isset( $definitions[$parentName] ) )
+            {
+                foreach ( $compoundInfo['children'] as $childName )
+                {
+                    if ( isset( $definitions[$childName] ) )
+                        $used[$childName] = true;
+                }
+            }
+        }
+
+        foreach ( $definitions as $name => $definition )
+        {
+            if ( isset( $used[$name] ) )
+                continue;
+
+            $def = $definition;
+            if ( isset( $compoundMap[$name] ) )
+            {
+                $def['type'] = 'compound_checkbox';
+                $def['no_self'] = true;
+                $def['reverse'] = $compoundMap[$name]['reverse'];
+                $def['children'] = array();
+                foreach ( $compoundMap[$name]['children'] as $childName )
+                {
+                    if ( isset( $definitions[$childName] ) )
+                        $def['children'][$childName] = $definitions[$childName];
+                }
+            }
+
+            $tree[$name] = $def;
+            $used[$name] = true;
+
+            if ( in_array( $name, $basic ) || ( isset( $compoundMap[$name] ) && in_array( $name, $basic ) ) )
+            {
+                // non-advanced
+            }
+            else
+            {
+                $advanced[] = $name;
+            }
+        }
+
+        // Order basic params explicitly; any that are not in the tree are skipped.
+        $orderedBasic = array();
+        foreach ( $basic as $name )
+        {
+            if ( isset( $tree[$name] ) )
+                $orderedBasic[] = $name;
+        }
+
+        return array( 'tree' => $tree, 'basic' => $orderedBasic, 'advanced' => $advanced );
     }
 
     protected static function handleRules( $parts )
