@@ -169,7 +169,7 @@
 
     <script src="{'vendor/ckeditor/ckeditor.js'|ezdesign('no')}" defer></script>
     <script src="{'vendor/ace-editor/ace.js'|ezdesign('no')}" defer></script>
-    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}" defer></script>
+    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20260833" defer></script>
     {literal}<script>
     document.addEventListener('click', function(e) {
         var toggle = e.target.closest('.dropdown-toggle');
