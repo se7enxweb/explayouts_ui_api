@@ -71,6 +71,7 @@
         #tab-content-tab .layouts-form .row-input label { display: block; font-size: 13px; color: #ddd; margin-bottom: 4px; font-weight: normal; }
         #tab-content-tab .layouts-form .row-input select,
         #tab-content-tab .layouts-form .row-input input[type="text"],
+        #tab-content-tab .layouts-form .row-input input[type="number"],
         #tab-content-tab .layouts-form .row-input textarea {
             width: 100%; height: 36px; padding: 0 8px; background: #fff; border: 1px solid #777; color: #333; border-radius: 2px; font-size: 13px; box-sizing: border-box;
         }
