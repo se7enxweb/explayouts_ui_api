@@ -59,6 +59,20 @@ class expLayoutsUIApplicationApi
         return self::response( array( 'error' => 'Unknown resource.' ), 404 );
     }
 
+    protected static function loadLayoutForApi( $service, $layoutId, $fallback = 'load' )
+    {
+        $published = isset( $_GET['published'] ) ? (string)$_GET['published'] : '';
+        if ( $published === 'false' )
+            return $service->loadDraft( $layoutId );
+        if ( $published === 'true' )
+            return $service->loadPublished( $layoutId );
+        if ( $fallback === 'loadDraft' )
+            return $service->loadDraft( $layoutId );
+        if ( $fallback === 'loadPublished' )
+            return $service->loadPublished( $layoutId );
+        return $service->load( $layoutId );
+    }
+
     protected static function handleConfig( $parts )
     {
         $sub = isset( $parts[0] ) ? $parts[0] : '';
@@ -220,14 +234,7 @@ class expLayoutsUIApplicationApi
 
         if ( $id > 0 )
         {
-            $published = isset( $_GET['published'] ) ? (string)$_GET['published'] : '';
-            if ( $published === 'false' )
-                $layout = $service->loadDraft( $id );
-            else if ( $published === 'true' )
-                $layout = $service->loadPublished( $id );
-            else
-                $layout = $service->load( $id );
-
+            $layout = self::loadLayoutForApi( $service, $id );
             return self::response( $layout ? self::layoutToArray( $layout ) : array( 'error' => 'Layout not found.' ), $layout ? 200 : 404 );
         }
 
@@ -249,9 +256,10 @@ class expLayoutsUIApplicationApi
                 return self::response( array( 'error' => 'Block type is required.' ), 422 );
 
             $service = new expLayoutsCoreLayoutService();
-            $layout = $service->load( $layoutId );
+            $layout = self::loadLayoutForApi( $service, $layoutId, 'loadDraft' );
             if ( !$layout )
                 return self::response( array( 'error' => 'Layout not found.' ), 404 );
+            $layoutId = (int)$layout->attribute( 'id' );
 
             $parentBlockId = isset( $_POST['parent_block_id'] ) ? (int)$_POST['parent_block_id'] : 0;
             $parentPlaceholder = isset( $_POST['parent_placeholder'] ) ? trim( $_POST['parent_placeholder'] ) : '';
@@ -299,11 +307,13 @@ class expLayoutsUIApplicationApi
             return self::response( self::blockToArray( $block ), 201 );
         }
 
-        $layout = expLayoutsLayout::fetch( $layoutId );
+        $service = new expLayoutsCoreLayoutService();
+        $layout = self::loadLayoutForApi( $service, $layoutId, 'loadDraft' );
         if ( !$layout )
             return self::response( array( 'values' => array(), 'total' => 0 ) );
 
         $zoneBlocks = array();
+        $layoutId = (int)$layout->attribute( 'id' );
         $zones = expLayoutsZone::fetchByLayout( $layoutId, null );
         foreach ( $zones as $zone )
         {
@@ -331,9 +341,11 @@ class expLayoutsUIApplicationApi
             if ( $layoutId === 0 || $zoneIdentifier === '' || $definitionIdentifier === '' )
                 return self::response( array( 'error' => 'Missing required block fields.' ), 422 );
 
-            $layout = expLayoutsLayout::fetch( $layoutId );
+            $service = new expLayoutsCoreLayoutService();
+            $layout = self::loadLayoutForApi( $service, $layoutId, 'loadDraft' );
             if ( !$layout )
                 return self::response( array( 'error' => 'Layout not found.' ), 404 );
+            $layoutId = (int)$layout->attribute( 'id' );
 
             $zoneObject = null;
             foreach ( expLayoutsZone::fetchByLayout( $layoutId, null ) as $z )
