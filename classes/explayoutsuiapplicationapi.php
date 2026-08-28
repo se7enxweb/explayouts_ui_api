@@ -7,56 +7,69 @@ class expLayoutsUIApplicationApi
         eZDebug::setHandleType( eZDebug::HANDLE_NONE );
         header( 'Content-Type: application/json' );
 
-        $resource = isset( $parts[0] ) ? $parts[0] : '';
-
-        if ( $resource === 'config' )
-            return self::handleConfig( array_slice( $parts, 1 ) );
-
-        $layoutsIndex = array_search( 'layouts', $parts );
-        $blocksIndex = array_search( 'blocks', $parts );
-
-        if ( $layoutsIndex !== false )
+        try
         {
-            $subResource = isset( $parts[$layoutsIndex + 2] ) ? $parts[$layoutsIndex + 2] : '';
-            if ( $subResource === 'blocks' )
-                return self::handleBlocks( $parts, $layoutsIndex );
+            $resource = isset( $parts[0] ) ? $parts[0] : '';
 
-            return self::handleLayouts( $parts, $layoutsIndex );
+            if ( $resource === 'config' )
+                return self::handleConfig( array_slice( $parts, 1 ) );
+
+            $layoutsIndex = array_search( 'layouts', $parts );
+            $blocksIndex = array_search( 'blocks', $parts );
+
+            if ( $layoutsIndex !== false )
+            {
+                $subResource = isset( $parts[$layoutsIndex + 2] ) ? $parts[$layoutsIndex + 2] : '';
+                if ( $subResource === 'blocks' )
+                    return self::handleBlocks( $parts, $layoutsIndex );
+
+                return self::handleLayouts( $parts, $layoutsIndex );
+            }
+
+            if ( $blocksIndex !== false )
+            {
+                return self::handleBlock( $parts, $blocksIndex );
+            }
+
+            if ( $resource === 'rules' )
+                return self::handleRules( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'mappings' )
+                return self::handleMappings( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'transfer' )
+                return self::handleTransfer( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'collections' )
+                return self::handleCollections( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'content_browser' )
+                return self::handleContentBrowser( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'forms' )
+                return self::handleForms( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'parameters' )
+                return self::handleParameters( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'versions' )
+                return self::handleVersions( array_slice( $parts, 1 ) );
+
+            if ( $resource === 'share' )
+                return self::handleShare( array_slice( $parts, 1 ) );
+
+            return self::response( array( 'error' => 'Unknown resource.' ), 404 );
         }
-
-        if ( $blocksIndex !== false )
+        catch ( Throwable $e )
         {
-            return self::handleBlock( $parts, $blocksIndex );
+            $server = isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : '?';
+            $uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
+            eZLog::write( 'expLayoutsUIApplicationApi fatal (' . $server . ' ' . $uri . '): ' . $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine() . "\n" . $e->getTraceAsString(), 'error.log' );
+            return self::response( array(
+                'error' => 'Internal error',
+                'details' => $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine(),
+            ), 500 );
         }
-
-        if ( $resource === 'rules' )
-            return self::handleRules( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'mappings' )
-            return self::handleMappings( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'transfer' )
-            return self::handleTransfer( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'collections' )
-            return self::handleCollections( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'content_browser' )
-            return self::handleContentBrowser( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'forms' )
-            return self::handleForms( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'parameters' )
-            return self::handleParameters( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'versions' )
-            return self::handleVersions( array_slice( $parts, 1 ) );
-
-        if ( $resource === 'share' )
-            return self::handleShare( array_slice( $parts, 1 ) );
-
-        return self::response( array( 'error' => 'Unknown resource.' ), 404 );
     }
 
     protected static function loadLayoutForApi( $service, $layoutId, $fallback = 'load' )
