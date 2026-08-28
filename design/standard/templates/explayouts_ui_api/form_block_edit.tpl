@@ -38,7 +38,7 @@
                             <div data-linked-value="dynamic">
                                 <label for="query-type">Query type</label>
                                 <select id="query-type" name="block_collection[query_type]" class="form-control js-skip-on-change js-always-show">
-                                    <option {if eq( $collection.query_type, 'ibexa_content_search' )}selected="selected"{/if} value="ibexa_content_search">Ibexa</option>
+                                    <option {if eq( $collection.query_type, 'exponential_content_search' )}selected="selected"{/if} value="exponential_content_search">Exponential</option>
                                     <option {if eq( $collection.query_type, 'content_by_topic' )}selected="selected"{/if} value="content_by_topic">Topics</option>
                                 </select>
                             </div>

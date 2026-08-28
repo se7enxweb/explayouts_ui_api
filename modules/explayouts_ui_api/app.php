@@ -272,11 +272,11 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/collections/([^/]+)/query/form$#',
 
     $collectionId = (int)$collection->attribute( 'id' );
     $query = expLayoutsCollectionQuery::fetchByCollection( $collectionId, true );
-    $queryType = $query ? (string)$query->attribute( 'query_type' ) : 'ibexa_content_search';
+    $queryType = $query ? (string)$query->attribute( 'query_type' ) : 'exponential_content_search';
 
     $handler = expLayoutsQueryHandlerFactory::get( $queryType );
     if ( !$handler )
-        $handler = expLayoutsQueryHandlerFactory::get( 'ibexa_content_search' );
+        $handler = expLayoutsQueryHandlerFactory::get( 'exponential_content_search' );
 
     $parameterDefinitions = method_exists( $handler, 'getParameters' ) ? $handler->getParameters() : array();
     $parameterValues = $query ? @json_decode( (string)$query->attribute( 'parameters' ), true ) : array();

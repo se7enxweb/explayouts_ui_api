@@ -528,7 +528,7 @@ class expLayoutsUIApplicationApi
                 if ( $collectionType === 'dynamic' )
                 {
                     if ( $queryType === '' )
-                        $queryType = 'ibexa_content_search';
+                        $queryType = 'exponential_content_search';
 
                     $query = expLayoutsCollectionQuery::fetchByCollection( $collectionId, true );
 
@@ -563,7 +563,7 @@ class expLayoutsUIApplicationApi
                 $collection->setAttribute( 'collection_type', 'dynamic' );
             }
 
-            $queryType = 'ibexa_content_search';
+            $queryType = 'exponential_content_search';
             if ( isset( $data['query_type'] ) && trim( $data['query_type'] ) !== '' )
                 $queryType = trim( $data['query_type'] );
 
