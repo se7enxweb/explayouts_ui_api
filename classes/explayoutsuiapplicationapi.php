@@ -103,8 +103,18 @@ class expLayoutsUIApplicationApi
 
     protected static function blockTypes()
     {
-        $group = 'standard';
+        $groupNames = array(
+            'basic' => 'Basic',
+            'components' => 'Components',
+            'listing' => 'Listing',
+            'gallery' => 'Gallery',
+            'containers' => 'Containers',
+            'placeholders' => 'Placeholders',
+            'standard' => 'Standard',
+        );
+
         $groupBlockTypes = array();
+        $groups = array();
         $blockTypes = array();
 
         foreach ( expLayoutsBlockHandlerFactory::getAvailableBlocks() as $identifier )
@@ -113,12 +123,25 @@ class expLayoutsUIApplicationApi
             if ( !$info )
                 continue;
 
-            $groupBlockTypes[] = (string)$identifier;
+            $category = !empty( $info['category'] ) ? (string)$info['category'] : 'standard';
+            $groupName = isset( $groupNames[$category] ) ? $groupNames[$category] : ucwords( str_replace( '_', ' ', $category ) );
+
+            if ( !isset( $groups[$category] ) )
+            {
+                $groups[$category] = array(
+                    'identifier' => $category,
+                    'name' => $groupName,
+                    'enabled' => true,
+                    'block_types' => array(),
+                );
+            }
+
+            $groups[$category]['block_types'][] = (string)$identifier;
             $blockTypes[] = array(
                 'identifier' => (string)$identifier,
                 'name' => (string)$info['name'],
                 'definition_identifier' => (string)$identifier,
-                'group_name' => $group,
+                'group_name' => $category,
                 'enabled' => true,
                 'is_container' => !empty( $info['is_container'] ),
                 'icon' => '',
@@ -127,16 +150,22 @@ class expLayoutsUIApplicationApi
             );
         }
 
+        $orderedGroups = array();
+        foreach ( array_keys( $groupNames ) as $category )
+        {
+            if ( isset( $groups[$category] ) )
+                $orderedGroups[] = $groups[$category];
+        }
+
+        foreach ( $groups as $category => $group )
+        {
+            if ( !in_array( $category, array_keys( $groupNames ), true ) )
+                $orderedGroups[] = $group;
+        }
+
         return self::response( array(
             'block_types' => $blockTypes,
-            'block_type_groups' => array(
-                array(
-                    'identifier' => $group,
-                    'name' => 'Standard',
-                    'enabled' => true,
-                    'block_types' => $groupBlockTypes,
-                ),
-            ),
+            'block_type_groups' => $orderedGroups,
         ) );
     }
 
@@ -691,7 +720,7 @@ class expLayoutsUIApplicationApi
 
         if ( $name === '' )
         {
-            $name = $definition === 'twig_block' ? 'TPL Block' : ucwords( str_replace( '_', ' ', $definition ) );
+            $name = $definition === 'tpl_block' ? 'TPL Block' : ucwords( str_replace( '_', ' ', $definition ) );
         }
 
         if ( is_array( $placeholders ) && !empty( $placeholders ) )
@@ -758,14 +787,14 @@ class expLayoutsUIApplicationApi
                 $richContent = '<p></p>';
             $content .= '<div class="rich-text-editor" data-attr="content" data-ck-editor="1">' . $richContent . '</div>';
         }
-        elseif ( $definition === 'twig_block' )
+        elseif ( $definition === 'tpl_block' )
         {
             $blockName = isset( $values['block_name'] ) ? (string)$values['block_name'] : '';
             if ( $blockName === '' )
                 $blockName = '..........................';
-            $content .= '<div class="twig-block-info" data-attr="block_name">' .
-                '<span class="twig-block-icon"><i class="material-icons">code</i></span>' .
-                '<span class="twig-block-label">Template block:</span> ' .
+            $content .= '<div class="tpl-block-info" data-attr="block_name">' .
+                '<span class="tpl-block-icon"><i class="material-icons">code</i></span>' .
+                '<span class="tpl-block-label">Template block:</span> ' .
                 '<strong>' . htmlspecialchars( $blockName ) . '</strong>' .
             '</div>';
         }
@@ -819,7 +848,7 @@ class expLayoutsUIApplicationApi
         }
 
         $viewType = (string)$block->attribute( 'view_type' );
-        $viewTypeName = htmlspecialchars( $viewType === 'twig_block' ? 'TPL_BLOCK' : $viewType );
+        $viewTypeName = htmlspecialchars( $viewType === 'tpl_block' ? 'TPL_BLOCK' : $viewType );
 
         $header =
             '<div class="block-header">' .
