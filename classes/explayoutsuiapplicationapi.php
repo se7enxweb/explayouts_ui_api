@@ -220,7 +220,14 @@ class expLayoutsUIApplicationApi
 
         if ( $id > 0 )
         {
-            $layout = $service->load( $id );
+            $published = isset( $_GET['published'] ) ? (string)$_GET['published'] : '';
+            if ( $published === 'false' )
+                $layout = $service->loadDraft( $id );
+            else if ( $published === 'true' )
+                $layout = $service->loadPublished( $id );
+            else
+                $layout = $service->load( $id );
+
             return self::response( $layout ? self::layoutToArray( $layout ) : array( 'error' => 'Layout not found.' ), $layout ? 200 : 404 );
         }
 
