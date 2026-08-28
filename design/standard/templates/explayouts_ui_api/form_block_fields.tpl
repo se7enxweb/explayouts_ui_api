@@ -40,6 +40,15 @@
             </select>
         </div>
     </div>
+    {elseif count( $view_types )|gt( 1 )}
+    <div class="row-input">
+        <label for="design_edit_view_type">View type</label>
+        <select id="design_edit_view_type" name="view_type" class="view-type js-skip-on-change">
+            {foreach $view_types as $view_type}
+                <option value="{$view_type|wash()}" {if eq( $view_type, $block.view_type )}selected="selected"{/if}>{$view_type|wash()}</option>
+            {/foreach}
+        </select>
+    </div>
     {/if}
 
     {foreach $parameters as $param_name => $param}

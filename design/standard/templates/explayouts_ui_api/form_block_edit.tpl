@@ -56,6 +56,7 @@
             </div>
         </div>
 
+        {if and( $collection, or( eq( $collection.collection_type, 'manual' ), eq( $collection.collection_type, 'dynamic' ) ) )}
         <div class="sidebar-panel">
             <a class="toggle-link" role="button" data-toggle="collapse" href="#collapseItems" aria-expanded="true" aria-controls="collapseItems">Items</a>
             <div class="collapse in" id="collapseItems">
@@ -69,6 +70,7 @@
                 </div>
             </div>
         </div>
+        {/if}
     </div>
 
     <div class="tab-pane" id="tab-design-tab">
