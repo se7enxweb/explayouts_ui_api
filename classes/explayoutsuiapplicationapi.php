@@ -561,7 +561,6 @@ class expLayoutsUIApplicationApi
             if ( (string)$collection->attribute( 'collection_type' ) !== 'dynamic' )
             {
                 $collection->setAttribute( 'collection_type', 'dynamic' );
-                $collection->store();
             }
 
             $queryType = 'ibexa_content_search';
@@ -571,6 +570,17 @@ class expLayoutsUIApplicationApi
             $parameters = isset( $data['parameters'] ) && is_array( $data['parameters'] ) ? $data['parameters'] : array();
             if ( isset( $data['query_edit']['parameters'] ) && is_array( $data['query_edit']['parameters'] ) )
                 $parameters = $data['query_edit']['parameters'];
+
+            $offset = isset( $data['offset'] ) ? (int)$data['offset'] : 0;
+            if ( isset( $data['query_edit']['offset'] ) )
+                $offset = (int)$data['query_edit']['offset'];
+            $limit = isset( $data['limit'] ) ? (int)$data['limit'] : 0;
+            if ( isset( $data['query_edit']['limit'] ) )
+                $limit = (int)$data['query_edit']['limit'];
+
+            $collection->setAttribute( 'offset_value', $offset );
+            $collection->setAttribute( 'limit_value', $limit );
+            $collection->store();
 
             $handler = expLayoutsQueryHandlerFactory::get( $queryType );
             $parameters = self::normalizeQueryParameters( $handler, $parameters );

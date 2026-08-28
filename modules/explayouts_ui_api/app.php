@@ -297,6 +297,8 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/collections/([^/]+)/query/form$#',
     $tpl->setVariable( 'basic_params', $queryTree['basic'] );
     $tpl->setVariable( 'advanced_params', $queryTree['advanced'] );
     $tpl->setVariable( 'parameter_values', $parameterValues );
+    $tpl->setVariable( 'offset', (int)$collection->attribute( 'offset_value' ) );
+    $tpl->setVariable( 'limit', (int)$collection->attribute( 'limit_value' ) );
 
     $Result = array();
     $Result['pagelayout'] = false;
