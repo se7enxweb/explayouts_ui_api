@@ -24,14 +24,16 @@
     {/if}
 
     <div class="sidebar-panel offset-limit">
-        <h3>Offset & number of items</h3>
-        <div class="row-input">
-            <label for="query_edit_offset">Offset</label>
-            <input type="number" id="query_edit_offset" name="offset" value="{if is_set( $offset )}{$offset|wash()}{else}0{/if}" min="0" />
-        </div>
-        <div class="row-input">
-            <label for="query_edit_limit">Number of items</label>
-            <input type="number" id="query_edit_limit" name="limit" value="{if is_set( $limit )}{$limit|wash()}{else}0{/if}" min="0" />
+        <a class="toggle-link sub-toggle" role="button" data-toggle="collapse" href="#collapseOffsetLimit" aria-expanded="false" aria-controls="collapseOffsetLimit">Offset & number of items</a>
+        <div class="collapse" id="collapseOffsetLimit">
+            <div class="row-input">
+                <label for="query_edit_offset">Offset</label>
+                <input type="number" id="query_edit_offset" name="offset" value="{if is_set( $offset )}{$offset|wash()}{else}0{/if}" min="0" />
+            </div>
+            <div class="row-input">
+                <label for="query_edit_limit">Number of items</label>
+                <input type="number" id="query_edit_limit" name="limit" value="{if is_set( $limit )}{$limit|wash()}{else}0{/if}" min="0" />
+            </div>
         </div>
     </div>
 </form>
