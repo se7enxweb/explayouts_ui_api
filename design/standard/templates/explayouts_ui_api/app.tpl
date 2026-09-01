@@ -43,61 +43,379 @@
         #ng-cancel-link:not(.btn) { position: fixed; top: 10px; right: 10px; z-index: 10000; display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.6rem 1rem; border-radius: 4px; background: #2563eb; color: #fff; font-family: Roboto, Helvetica Neue, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; line-height: 1; cursor: pointer; border: 0; }
         #ng-cancel-link:not(.btn):hover { background: #1d4ed8; }
 
-        /* Design tab form overrides to match Nexus dark sidebar */
-        #tab-design-tab .layouts-form .row-input { margin-bottom: 1em; }
-        #tab-design-tab .layouts-form .row-input label { display: block; font-size: 13px; color: #ddd; margin-bottom: 4px; font-weight: normal; }
-        #tab-design-tab .layouts-form .row-input select,
-        #tab-design-tab .layouts-form .row-input input[type="text"],
-        #tab-design-tab .layouts-form .row-input input[type="number"],
-        #tab-design-tab .layouts-form .row-input textarea {
-            width: 100%; height: 36px; padding: 0 8px; background: #555; border: 1px solid #777; color: #fff; border-radius: 2px; font-size: 13px; box-sizing: border-box;
+        /* Right sidebar / query browser styles to match Nexus */
+        #aside-tabs {
+            background: #404040;
+            color: #fff;
+            padding: 15px;
+            font-size: 16px;
+            box-sizing: border-box;
         }
-        #tab-design-tab .layouts-form .row-input select { appearance: none; -webkit-appearance: none; padding-right: 2em;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEuNDEiPjxwYXRoIGQ9Ik01LjUzIDcuNDlMLjIgMi4xNWEuNjYuNjYgMCAwIDEgMC0uOTNMLjgyLjU5YS42Ni42NiAwIDAgMS45MyAwTDYgNC44MiAxMC4yNS42YS42Ni42NiAwIDAxLjkzIDBsLjYzLjYzYy4yNS4yNS4yNS42NyAwIC45M0w2LjQ3IDcuNDlhLjY2LjY2IDAgMDEtLjk0IDB6IiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=');
-            background-repeat: no-repeat; background-position: right .75em center; background-size: .75em auto;
+        #aside-tabs h4 {
+            font-size: 11px;
+            font-weight: 400;
+            margin: 16px 0 12px;
+            text-transform: uppercase;
+            color: #9b9b9b;
         }
-        #tab-design-tab .layouts-form .row-input input[type="checkbox"] { position: absolute; left: -9999em; }
-        #tab-design-tab .layouts-form .row-input input[type="checkbox"] + label { position: relative; padding-left: 1.75em; cursor: pointer; }
-        #tab-design-tab .layouts-form .row-input input[type="checkbox"] + label::before { content: ''; position: absolute; left: 0; top: 0; width: 1.25em; height: 1.25em; border: 1px solid #777; background: #555; }
-        #tab-design-tab .layouts-form .row-input input[type="checkbox"]:checked + label::before { background: #4a90e2; border-color: #4a90e2; }
-        #tab-design-tab .layouts-form .row-input input[type="checkbox"]:checked + label::after { content: '✓'; position: absolute; left: 0.25em; top: 0.05em; color: #fff; font-size: 1em; }
-        #tab-design-tab .layouts-form .children { display: none; margin-left: 1.5em; margin-top: 0.5em; }
-        #tab-design-tab .layouts-form input[type="checkbox"]:checked ~ .children { display: block; }
-        #tab-design-tab .layouts-form select option.hidden { display: none; }
+        #aside-tabs .aside-tab-control {
+            list-style-type: none;
+            display: flex;
+            margin: 0 0 16px;
+            padding: 0;
+        }
+        #aside-tabs .aside-tab-control li {
+            flex: 1;
+            display: flex;
+        }
+        #aside-tabs .aside-tab-control li a {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid #fff;
+            color: #fff;
+            width: 100%;
+            padding: 9px 4px;
+            display: flex;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #aside-tabs .aside-tab-control li:first-child a {
+            border-radius: 2px 0 0 2px;
+        }
+        #aside-tabs .aside-tab-control li:last-child a {
+            border-radius: 0 2px 2px 0;
+        }
+        #aside-tabs .aside-tab-control li.active a {
+            background: #fff;
+            border: 0;
+            color: #404040;
+        }
 
-        /* Content tab query builder form */
-        #tab-content-tab { box-sizing: border-box; padding: 0 1em; }
-        #tab-content-tab .layouts-form .row-input { margin-bottom: 1em; }
-        #tab-content-tab .layouts-form .row-input label { display: block; font-size: 13px; color: #ddd; margin-bottom: 4px; font-weight: normal; }
-        #tab-content-tab .layouts-form .row-input select,
-        #tab-content-tab .layouts-form .row-input input[type="text"],
-        #tab-content-tab .layouts-form .row-input input[type="number"],
-        #tab-content-tab .layouts-form .row-input textarea {
-            width: 100%; height: 36px; padding: 0 8px; background: #fff; border: 1px solid #777; color: #333; border-radius: 2px; font-size: 13px; box-sizing: border-box;
+        #aside-tabs .tab-pane {
+            display: none;
+            box-sizing: border-box;
         }
-        #tab-content-tab .layouts-form .row-input select { appearance: none; -webkit-appearance: none; padding-right: 2em;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEuNDEiPjxwYXRoIGQ9Ik01LjUzIDcuNDlMLjIgMi4xNWEuNjYuNjYgMCAwIDEgMC0uOTNMLjgyLjU5YS42Ni42NiAwIDAgMS45MyAwTDYgNC44MiAxMC4yNS42YS42Ni42NiAwIDAxLjkzIDBsLjYzLjYzYy4yNS4yNS4yNS42NyAwIC45M0w2LjQ3IDcuNDlhLjY2LjY2IDAgMDEtLjk0IDB6IiBmaWxsPSIjMzMzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=');
-            background-repeat: no-repeat; background-position: right .75em center; background-size: .75em auto;
+        #aside-tabs .tab-pane.active {
+            display: block;
         }
-        #tab-content-tab .layouts-form .row-input select[multiple] { height: auto; min-height: 140px; }
-        #tab-content-tab .layouts-form .row-input input[type="checkbox"] { position: absolute; left: -9999em; }
-        #tab-content-tab .layouts-form .row-input input[type="checkbox"] + label { position: relative; padding-left: 1.75em; cursor: pointer; color: #ddd; line-height: 1.4; }
-        #tab-content-tab .layouts-form .row-input input[type="checkbox"] + label::before { content: ''; position: absolute; left: 0; top: 0; width: 1.25em; height: 1.25em; border: 1px solid #777; background: #555; }
-        #tab-content-tab .layouts-form .row-input input[type="checkbox"]:checked + label::before { background: #4a90e2; border-color: #4a90e2; }
-        #tab-content-tab .layouts-form .row-input input[type="checkbox"]:checked + label::after { content: '✓'; position: absolute; left: 0.25em; top: 0.05em; color: #fff; font-size: 1em; }
-        #tab-content-tab .layouts-form .children { display: none; margin-left: 0; margin-top: 0.5em; }
-        #tab-content-tab .layouts-form input[type="checkbox"]:checked ~ .children { display: block; }
-        #tab-content-tab .layouts-form [data-compound-reverse] .children { display: block; }
-        #tab-content-tab .layouts-form [data-compound-reverse] input[type="checkbox"]:checked ~ .children { display: none; }
-        #tab-content-tab .sidebar-panel { margin-bottom: 0.75em; }
-        #tab-content-tab .sidebar-panel .toggle-link { display: block; padding: 0.5em 0; color: #ddd; font-size: 13px; text-transform: uppercase; border-bottom: 1px solid #555; text-decoration: none; }
-        #tab-content-tab .input-browse { background: #fff; border: 1px solid #777; border-radius: 2px; height: 36px; box-sizing: border-box; margin: 0; }
-        #tab-content-tab .input-browse .js-trigger { color: #333; text-decoration: none; align-items: center; }
-        #tab-content-tab .input-browse .js-name { font-size: 13px; color: #333; }
-        #tab-content-tab .input-browse .js-clear { color: #333; align-items: center; }
-        .input-browse .material-icons { font-size: 20px; color: #666; pointer-events: none; }
-        #tab-content-tab .js-view-cms { display: inline-block; margin-top: 4px; font-size: 12px; color: #4a90e2; text-decoration: none; }
-        #tab-content-tab .js-view-cms:hover { text-decoration: underline; }
+        #aside-tabs .sidebar-panel + .sidebar-panel {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid hsla(0, 0%, 100%, .2);
+        }
+
+        #aside-tabs .layouts-form,
+        #aside-tabs .query-form,
+        #aside-tabs .content-form {
+            color: #fff;
+        }
+
+        #aside-tabs .row-input,
+        #aside-tabs .checkbox {
+            margin-bottom: 16px;
+        }
+        #aside-tabs .row-input > label,
+        #aside-tabs .xeditable .current > label {
+            display: block;
+            font-weight: 400;
+            font-size: 12px;
+            color: #9b9b9b;
+            margin: 0 0 4px;
+        }
+
+        #aside-tabs .row-input input[type="text"],
+        #aside-tabs .row-input input[type="number"],
+        #aside-tabs .row-input input[type="url"],
+        #aside-tabs .row-input input[type="email"],
+        #aside-tabs .row-input textarea,
+        #aside-tabs select,
+        #aside-tabs .xeditable .js-edit {
+            border: 0;
+            box-shadow: none;
+            border-radius: 2px;
+            padding: 0 12px;
+            width: 100%;
+            height: 36px;
+            font-size: 12px;
+            margin: 0 0 16px;
+            background: #666;
+            color: #fff;
+            box-sizing: border-box;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        #aside-tabs select {
+            background: #666 url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEuNDEiPjxwYXRoIGQ9Ik01LjUzIDcuNDlMLjIgMi4xNWEuNjYuNjYgMCAwIDEgMC0uOTNMLjgyLjU5YS42Ni42NiAwIDAgMS45MyAwTDYgNC44MiAxMC4yNS42YS42Ni42NiAwIDAxLjkzIDBsLjYzLjYzYy4yNS4yNS4yNS42NyAwIC45M0w2LjQ3IDcuNDlhLjY2LjY2IDAgMDEtLjk0IDB6IiBmaWxsPSIjZmZmIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=') no-repeat;
+            background-position: right 8px center;
+            background-size: 13px auto;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+        #aside-tabs select[multiple] {
+            height: auto;
+            min-height: 140px;
+            padding: 4px 0;
+            background-image: none;
+        }
+        #aside-tabs select option,
+        #aside-tabs select optgroup,
+        #aside-tabs select[multiple] option,
+        #aside-tabs select[multiple] optgroup {
+            color: #fff;
+            background: #666;
+        }
+        #aside-tabs select[multiple] option {
+            padding: 2px 12px;
+        }
+        #aside-tabs select[multiple] optgroup[label] {
+            padding: 2px 12px;
+        }
+        #aside-tabs select[multiple] optgroup[label] option {
+            margin: 0 -12px;
+        }
+        #aside-tabs select option:checked,
+        #aside-tabs select option:hover,
+        #aside-tabs select[multiple] option:checked,
+        #aside-tabs select[multiple] option:hover {
+            background: #4a90e2;
+        }
+        #aside-tabs select option.hidden,
+        #aside-tabs select[multiple] option.hidden {
+            display: none;
+        }
+        #aside-tabs .row-input textarea {
+            height: auto;
+            min-height: 120px;
+            padding-top: 6px;
+            resize: vertical;
+        }
+        #aside-tabs .input-note {
+            font-size: 10px;
+            font-style: italic;
+            margin: -12px 0 19px;
+            color: #9b9b9b;
+        }
+
+        /* Checkboxes */
+        #aside-tabs input[type="checkbox"] {
+            position: absolute;
+            left: -9999em;
+        }
+        #aside-tabs input[type="checkbox"] + label {
+            display: block;
+            position: relative;
+            padding: 6px 6px 6px 32px;
+            margin: 0 0 8px;
+            cursor: pointer;
+            font-size: 12px;
+            color: #9b9b9b;
+            line-height: 1.4;
+        }
+        #aside-tabs input[type="checkbox"] + label::before {
+            content: 'check_box_outline_blank';
+            font-family: 'Material Icons';
+            font-size: 24px;
+            position: absolute;
+            color: #fff;
+            left: 0;
+            top: .2em;
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+            letter-spacing: normal;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+        }
+        #aside-tabs input[type="checkbox"]:checked + label::before {
+            content: 'check_box';
+        }
+
+        #aside-tabs [data-compound-checkbox] .children { display: none; padding-left: 1.625em; margin-bottom: 16px; }
+        #aside-tabs [data-compound-checkbox] .children > .row-input,
+        #aside-tabs [data-compound-checkbox] .children > .checkbox {
+            margin-bottom: 16px;
+        }
+        #aside-tabs [data-compound-checkbox] input[type="checkbox"]:checked ~ .children { display: block; }
+        #aside-tabs [data-compound-reverse] .children { display: block; padding-left: 0; }
+        #aside-tabs [data-compound-reverse] input[type="checkbox"]:checked ~ .children { display: none; }
+
+        /* Toggle links / headings */
+        #aside-tabs .toggle-link {
+            font-size: 12px;
+            display: block;
+            margin: 0 0 16px;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+        }
+        #aside-tabs .toggle-link::after {
+            content: 'arrow_drop_down';
+            font-family: 'Material Icons';
+            display: inline-block;
+            vertical-align: middle;
+            float: right;
+            transform: rotate(-90deg);
+            font-size: 20px;
+        }
+        #aside-tabs .toggle-link[aria-expanded="true"]::after {
+            transform: none;
+        }
+        #aside-tabs .sub-toggle {
+            display: inline-block;
+            text-transform: none;
+        }
+        #aside-tabs .sub-toggle::after {
+            float: none;
+        }
+
+        /* Browse input */
+        #aside-tabs .input-browse {
+            display: flex;
+            align-items: center;
+            background: #666;
+            border-radius: 2px;
+            height: 36px;
+            margin: 0 0 16px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        #aside-tabs .input-browse .js-clear {
+            order: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 36px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            background: #666;
+            border-right: 1px solid #404040;
+            border-radius: 2px 0 0 2px;
+        }
+        #aside-tabs .input-browse .js-clear:hover {
+            background: #595959;
+        }
+        #aside-tabs .input-browse .js-trigger {
+            order: 1;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            height: 36px;
+            font-size: 12px;
+            background: #666;
+            border-radius: 0 2px 2px 0;
+        }
+        #aside-tabs .input-browse .js-trigger:hover {
+            background: #595959;
+        }
+        #aside-tabs .input-browse .js-name {
+            flex: 1;
+            padding: 0 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #aside-tabs .input-browse .material-icons {
+            font-size: 20px;
+            color: #fff;
+            pointer-events: none;
+            padding: 0 8px;
+        }
+        #aside-tabs .input-browse.item-empty .js-trigger {
+            color: #bbb;
+        }
+        #aside-tabs .input-browse.item-empty .js-clear {
+            display: none;
+        }
+
+        /* View in CMS */
+        .js-view-cms {
+            display: block;
+            margin: -12px 0 16px;
+            padding: 8px 12px;
+            border: 1px dashed #9b9b9b;
+            border-radius: 2px;
+            text-align: center;
+            font-size: 11px;
+            line-height: 1.4;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .js-view-cms:hover {
+            background: rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+        }
+
+        /* Xeditable current value display */
+        #aside-tabs .xeditable .js-edit {
+            margin: 0 0 16px;
+            background: #666;
+            height: 36px;
+            font-size: 12px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 2px;
+            padding: 0;
+        }
+        #aside-tabs .xeditable .js-edit:hover {
+            background: #595959;
+        }
+        #aside-tabs .xeditable .js-edit .text {
+            flex: 1;
+            padding: 0 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #aside-tabs .xeditable .js-edit .icon {
+            background: #595959;
+            padding: 0 24px;
+            border-radius: 0 2px 2px 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            height: 36px;
+        }
+        #aside-tabs .xeditable .actions {
+            text-align: right;
+            margin: 0 0 8px;
+        }
+
+        /* Add items button */
+        #aside-tabs .add-items {
+            margin: 0 0 24px;
+            border: 1px dashed #9b9b9b;
+            text-align: center;
+            font-size: 10px;
+            line-height: 36px;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #fff;
+            display: block;
+        }
+        #aside-tabs .add-items:hover {
+            background: rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+        }
+
+        /* Value type select wrapper inside collection items */
+        #aside-tabs .value-type-wrapper select {
+            margin-bottom: 8px;
+        }
     </style>{/literal}
 </head>
 <body>
@@ -188,6 +506,24 @@
         if (openDropdown && !openDropdown.contains(e.target)) {
             openDropdown.classList.remove('open');
         }
+    }, true);
+    </script>{/literal}
+    {literal}<script>
+    document.addEventListener('click', function(e) {
+        var tabLink = e.target.closest('#aside-tabs .aside-tab-control a[role="tab"]');
+        if (!tabLink) return;
+        e.preventDefault();
+
+        var controls = tabLink.getAttribute('aria-controls');
+        var tabList = tabLink.closest('.aside-tab-control');
+        if (!tabList || !controls) return;
+
+        tabList.querySelectorAll('li').forEach(function(li) { li.classList.remove('active'); });
+        tabLink.parentNode.classList.add('active');
+
+        document.querySelectorAll('#aside-tabs .tab-pane').forEach(function(pane) { pane.classList.remove('active'); });
+        var targetPane = document.getElementById(controls);
+        if (targetPane) targetPane.classList.add('active');
     }, true);
     </script>{/literal}
     {literal}<script>

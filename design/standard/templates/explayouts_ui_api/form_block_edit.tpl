@@ -1,10 +1,10 @@
 <div id="aside-tabs">
     <ul class="aside-tab-control" role="tablist">
-        <li class="active"><a href="#" id="tab-content" role="tab" aria-controls="tab-content-tab">Content</a></li>
-        <li><a href="#" id="tab-design" role="tab" aria-controls="tab-design-tab">Design</a></li>
+        <li><a href="#" id="tab-content" role="tab" aria-controls="tab-content-tab">Content</a></li>
+        <li class="active"><a href="#" id="tab-design" role="tab" aria-controls="tab-design-tab">Design</a></li>
     </ul>
 
-    <div class="tab-pane active" id="tab-content-tab">
+    <div class="tab-pane" id="tab-content-tab">
         <div class="sidebar-panel">
             <a class="toggle-link" role="button" data-toggle="collapse" href="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">Options</a>
             <div class="collapse in" id="collapseSettings">
@@ -73,7 +73,7 @@
         {/if}
     </div>
 
-    <div class="tab-pane" id="tab-design-tab">
+    <div class="tab-pane active" id="tab-design-tab">
         <div data-form="{$form_url}"></div>
     </div>
 </div>

@@ -202,6 +202,11 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
     $handler = expLayoutsBlockHandlerFactory::get( $definitionIdentifier );
     $parameters = $handler ? $handler->getParameters() : array();
 
+    // Every block should expose the standard design parameters in the right
+    // sidebar (Use vertical whitespace, CSS class/ID, Wrap in container).
+    // If the handler already defines any of these, its own definition wins.
+    $parameters = $parameters + expLayoutsStandardDesignParameters::get();
+
     $parameterValues = array();
     foreach ( $parameters as $paramName => $paramDef )
     {
@@ -237,6 +242,7 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
     }
 
     $tpl->setVariable( 'block', $block );
+    $tpl->setVariable( 'block_name', (string)$block->attribute( 'name' ) );
     $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId" );
     $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
     $itemViewTypes = method_exists( $handler, 'getItemViewTypes' ) ? $handler->getItemViewTypes() : array();

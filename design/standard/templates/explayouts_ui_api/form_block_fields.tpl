@@ -2,6 +2,11 @@
 <form method="post" action="{$action_url}" class="block-form" name="design_edit">
     <input type="hidden" name="ezxform_token" value="{$ezxform_token|wash()}" />
 
+    <div class="row-input">
+        <label for="design_edit_block_name">Block label</label>
+        <input type="text" id="design_edit_block_name" name="name" value="{$block_name|wash()}" class="form-control" />
+    </div>
+
     {if count( $item_view_types )|gt( 0 )}
     <div class="master-slave-selects">
         <div class="row-input">
