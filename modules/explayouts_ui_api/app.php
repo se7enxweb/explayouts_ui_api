@@ -245,7 +245,13 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
     $tpl->setVariable( 'block_name', (string)$block->attribute( 'name' ) );
     $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId" );
     $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
-    $itemViewTypes = method_exists( $handler, 'getItemViewTypes' ) ? $handler->getItemViewTypes() : array();
+    // $handler is false when the block's definition has no BlockDefinition_*
+    // group in explayouts.ini. method_exists() throws on false under PHP 8, so
+    // the whole sidebar request died and the editor span forever instead of
+    // showing an empty form.
+    $itemViewTypes = is_object( $handler ) && method_exists( $handler, 'getItemViewTypes' )
+        ? $handler->getItemViewTypes()
+        : array();
 
     $tpl->setVariable( 'view_types', $viewTypes );
     $tpl->setVariable( 'item_view_types', $itemViewTypes );
@@ -284,7 +290,10 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/collections/([^/]+)/query/form$#',
     if ( !$handler )
         $handler = expLayoutsQueryHandlerFactory::get( 'exponential_content_search' );
 
-    $parameterDefinitions = method_exists( $handler, 'getParameters' ) ? $handler->getParameters() : array();
+    // Both lookups can fail, leaving $handler false; guard as above.
+    $parameterDefinitions = is_object( $handler ) && method_exists( $handler, 'getParameters' )
+        ? $handler->getParameters()
+        : array();
     $parameterValues = $query ? @json_decode( (string)$query->attribute( 'parameters' ), true ) : array();
     if ( !is_array( $parameterValues ) )
         $parameterValues = array();
@@ -326,8 +335,10 @@ $tpl->setVariable( 'custom_javascripts', is_array( $customJavascripts ) ? $custo
 $returnTo = isset( $_GET['return_to'] ) ? $_GET['return_to'] : '';
 
 $tpl->setVariable( 'google_maps_api_key', $googleMapsApiKey );
+// app_version and edition are joined into #app[data-version], which the SPA
+// reads into the app-logo tooltip.
 $tpl->setVariable( 'app_version', '' );
-$tpl->setVariable( 'edition', 'Open Source' );
+$tpl->setVariable( 'edition', 'Exponential Layouts' );
 $tpl->setVariable( 'page_title', 'Exponential Layouts' );
 $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
 $tpl->setVariable( 'return_to', $returnTo );
