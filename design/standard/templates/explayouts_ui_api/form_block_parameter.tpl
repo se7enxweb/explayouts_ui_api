@@ -10,7 +10,11 @@
 {if eq( $type, 'select' )}
     <div class="row-input" {if $view_type_attr}data-view-type="{$view_type_attr|wash()}"{/if}>
         <label for="{$input_id}">{$param.name|wash()}</label>
-        <select id="{$input_id}" name="parameters[{$name}]" class="js-skip-on-change">
+        {* No js-skip-on-change here: the design form has no submit button and is
+           saved by the debounced auto-submit on change, which ignores elements
+           carrying that class. It belongs on the view_type / collection-type
+           master selects, which drive a field re-render, not on parameters. *}
+        <select id="{$input_id}" name="parameters[{$name}]">
             {foreach $param.options as $opt_val => $opt_label}
                 <option value="{$opt_val|wash()}" {if and( is_set( $value ), eq( $opt_val, $value ) )}selected="selected"{/if}>{$opt_label|wash()}</option>
             {/foreach}
@@ -69,6 +73,19 @@
             {/if}
         {else}
             {set $selected_object = fetch( 'content', 'object', hash( 'object_id', $value ) )}
+            {* Component blocks store a Nexus content id, and the imported
+               objects carry remote_id 'media-o-<nexus_id + 776>'. Fall back
+               through the same chain as the component_content operator, or the
+               picker shows "Select item" for a block that does have one. *}
+            {if not( $selected_object )}
+                {set $selected_object = fetch( 'content', 'object', hash( 'remote_id', concat( 'media-o-', $value|sum( 776 ) ) ) )}
+            {/if}
+            {if not( $selected_object )}
+                {set $selected_object = fetch( 'content', 'object', hash( 'remote_id', concat( 'media-o-', $value ) ) )}
+            {/if}
+            {if not( $selected_object )}
+                {set $selected_object = fetch( 'content', 'object', hash( 'object_id', $value|sum( 776 ) ) )}
+            {/if}
             {if $selected_object}
                 {set $selected_name = $selected_object.name|wash()
                      $cms_node_id = $selected_object.main_node_id
@@ -98,7 +115,7 @@
 {elseif eq( $type, 'multiselect' )}
     <div class="row-input" {if $view_type_attr}data-view-type="{$view_type_attr|wash()}"{/if}>
         <label for="{$input_id}">{$param.name|wash()}</label>
-        <select id="{$input_id}" name="parameters[{$name}][]" multiple="multiple" class="js-skip-on-change" size="10">
+        <select id="{$input_id}" name="parameters[{$name}][]" multiple="multiple" size="10">
             {foreach $param.options as $opt_val => $opt_label}
                 <option value="{$opt_val|wash()}" {if and( is_array( $value ), $value|contains( $opt_val ) )}selected="selected"{/if}>{$opt_label|wash()}</option>
             {/foreach}
