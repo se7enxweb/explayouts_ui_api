@@ -309,13 +309,16 @@ class expLayoutsUIApplicationApi
                 $definitionIdentifier,
                 isset( $_POST['name'] ) ? trim( $_POST['name'] ) : ''
             );
-            $block->setAttribute( 'position', 0 );
+            $requestedPosition = isset( $_POST['parent_position'] ) ? (int)$_POST['parent_position'] : null;
+            $block->setAttribute( 'position', $requestedPosition === null ? 0 : $requestedPosition );
             if ( $parentBlockId > 0 )
             {
                 $block->setAttribute( 'parent_id', $parentBlockId );
                 $block->setAttribute( 'placeholder', $parentPlaceholder );
             }
             $block->store();
+
+            self::placeBlockAt( $block, $requestedPosition === null ? PHP_INT_MAX : $requestedPosition );
 
             return self::response( self::blockToArray( $block ), 201 );
         }
@@ -391,14 +394,17 @@ class expLayoutsUIApplicationApi
                 $definitionIdentifier,
                 isset( $data['name'] ) ? trim( $data['name'] ) : ''
             );
+            $requestedPosition = isset( $data['parent_position'] ) ? (int)$data['parent_position'] : null;
             $block->setAttribute( 'status', (int)$layout->attribute( 'status' ) );
-            $block->setAttribute( 'position', isset( $data['parent_position'] ) ? (int)$data['parent_position'] : 0 );
+            $block->setAttribute( 'position', $requestedPosition === null ? 0 : $requestedPosition );
             if ( $parentBlockId > 0 )
             {
                 $block->setAttribute( 'parent_id', $parentBlockId );
                 $block->setAttribute( 'placeholder', $parentPlaceholder );
             }
             $block->store();
+
+            self::placeBlockAt( $block, $requestedPosition === null ? PHP_INT_MAX : $requestedPosition );
 
             self::saveBlockParameters( $block, isset( $data['parameters'] ) && is_array( $data['parameters'] ) ? $data['parameters'] : array() );
 
@@ -420,7 +426,14 @@ class expLayoutsUIApplicationApi
 
             if ( $method === 'DELETE' )
             {
+                $originZoneId = (int)$block->attribute( 'zone_id' );
+                $originParentId = (int)$block->attribute( 'parent_id' );
+                $originPlaceholder = $block->attribute( 'placeholder' );
+                $blockStatus = (int)$block->attribute( 'status' );
+
                 self::deleteBlock( $block );
+                self::compactSiblings( $originZoneId, $originParentId, $originPlaceholder, $blockStatus );
+
                 return self::response( array( 'id' => $id ), 200 );
             }
 
@@ -448,8 +461,11 @@ class expLayoutsUIApplicationApi
                     (string)$block->attribute( 'definition_identifier' ),
                     (string)$block->attribute( 'name' )
                 );
+                $requestedPosition = isset( $data['parent_position'] )
+                    ? (int)$data['parent_position']
+                    : (int)$block->attribute( 'position' ) + 1;
                 $newBlock->setAttribute( 'view_type', (string)$block->attribute( 'view_type' ) );
-                $newBlock->setAttribute( 'position', isset( $data['parent_position'] ) ? (int)$data['parent_position'] : (int)$block->attribute( 'position' ) );
+                $newBlock->setAttribute( 'position', $requestedPosition );
                 $newBlock->setAttribute( 'status', (int)$block->attribute( 'status' ) );
                 if ( $parentBlockId > 0 )
                 {
@@ -457,6 +473,8 @@ class expLayoutsUIApplicationApi
                     $newBlock->setAttribute( 'placeholder', $parentPlaceholder );
                 }
                 $newBlock->store();
+
+                self::placeBlockAt( $newBlock, $requestedPosition );
 
                 foreach ( expLayoutsBlockParameter::fetchByBlock( (int)$block->attribute( 'id' ) ) as $param )
                 {
@@ -469,6 +487,14 @@ class expLayoutsUIApplicationApi
             if ( $method === 'POST' && $sub === 'move' )
             {
                 $data = self::requestData();
+
+                // Remember where the block came from so the gap it leaves
+                // behind can be closed once it has been stored elsewhere.
+                $originZoneId = (int)$block->attribute( 'zone_id' );
+                $originParentId = (int)$block->attribute( 'parent_id' );
+                $originPlaceholder = $block->attribute( 'placeholder' );
+                $blockStatus = (int)$block->attribute( 'status' );
+
                 if ( isset( $data['zone_identifier'] ) && isset( $data['layout_id'] ) )
                 {
                     $zone = self::findZoneByIdentifier( (int)$data['layout_id'], trim( $data['zone_identifier'] ) );
@@ -479,10 +505,14 @@ class expLayoutsUIApplicationApi
                     }
                 }
 
+                $requestedPosition = null;
                 if ( isset( $data['parent_position'] ) )
-                    $block->setAttribute( 'position', (int)$data['parent_position'] );
+                    $requestedPosition = (int)$data['parent_position'];
                 elseif ( isset( $data['position'] ) )
-                    $block->setAttribute( 'position', (int)$data['position'] );
+                    $requestedPosition = (int)$data['position'];
+
+                if ( $requestedPosition !== null )
+                    $block->setAttribute( 'position', $requestedPosition );
 
                 if ( isset( $data['parent_block_id'] ) )
                 {
@@ -514,6 +544,14 @@ class expLayoutsUIApplicationApi
                 $block->setAttribute( 'modified', time() );
                 $block->store();
 
+                self::placeBlockAt( $block, $requestedPosition === null ? PHP_INT_MAX : $requestedPosition );
+
+                $movedGroups = $originZoneId !== (int)$block->attribute( 'zone_id' )
+                    || $originParentId !== (int)$block->attribute( 'parent_id' )
+                    || self::normalizedPlaceholder( $originPlaceholder ) !== self::normalizedPlaceholder( $block->attribute( 'placeholder' ) );
+                if ( $movedGroups )
+                    self::compactSiblings( $originZoneId, $originParentId, $originPlaceholder, $blockStatus );
+
                 return self::response( self::blockToArray( $block ) );
             }
 
@@ -526,10 +564,14 @@ class expLayoutsUIApplicationApi
                     $block->setAttribute( 'view_type', trim( $data['view_type'] ) );
                 if ( isset( $data['item_view_type'] ) )
                     $block->setAttribute( 'item_view_type', trim( $data['item_view_type'] ) );
-                if ( isset( $data['position'] ) )
-                    $block->setAttribute( 'position', (int)$data['position'] );
+                $requestedPosition = isset( $data['position'] ) ? (int)$data['position'] : null;
+                if ( $requestedPosition !== null )
+                    $block->setAttribute( 'position', $requestedPosition );
                 $block->setAttribute( 'modified', time() );
                 $block->store();
+
+                if ( $requestedPosition !== null )
+                    self::placeBlockAt( $block, $requestedPosition );
 
                 self::saveBlockParameters( $block, isset( $data['parameters'] ) && is_array( $data['parameters'] ) ? $data['parameters'] : array() );
             }
@@ -976,6 +1018,135 @@ class expLayoutsUIApplicationApi
         } );
 
         return $topLevel;
+    }
+
+    /**
+     * An empty placeholder and "main" render as one list (see blockToArray),
+     * so they share a single position sequence.
+     */
+    protected static function normalizedPlaceholder( $placeholder )
+    {
+        $placeholder = (string)$placeholder;
+        return $placeholder === '' ? 'main' : $placeholder;
+    }
+
+    /**
+     * The blocks that share a position sequence with the given coordinates:
+     * the top level of a zone when there is no parent, otherwise one
+     * placeholder of the parent container. Sorted by position, then id.
+     *
+     * Blocks with an empty definition_identifier are the imported zone root
+     * artifacts; they render nothing and are left out of the sequence.
+     */
+    protected static function siblingBlocks( $zoneId, $parentId, $placeholder, $status )
+    {
+        $parentId = (int)$parentId;
+        $bucket = self::normalizedPlaceholder( $placeholder );
+
+        $candidates = $parentId > 0
+            ? expLayoutsBlock::fetchChildren( $parentId, $status )
+            : expLayoutsBlock::fetchByZone( (int)$zoneId, $status );
+
+        $siblings = array();
+        foreach ( $candidates as $candidate )
+        {
+            if ( (int)$candidate->attribute( 'parent_id' ) !== $parentId )
+                continue;
+            if ( (string)$candidate->attribute( 'definition_identifier' ) === '' )
+                continue;
+            // Top-level blocks are rendered as one list per zone regardless of
+            // their placeholder (see explayouts/zone.tpl), so only nested
+            // blocks are split by placeholder.
+            if ( $parentId > 0 && self::normalizedPlaceholder( $candidate->attribute( 'placeholder' ) ) !== $bucket )
+                continue;
+
+            $siblings[] = $candidate;
+        }
+
+        usort( $siblings, function( $a, $b ) {
+            $posA = (int)$a->attribute( 'position' );
+            $posB = (int)$b->attribute( 'position' );
+            if ( $posA !== $posB )
+                return $posA - $posB;
+            return (int)$a->attribute( 'id' ) - (int)$b->attribute( 'id' );
+        } );
+
+        return $siblings;
+    }
+
+    /**
+     * Renumber a sibling sequence to 0..n, writing only the rows that move.
+     * Returns the ordered sibling list.
+     */
+    protected static function renumberSiblings( $siblings )
+    {
+        $position = 0;
+        foreach ( $siblings as $sibling )
+        {
+            if ( (int)$sibling->attribute( 'position' ) !== $position )
+            {
+                $sibling->setAttribute( 'position', $position );
+                $sibling->store();
+            }
+            $position++;
+        }
+
+        return $siblings;
+    }
+
+    /**
+     * Move an already-stored block to $targetPosition inside its sibling
+     * sequence and renumber the whole sequence to 0..n. Without this the API
+     * left every block it created at position 0, so ordering silently fell
+     * back to insertion order (block id).
+     */
+    protected static function placeBlockAt( $block, $targetPosition )
+    {
+        $blockId = (int)$block->attribute( 'id' );
+        $siblings = self::siblingBlocks(
+            (int)$block->attribute( 'zone_id' ),
+            (int)$block->attribute( 'parent_id' ),
+            $block->attribute( 'placeholder' ),
+            (int)$block->attribute( 'status' )
+        );
+
+        // Work from the rows as they are stored. The caller's instance may
+        // carry a stale position (it is not updated when an earlier renumber
+        // rewrote its row), which would make the renumber below skip it.
+        $ordered = array();
+        $target = null;
+        foreach ( $siblings as $sibling )
+        {
+            if ( (int)$sibling->attribute( 'id' ) === $blockId )
+            {
+                $target = $sibling;
+                continue;
+            }
+            $ordered[] = $sibling;
+        }
+        if ( $target === null )
+            $target = $block;
+
+        $targetPosition = (int)$targetPosition;
+        if ( $targetPosition < 0 )
+            $targetPosition = 0;
+        if ( $targetPosition > count( $ordered ) )
+            $targetPosition = count( $ordered );
+
+        array_splice( $ordered, $targetPosition, 0, array( $target ) );
+        self::renumberSiblings( $ordered );
+
+        // Keep the caller's instance in step so the API response reports the
+        // position that was actually written.
+        $block->setAttribute( 'position', (int)$target->attribute( 'position' ) );
+    }
+
+    /**
+     * Close the gap left by a removed or relocated block.
+     */
+    protected static function compactSiblings( $zoneId, $parentId, $placeholder, $status )
+    {
+        self::renumberSiblings( self::siblingBlocks( $zoneId, $parentId, $placeholder, $status ) );
     }
 
     protected static function deleteBlock( $block )
@@ -1934,7 +2105,7 @@ class expLayoutsUIApplicationApi
         {
             foreach ( $data['rules'] as $ruleData )
             {
-                $priority = isset( $ruleData['priority'] ) ? (int)$ruleData['priority'] : 0;
+                $priority = isset( $ruleData['priority'] ) ? (int)$ruleData['priority'] : null;
                 $rule = expLayoutsRule::create( $layoutId, $priority );
                 if ( isset( $ruleData['enabled'] ) )
                     $rule->setAttribute( 'enabled', (int)$ruleData['enabled'] ? 1 : 0 );
