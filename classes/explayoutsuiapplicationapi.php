@@ -794,7 +794,23 @@ class expLayoutsUIApplicationApi
 
         if ( $name === '' )
         {
-            $name = $definition === 'tpl_block' ? 'TPL Block' : ucwords( str_replace( '_', ' ', $definition ) );
+            // Prefer the definition's configured Name. Falling back to the
+            // identifier surfaced internals in the editor - a component block
+            // was labelled "Ibexa Component Hero" off ibexa_component_hero.
+            $blockInfo = expLayoutsBlockHandlerFactory::getBlockInfo( $definition );
+            if ( is_array( $blockInfo ) && isset( $blockInfo['name'] ) && (string)$blockInfo['name'] !== ''
+                 && (string)$blockInfo['name'] !== $definition )
+            {
+                $name = (string)$blockInfo['name'];
+            }
+            elseif ( $definition === 'tpl_block' )
+            {
+                $name = 'Template block';
+            }
+            else
+            {
+                $name = ucwords( str_replace( '_', ' ', $definition ) );
+            }
         }
 
         if ( is_array( $placeholders ) && !empty( $placeholders ) )
@@ -878,29 +894,86 @@ class expLayoutsUIApplicationApi
             $textHint = $textContent === '' ? ' data-hint="No content"' : '';
             $content .= '<span data-inline-child data-attr="content"' . $textHint . '>' . ( $textContent === '' ? '' : nl2br( htmlspecialchars( $textContent ) ) ) . '</span>';
         }
+        elseif ( strpos( $definition, 'ibexa_component_' ) === 0 || $definition === 'exp_component' )
+        {
+            // Mirrors the reference app/block/ibexa_component.html.twig: the
+            // referenced component rendered as a single list item, or a notice
+            // when nothing is picked.
+            $contentId = isset( $values['content'] ) ? (int)$values['content'] : 0;
+            $componentNode = self::componentPreviewNode( $contentId );
+
+            if ( $componentNode instanceof eZContentObjectTreeNode )
+            {
+                $content .= '<div class="list-row"><div class="list-item">' .
+                    self::renderItemPreview( $componentNode, (string)$componentNode->attribute( 'name' ) ) .
+                    '</div></div>';
+            }
+            else
+            {
+                $notice = $contentId > 0
+                    ? 'Component ' . $contentId . ' could not be resolved'
+                    : 'No component selected';
+                $content .= '<p class="block-notice">' . htmlspecialchars( $notice ) . '</p>';
+            }
+        }
         elseif ( isset( $values['items'] ) && is_array( $values['items'] ) && !empty( $values['items'] ) )
         {
-            $content .= '<ul class="block-items">';
+            // Mirror the reference editor preview
+            // (@nglayouts_admin app/parts/collection.html.twig): a grid view
+            // lays its items out in `number_of_columns` across, so changing
+            // that setting is visible in the editor at a glance. Anything with
+            // one column falls back to the stacked list markup.
+            $parameters = is_array( $prepared ) && isset( $prepared['parameters'] ) ? $prepared['parameters'] : array();
+            $columns = isset( $parameters['number_of_columns'] ) ? (int)$parameters['number_of_columns'] : 0;
+            if ( $columns <= 0 )
+                $columns = 1;
+            if ( $columns > 12 )
+                $columns = 12;
+
+            // The reference registers only two list previews in the editor
+            // (layouts-standard block_view.yaml, app context): list\grid gets
+            // the column grid, list\list gets the stacked list. Every other
+            // view type - grid_featured included, which has no editor template
+            // there - falls back to the stacked list.
+            $blockViewType = (string)$block->attribute( 'view_type' );
+            if ( $blockViewType !== 'grid' )
+                $columns = 1;
+
+            $isGrid = $columns > 1;
+            $rowClass = $isGrid ? 'grid-row' : 'list-row';
+            $itemClass = $isGrid ? 'grid-item cols-' . $columns : 'list-item';
+
+            $content .= '<div class="' . $rowClass . '">';
             foreach ( $values['items'] as $item )
             {
                 $title = '';
+                $itemNode = null;
                 if ( is_object( $item ) && method_exists( $item, 'attribute' ) )
                 {
                     $title = (string)$item->attribute( 'name' );
                     if ( $title === '' && method_exists( $item, 'Name' ) )
                         $title = (string)$item->Name;
+                    if ( $item instanceof eZContentObjectTreeNode )
+                        $itemNode = $item;
                 }
-                elseif ( is_array( $item ) && isset( $item['name'] ) )
+                elseif ( is_array( $item ) )
                 {
-                    $title = (string)$item['name'];
+                    if ( isset( $item['name'] ) )
+                        $title = (string)$item['name'];
+                    if ( isset( $item['node_id'] ) && (int)$item['node_id'] > 0 )
+                        $itemNode = eZContentObjectTreeNode::fetch( (int)$item['node_id'] );
                 }
 
+                if ( $title === '' && $itemNode instanceof eZContentObjectTreeNode )
+                    $title = (string)$itemNode->attribute( 'name' );
                 if ( $title === '' )
                     continue;
 
-                $content .= '<li>' . htmlspecialchars( $title ) . '</li>';
+                $content .= '<div class="' . $itemClass . '">' .
+                    self::renderItemPreview( $itemNode, $title ) .
+                    '</div>';
             }
-            $content .= '</ul>';
+            $content .= '</div>';
         }
         elseif ( !empty( $values ) )
         {
@@ -944,6 +1017,171 @@ class expLayoutsUIApplicationApi
             '</div>';
 
         return $header . '<div class="block-content">' . $content . '</div>';
+    }
+
+    /**
+     * Main node of the component a content-backed component block references.
+     *
+     * The stored `content` parameter is a Nexus content id; the imported
+     * objects carry remote_id 'media-o-<nexus_id + 776>'. This mirrors the
+     * resolution order of the theme's component_content operator so the editor
+     * preview and the rendered page agree on which object a block points at.
+     */
+    protected static function componentPreviewNode( $contentId )
+    {
+        $contentId = (int)$contentId;
+        if ( $contentId <= 0 )
+            return null;
+
+        $object = eZContentObject::fetchByRemoteID( 'media-o-' . ( $contentId + 776 ) );
+        if ( !$object )
+            $object = eZContentObject::fetchByRemoteID( 'media-o-' . $contentId );
+        if ( !$object )
+            $object = eZContentObject::fetch( $contentId + 776 );
+        if ( !$object )
+            $object = eZContentObject::fetch( $contentId );
+
+        if ( !$object instanceof eZContentObject )
+            return null;
+
+        $node = $object->attribute( 'main_node' );
+        return $node instanceof eZContentObjectTreeNode ? $node : null;
+    }
+
+    /**
+     * Thumbnail URL for a collection item in the editor preview.
+     *
+     * Mirrors the reference app/item/nglayouts_app_preview.html.twig, which
+     * renders the item's image field through a small dedicated alias. Prefers
+     * teaser_image over image, matching content/parts/item_image.tpl, and
+     * walks the aliases from smallest usable upwards.
+     */
+    protected static function itemPreviewImageUrl( $node )
+    {
+        if ( !$node instanceof eZContentObjectTreeNode )
+            return '';
+
+        $dataMap = $node->attribute( 'data_map' );
+        if ( !is_array( $dataMap ) )
+            return '';
+
+        foreach ( array( 'teaser_image', 'image', 'thumbnail' ) as $identifier )
+        {
+            if ( !isset( $dataMap[$identifier] ) )
+                continue;
+
+            $attribute = $dataMap[$identifier];
+            if ( !$attribute instanceof eZContentObjectAttribute )
+                continue;
+            if ( (string)$attribute->attribute( 'data_type_string' ) !== 'ezimage' )
+                continue;
+            if ( !$attribute->attribute( 'has_content' ) )
+                continue;
+
+            $handler = $attribute->content();
+            if ( !$handler instanceof eZImageAliasHandler )
+                continue;
+
+            $url = self::imageAliasUrl( $handler, array( 'small', 'medium', 'i320', 'large', 'original' ) );
+            if ( $url !== '' )
+                return $url;
+        }
+
+        return '';
+    }
+
+    /**
+     * First of the given aliases that actually exists on disk, as a
+     * root-relative URL.
+     *
+     * imageAlias() generates a missing variation, and the stored alias list can
+     * name files that were never written, so each candidate is checked through
+     * the cluster file handler - the same treatment the theme's image operator
+     * applies. Alias URLs are stored without a leading slash, which would
+     * otherwise resolve against /explayouts_ui_api/app in the editor.
+     */
+    protected static function imageAliasUrl( $handler, $aliases )
+    {
+        $clusterFileHandler = eZClusterFileHandler::instance();
+        $aliasList = $handler->aliasList();
+        if ( !is_array( $aliasList ) )
+            $aliasList = array();
+
+        $url = '';
+        foreach ( $aliases as $alias )
+        {
+            if ( isset( $aliasList[$alias]['url'] ) && $aliasList[$alias]['url'] !== ''
+                 && $clusterFileHandler->fileExists( $aliasList[$alias]['url'] ) )
+            {
+                $url = (string)$aliasList[$alias]['url'];
+                break;
+            }
+
+            $generated = $handler->imageAlias( $alias );
+            if ( is_array( $generated ) && !empty( $generated['url'] )
+                 && $clusterFileHandler->fileExists( $generated['url'] ) )
+            {
+                $url = (string)$generated['url'];
+                break;
+            }
+        }
+
+        if ( $url !== '' && strpos( $url, '/' ) !== 0 && strpos( $url, 'http' ) !== 0 )
+            $url = '/' . $url;
+
+        return $url;
+    }
+
+    /**
+     * One collection item as the reference editor renders it: thumbnail, linked
+     * name, then the value type and content type
+     * (app/item/nglayouts_app_preview.html.twig).
+     */
+    protected static function renderItemPreview( $node, $title )
+    {
+        $html = '';
+
+        $imageUrl = self::itemPreviewImageUrl( $node );
+        if ( $imageUrl !== '' )
+        {
+            $html .= '<div class="image"><img src="' . htmlspecialchars( $imageUrl ) .
+                '" alt="' . htmlspecialchars( $title ) . '" loading="lazy" /></div>';
+        }
+
+        $url = '';
+        $typeName = '';
+        if ( $node instanceof eZContentObjectTreeNode )
+        {
+            $url = '/' . ltrim( (string)$node->attribute( 'url_alias' ), '/' );
+            eZURI::transformURI( $url );
+
+            $object = $node->attribute( 'object' );
+            if ( $object instanceof eZContentObject )
+            {
+                $contentClass = $object->attribute( 'content_class' );
+                if ( $contentClass )
+                    $typeName = (string)$contentClass->attribute( 'name' );
+            }
+        }
+
+        $html .= '<div class="name"><p>';
+        if ( $url !== '' )
+        {
+            $html .= '<a href="' . htmlspecialchars( $url ) .
+                '" target="_blank" rel="noopener noreferrer">' . htmlspecialchars( $title ) . '</a>';
+        }
+        else
+        {
+            $html .= htmlspecialchars( $title );
+        }
+        $html .= '</p></div>';
+
+        if ( $typeName !== '' )
+        {
+            $html .= '<div class="value-type"><p>Location (' . htmlspecialchars( $typeName ) . ')</p></div>';
+        }
+
+        return $html;
     }
 
     protected static function findZoneByIdentifier( $layoutId, $zoneIdentifier )
