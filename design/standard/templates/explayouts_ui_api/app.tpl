@@ -43,6 +43,112 @@
         #ng-cancel-link:not(.btn) { position: fixed; top: 10px; right: 10px; z-index: 10000; display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.6rem 1rem; border-radius: 4px; background: #2563eb; color: #fff; font-family: Roboto, Helvetica Neue, sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; line-height: 1; cursor: pointer; border: 0; }
         #ng-cancel-link:not(.btn):hover { background: #1d4ed8; }
 
+        /* Collection preview inside a block, ported from the reference editor
+           (netgen/layouts-ui app/styles/_blocks.scss). A grid view lays its
+           items out `number_of_columns` across via .cols-N, so changing that
+           setting is visible in the editor at a glance; everything else stacks
+           as a list. The markup comes from renderBlockHtml(). */
+        [data-block] .grid-row { display: flex; flex-wrap: wrap; margin: -1px; }
+        [data-block] .grid-row .grid-item {
+            padding: .5rem .5rem 0;
+            background: rgba(0,0,0,.035);
+            border: 1px solid #fff;
+            font-size: .75em;
+            word-break: break-word;
+            box-sizing: border-box;
+        }
+        [data-block] .grid-row .grid-item.cols-1  { flex-basis: 100%; }
+        [data-block] .grid-row .grid-item.cols-2  { flex-basis: 50%; }
+        [data-block] .grid-row .grid-item.cols-3  { flex-basis: 33.3333%; }
+        [data-block] .grid-row .grid-item.cols-4  { flex-basis: 25%; }
+        [data-block] .grid-row .grid-item.cols-5  { flex-basis: 20%; }
+        [data-block] .grid-row .grid-item.cols-6  { flex-basis: 16.6667%; }
+        [data-block] .grid-row .grid-item.cols-7  { flex-basis: 14.2857%; }
+        [data-block] .grid-row .grid-item.cols-8  { flex-basis: 12.5%; }
+        [data-block] .grid-row .grid-item.cols-9  { flex-basis: 11.1111%; }
+        [data-block] .grid-row .grid-item.cols-10 { flex-basis: 10%; }
+        [data-block] .grid-row .grid-item.cols-11 { flex-basis: 9.0909%; }
+        [data-block] .grid-row .grid-item.cols-12 { flex-basis: 8.3333%; }
+        [data-block] .list-row .list-item {
+            background: rgba(0,0,0,.035);
+            padding: .5rem;
+            margin: .125rem 0;
+            font-size: .75em;
+            word-break: break-word;
+        }
+        /* Item internals: thumbnail floated left of the linked name, with the
+           value type beneath - app/item/nglayouts_app_preview.html.twig. */
+        [data-block] .grid-row .list-item::after,
+        [data-block] .list-row .list-item::after { content: ""; display: table; clear: both; }
+        [data-block] .grid-row .image,
+        [data-block] .list-row .image { float: left; margin-right: .75rem; max-width: 5rem; }
+        [data-block] .grid-row img,
+        [data-block] .list-row img { width: 100%; display: block; }
+        [data-block] .grid-row .name,
+        [data-block] .list-row .name { overflow: hidden; min-width: 5rem; }
+        [data-block] .grid-row .image, [data-block] .grid-row .name,
+        [data-block] .list-row .image, [data-block] .list-row .name { margin-bottom: .5rem; }
+        [data-block] .grid-row .name p,
+        [data-block] .list-row .name p { margin: 0; }
+        [data-block] .grid-row .name a,
+        [data-block] .list-row .name a { color: #2a72ef; text-decoration: none; }
+        [data-block] .grid-row .name a:hover,
+        [data-block] .list-row .name a:hover { text-decoration: underline; }
+        [data-block] .grid-row .value-type,
+        [data-block] .list-row .value-type {
+            color: #a6a6a6;
+            font-style: italic;
+            margin-bottom: .5em;
+            clear: both;
+            font-size: 1rem;
+        }
+        [data-block] .grid-row .value-type p,
+        [data-block] .list-row .value-type p { margin: 0; font-size: .75em; }
+
+        /* Selected-block highlight.
+           The editor marks the block being edited by adding .editing to its
+           [data-block] wrapper (block view editing_mark / editing_unmark).
+           The bundled stylesheet only recolours a 1px border and the header
+           strip, which is easy to lose on a busy canvas - and for container
+           blocks it recolours the border to the same #383838 as their own
+           background, so a selected container showed no change at all.
+           These rules add a subtle tint, a clear 2px ring and a left accent
+           bar, and give containers the same accent. */
+        [data-block] { transition: box-shadow .12s ease, background-color .12s ease; }
+
+        /* Hover affordance, deliberately weaker than the selected state. */
+        [data-block]:not(.editing):hover { box-shadow: 0 0 0 1px rgba(42,114,239,.35); }
+
+        [data-block].editing {
+            background-color: #f2f7ff;
+            box-shadow: 0 0 0 2px #2a72ef, 0 3px 12px rgba(42,114,239,.16);
+        }
+        /* .block-content is given a hard white background above; let the tint show. */
+        [data-block].editing > .block-content { background: transparent; }
+        [data-block].editing > .block-header { font-weight: 600; }
+        /* An unmistakable anchor down the left edge of the selected block. */
+        [data-block].editing::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: #2a72ef;
+            pointer-events: none;
+        }
+
+        /* Containers keep their dark body - that is what distinguishes a
+           container from a leaf block - so only the ring, the accent bar and
+           the header carry the selection here. */
+        [data-block][data-container].editing {
+            background-color: #383838;
+            box-shadow: 0 0 0 2px #2a72ef, 0 3px 12px rgba(42,114,239,.22);
+        }
+        [data-block][data-container].editing > .block-header { background: #2a72ef; color: #fff; }
+
+        /* A nested block that is not itself selected keeps its own background. */
+        [data-block].editing [data-block]:not(.editing) { background-color: #fff; }
+        [data-block].editing [data-block]:not(.editing) > .block-content { background: #fff; }
+
         /* Right sidebar / query browser styles to match Nexus */
         #aside-tabs {
             background: #404040;
@@ -441,7 +547,9 @@
         }
     })();
     </script>{/literal}
-    <div id="app" class="ngc" data-version="{$app_version|wash()} {$edition|wash()}"></div>
+    {* Joined into the app-logo tooltip by the SPA. Skip the separator when
+       there is no version, so the tooltip has no leading space. *}
+    <div id="app" class="ngc" data-version="{if $app_version|ne('')}{$app_version|wash()} {/if}{$edition|wash()}"></div>
     <a id="ng-cancel-link" href="#">Cancel</a>
     {literal}<script>
     (function(){
