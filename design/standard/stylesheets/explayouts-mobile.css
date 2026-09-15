@@ -14,9 +14,11 @@
  *   - the header is allowed the height its contents need, and everything
  *     beneath it starts at --exp-header-h rather than at a hard coded 50px;
  *   - the canvas takes the full width beside the rail;
- *   - the properties panel becomes a drawer over the canvas, opened by a
- *     button, by selecting a block, and closed by the scrim, its own close
- *     button or Escape;
+ *   - the properties panel becomes a drawer over the canvas, opened and closed
+ *     by a toggle in the rail, and also closed by the scrim, its own close
+ *     button or Escape. Selecting a block does not open it: the toggle turns
+ *     accent coloured to say something is waiting in there, and the panel comes
+ *     out when it is asked for rather than on every tap;
  *   - anything meant to be tapped is at least 44px.
  *
  * explayouts-mobile.js sets --exp-header-h and drives the drawer. The rules

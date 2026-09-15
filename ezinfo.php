@@ -14,7 +14,7 @@ class explayouts_ui_apiInfo
     public static function info()
     {
         return array( Name => "explayouts_ui_api",
-                      Version => "1.0.0",
+                      Version => "1.2.0",
                       Copyright => "Copyright (C) 1998 - 2026 7x. All rights reserved.",
                       License => "GNU General Public License v2.0 (or any later version)",
                       info_url => "https://github.com/se7enxweb/explayouts_ui_api" );

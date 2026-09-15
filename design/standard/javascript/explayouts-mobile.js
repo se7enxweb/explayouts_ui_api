@@ -10,8 +10,9 @@
  *      it rather than behind it.
  *
  *   2. The properties drawer. A panel that opens has to be opened by
- *      something: a button, selecting a block, and closing again on the scrim,
- *      the close button or Escape.
+ *      something: the toggle in the rail, and closed again on the scrim, its
+ *      own close button or Escape. Selecting a block deliberately does not
+ *      open it - see watchSelection().
  *
  *   3. Dragging by finger. The editor sorts blocks with jQuery UI sortable,
  *      which listens for mouse events and nothing else, so on a touch screen
@@ -168,81 +169,22 @@
     }
 
     /**
-     * Which block the panel is currently showing, or null for none.
+     * Keeps the rail toggle's state in step with the panel.
      *
-     * The canvas marks the selected block with `editing` and the panel's forms
-     * post to .../blocks/<id>. The panel is the better source: it says what is
-     * actually loaded rather than what has been clicked, so a drawer opened off
-     * it is never opened onto the previous block's properties.
+     * Deliberately does NOT open the drawer. It used to: selecting a block
+     * brought the panel out over the layout, which on a phone means the thing
+     * you just tapped disappears behind a panel you did not ask for, on every
+     * tap. Now that the rail carries a toggle that is always in the same place,
+     * selecting and looking are separate: tap blocks freely, open the panel
+     * when you actually want it.
+     *
+     * The toggle turns accent coloured instead, which is how a selection makes
+     * itself known without taking the screen.
      */
-    function shownBlockId()
-    {
-        if ( !sidebar )
-            return null;
-
-        var form = sidebar.querySelector( 'form[action*="/blocks/"], [data-form*="/blocks/"]' );
-        if ( !form )
-            return null;
-
-        var url = form.getAttribute( 'action' ) || form.getAttribute( 'data-form' ) || '';
-        var found = url.match( /\/blocks\/(\d+)/ );
-        return found ? found[1] : null;
-    }
-
     function watchSelection()
     {
-        var was  = hasSelection();
-        var last = shownBlockId();
-
-        new MutationObserver( function () {
-            var now = hasSelection();
-            var id  = shownBlockId();
-
-            // Open when something is newly being shown, and open again when it
-            // is a different block than last time. Only checking the first of
-            // those was the whole bug: after the first block the panel never
-            // went back to showing nothing, so choosing a second block changed
-            // what was in the drawer without ever opening it again, and there
-            // was no way to reach a block's properties by tapping it.
-            //
-            // A redraw of the same block still does not reopen: closing the
-            // drawer to look at the canvas behind it has to stick.
-            if ( now && ( !was || ( id && id !== last ) ) )
-                openDrawer();
-            else if ( !now && was )
-                closeDrawer();
-
-            was  = now;
-            last = id;
-            refreshToggle();
-        } ).observe( sidebar, { childList: true, subtree: true, attributes: true,
-                                attributeFilter: [ 'action', 'data-form' ] } );
-    }
-
-    /**
-     * Tapping a block on the canvas brings up its properties.
-     *
-     * The observer above covers it once the panel has re-rendered, but that is
-     * a request away and the drawer should answer the tap, not the response to
-     * it. Controls inside a block are excluded: the overflow menu, the drag
-     * handle and any link or button are doing their own job, and one of them
-     * opening the drawer over the menu it just opened would be worse than
-     * nothing.
-     */
-    function watchCanvasTaps()
-    {
-        document.addEventListener( 'click', function ( e ) {
-            if ( !isMobile() || !e.target.closest )
-                return;
-
-            if ( !e.target.closest( '.main-content [data-block]' ) )
-                return;
-
-            if ( e.target.closest( 'a, button, input, select, textarea, .dropdown, .handle, .ui-sortable-handle' ) )
-                return;
-
-            openDrawer();
-        }, true );
+        new MutationObserver( refreshToggle )
+            .observe( sidebar, { childList: true, subtree: true } );
     }
 
     document.addEventListener( 'keydown', function ( e ) {
@@ -380,7 +322,6 @@
             watchHeader();
             buildDrawerControls();
             watchSelection();
-            watchCanvasTaps();
             applyMode();
         } );
 
