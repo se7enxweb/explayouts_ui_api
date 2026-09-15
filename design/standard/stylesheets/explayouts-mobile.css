@@ -29,6 +29,17 @@
 
 :root { --exp-header-h: 3.125rem; }
 
+/* The three controls the script adds - the scrim, the drawer's close button and
+   the rail toggle - exist in the page at every width, because the script builds
+   them once when the app first draws itself rather than on every resize. Their
+   hidden state therefore has to live OUT here: a `display: none` inside the
+   media query below stops applying the moment the viewport is wide, and a
+   button with no rule at all is a visible button. That is exactly what happened
+   - the rail toggle turned up in the desktop rail. */
+.ngc .exp-scrim,
+.ngc .exp-drawer-close,
+.ngc .exp-rail-toggle { display: none; }
+
 @media (max-width: 820px) {
 
 /* ── Header ───────────────────────────────────────────────────────────────
@@ -129,6 +140,12 @@
     padding: 0;
 }
 .ngc.exp-mobile.exp-sidebar-open .exp-scrim { display: block; }
+/* With the drawer open the rail has to stay above the scrim, or the toggle that
+   opened it cannot be reached to close it again - and on a phone the drawer is
+   everything but the rail, so there would be nothing else left to tap. Keeping
+   the whole rail live also means adding a block does not first cost a trip
+   through closing the panel. */
+.ngc.exp-mobile.exp-sidebar-open .left-toolbar { z-index: 58; }
 
 /* Close control, pinned inside the drawer. */
 .ngc .exp-drawer-close {
@@ -149,30 +166,31 @@
 }
 .ngc.exp-mobile .exp-drawer-close { display: inline-flex; }
 
-/* The button that opens it. Bottom right, clear of the rail, above the canvas
-   but below the drawer itself. */
-.ngc .exp-drawer-toggle {
-    position: fixed;
-    right: .75rem;
-    bottom: .75rem;
-    z-index: 45;
+/* The control that opens it, in the rail directly under the add-block button.
+   It sits with the other tools rather than floating over the layout, and it is
+   there whatever is selected and whatever the drawer is doing - so there is
+   always one place to go for the properties of the current block, which a
+   panel that only appears when you tap the right thing is not. */
+.ngc .exp-rail-toggle {
     display: none;
-    align-items: center;
-    gap: .375rem;
-    min-height: 2.75rem;
-    padding: 0 1rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 0;
     border: 0;
-    border-radius: 999px;
-    background: #2563eb;
-    color: #fff;
-    font: 500 .875rem/1 Roboto, "Helvetica Neue", sans-serif;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+    background: transparent;
+    color: #9c9c9c;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
-.ngc.exp-mobile .exp-drawer-toggle { display: inline-flex; }
-.ngc.exp-mobile.exp-sidebar-open .exp-drawer-toggle { display: none; }
-/* Says something is selected and waiting in there. */
-.ngc .exp-drawer-toggle.has-selection { background: #16a34a; }
+.ngc.exp-mobile .exp-rail-toggle { display: flex; }
+.ngc .exp-rail-toggle:hover { color: #fff; background: rgba(255, 255, 255, .06); }
+/* Open: reads as the pressed tool it is. */
+.ngc.exp-sidebar-open .exp-rail-toggle { color: #fff; background: #4f4f4f; }
+/* Something is selected and waiting in there. */
+.ngc .exp-rail-toggle.has-selection { color: #4a90e2; }
+.ngc.exp-sidebar-open .exp-rail-toggle.has-selection { color: #fff; }
+.ngc .exp-rail-toggle .material-icons { font-size: 24px; }
 
 /* ── Touch targets ────────────────────────────────────────────────────────
    The block toolbars are 24px icons, which is a coin toss with a finger. */

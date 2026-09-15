@@ -90,11 +90,22 @@
     {
         if ( isMobile() )
             app.classList.add( 'exp-sidebar-open' );
+
+        refreshToggle();
     }
 
     function closeDrawer()
     {
         app.classList.remove( 'exp-sidebar-open' );
+        refreshToggle();
+    }
+
+    function toggleDrawer()
+    {
+        if ( app.classList.contains( 'exp-sidebar-open' ) )
+            closeDrawer();
+        else
+            openDrawer();
     }
 
     function refreshToggle()
@@ -104,10 +115,11 @@
 
         var selected = hasSelection();
         toggle.classList.toggle( 'has-selection', selected );
-        toggle.textContent = 'Properties';
-        toggle.setAttribute( 'aria-label',
-            selected ? 'Show the properties of the selected block'
-                     : 'Show the properties panel' );
+        toggle.setAttribute( 'aria-expanded',
+            app.classList.contains( 'exp-sidebar-open' ) ? 'true' : 'false' );
+        toggle.setAttribute( 'title',
+            selected ? 'Block options' : 'Block options (nothing selected)' );
+        toggle.setAttribute( 'aria-label', toggle.getAttribute( 'title' ) );
     }
 
     function buildDrawerControls()
@@ -122,11 +134,27 @@
         scrim.addEventListener( 'click', closeDrawer );
         app.appendChild( scrim );
 
+        // In the rail, directly under the add-block button. The rail is where
+        // the editor keeps its tools, and a tool that is always in the same
+        // place is the point: the drawer can otherwise only be reached by
+        // tapping exactly the right part of exactly the right block, and there
+        // is then no way back to the properties of the block already selected.
         toggle = document.createElement( 'button' );
         toggle.type = 'button';
-        toggle.className = 'exp-drawer-toggle';
-        toggle.addEventListener( 'click', openDrawer );
-        app.appendChild( toggle );
+        toggle.className = 'exp-rail-toggle';
+        toggle.innerHTML = '<i class="material-icons">tune</i>';
+        toggle.addEventListener( 'click', toggleDrawer );
+
+        var topMenu = app.querySelector( '.left-toolbar .top-menu' );
+        var blocks  = topMenu && topMenu.querySelector( '.blocks' );
+
+        if ( blocks && blocks.parentNode === topMenu )
+            topMenu.insertBefore( toggle, blocks.nextSibling );
+        else if ( topMenu )
+            topMenu.appendChild( toggle );
+        else
+            // No rail to hang it on - better loose in the app than absent.
+            app.appendChild( toggle );
 
         closer = document.createElement( 'button' );
         closer.type = 'button';
@@ -330,6 +358,7 @@
         }
 
         publishHeaderHeight();
+        refreshToggle();
     }
 
     function start()
