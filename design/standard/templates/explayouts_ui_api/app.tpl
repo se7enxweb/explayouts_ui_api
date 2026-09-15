@@ -28,6 +28,9 @@
 
     <link rel="stylesheet" href="{'stylesheets/netgen-layouts.css'|ezdesign('no')}">
     <link rel="stylesheet" href="{'stylesheets/netgen-layouts-admin.css'|ezdesign('no')}">
+    {* Last of the three so it wins. The editor has no mobile layout of its own
+       - upstream refuses below 800px instead - so this file is that layout. *}
+    <link rel="stylesheet" href="{'stylesheets/explayouts-mobile.css'|ezdesign('no')}">
     {literal}<style>
         #ngc-size-warning { display: none !important; }
         .left-toolbar .button.js-open.active + .left-toolbar-panels .left-panel { display: block !important; }
@@ -596,6 +599,9 @@
     <script src="{'vendor/ckeditor/ckeditor.js'|ezdesign('no')}" defer></script>
     <script src="{'vendor/ace-editor/ace.js'|ezdesign('no')}" defer></script>
     <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20260833" defer></script>
+    {* After the app bundle: it waits for the app to draw itself before it
+       touches anything. *}
+    <script src="{'javascript/explayouts-mobile.js'|ezdesign('no')}" defer></script>
     {literal}<script>
     document.addEventListener('click', function(e) {
         var toggle = e.target.closest('.dropdown-toggle');
