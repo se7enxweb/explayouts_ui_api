@@ -19,9 +19,15 @@ class expLayoutsUIApplicationApi
 
             if ( $layoutsIndex !== false )
             {
+                $layoutSegment = isset( $parts[$layoutsIndex + 1] ) ? $parts[$layoutsIndex + 1] : '';
+                if ( $layoutSegment === 'shared' )
+                    return self::handleSharedLayouts();
+
                 $subResource = isset( $parts[$layoutsIndex + 2] ) ? $parts[$layoutsIndex + 2] : '';
                 if ( $subResource === 'blocks' )
                     return self::handleBlocks( $parts, $layoutsIndex );
+                if ( $subResource === 'zones' )
+                    return self::handleZones( $parts, $layoutsIndex );
 
                 return self::handleLayouts( $parts, $layoutsIndex );
             }
@@ -255,6 +261,114 @@ class expLayoutsUIApplicationApi
         return self::response( array( 'values' => array_map( array( __CLASS__, 'layoutToArray' ), $layouts ), 'total' => count( $layouts ) ) );
     }
 
+    /**
+     * GET layouts/shared - the layouts a zone may be linked to.
+     *
+     * Only published shared layouts: a zone links to shared content that is
+     * live, never to somebody's unpublished draft of it.
+     */
+    protected static function handleSharedLayouts()
+    {
+        $layouts = expLayoutsLayout::fetchShared( 2 );
+        return self::response( array(
+            'values' => array_map( array( __CLASS__, 'layoutToArray' ), $layouts ),
+            'total' => count( $layouts ),
+        ) );
+    }
+
+    /**
+     * Zone-scoped routes:
+     *   GET    [:locale/]layouts/:id/zones/:identifier/blocks
+     *   POST   layouts/:id/zones/:identifier/link
+     *   DELETE layouts/:id/zones/:identifier/link
+     */
+    protected static function handleZones( $parts, $layoutsIndex )
+    {
+        $layoutId = isset( $parts[$layoutsIndex + 1] ) ? (int)$parts[$layoutsIndex + 1] : 0;
+        $zoneIdentifier = isset( $parts[$layoutsIndex + 3] ) ? trim( $parts[$layoutsIndex + 3] ) : '';
+        $action = isset( $parts[$layoutsIndex + 4] ) ? $parts[$layoutsIndex + 4] : '';
+        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( $_SERVER['REQUEST_METHOD'] ) : 'GET';
+
+        if ( $layoutId <= 0 || $zoneIdentifier === '' )
+            return self::response( array( 'error' => 'Missing layout id or zone identifier.' ), 400 );
+
+        $service = new expLayoutsCoreLayoutService();
+        $zoneService = new expLayoutsCoreZoneService();
+
+        if ( $action === 'blocks' && $method === 'GET' )
+        {
+            // The zone whose blocks are being asked for is a zone of the
+            // shared layout, so it is read straight off the published row.
+            // A bare array, not the usual values/total envelope: the editor
+            // plucks the ids straight off this response to remember which
+            // blocks belong to the linked zone.
+            $layout = self::loadLayoutForApi( $service, $layoutId, 'loadPublished' );
+            if ( !$layout )
+                return self::response( array() );
+
+            $zone = expLayoutsZone::fetchByLayoutAndIdentifier(
+                (int)$layout->attribute( 'id' ), $zoneIdentifier, (int)$layout->attribute( 'status' ) );
+            if ( !$zone )
+                $zone = expLayoutsZone::fetchByLayoutAndIdentifier( (int)$layout->attribute( 'id' ), $zoneIdentifier, null );
+            if ( !$zone )
+                return self::response( array() );
+
+            $blocks = self::fetchTopLevelBlocksForZone( $zone );
+            return self::response( array_values( array_map( array( __CLASS__, 'blockToArray' ), $blocks ) ) );
+        }
+
+        if ( $action !== 'link' )
+            return self::response( array( 'error' => 'Unknown zone action.' ), 404 );
+
+        // Linking is an edit, so it happens on the draft like every other one.
+        $layout = self::loadLayoutForApi( $service, $layoutId, 'loadDraft' );
+        if ( !$layout )
+            return self::response( array( 'error' => 'Layout not found.' ), 404 );
+
+        $zone = expLayoutsZone::fetchByLayoutAndIdentifier(
+            (int)$layout->attribute( 'id' ), $zoneIdentifier, (int)$layout->attribute( 'status' ) );
+        if ( !$zone )
+            return self::response( array( 'error' => 'Zone not found.' ), 404 );
+
+        if ( $method === 'DELETE' )
+        {
+            $zone = $zoneService->unlink( (int)$zone->attribute( 'id' ) );
+            return self::response( self::zoneToArray( $zone ) );
+        }
+
+        if ( $method === 'POST' || $method === 'PATCH' || $method === 'PUT' )
+        {
+            $data = self::requestData();
+            $linkedLayoutId = isset( $data['linked_layout_id'] ) ? (int)$data['linked_layout_id'] : 0;
+            $linkedZoneIdentifier = isset( $data['linked_zone_identifier'] ) ? trim( $data['linked_zone_identifier'] ) : '';
+
+            $linked = $zoneService->link( (int)$zone->attribute( 'id' ), $linkedLayoutId, $linkedZoneIdentifier );
+            if ( !$linked )
+                return self::response( array( 'error' => 'Zone could not be linked to that layout zone.' ), 422 );
+
+            return self::response( self::zoneToArray( $linked ) );
+        }
+
+        return self::response( array( 'error' => 'Unsupported method.' ), 405 );
+    }
+
+    protected static function zoneToArray( $zone )
+    {
+        $blockIds = array();
+        foreach ( self::fetchOwnTopLevelBlocksForZone( $zone ) as $block )
+            $blockIds[] = (int)$block->attribute( 'id' );
+
+        return array(
+            'identifier' => (string)$zone->attribute( 'identifier' ),
+            'name' => (string)$zone->attribute( 'identifier' ),
+            'layout_id' => (int)$zone->attribute( 'layout_id' ),
+            'block_ids' => $blockIds,
+            'allowed_block_definitions' => true,
+            'linked_layout_id' => $zone->isLinked() ? self::publishedLayoutId( (int)$zone->attribute( 'linked_layout_id' ) ) : null,
+            'linked_zone_identifier' => $zone->isLinked() ? (string)$zone->attribute( 'linked_zone_identifier' ) : null,
+        );
+    }
+
     protected static function handleBlocks( $parts, $layoutsIndex )
     {
         $layoutId = isset( $parts[$layoutsIndex + 1] ) ? (int)$parts[$layoutsIndex + 1] : 0;
@@ -303,6 +417,9 @@ class expLayoutsUIApplicationApi
             if ( !$zoneObject )
                 return self::response( array( 'error' => 'Zone not found.' ), 404 );
 
+            if ( $zoneObject->isLinked() )
+                return self::response( array( 'error' => 'This zone is linked to a shared layout and cannot take blocks of its own.' ), 403 );
+
             $block = expLayoutsBlock::create(
                 (int)$zoneObject->attribute( 'id' ),
                 $layoutId,
@@ -328,12 +445,14 @@ class expLayoutsUIApplicationApi
         if ( !$layout )
             return self::response( array( 'values' => array(), 'total' => 0 ) );
 
+        // Only the layout's own blocks. The editor asks for the blocks behind
+        // a linked zone separately, against the shared layout they belong to.
         $zoneBlocks = array();
         $layoutId = (int)$layout->attribute( 'id' );
         $zones = expLayoutsZone::fetchByLayout( $layoutId, null );
         foreach ( $zones as $zone )
         {
-            foreach ( self::fetchTopLevelBlocksForZone( $zone ) as $block )
+            foreach ( self::fetchOwnTopLevelBlocksForZone( $zone ) as $block )
             {
                 $zoneBlocks[] = $block;
             }
@@ -374,6 +493,9 @@ class expLayoutsUIApplicationApi
             }
             if ( !$zoneObject )
                 return self::response( array( 'error' => 'Zone not found.' ), 404 );
+
+            if ( $zoneObject->isLinked() )
+                return self::response( array( 'error' => 'This zone is linked to a shared layout and cannot take blocks of its own.' ), 403 );
 
             $parentBlockId = isset( $data['parent_block_id'] ) ? (int)$data['parent_block_id'] : 0;
             $parentPlaceholder = isset( $data['parent_placeholder'] ) ? trim( $data['parent_placeholder'] ) : '';
@@ -423,6 +545,13 @@ class expLayoutsUIApplicationApi
             $block = expLayoutsBlock::fetch( $id );
             if ( !$block )
                 return self::response( array( 'error' => 'Block not found.' ), 404 );
+
+            if ( $method !== 'GET' && self::blockIsInherited( $block ) )
+            {
+                return self::response( array(
+                    'error' => 'This block belongs to a shared layout and cannot be edited from a layout that links to it.',
+                ), 403 );
+            }
 
             if ( $method === 'DELETE' )
             {
@@ -1196,37 +1325,62 @@ class expLayoutsUIApplicationApi
 
     protected static function resolveLinkedZone( $zone )
     {
-        $sourceZone = $zone;
-        $linkedLayoutId = (int)$zone->attribute( 'linked_layout_id' );
-        $seen = array();
+        return expLayoutsZone::resolveSource( $zone );
+    }
 
-        while ( $linkedLayoutId > 0 && !isset( $seen[$linkedLayoutId] ) )
-        {
-            $seen[$linkedLayoutId] = true;
-            $targetZone = false;
-            $fallbackZone = false;
-            foreach ( expLayoutsZone::fetchByLayout( $linkedLayoutId, null ) as $candidate )
-            {
-                if ( (string)$candidate->attribute( 'identifier' ) === (string)$zone->attribute( 'identifier' ) )
-                {
-                    $targetZone = $candidate;
-                    break;
-                }
-                if ( (string)$candidate->attribute( 'identifier' ) === 'main' )
-                    $fallbackZone = $candidate;
-            }
+    /**
+     * The id of the published row of a layout, given any of its rows.
+     *
+     * The editor looks a linked layout up in the shared-layout collection,
+     * which only ever holds published rows, so a link reported against a
+     * draft id would come back as an unknown layout.
+     */
+    protected static function publishedLayoutId( $layoutId )
+    {
+        $layout = expLayoutsLayout::fetch( (int)$layoutId );
+        if ( !$layout )
+            return (int)$layoutId;
 
-            if ( !$targetZone && $fallbackZone )
-                $targetZone = $fallbackZone;
+        if ( (int)$layout->attribute( 'status' ) === 2 )
+            return (int)$layout->attribute( 'id' );
 
-            if ( !$targetZone )
-                break;
+        $published = expLayoutsLayout::fetchByIdentifier( (string)$layout->attribute( 'identifier' ), 2 );
+        return $published ? (int)$published->attribute( 'id' ) : (int)$layoutId;
+    }
 
-            $sourceZone = $targetZone;
-            $linkedLayoutId = (int)$sourceZone->attribute( 'linked_layout_id' );
-        }
+    /**
+     * The blocks the zone owns.
+     *
+     * A linked zone owns none: its blocks belong to the shared layout and the
+     * editor loads them separately, through the zone-blocks endpoint, so that
+     * it can draw them locked rather than as this layout's own.
+     */
+    /**
+     * True for a block that is only ever on screen because some layout links
+     * to the shared layout owning it.
+     *
+     * Such a block reaches the editor through the zone-blocks endpoint and is
+     * drawn locked, but the block routes address blocks by id alone, so a
+     * stale page or a hand-made request could still aim an edit at it. A
+     * published row of a shared layout is never the right target: editing a
+     * shared layout goes through that layout's own draft, whose blocks are
+     * separate rows at status 1.
+     */
+    protected static function blockIsInherited( $block )
+    {
+        if ( (int)$block->attribute( 'status' ) !== 2 )
+            return false;
 
-        return $sourceZone;
+        $layout = expLayoutsLayout::fetch( (int)$block->attribute( 'layout_id' ) );
+        return $layout instanceof expLayoutsLayout && $layout->isShared();
+    }
+
+    protected static function fetchOwnTopLevelBlocksForZone( $zone )
+    {
+        if ( $zone->isLinked() )
+            return array();
+
+        return self::fetchTopLevelBlocksForZone( $zone );
     }
 
     protected static function fetchTopLevelBlocksForZone( $zone )
@@ -2132,15 +2286,20 @@ class expLayoutsUIApplicationApi
 
             $zone = $existingZones[$zoneIdentifier];
             $blockIds = array();
-            foreach ( self::fetchTopLevelBlocksForZone( $zone ) as $block )
+            foreach ( self::fetchOwnTopLevelBlocksForZone( $zone ) as $block )
             {
                 $blockIds[] = (int)$block->attribute( 'id' );
             }
 
+            // A linked zone reports the link and no blocks of its own. The
+            // editor keys "inherited" off linked_zone_identifier and pulls the
+            // shared layout's blocks itself, through the zone-blocks endpoint.
             $zones[] = array(
                 'identifier' => $zoneIdentifier,
                 'name' => $zoneIdentifier,
                 'block_ids' => $blockIds,
+                'linked_layout_id' => $zone->isLinked() ? self::publishedLayoutId( (int)$zone->attribute( 'linked_layout_id' ) ) : null,
+                'linked_zone_identifier' => $zone->isLinked() ? (string)$zone->attribute( 'linked_zone_identifier' ) : null,
             );
 
             $zoneHtmlParts[] = '<div class="zone" data-zone="' . htmlspecialchars( $zoneIdentifier, ENT_QUOTES, 'UTF-8' ) . '"></div>';
@@ -2150,8 +2309,6 @@ class expLayoutsUIApplicationApi
         foreach ( $zones as $zone )
         {
             $zone['allowed_block_definitions'] = true;
-            $zone['linked_layout_id'] = null;
-            $zone['linked_zone_identifier'] = null;
             $zonesWithAllowed[] = $zone;
         }
 
@@ -2164,7 +2321,7 @@ class expLayoutsUIApplicationApi
             'description' => '',
             'status' => $status,
             'published' => $status === 2,
-            'shared' => false,
+            'shared' => (int)$layout->attribute( 'shared' ) === 1,
             'has_published_state' => $hasPublishedState,
             'has_archived_state' => false,
             'created' => (int)$layout->attribute( 'created' ),
@@ -2272,7 +2429,11 @@ class expLayoutsUIApplicationApi
                 if ( isset( $zoneData['position'] ) )
                     $zone->setAttribute( 'position', (int)$zoneData['position'] );
                 if ( isset( $zoneData['linked_layout_id'] ) )
+                {
                     $zone->setAttribute( 'linked_layout_id', (int)$zoneData['linked_layout_id'] );
+                    $zone->setAttribute( 'linked_zone_identifier',
+                        isset( $zoneData['linked_zone_identifier'] ) ? $zoneData['linked_zone_identifier'] : $zoneIdentifier );
+                }
                 $zone->store();
                 $zoneId = (int)$zone->attribute( 'id' );
 
