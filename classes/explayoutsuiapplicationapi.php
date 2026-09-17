@@ -134,6 +134,90 @@ class expLayoutsUIApplicationApi
         return self::response( array( 'values' => $types, 'total' => count( $types ) ) );
     }
 
+    /**
+     * The editor's icon for each block type.
+     *
+     * The block_types/item template renders an <img> when a block type
+     * declares an icon and falls back to a CSS font glyph when it does not.
+     * The font only maps a glyph for eighteen of the forty types offered, so
+     * anything left undeclared drew the font's default box - which is what
+     * made the plus menu look nothing like the reference installation.
+     *
+     * The files are the reference installation's own icons, copied into this
+     * extension's design by
+     * ai/bin/one/copy_nexus_block_icons_into_explayouts_ui_api.sh. Three
+     * identifiers are named differently here than upstream: video is
+     * external_video, html is html_snippet, and tpl_block is twig_block.
+     */
+    const BLOCK_ICON_BASE = '/extension/explayouts_ui_api/design/standard/images/';
+
+    protected static function blockIconMap()
+    {
+        return array(
+            // Basic
+            'title' => 'blocks/icon-title.svg',
+            'text' => 'blocks/icon-text.svg',
+            'button' => 'blocks/icon-button.svg',
+            'rich_text' => 'blocks/icon-rich_text.svg',
+            'markdown' => 'blocks/icon-markdown.svg',
+            'map' => 'blocks/icon-map.svg',
+            'html' => 'blocks/icon-html_snippet.svg',
+            'video' => 'blocks/icon-external_video.svg',
+
+            // Listing
+            'list' => 'blocks/icon-list.svg',
+            'grid' => 'blocks/icon-grid.svg',
+            'list_zigzag' => 'blocks/icon-list-zig-zag.svg',
+            'list_accordion' => 'blocks/icon-list-accordion.svg',
+
+            // Gallery
+            'gallery' => 'blocks/icon-gallery.svg',
+            'slider' => 'blocks/icon-slider.svg',
+            'thumb_gallery' => 'blocks/icon-thumb_gallery.svg',
+            'grid_gallery' => 'blocks/icon-grid_gallery.svg',
+            'sushi_bar' => 'blocks/icon-sushi_bar.svg',
+
+            // Containers
+            'column' => 'blocks/icon-column.svg',
+            'two_columns' => 'blocks/icon-two_columns.svg',
+            'three_columns' => 'blocks/icon-three_columns.svg',
+            'four_columns' => 'blocks/icon-four_columns.svg',
+
+            // Placeholders
+            'full_view' => 'blocks/icon-full_view.svg',
+            'tpl_block' => 'blocks/icon-twig_block.svg',
+
+            // Components, and the ibexa_component_* twins of the same thing
+            'about' => 'components/icon-component-about.svg',
+            'features' => 'components/icon-component-features.svg',
+            'hero' => 'components/icon-component-hero.svg',
+            'lead' => 'components/icon-component-lead.svg',
+            'logos' => 'components/icon-component-logos.svg',
+            'quote' => 'components/icon-component-quote.svg',
+            'ibexa_component_about' => 'components/icon-component-about.svg',
+            'ibexa_component_features' => 'components/icon-component-features.svg',
+            'ibexa_component_hero' => 'components/icon-component-hero.svg',
+            'ibexa_component_lead' => 'components/icon-component-lead.svg',
+            'ibexa_component_logos' => 'components/icon-component-logos.svg',
+            'ibexa_component_quote' => 'components/icon-component-quote.svg',
+        );
+    }
+
+    /**
+     * Blocks this installation offers that the reference installation has no
+     * icon for. They take the upstream generic component icon rather than a
+     * borrowed one, so the menu stays legible without implying a block is
+     * something it is not.
+     */
+    const BLOCK_ICON_FALLBACK = 'components/icon-component-generic.svg';
+
+    protected static function blockIcon( $identifier )
+    {
+        $map = self::blockIconMap();
+        $file = isset( $map[$identifier] ) ? $map[$identifier] : self::BLOCK_ICON_FALLBACK;
+        return self::BLOCK_ICON_BASE . $file;
+    }
+
     protected static function blockTypes()
     {
         $groupNames = array(
@@ -177,7 +261,7 @@ class expLayoutsUIApplicationApi
                 'group_name' => $category,
                 'enabled' => true,
                 'is_container' => !empty( $info['is_container'] ),
-                'icon' => '',
+                'icon' => self::blockIcon( (string)$identifier ),
                 'parameters' => '{}',
                 'defaults' => array(),
             );
