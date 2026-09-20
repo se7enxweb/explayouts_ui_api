@@ -2961,15 +2961,8 @@ class expLayoutsUIApplicationApi
             return self::response( array( 'error' => 'Layout not found.' ), 404 );
 
         $db = eZDB::instance();
-        $db->query( 'CREATE TABLE IF NOT EXISTS explayouts_share (
-            id int(11) NOT NULL AUTO_INCREMENT,
-            layout_id int(11) NOT NULL DEFAULT 0,
-            token varchar(64) NOT NULL,
-            created int(11) NOT NULL DEFAULT 0,
-            PRIMARY KEY (id),
-            KEY layout_id (layout_id),
-            UNIQUE KEY token (token)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4' );
+        if ( !self::ensureShareTable( $db ) )
+            return self::response( array( 'error' => 'Share storage is unavailable.' ), 500 );
 
         $method = isset( $_SERVER['REQUEST_METHOD'] ) ? $_SERVER['REQUEST_METHOD'] : 'GET';
 
@@ -2977,10 +2970,15 @@ class expLayoutsUIApplicationApi
         {
             $token = bin2hex( random_bytes( 32 ) );
             $created = time();
-            $db->query( 'INSERT INTO explayouts_share (layout_id, token, created) VALUES ( '
+            $stored = $db->query( 'INSERT INTO explayouts_share (layout_id, token, created) VALUES ( '
                 . $layoutId . ', \''
                 . $db->escapeString( $token ) . '\', '
                 . $created . ' )' );
+            // Answering 201 regardless handed the caller a token that was in
+            // nobody's table and would never validate.
+            if ( $stored === false )
+                return self::response( array( 'error' => 'Share token could not be stored.' ), 500 );
+
             return self::response( array(
                 'layout_id' => $layoutId,
                 'share_token' => $token,
@@ -2991,6 +2989,11 @@ class expLayoutsUIApplicationApi
         if ( $method === 'GET' )
         {
             $tokens = $db->arrayQuery( 'SELECT id, token, created FROM explayouts_share WHERE layout_id = ' . $layoutId . ' ORDER BY created DESC' );
+            // A failed read returns false, which would be sent as the JSON
+            // body in place of the list the client is documented to receive.
+            if ( !is_array( $tokens ) )
+                return self::response( array( 'error' => 'Share tokens could not be read.' ), 500 );
+
             return self::response( $tokens );
         }
 
@@ -2999,11 +3002,79 @@ class expLayoutsUIApplicationApi
             $token = isset( $parts[1] ) ? $parts[1] : '';
             if ( $token === '' )
                 return self::response( array( 'error' => 'Missing token.' ), 400 );
-            $db->query( 'DELETE FROM explayouts_share WHERE layout_id = ' . $layoutId . ' AND token = \'' . $db->escapeString( $token ) . '\'' );
+
+            $removed = $db->query( 'DELETE FROM explayouts_share WHERE layout_id = ' . $layoutId . ' AND token = \'' . $db->escapeString( $token ) . '\'' );
+            if ( $removed === false )
+                return self::response( array( 'error' => 'Share token could not be removed.' ), 500 );
+
             return self::response( array( 'deleted' => true ) );
         }
 
         return self::response( array( 'error' => 'Unsupported method.' ), 405 );
+    }
+
+    /**
+     * Create explayouts_share on first use.
+     *
+     * The table belongs to no schema file, so the endpoint builds it on
+     * demand. The DDL was MySQL's alone - int(11), KEY, ENGINE=InnoDB - which
+     * every other engine rejects, and nothing checked the result. On SQLite
+     * that meant the table was never created, the insert that followed failed
+     * too, and the endpoint still answered 201 with a share token it had not
+     * stored.
+     *
+     * SQLite gets its own spelling. MySQL keeps the original, and the MongoDB
+     * driver reads the key clauses out of that same statement to build the
+     * matching indexes, so both share one definition.
+     *
+     * @return bool false when the table is not usable, which the caller must
+     *              turn into an error response rather than ignore.
+     */
+    protected static function ensureShareTable( $db )
+    {
+        static $ready = array();
+
+        $engine = $db->databaseName();
+        if ( isset( $ready[$engine] ) )
+            return $ready[$engine];
+
+        if ( $engine === 'sqlite' )
+        {
+            $statements = array(
+                'CREATE TABLE IF NOT EXISTS explayouts_share (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    layout_id INTEGER NOT NULL DEFAULT 0,
+                    token TEXT NOT NULL,
+                    created INTEGER NOT NULL DEFAULT 0 )',
+                'CREATE INDEX IF NOT EXISTS explayouts_share_layout_id ON explayouts_share ( layout_id )',
+                'CREATE UNIQUE INDEX IF NOT EXISTS explayouts_share_token ON explayouts_share ( token )',
+            );
+        }
+        else
+        {
+            $statements = array( 'CREATE TABLE IF NOT EXISTS explayouts_share (
+                id int(11) NOT NULL AUTO_INCREMENT,
+                layout_id int(11) NOT NULL DEFAULT 0,
+                token varchar(64) NOT NULL,
+                created int(11) NOT NULL DEFAULT 0,
+                PRIMARY KEY (id),
+                KEY layout_id (layout_id),
+                UNIQUE KEY token (token)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4' );
+        }
+
+        foreach ( $statements as $statement )
+        {
+            if ( $db->query( $statement ) === false )
+            {
+                eZDebug::writeError( 'Could not create explayouts_share on ' . $engine, __METHOD__ );
+                $ready[$engine] = false;
+                return false;
+            }
+        }
+
+        $ready[$engine] = true;
+        return true;
     }
 
     protected static function objectToArray( eZPersistentObject $object )
