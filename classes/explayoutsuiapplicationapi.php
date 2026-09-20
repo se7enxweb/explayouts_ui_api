@@ -3027,6 +3027,14 @@ class expLayoutsUIApplicationApi
      * driver reads the key clauses out of that same statement to build the
      * matching indexes, so both share one definition.
      *
+     * The table and its index names must stay identical to the declaration in
+     * extension/explayouts/share/db_schema.dba and the per-engine files beside
+     * it. The system upgrade page compares the live database against those,
+     * and anything created here under a different name is reported as an
+     * inconsistency for the operator to correct by hand - which is how the
+     * index names below came to be idx_share_layout and idx_share_token
+     * rather than something local to this method.
+     *
      * @return bool false when the table is not usable, which the caller must
      *              turn into an error response rather than ignore.
      */
@@ -3046,8 +3054,8 @@ class expLayoutsUIApplicationApi
                     layout_id INTEGER NOT NULL DEFAULT 0,
                     token TEXT NOT NULL,
                     created INTEGER NOT NULL DEFAULT 0 )',
-                'CREATE INDEX IF NOT EXISTS explayouts_share_layout_id ON explayouts_share ( layout_id )',
-                'CREATE UNIQUE INDEX IF NOT EXISTS explayouts_share_token ON explayouts_share ( token )',
+                'CREATE INDEX IF NOT EXISTS idx_share_layout ON explayouts_share ( layout_id )',
+                'CREATE UNIQUE INDEX IF NOT EXISTS idx_share_token ON explayouts_share ( token )',
             );
         }
         else
@@ -3058,8 +3066,8 @@ class expLayoutsUIApplicationApi
                 token varchar(64) NOT NULL,
                 created int(11) NOT NULL DEFAULT 0,
                 PRIMARY KEY (id),
-                KEY layout_id (layout_id),
-                UNIQUE KEY token (token)
+                KEY idx_share_layout (layout_id),
+                UNIQUE KEY idx_share_token (token)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4' );
         }
 
