@@ -1,4 +1,23 @@
 <?php
+
+if ( !function_exists( 'layoutToArray' ) ) {
+function layoutToArray( $layout )
+{
+    if ( !$layout )
+        return null;
+
+    return array(
+        'id' => (int)$layout->attribute( 'id' ),
+        'identifier' => (string)$layout->attribute( 'identifier' ),
+        'name' => (string)$layout->attribute( 'name' ),
+        'layout_type' => (string)$layout->attribute( 'layout_type' ),
+        'status' => (int)$layout->attribute( 'status' ),
+        'created' => (int)$layout->attribute( 'created' ),
+        'modified' => (int)$layout->attribute( 'modified' ),
+    );
+}
+}
+
 $http = eZHTTPTool::instance();
 $layoutId = isset( $Params['LayoutID'] ) ? (int)$Params['LayoutID'] : 0;
 
@@ -24,18 +43,3 @@ $Result['pagelayout'] = false;
 $Result['content'] = json_encode( $response );
 return $Result;
 
-function layoutToArray( $layout )
-{
-    if ( !$layout )
-        return null;
-
-    return array(
-        'id' => (int)$layout->attribute( 'id' ),
-        'identifier' => (string)$layout->attribute( 'identifier' ),
-        'name' => (string)$layout->attribute( 'name' ),
-        'layout_type' => (string)$layout->attribute( 'layout_type' ),
-        'status' => (int)$layout->attribute( 'status' ),
-        'created' => (int)$layout->attribute( 'created' ),
-        'modified' => (int)$layout->attribute( 'modified' ),
-    );
-}
