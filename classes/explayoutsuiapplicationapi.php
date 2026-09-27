@@ -1875,6 +1875,8 @@ class expLayoutsUIApplicationApi
                     $name = (string)$object->attribute( 'name' );
                     $cmsVisible = true;
                     $cmsUrl = '/content/view/full/' . (int)$node->attribute( 'node_id' );
+                    // With the siteaccess prefix (/admin/...) when there is one.
+                    eZURI::transformURI( $cmsUrl, false, 'relative', false );
                 }
                 $urlAlias = (string)$node->urlAlias();
             }
@@ -2030,6 +2032,8 @@ class expLayoutsUIApplicationApi
         $name = ( $object instanceof eZContentObject ) ? (string)$object->attribute( 'name' ) : (string)$node->attribute( 'name' );
         $cmsVisible = $object instanceof eZContentObject;
         $cmsUrl = '/content/view/full/' . (int)$node->attribute( 'node_id' );
+        // With the siteaccess prefix (/admin/...) when there is one.
+        eZURI::transformURI( $cmsUrl, false, 'relative', false );
         $urlAlias = (string)$node->urlAlias();
         $nodeId = (int)$node->attribute( 'node_id' );
 
