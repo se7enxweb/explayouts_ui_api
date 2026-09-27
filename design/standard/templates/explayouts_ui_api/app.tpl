@@ -528,11 +528,48 @@
     </style>{/literal}
 </head>
 <body>
+    {literal}<script>
+    // The editor's base URL, with the siteaccess prefix (/admin/...) when there is one.
+    function nglayoutsBase() { var m = document.querySelector('meta[name="nglayouts-base-path"]'); return m ? m.content : '/explayouts_ui_api'; }
+    </script>{/literal}
     <script>{literal}var nglayoutsServerReturnTo = '{/literal}{$return_to|wash('javascript')}{literal}';{/literal}</script>
+    <script>{literal}var nglayoutsSiteRoot = '{/literal}{'/'|ezurl('no')|wash('javascript')}{literal}';{/literal}</script>
+    {literal}<script>
+    // Where the editor returns to. Discard, Cancel and closing go to
+    // localStorage.ngl_referrer (the bundle's fallback is "/", the domain
+    // root); the page's own scripts use nglayoutsReturnTo. Any same-site path
+    // outside this siteaccess is put back inside it: the admin's Layouts tab
+    // stored /content/view/full/N without /admin, and pages still open keep
+    // storing it until reloaded.
+    (function(){
+        function url(u) { try { return new URL(u, window.location.href); } catch (e) { return null; } }
+        function sameSite(u) { var x = url(u); return !!x && x.origin === window.location.origin; }
+        function isEditor(u) { return /\/explayouts_ui_api\/app/.test(u); }
+        var root = url(nglayoutsSiteRoot || '/');
+        var rootPath = root ? root.pathname.replace(/\/?$/, '/') : '/';
+        function inSiteaccess(u) { var x = url(u); return !!x && sameSite(u) && (x.pathname + '/').indexOf(rootPath) === 0; }
+        window.nglayoutsInSiteaccess = function (u) {
+            var x = url(u);
+            if (!x || !sameSite(u) || rootPath === '/' || inSiteaccess(u)) return x ? x.href : u;
+            return window.location.origin + rootPath.replace(/\/$/, '') + x.pathname + x.search + x.hash;
+        };
+        var stored = null, kept = null;
+        try { stored = window.sessionStorage.getItem('nglayouts_return_to'); } catch (e) {}
+        try { kept = window.localStorage.getItem('ngl_referrer'); } catch (e) {}
+        var explicit = nglayoutsServerReturnTo || stored || null;
+        if (!explicit && document.referrer && sameSite(document.referrer) && !isEditor(document.referrer)) explicit = document.referrer;
+        if (explicit) explicit = window.nglayoutsInSiteaccess(explicit);
+        window.nglayoutsReturnTo = explicit || '';
+        var target = explicit;
+        if (!target && kept && inSiteaccess(kept) && !isEditor(kept)) target = kept;
+        if (!target) target = root ? root.href : '/';
+        try { window.localStorage.setItem('ngl_referrer', target); } catch (e) {}
+        if (explicit) { try { window.sessionStorage.setItem('nglayouts_return_to', explicit); } catch (e) {} }
+    })();
+    </script>{/literal}
     {literal}<script>
     (function(){
-        var returnTo = nglayoutsServerReturnTo || sessionStorage.getItem('nglayouts_return_to');
-        if (!returnTo && document.referrer) returnTo = document.referrer;
+        var returnTo = window.nglayoutsReturnTo;
         if (returnTo) sessionStorage.setItem('nglayouts_return_to', returnTo);
         if ( ( window.location.hash === '' || window.location.hash === '#' ) && returnTo )
         {
@@ -544,7 +581,7 @@
             var m = document.referrer.match( /\/content\/view\/full\/(\d+)/ );
             if ( m )
             {
-                window.location.replace( '/content/view/full/' + m[1] );
+                window.location.replace( window.nglayoutsInSiteaccess( '/content/view/full/' + m[1] ) );
                 return;
             }
         }
@@ -558,8 +595,7 @@
     (function(){
         var link = document.getElementById('ng-cancel-link');
         if (!link) return;
-        var returnTo = nglayoutsServerReturnTo || sessionStorage.getItem('nglayouts_return_to');
-        if (!returnTo && document.referrer) returnTo = document.referrer;
+        var returnTo = window.nglayoutsReturnTo;
         if (returnTo) link.href = returnTo;
         link.addEventListener('click', function(e){
             if (!returnTo) {
@@ -697,7 +733,7 @@
             body.append('definition_identifier', definition);
             var tokenMeta = document.querySelector('meta[name="ezxform-token"]');
             if (tokenMeta) body.append('ezxform_token', tokenMeta.content);
-            fetch('/explayouts_ui_api/app/api/eng/blocks', { method: 'POST', body: body, credentials: 'same-origin' }).then(function(r){
+            fetch(nglayoutsBase() + '/app/api/eng/blocks', { method: 'POST', body: body, credentials: 'same-origin' }).then(function(r){
                 if (r.ok) window.location.reload();
             });
         }, true);
@@ -812,7 +848,7 @@
         }
 
         function load() {
-            var url = '/explayouts_ui_api/app/api/content_browser?parent_node_id=' + state.parentId + '&search=' + encodeURIComponent(state.search) + '&offset=0&limit=50';
+            var url = nglayoutsBase() + '/app/api/content_browser?parent_node_id=' + state.parentId + '&search=' + encodeURIComponent(state.search) + '&offset=0&limit=50';
             $modal.find('.exp-cb-list').html('<p>Loading...</p>');
             $.getJSON(url).done(function(data){
                 var html = '';
@@ -906,7 +942,7 @@
             });
 
             $.ajax({
-                url: '/explayouts_ui_api/app/api/' + locale + '/blocks/' + blockId + '/collections/' + identifier + '/items',
+                url: nglayoutsBase() + '/app/api/' + locale + '/blocks/' + blockId + '/collections/' + identifier + '/items',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ items: items }),
@@ -970,7 +1006,7 @@
                 $input.val(value).trigger('change');
                 $name.text(data.name);
                 $wrap.removeClass('item-empty');
-                $cms.attr('href', '/content/view/full/' + data.nodeId).show();
+                $cms.attr('href', window.nglayoutsInSiteaccess('/content/view/full/' + data.nodeId)).show();
                 triggerBrowserChange($wrap);
             }, { title: title, buttonText: 'Select' });
         }, true);

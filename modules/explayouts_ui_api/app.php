@@ -7,7 +7,9 @@ $path = preg_replace( '#^/index\.php/#', '/', $path );
 $path = rtrim( $path, '/' );
 
 $apiPath = '';
-if ( preg_match( '#^/explayouts_ui_api/app(?:/(.*))?$#', $path, $m ) )
+// A siteaccess reached by path (/admin/explayouts_ui_api/app) puts its
+// prefix in front; the editor's own path is what follows it.
+if ( preg_match( '#^(?:/[^/]+)*?/explayouts_ui_api/app(?:/(.*))?$#', $path, $m ) )
 {
     $apiPath = isset( $m[1] ) ? $m[1] : '';
 }
@@ -21,10 +23,19 @@ if ( strpos( $apiPath, 'api/' ) === 0 )
 $tpl = eZTemplate::factory();
 $tpl->resetVariables();
 
+// Every editor URL the page and its scripts use, with the siteaccess's
+// prefix when it has one: hardcoded, /admin/explayouts_ui_api/app sent its
+// API calls to the public site's /explayouts_ui_api/app/api and got 403.
+$expLayoutsUrl = function ( $url )
+{
+    eZURI::transformURI( $url, false, 'relative', false );
+    return $url;
+};
+
 if ( $apiPath === 'layouts/form/create' )
 {
     $tpl->setVariable( 'layout_types', expLayoutsLayoutType::getAvailableTypes() );
-    $tpl->setVariable( 'action_url', '/explayouts_ui_api/app/api/layouts' );
+    $tpl->setVariable( 'action_url', $expLayoutsUrl( '/explayouts_ui_api/app/api/layouts' ) );
 
     $Result = array();
     $Result['pagelayout'] = false;
@@ -139,7 +150,7 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/edit$#', $apiPath, $m ) )
     {
         $collectionData = expLayoutsUIApplicationApi::collectionToArray( $collection, $block );
         $tpl->setVariable( 'collection', $collectionData );
-        $tpl->setVariable( 'query_form_url', "/explayouts_ui_api/app/$locale/blocks/$blockId/collections/default/query/form" );
+        $tpl->setVariable( 'query_form_url', $expLayoutsUrl( "/explayouts_ui_api/app/$locale/blocks/$blockId/collections/default/query/form" ) );
     }
     else
     {
@@ -147,8 +158,8 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/edit$#', $apiPath, $m ) )
         $tpl->setVariable( 'query_form_url', '' );
     }
 
-    $tpl->setVariable( 'form_url', "/explayouts_ui_api/app/$locale/blocks/$blockId/form" );
-    $tpl->setVariable( 'content_form_url', "/explayouts_ui_api/app/$locale/blocks/$blockId/form/edit/content" );
+    $tpl->setVariable( 'form_url', $expLayoutsUrl( "/explayouts_ui_api/app/$locale/blocks/$blockId/form" ) );
+    $tpl->setVariable( 'content_form_url', $expLayoutsUrl( "/explayouts_ui_api/app/$locale/blocks/$blockId/form/edit/content" ) );
     $tpl->setVariable( 'block_id', $blockId );
     $tpl->setVariable( 'block', $block );
     $tpl->setVariable( 'block_name', $block ? (string)$block->attribute( 'name' ) : '' );
@@ -172,7 +183,7 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form/edit/content$#', $apiPath, $m
         return $Result;
     }
 
-    $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId" );
+    $tpl->setVariable( 'action_url', $expLayoutsUrl( "/explayouts_ui_api/app/api/$locale/blocks/$blockId" ) );
     $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
     $tpl->setVariable( 'block_name', (string)$block->attribute( 'name' ) );
 
@@ -243,7 +254,7 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/form$#', $apiPath, $m ) )
 
     $tpl->setVariable( 'block', $block );
     $tpl->setVariable( 'block_name', (string)$block->attribute( 'name' ) );
-    $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId" );
+    $tpl->setVariable( 'action_url', $expLayoutsUrl( "/explayouts_ui_api/app/api/$locale/blocks/$blockId" ) );
     $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
     // $handler is false when the block's definition has no BlockDefinition_*
     // group in explayouts.ini. method_exists() throws on false under PHP 8, so
@@ -305,7 +316,7 @@ if ( preg_match( '#^([a-zA-Z_]+)/blocks/(\d+)/collections/([^/]+)/query/form$#',
 
     $queryTree = expLayoutsUIApplicationApi::buildQueryParameterTree( $handler );
 
-    $tpl->setVariable( 'action_url', "/explayouts_ui_api/app/api/$locale/blocks/$blockId/collections/$collectionIdentifier/query" );
+    $tpl->setVariable( 'action_url', $expLayoutsUrl( "/explayouts_ui_api/app/api/$locale/blocks/$blockId/collections/$collectionIdentifier/query" ) );
     $tpl->setVariable( 'ezxform_token', ezxFormToken::getToken() );
     $tpl->setVariable( 'query_type', $queryType );
     $tpl->setVariable( 'parameters', $queryTree['tree'] );
@@ -327,9 +338,9 @@ $customJavascripts = $ini->hasVariable( 'App', 'Javascripts' ) ? $ini->variable(
 $googleMapsApiKey = $ini->hasVariable( 'App', 'GoogleMapsApiKey' ) ? trim( $ini->variable( 'App', 'GoogleMapsApiKey' ) ) : '';
 
 $tpl->setVariable( 'locale', $locale );
-$tpl->setVariable( 'route_prefix', '/explayouts_ui_api' );
-$tpl->setVariable( 'base_path', '/explayouts_ui_api' );
-$tpl->setVariable( 'cb_base_path', '/explayouts_content_browser_ui' );
+$tpl->setVariable( 'route_prefix', $expLayoutsUrl( '/explayouts_ui_api' ) );
+$tpl->setVariable( 'base_path', $expLayoutsUrl( '/explayouts_ui_api' ) );
+$tpl->setVariable( 'cb_base_path', $expLayoutsUrl( '/explayouts_content_browser_ui' ) );
 $tpl->setVariable( 'custom_stylesheets', is_array( $customStylesheets ) ? $customStylesheets : array() );
 $tpl->setVariable( 'custom_javascripts', is_array( $customJavascripts ) ? $customJavascripts : array() );
 $returnTo = isset( $_GET['return_to'] ) ? $_GET['return_to'] : '';
