@@ -759,11 +759,37 @@
                    (url.match(/\/api\/layouts\/\d+\/draft([?#]|$)/) && method === 'DELETE');
         }
 
+        // Every request that can change something carries the session's form
+        // token in X-CSRF-Token, or the API refuses it with 403. Most calls
+        // already set it; this adds it to any same-site write that does not.
+        function formToken() {
+            var m = document.querySelector('meta[name="ezxform-token"]');
+            return m ? m.content : '';
+        }
+        function isWrite(method) {
+            method = (method || 'GET').toUpperCase();
+            return method !== 'GET' && method !== 'HEAD' && method !== 'OPTIONS';
+        }
+        function isSameOrigin(url) {
+            try { return new URL(url, window.location.href).origin === window.location.origin; }
+            catch (e) { return false; }
+        }
+
         if (window.fetch) {
             var origFetch = window.fetch;
             window.fetch = function(url, options) {
-                var method = options && options.method ? options.method : 'GET';
-                var urlString = typeof url === 'string' ? url : (url && url.url ? url.url : '');
+                var isRequest = typeof Request !== 'undefined' && url instanceof Request;
+                var method = options && options.method ? options.method : (isRequest ? url.method : 'GET');
+                var urlString = typeof url === 'string' ? url : (url && url.url ? url.url : String(url));
+                var token = formToken();
+                if (token && isWrite(method) && isSameOrigin(urlString)) {
+                    var headers = new Headers((options && options.headers) || (isRequest ? url.headers : undefined));
+                    if (!headers.has('X-CSRF-Token')) {
+                        headers.set('X-CSRF-Token', token);
+                        options = Object.assign({}, options || {}, { headers: headers });
+                        return window.fetch.call(this, url, options);
+                    }
+                }
                 return origFetch.apply(this, arguments).then(function(response) {
                     if (response.ok && shouldRedirect(urlString, method)) {
                         checkRedirect();
@@ -775,15 +801,31 @@
 
         var origXhrOpen = XMLHttpRequest.prototype.open;
         var origXhrSend = XMLHttpRequest.prototype.send;
+        var origXhrSetRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
         XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
             this._ngMethod = method;
             this._ngUrl = url;
+            this._ngHasToken = false;
             return origXhrOpen.apply(this, arguments);
+        };
+        XMLHttpRequest.prototype.setRequestHeader = function(name, value) {
+            if (String(name).toLowerCase() === 'x-csrf-token') {
+                // An empty value would only stand in the way of the real one
+                if (!value) return;
+                // Set once: a second value would be joined to the first
+                if (this._ngHasToken) return;
+                this._ngHasToken = true;
+            }
+            return origXhrSetRequestHeader.apply(this, arguments);
         };
         XMLHttpRequest.prototype.send = function(body) {
             var xhr = this;
             var method = xhr._ngMethod;
             var url = xhr._ngUrl;
+            var token = formToken();
+            if (token && !xhr._ngHasToken && isWrite(method) && isSameOrigin(String(url))) {
+                xhr.setRequestHeader('X-CSRF-Token', token);
+            }
             xhr.addEventListener('load', function() {
                 if (xhr.status >= 200 && xhr.status < 300 && shouldRedirect(url, method)) {
                     checkRedirect();
