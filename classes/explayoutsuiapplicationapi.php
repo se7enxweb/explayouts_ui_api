@@ -7,6 +7,10 @@ class expLayoutsUIApplicationApi
         eZDebug::setHandleType( eZDebug::HANDLE_NONE );
         header( 'Content-Type: application/json' );
 
+        $refusal = self::checkFormToken();
+        if ( $refusal !== null )
+            return $refusal;
+
         try
         {
             $resource = isset( $parts[0] ) ? $parts[0] : '';
@@ -3128,6 +3132,73 @@ class expLayoutsUIApplicationApi
             $rules[] = $ruleData;
         }
         return $rules;
+    }
+
+    /**
+     * Every request that can change something (anything but GET, HEAD and
+     * OPTIONS) must carry this session's form token, in an X-CSRF-Token
+     * header or an ezxform_token form field, as the ezformtoken extension
+     * asks of a POST. The kernel's own check only looks at POST requests, so
+     * PUT, PATCH and DELETE would otherwise go through without one.
+     *
+     * A refusal is answered the way the kernel answers its own: HTTP 403,
+     * never cached, one warning line, and the JSON body
+     * {"error":{"code":403,"reason":"form_token_missing|form_token_wrong",...}}.
+     * Nothing has been read or changed at that point.
+     *
+     * @return array|null the module result of the refusal, or null to go on
+     */
+    protected static function checkFormToken()
+    {
+        $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( (string)$_SERVER['REQUEST_METHOD'] ) : 'GET';
+        if ( $method === 'GET' || $method === 'HEAD' || $method === 'OPTIONS' )
+            return null;
+
+        // Without the ezformtoken extension, or with it switched off, the
+        // site issues no token at all, so there is nothing to compare with.
+        if ( !class_exists( 'ezxFormToken' ) || !ezxFormToken::isEnabled() )
+            return null;
+
+        $token = null;
+        if ( isset( $_SERVER['HTTP_X_CSRF_TOKEN'] ) && is_string( $_SERVER['HTTP_X_CSRF_TOKEN'] ) && $_SERVER['HTTP_X_CSRF_TOKEN'] !== '' )
+            $token = $_SERVER['HTTP_X_CSRF_TOKEN'];
+        else if ( isset( $_POST[ezxFormToken::FORM_FIELD] ) && is_string( $_POST[ezxFormToken::FORM_FIELD] ) && $_POST[ezxFormToken::FORM_FIELD] !== '' )
+            $token = $_POST[ezxFormToken::FORM_FIELD];
+
+        if ( $token === null )
+            $reason = 'missing';
+        else if ( !hash_equals( (string)ezxFormToken::getToken(), $token ) )
+            $reason = 'wrong';
+        else
+            return null;
+
+        if ( class_exists( 'ezpFormTokenException' ) && class_exists( 'ezpFormTokenRefusal' ) )
+        {
+            $e = new ezpFormTokenException( $reason );
+            ezpFormTokenRefusal::log( $e );
+            ezpFormTokenRefusal::sendHeaders( 'application/json; charset=utf-8' );
+            $body = ezpFormTokenRefusal::jsonBody( $e );
+        }
+        else
+        {
+            // A kernel without the refusal classes: the same status and body
+            eZDebug::writeWarning( 'Form token ' . $reason . ': ' . $method . ' refused', __METHOD__ );
+            http_response_code( 403 );
+            header( 'Cache-Control: no-store, max-age=0' );
+            header( 'Content-Type: application/json; charset=utf-8' );
+            $body = json_encode( array(
+                'error' => array(
+                    'code' => 403,
+                    'reason' => 'form_token_' . $reason,
+                    'message' => 'The page with this form was open for a long time, or the form was sent from another page. To keep your information safe, nothing was saved.',
+                ),
+            ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+        }
+
+        $Result = array();
+        $Result['pagelayout'] = false;
+        $Result['content'] = $body;
+        return $Result;
     }
 
     protected static function response( $data, $status = 200 )
