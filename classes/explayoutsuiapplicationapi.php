@@ -483,6 +483,8 @@ class expLayoutsUIApplicationApi
             if ( $parentBlockId > 0 )
             {
                 $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                if ( $parentBlock && (int)$parentBlock->attribute( 'status' ) !== (int)$layout->attribute( 'status' ) )
+                    return self::publishedBlockRefusal();
                 if ( $parentBlock )
                 {
                     $zoneObject = expLayoutsZone::fetch( (int)$parentBlock->attribute( 'zone_id' ) );
@@ -492,14 +494,7 @@ class expLayoutsUIApplicationApi
 
             if ( !$zoneObject && $zone !== '' )
             {
-                foreach ( expLayoutsZone::fetchByLayout( $layoutId, null ) as $z )
-                {
-                    if ( (string)$z->attribute( 'identifier' ) === $zone )
-                    {
-                        $zoneObject = $z;
-                        break;
-                    }
-                }
+                $zoneObject = self::findZoneByIdentifier( $layoutId, $zone, (int)$layout->attribute( 'status' ) ) ?: null;
             }
 
             if ( !$zoneObject )
@@ -570,15 +565,7 @@ class expLayoutsUIApplicationApi
                 return self::response( array( 'error' => 'Layout not found.' ), 404 );
             $layoutId = (int)$layout->attribute( 'id' );
 
-            $zoneObject = null;
-            foreach ( expLayoutsZone::fetchByLayout( $layoutId, null ) as $z )
-            {
-                if ( (string)$z->attribute( 'identifier' ) === $zoneIdentifier )
-                {
-                    $zoneObject = $z;
-                    break;
-                }
-            }
+            $zoneObject = self::findZoneByIdentifier( $layoutId, $zoneIdentifier, (int)$layout->attribute( 'status' ) ) ?: null;
             if ( !$zoneObject )
                 return self::response( array( 'error' => 'Zone not found.' ), 404 );
 
@@ -591,6 +578,8 @@ class expLayoutsUIApplicationApi
             if ( $parentBlockId > 0 )
             {
                 $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                if ( $parentBlock && (int)$parentBlock->attribute( 'status' ) !== (int)$layout->attribute( 'status' ) )
+                    return self::publishedBlockRefusal();
                 if ( $parentBlock )
                 {
                     $zoneObject = expLayoutsZone::fetch( (int)$parentBlock->attribute( 'zone_id' ) );
@@ -622,6 +611,16 @@ class expLayoutsUIApplicationApi
         }
 
         $sub = isset( $parts[$blocksIndex + 2] ) ? $parts[$blocksIndex + 2] : '';
+
+        // Every write addressed to one block, its collections included, is
+        // for a block of a draft. A published block changes only when its
+        // layout's draft is published.
+        if ( $id > 0 && !in_array( $method, array( 'GET', 'HEAD', 'OPTIONS' ) ) )
+        {
+            $refusal = self::refuseWriteToPublishedBlock( expLayoutsBlock::fetch( $id ) );
+            if ( $refusal )
+                return $refusal;
+        }
 
         if ( $id > 0 && $sub === 'collections' )
         {
@@ -665,6 +664,8 @@ class expLayoutsUIApplicationApi
                 if ( $parentBlockId > 0 )
                 {
                     $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                    if ( $parentBlock && (int)$parentBlock->attribute( 'status' ) !== (int)$block->attribute( 'status' ) )
+                        return self::publishedBlockRefusal();
                     if ( $parentBlock )
                     {
                         $newZoneId = (int)$parentBlock->attribute( 'zone_id' );
@@ -714,7 +715,7 @@ class expLayoutsUIApplicationApi
 
                 if ( isset( $data['zone_identifier'] ) && isset( $data['layout_id'] ) )
                 {
-                    $zone = self::findZoneByIdentifier( (int)$data['layout_id'], trim( $data['zone_identifier'] ) );
+                    $zone = self::findZoneByIdentifier( (int)$data['layout_id'], trim( $data['zone_identifier'] ), $blockStatus );
                     if ( $zone )
                     {
                         $block->setAttribute( 'layout_id', (int)$data['layout_id'] );
@@ -740,6 +741,8 @@ class expLayoutsUIApplicationApi
                         $block->setAttribute( 'placeholder', isset( $data['parent_placeholder'] ) ? trim( $data['parent_placeholder'] ) : '' );
 
                         $parentBlock = expLayoutsBlock::fetch( $parentBlockId );
+                        if ( $parentBlock && (int)$parentBlock->attribute( 'status' ) !== $blockStatus )
+                            return self::publishedBlockRefusal();
                         if ( $parentBlock )
                         {
                             $block->setAttribute( 'zone_id', (int)$parentBlock->attribute( 'zone_id' ) );
@@ -1401,14 +1404,50 @@ class expLayoutsUIApplicationApi
         return $html;
     }
 
-    protected static function findZoneByIdentifier( $layoutId, $zoneIdentifier )
+    /**
+     * The zone of a layout by its identifier. With $status, the zone of that
+     * version (draft or published) is preferred, so that a draft block is
+     * never placed into the zone of the published row of the same layout.
+     */
+    protected static function findZoneByIdentifier( $layoutId, $zoneIdentifier, $status = null )
     {
+        $any = false;
         foreach ( expLayoutsZone::fetchByLayout( (int)$layoutId, null ) as $zone )
         {
-            if ( (string)$zone->attribute( 'identifier' ) === $zoneIdentifier )
+            if ( (string)$zone->attribute( 'identifier' ) !== $zoneIdentifier )
+                continue;
+            if ( $status === null || (int)$zone->attribute( 'status' ) === (int)$status )
                 return $zone;
+            if ( $any === false )
+                $any = $zone;
         }
-        return false;
+        return $status === null ? false : ( $any && (int)$any->attribute( 'status' ) === 2 ? false : $any );
+    }
+
+    /**
+     * The refusal for a write aimed at a block that is not a draft, or null
+     * when the block may be changed (or does not exist: the route answers 404).
+     */
+    protected static function refuseWriteToPublishedBlock( $block )
+    {
+        if ( !$block instanceof expLayoutsBlock )
+            return null;
+        if ( self::blockIsInherited( $block ) )
+        {
+            return self::response( array(
+                'error' => 'This block belongs to a shared layout and cannot be edited from a layout that links to it.',
+            ), 403 );
+        }
+        if ( (int)$block->attribute( 'status' ) !== 1 )
+            return self::publishedBlockRefusal();
+        return null;
+    }
+
+    protected static function publishedBlockRefusal()
+    {
+        return self::response( array(
+            'error' => 'This block belongs to a published layout. Blocks are changed on the layout\'s draft and go live when the draft is published.',
+        ), 403 );
     }
 
     protected static function resolveLinkedZone( $zone )
