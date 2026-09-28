@@ -3,7 +3,7 @@
         <div class="modal-body">
             <form method="post" action="{$action_url}">
                 <div class="form-group">
-                    <label>Layout type</label>
+                    <label>{'Layout type'|i18n( 'design/standard/explayouts_ui_api/form_create' )}</label>
                     <div class="layout-type-grid">
                         {foreach $layout_types as $type}
                             <label class="layout-type-option">
@@ -34,27 +34,27 @@
                 </style>{/literal}
 
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">{'Name'|i18n( 'design/standard/explayouts_ui_api/form_create' )}</label>
                     <input type="text" name="name" id="name" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="identifier">Identifier</label>
+                    <label for="identifier">{'Identifier'|i18n( 'design/standard/explayouts_ui_api/form_create' )}</label>
                     <input type="text" name="identifier" id="identifier" class="form-control" />
                 </div>
                 <div class="form-group">
-                    <label for="description">Description</label>
+                    <label for="description">{'Description'|i18n( 'design/standard/explayouts_ui_api/form_create' )}</label>
                     <textarea name="description" id="description" class="form-control"></textarea>
                 </div>
                 <div class="form-group checkbox">
                     <label>
                         <input type="checkbox" name="isShared" id="create_isShared" value="1" />
-                        Shared layout
+                        {'Shared layout'|i18n( 'design/standard/explayouts_ui_api/form_create' )}
                     </label>
                 </div>
             </form>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary action_apply green">Create layout</button>
+            <button type="button" class="btn btn-primary action_apply green">{'Create layout'|i18n( 'design/standard/explayouts_ui_api/form_create' )}</button>
         </div>
     </div>
 </div>

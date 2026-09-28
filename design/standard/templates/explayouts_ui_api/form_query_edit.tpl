@@ -11,7 +11,7 @@
 
     {if count( $advanced_params )}
         <div class="sidebar-panel advanced-options">
-            <a class="toggle-link sub-toggle" role="button" data-toggle="collapse" href="#collapseAdvanced" aria-expanded="false" aria-controls="collapseAdvanced">Advanced options</a>
+            <a class="toggle-link sub-toggle" role="button" data-toggle="collapse" href="#collapseAdvanced" aria-expanded="false" aria-controls="collapseAdvanced">{'Advanced options'|i18n( 'design/standard/explayouts_ui_api/form_query_edit' )}</a>
             <div class="collapse" id="collapseAdvanced">
                 {foreach $advanced_params as $name}
                     {def $param = $parameters[$name]}
@@ -24,14 +24,14 @@
     {/if}
 
     <div class="sidebar-panel offset-limit">
-        <a class="toggle-link sub-toggle" role="button" data-toggle="collapse" href="#collapseOffsetLimit" aria-expanded="false" aria-controls="collapseOffsetLimit">Offset & number of items</a>
+        <a class="toggle-link sub-toggle" role="button" data-toggle="collapse" href="#collapseOffsetLimit" aria-expanded="false" aria-controls="collapseOffsetLimit">{'Offset & number of items'|i18n( 'design/standard/explayouts_ui_api/form_query_edit' )}</a>
         <div class="collapse" id="collapseOffsetLimit">
             <div class="row-input">
-                <label for="query_edit_offset">Offset</label>
+                <label for="query_edit_offset">{'Offset'|i18n( 'design/standard/explayouts_ui_api/form_query_edit' )}</label>
                 <input type="number" id="query_edit_offset" name="offset" value="{if is_set( $offset )}{$offset|wash()}{else}0{/if}" min="0" />
             </div>
             <div class="row-input">
-                <label for="query_edit_limit">Number of items</label>
+                <label for="query_edit_limit">{'Number of items'|i18n( 'design/standard/explayouts_ui_api/form_query_edit' )}</label>
                 <input type="number" id="query_edit_limit" name="limit" value="{if is_set( $limit )}{$limit|wash()}{else}0{/if}" min="0" />
             </div>
         </div>

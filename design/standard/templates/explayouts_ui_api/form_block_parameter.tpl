@@ -59,7 +59,7 @@
          $selected_node = false()
          $selected_object = false()
          $cms_node_id = 0
-         $selected_name = 'Select item'
+         $selected_name = 'Select item'|i18n( 'design/standard/explayouts_ui_api/form_block_parameter' )
          $cms_url = ''
          $is_empty = true()}
     {if and( is_set( $value ), $value|ne('') )}
@@ -97,18 +97,18 @@
     <div class="row-input" {if $view_type_attr}data-view-type="{$view_type_attr|wash()}"{/if}>
         <label for="{$input_id}">{$param.name|wash()}</label>
         <div class="input-browse {if $is_empty}item-empty{/if} js-input-browse exp-input-browse" data-browser="true" data-input-id="{$input_id}">
-            <a href="#" class="js-trigger" title="Browse content">
-                <span class="js-name" data-empty-note="Select item">{$selected_name|wash()}</span>
+            <a href="#" class="js-trigger" title="{'Browse content'|i18n( 'design/standard/explayouts_ui_api/form_block_parameter' )}">
+                <span class="js-name" data-empty-note="{'Select item'|i18n( 'design/standard/explayouts_ui_api/form_block_parameter' )}">{$selected_name|wash()}</span>
                 <i class="material-icons">folder_open</i>
             </a>
-            <a href="#" class="js-clear" title="Clear selection">
+            <a href="#" class="js-clear" title="{'Clear selection'|i18n( 'design/standard/explayouts_ui_api/form_block_parameter' )}">
                 <i class="material-icons">close</i>
             </a>
             <input type="hidden" class="js-item-type" value="{$item_type|wash()}" />
             <input type="hidden" class="js-value" id="{$input_id}" name="parameters[{$name}]" value="{if is_set( $value )}{$value|wash()}{/if}" />
         </div>
         {if $cms_url|ne('')}
-            <a href="{$cms_url|ezurl('no')}" target="_blank" class="js-view-cms">View in CMS</a>
+            <a href="{$cms_url|ezurl('no')}" target="_blank" class="js-view-cms">{'View in CMS'|i18n( 'design/standard/explayouts_ui_api/form_block_parameter' )}</a>
         {/if}
     </div>
     {undef $item_type $selected_node $selected_object $cms_node_id $selected_name $cms_url $is_empty}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rules</title>
+    <title>{'Rules'|i18n( 'design/standard/explayouts_ui_api/rules' )}</title>
     <link rel="stylesheet" type="text/css" href={'stylesheets/netgen-layouts.css'|ezdesign('no')} />
     {literal}
     <style>
@@ -18,16 +18,16 @@
 </head>
 <body>
     <div class="ngl-admin">
-        <h1>Rules</h1>
+        <h1>{'Rules'|i18n( 'design/standard/explayouts_ui_api/rules' )}</h1>
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Layout</th>
-                    <th>Priority</th>
-                    <th>Enabled</th>
-                    <th>Targets</th>
-                    <th>Conditions</th>
+                    <th>{'Layout'|i18n( 'design/standard/explayouts_ui_api/rules' )}</th>
+                    <th>{'Priority'|i18n( 'design/standard/explayouts_ui_api/rules' )}</th>
+                    <th>{'Enabled'|i18n( 'design/standard/explayouts_ui_api/rules' )}</th>
+                    <th>{'Targets'|i18n( 'design/standard/explayouts_ui_api/rules' )}</th>
+                    <th>{'Conditions'|i18n( 'design/standard/explayouts_ui_api/rules' )}</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,7 +36,7 @@
                         <td>{$rule.id}</td>
                         <td>{$rule.layout_name|wash}</td>
                         <td>{$rule.priority}</td>
-                        <td>{if $rule.enabled}Yes{else}No{/if}</td>
+                        <td>{if $rule.enabled}{'Yes'|i18n( 'design/standard/explayouts_ui_api/rules' )}{else}{'No'|i18n( 'design/standard/explayouts_ui_api/rules' )}{/if}</td>
                         <td>
                             {foreach $rule.targets as $target}
                                 <span class="tag">{$target.target_type|wash}: {$target.target_value|wash}</span>

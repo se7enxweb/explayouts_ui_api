@@ -3,14 +3,14 @@
     <input type="hidden" name="ezxform_token" value="{$ezxform_token|wash()}" />
 
     <div class="row-input">
-        <label for="design_edit_block_name">Block label</label>
+        <label for="design_edit_block_name">{'Block label'|i18n( 'design/standard/explayouts_ui_api/form_block_fields' )}</label>
         <input type="text" id="design_edit_block_name" name="name" value="{$block_name|wash()}" class="form-control" />
     </div>
 
     {if count( $item_view_types )|gt( 0 )}
     <div class="master-slave-selects">
         <div class="row-input">
-            <label for="design_edit_view_type">View type</label>
+            <label for="design_edit_view_type">{'View type'|i18n( 'design/standard/explayouts_ui_api/form_block_fields' )}</label>
             <select id="design_edit_view_type" name="view_type" class="master view-type js-skip-on-change">
                 {foreach $view_types as $view_type}
                     <option value="{$view_type|wash()}" {if eq( $view_type, $block.view_type )}selected="selected"{/if}>{$view_type|wash()}</option>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="row-input">
-            <label for="design_edit_item_view_type">Item view type</label>
+            <label for="design_edit_item_view_type">{'Item view type'|i18n( 'design/standard/explayouts_ui_api/form_block_fields' )}</label>
             <select id="design_edit_item_view_type" name="item_view_type" class="slave">
                 {foreach $item_view_types as $item_view_type => $item_view_label}
                     {def $master_list = 'list,list_numbered,grid,grid_featured'}
@@ -47,7 +47,7 @@
     </div>
     {elseif count( $view_types )|gt( 1 )}
     <div class="row-input">
-        <label for="design_edit_view_type">View type</label>
+        <label for="design_edit_view_type">{'View type'|i18n( 'design/standard/explayouts_ui_api/form_block_fields' )}</label>
         <select id="design_edit_view_type" name="view_type" class="view-type js-skip-on-change">
             {foreach $view_types as $view_type}
                 <option value="{$view_type|wash()}" {if eq( $view_type, $block.view_type )}selected="selected"{/if}>{$view_type|wash()}</option>

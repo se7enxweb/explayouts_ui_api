@@ -534,6 +534,7 @@
     </script>{/literal}
     <script>{literal}var nglayoutsServerReturnTo = '{/literal}{$return_to|wash('javascript')}{literal}';{/literal}</script>
     <script>{literal}var nglayoutsSiteRoot = '{/literal}{'/'|ezurl('no')|wash('javascript')}{literal}';{/literal}</script>
+    <script>var nglayoutsI18n = {ldelim} content: '{'Content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_to_collection: '{'Add content to collection'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_selected: '{'Add selected'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_content: '{'Select content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select: '{'Select'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_label: '{'Select %label'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_item: '{'Select item'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_failed: '{'Failed to add items.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', search: '{'Search...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', cancel: '{'Cancel'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', loading: '{'Loading...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', no_content: '{'No content found.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', open: '{'Open'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', load_failed: '{'Failed to load content.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}' {rdelim};</script>
     {literal}<script>
     // Where the editor returns to. Discard, Cancel and closing go to
     // localStorage.ngl_referrer (the bundle's fallback is "/", the domain
@@ -590,7 +591,7 @@
     {* Joined into the app-logo tooltip by the SPA. Skip the separator when
        there is no version, so the tooltip has no leading space. *}
     <div id="app" class="ngc" data-version="{if $app_version|ne('')}{$app_version|wash()} {/if}{$edition|wash()}"></div>
-    <a id="ng-cancel-link" href="#">Cancel</a>
+    <a id="ng-cancel-link" href="#">{'Cancel'|i18n( 'design/standard/explayouts_ui_api/app' )}</a>
     {literal}<script>
     (function(){
         var link = document.getElementById('ng-cancel-link');
@@ -850,20 +851,20 @@
         var modalHtml = '<div class="modal fade" id="exp-content-browser-modal" tabindex="-1" role="dialog">' +
             '<div class="modal-dialog" role="document" style="width:700px;max-width:90vw;">' +
             '<div class="modal-content">' +
-            '<div class="modal-header"><h4 class="modal-title">Add content to collection</h4></div>' +
+            '<div class="modal-header"><h4 class="modal-title">' + $('<div>').text(nglayoutsI18n.add_to_collection).html() + '</h4></div>' +
             '<div class="modal-body">' +
-            '<div class="exp-cb-search form-group"><input type="text" class="form-control" placeholder="Search..." /></div>' +
+            '<div class="exp-cb-search form-group"><input type="text" class="form-control" placeholder="' + $('<div>').text(nglayoutsI18n.search).html() + '" /></div>' +
             '<div class="exp-cb-breadcrumbs" style="margin:0 0 10px;"></div>' +
             '<div class="exp-cb-list" style="max-height:400px;overflow:auto;"></div>' +
             '</div>' +
             '<div class="modal-footer">' +
-            '<button class="btn btn-default exp-cb-cancel" data-dismiss="modal">Cancel</button>' +
-            '<button class="btn btn-primary exp-cb-apply">Add selected</button>' +
+            '<button class="btn btn-default exp-cb-cancel" data-dismiss="modal">' + $('<div>').text(nglayoutsI18n.cancel).html() + '</button>' +
+            '<button class="btn btn-primary exp-cb-apply">' + $('<div>').text(nglayoutsI18n.add_selected).html() + '</button>' +
             '</div>' +
             '</div></div></div>';
 
         var $modal;
-        var state = { parentId: 2, search: '', path: [{ node_id: 2, name: 'Content' }], singleSelect: false, callback: null };
+        var state = { parentId: 2, search: '', path: [{ node_id: 2, name: nglayoutsI18n.content }], singleSelect: false, callback: null };
         var pendingView = null;
 
         function ensureModal() {
@@ -891,11 +892,11 @@
 
         function load() {
             var url = nglayoutsBase() + '/app/api/content_browser?parent_node_id=' + state.parentId + '&search=' + encodeURIComponent(state.search) + '&offset=0&limit=50';
-            $modal.find('.exp-cb-list').html('<p>Loading...</p>');
+            $modal.find('.exp-cb-list').html($('<p>').text(nglayoutsI18n.loading));
             $.getJSON(url).done(function(data){
                 var html = '';
                 if (!data.values || data.values.length === 0) {
-                    html = '<p>No content found.</p>';
+                    html = $('<p>').text(nglayoutsI18n.no_content).prop('outerHTML');
                 } else {
                     html += '<table class="table table-condensed"><tbody>';
                     data.values.forEach(function(item){
@@ -907,7 +908,7 @@
                         html += '<label for="' + cbId + '">' + $('<div>').text(item.name).html() + ' <small>(' + item.class_name + ')</small></label></td>';
                         html += '<td style="width:100px;">';
                         if (item.is_container) {
-                            html += '<a href="#" class="js-cb-browse" data-node-id="' + item.node_id + '" data-name="' + $('<div>').text(item.name).html() + '">Open</a>';
+                            html += '<a href="#" class="js-cb-browse" data-node-id="' + item.node_id + '" data-name="' + $('<div>').text(item.name).html() + '">' + $('<div>').text(nglayoutsI18n.open).html() + '</a>';
                         }
                         html += '</td></tr>';
                     });
@@ -916,7 +917,7 @@
                 $modal.find('.exp-cb-list').html(html);
                 renderBreadcrumbs();
             }).fail(function(){
-                $modal.find('.exp-cb-list').html('<p>Failed to load content.</p>');
+                $modal.find('.exp-cb-list').html($('<p>').text(nglayoutsI18n.load_failed));
             });
         }
 
@@ -925,11 +926,11 @@
             state.singleSelect = false;
             state.callback = null;
             ensureModal();
-            $modal.find('.modal-title').text('Add content to collection');
-            $modal.find('.exp-cb-apply').text('Add selected');
+            $modal.find('.modal-title').text(nglayoutsI18n.add_to_collection);
+            $modal.find('.exp-cb-apply').text(nglayoutsI18n.add_selected);
             state.parentId = 2;
             state.search = '';
-            state.path = [{ node_id: 2, name: 'Content' }];
+            state.path = [{ node_id: 2, name: nglayoutsI18n.content }];
             $modal.find('.exp-cb-search input').val('');
             load();
             $modal.modal('show');
@@ -941,11 +942,11 @@
             state.singleSelect = true;
             state.callback = callback;
             ensureModal();
-            $modal.find('.modal-title').text(options.title || 'Select content');
-            $modal.find('.exp-cb-apply').text(options.buttonText || 'Select');
+            $modal.find('.modal-title').text(options.title || nglayoutsI18n.select_content);
+            $modal.find('.exp-cb-apply').text(options.buttonText || nglayoutsI18n.select);
             state.parentId = 2;
             state.search = '';
-            state.path = [{ node_id: 2, name: 'Content' }];
+            state.path = [{ node_id: 2, name: nglayoutsI18n.content }];
             $modal.find('.exp-cb-search input').val('');
             load();
             $modal.modal('show');
@@ -994,7 +995,7 @@
                 if (model.fetch_results) model.fetch_results();
             }).fail(function(){
                 $modal.modal('hide');
-                alert('Failed to add items.');
+                alert(nglayoutsI18n.add_failed);
             });
         }
 
@@ -1032,16 +1033,16 @@
 
             if (clear) {
                 $input.val('').trigger('change');
-                $name.text($name.data('empty-note') || 'Select item');
+                $name.text($name.data('empty-note') || nglayoutsI18n.select_item);
                 $wrap.addClass('item-empty');
                 $cms.hide();
                 triggerBrowserChange($wrap);
                 return;
             }
 
-            var title = 'Select content';
+            var title = nglayoutsI18n.select_content;
             var $label = $row.find('label').first();
-            if ($label.length) title = 'Select ' + $label.text().trim();
+            if ($label.length) title = nglayoutsI18n.select_label.replace('%label', $label.text().trim());
 
             openSingleSelectModal(function(data){
                 var value = (itemType === 'ibexa_location') ? data.nodeId : data.objectId;
@@ -1050,7 +1051,7 @@
                 $wrap.removeClass('item-empty');
                 $cms.attr('href', window.nglayoutsInSiteaccess('/content/view/full/' + data.nodeId)).show();
                 triggerBrowserChange($wrap);
-            }, { title: title, buttonText: 'Select' });
+            }, { title: title, buttonText: nglayoutsI18n.select });
         }, true);
 
 }

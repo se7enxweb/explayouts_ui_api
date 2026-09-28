@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Layout Mappings</title>
+    <title>{'Layout Mappings'|i18n( 'design/standard/explayouts_ui_api/mappings' )}</title>
     <link rel="stylesheet" type="text/css" href={'stylesheets/netgen-layouts.css'|ezdesign('no')} />
     {literal}
     <style>
@@ -17,13 +17,13 @@
 </head>
 <body>
     <div class="ngl-admin">
-        <h1>Layout Mappings</h1>
+        <h1>{'Layout Mappings'|i18n( 'design/standard/explayouts_ui_api/mappings' )}</h1>
         <table>
             <thead>
                 <tr>
-                    <th>Layout ID</th>
-                    <th>Layout name</th>
-                    <th>Rules mapped</th>
+                    <th>{'Layout ID'|i18n( 'design/standard/explayouts_ui_api/mappings' )}</th>
+                    <th>{'Layout name'|i18n( 'design/standard/explayouts_ui_api/mappings' )}</th>
+                    <th>{'Rules mapped'|i18n( 'design/standard/explayouts_ui_api/mappings' )}</th>
                 </tr>
             </thead>
             <tbody>

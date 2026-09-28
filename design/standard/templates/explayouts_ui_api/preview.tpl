@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{$layout.name|wash} - Preview</title>
+    <title>{'%name - Preview'|i18n( 'design/standard/explayouts_ui_api/preview',, hash( '%name', $layout.name|wash ) )}</title>
     <link rel="stylesheet" type="text/css" href={'stylesheets/netgen-layouts.css'|ezdesign('no')} />
     {literal}
     <style>
@@ -22,11 +22,11 @@
     <div class="ngl-preview">
         <div class="ngl-preview-header">
             <h1>{$layout.name|wash}</h1>
-            <p>Layout type: <strong>{$layout.layout_type|wash}</strong></p>
+            <p>{'Layout type:'|i18n( 'design/standard/explayouts_ui_api/preview' )} <strong>{$layout.layout_type|wash}</strong></p>
         </div>
         {foreach $zones as $zone}
             <div class="zone-preview zone-{$zone.identifier|wash}">
-                <h4>Zone: {$zone.identifier|wash}</h4>
+                <h4>{'Zone:'|i18n( 'design/standard/explayouts_ui_api/preview' )} {$zone.identifier|wash}</h4>
                 {foreach $zone.blocks as $block}
                     <div class="block-preview block-{$block.definition_identifier|wash}">
                         {$block.html}
