@@ -3105,6 +3105,39 @@ class expLayoutsUIApplicationApi
                 'CREATE UNIQUE INDEX IF NOT EXISTS idx_share_token ON explayouts_share ( token )',
             );
         }
+        else if ( $engine === 'oracle' )
+        {
+            // Oracle knows none of int(11), AUTO_INCREMENT, KEY or ENGINE, and
+            // the installer already builds the table from share/db_schema.dba.
+            // It is created here only when missing, with the sequence and the
+            // trigger the Oracle schema handler gives every serial column.
+            $tables = $db->relationList();
+            if ( is_array( $tables ) && in_array( 'explayouts_share', $tables, true ) )
+            {
+                $ready[$engine] = true;
+                return true;
+            }
+            $statements = array(
+                'CREATE TABLE explayouts_share (
+                    id INTEGER NOT NULL,
+                    layout_id INTEGER DEFAULT 0 NOT NULL,
+                    token VARCHAR2(64) NOT NULL,
+                    created INTEGER DEFAULT 0 NOT NULL,
+                    PRIMARY KEY ( id ) )',
+                "BEGIN
+  EXECUTE IMMEDIATE 'CREATE SEQUENCE se_explayouts_share';
+EXCEPTION WHEN OTHERS THEN
+  IF SQLCODE != -955 THEN RAISE; END IF;
+END;",
+                "CREATE OR REPLACE TRIGGER explayouts_share_id_tr
+BEFORE INSERT ON explayouts_share FOR EACH ROW WHEN (new.id IS NULL)
+BEGIN
+  SELECT se_explayouts_share.nextval INTO :new.id FROM dual;
+END;",
+                'CREATE INDEX idx_share_layout ON explayouts_share ( layout_id )',
+                'CREATE UNIQUE INDEX idx_share_token ON explayouts_share ( token )',
+            );
+        }
         else
         {
             $statements = array( 'CREATE TABLE IF NOT EXISTS explayouts_share (
