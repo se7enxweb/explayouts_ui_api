@@ -39,6 +39,13 @@
     var closer  = null;
     var mql     = window.matchMedia( BREAKPOINT );
 
+    // Interface texts go through the translations the page hands the editor
+    // bundle (nglT, window.nglayoutsSpaI18n); English when there are none.
+    function tr( text )
+    {
+        return window.nglT ? window.nglT( text ) : text;
+    }
+
     function isMobile()
     {
         return mql.matches;
@@ -119,7 +126,7 @@
         toggle.setAttribute( 'aria-expanded',
             app.classList.contains( 'exp-sidebar-open' ) ? 'true' : 'false' );
         toggle.setAttribute( 'title',
-            selected ? 'Block options' : 'Block options (nothing selected)' );
+            tr( selected ? 'Block options' : 'Block options (nothing selected)' ) );
         toggle.setAttribute( 'aria-label', toggle.getAttribute( 'title' ) );
     }
 
@@ -131,7 +138,7 @@
         scrim = document.createElement( 'button' );
         scrim.type = 'button';
         scrim.className = 'exp-scrim';
-        scrim.setAttribute( 'aria-label', 'Close the properties panel' );
+        scrim.setAttribute( 'aria-label', tr( 'Close the properties panel' ) );
         scrim.addEventListener( 'click', closeDrawer );
         app.appendChild( scrim );
 
@@ -161,7 +168,7 @@
         closer.type = 'button';
         closer.className = 'exp-drawer-close';
         closer.innerHTML = '<i class="material-icons">close</i>';
-        closer.setAttribute( 'aria-label', 'Close the properties panel' );
+        closer.setAttribute( 'aria-label', tr( 'Close the properties panel' ) );
         closer.addEventListener( 'click', closeDrawer );
         sidebar.appendChild( closer );
 

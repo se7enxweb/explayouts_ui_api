@@ -535,6 +535,7 @@
     <script>{literal}var nglayoutsServerReturnTo = '{/literal}{$return_to|wash('javascript')}{literal}';{/literal}</script>
     <script>{literal}var nglayoutsSiteRoot = '{/literal}{'/'|ezurl('no')|wash('javascript')}{literal}';{/literal}</script>
     <script>var nglayoutsI18n = {ldelim} content: '{'Content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_to_collection: '{'Add content to collection'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_selected: '{'Add selected'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_content: '{'Select content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select: '{'Select'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_label: '{'Select %label'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_item: '{'Select item'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_failed: '{'Failed to add items.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', search: '{'Search...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', cancel: '{'Cancel'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', loading: '{'Loading...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', no_content: '{'No content found.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', open: '{'Open'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', load_failed: '{'Failed to load content.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}' {rdelim};</script>
+    {include uri='design:explayouts_ui_api/spa_strings.tpl'}
     {literal}<script>
     // Where the editor returns to. Discard, Cancel and closing go to
     // localStorage.ngl_referrer (the bundle's fallback is "/", the domain
@@ -635,10 +636,10 @@
 
     <script src="{'vendor/ckeditor/ckeditor.js'|ezdesign('no')}" defer></script>
     <script src="{'vendor/ace-editor/ace.js'|ezdesign('no')}" defer></script>
-    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20260833" defer></script>
+    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20260929" defer></script>
     {* After the app bundle: it waits for the app to draw itself before it
        touches anything. *}
-    <script src="{'javascript/explayouts-mobile.js'|ezdesign('no')}" defer></script>
+    <script src="{'javascript/explayouts-mobile.js'|ezdesign('no')}?v=20260929" defer></script>
     {literal}<script>
     document.addEventListener('click', function(e) {
         var toggle = e.target.closest('.dropdown-toggle');
