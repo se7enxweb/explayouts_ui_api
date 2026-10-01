@@ -21,7 +21,7 @@
                             {if eq( $collection.collection_type, 'dynamic' )}
                                 <label>{'Query type'|i18n( 'design/standard/explayouts_ui_api/form_block_edit' )}</label>
                                 <a href="#" class="js-edit">
-                                    <span class="text">{if $collection.query_type}{$collection.query_type|wash()}{else}Ibexa{/if}</span>
+                                    <span class="text">{if $collection.query_type}{$collection.query_type|wash()}{else}Exponential{/if}</span>
                                     <span class="icon">{'Change'|i18n( 'design/standard/explayouts_ui_api/form_block_edit' )}</span>
                                 </a>
                             {/if}

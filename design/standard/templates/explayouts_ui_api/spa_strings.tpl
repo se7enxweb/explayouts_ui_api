@@ -1,8 +1,8 @@
 {* The interface texts of the layout editor (javascript/netgen-layouts.js), translated here
-   and handed to the bundle as window.nglayoutsSpaI18n, keyed by the English text; the
+   and handed to the bundle as window.explayoutsSpaI18n, keyed by the English text; the
    bundle looks them up with nglT() / nglTh() and falls back to the English text. *}
 <script>
-window.nglayoutsSpaI18n = {ldelim}
+window.explayoutsSpaI18n = {ldelim}
     'A new version of this site is available. Load it?': '{"A new version of this site is available. Load it?"|i18n( 'design/standard/explayouts_ui_api/spa' )|wash( javascript )}',
     'There could be unsaved changes. Are you sure you want to leave?': '{"There could be unsaved changes. Are you sure you want to leave?"|i18n( 'design/standard/explayouts_ui_api/spa' )|wash( javascript )}',
     'Refresh': '{"Refresh"|i18n( 'design/standard/explayouts_ui_api/spa' )|wash( javascript )}',

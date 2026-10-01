@@ -40,7 +40,7 @@
     var mql     = window.matchMedia( BREAKPOINT );
 
     // Interface texts go through the translations the page hands the editor
-    // bundle (nglT, window.nglayoutsSpaI18n); English when there are none.
+    // bundle (nglT, window.explayoutsSpaI18n); English when there are none.
     function tr( text )
     {
         return window.nglT ? window.nglT( text ) : text;

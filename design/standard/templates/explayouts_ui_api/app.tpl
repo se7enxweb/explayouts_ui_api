@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#383838">
 
-    <meta name="nglayouts-route-prefix" content="{$route_prefix|wash()}">
-    <meta name="nglayouts-base-path" content="{$base_path|wash()}">
+    <meta name="explayouts-route-prefix" content="{$route_prefix|wash()}">
+    <meta name="explayouts-base-path" content="{$base_path|wash()}">
     <meta name="ngcb-base-path" content="{$cb_base_path|wash()}">
     <meta name="ezxform-token" content="{$ezxform_token|wash()}">
 
@@ -530,16 +530,16 @@
 <body>
     {literal}<script>
     // The editor's base URL, with the siteaccess prefix (/admin/...) when there is one.
-    function nglayoutsBase() { var m = document.querySelector('meta[name="nglayouts-base-path"]'); return m ? m.content : '/explayouts_ui_api'; }
+    function explayoutsBase() { var m = document.querySelector('meta[name="explayouts-base-path"]'); return m ? m.content : '/explayouts_ui_api'; }
     </script>{/literal}
-    <script>{literal}var nglayoutsServerReturnTo = '{/literal}{$return_to|wash('javascript')}{literal}';{/literal}</script>
-    <script>{literal}var nglayoutsSiteRoot = '{/literal}{'/'|ezurl('no')|wash('javascript')}{literal}';{/literal}</script>
-    <script>var nglayoutsI18n = {ldelim} content: '{'Content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_to_collection: '{'Add content to collection'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_selected: '{'Add selected'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_content: '{'Select content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select: '{'Select'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_label: '{'Select %label'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_item: '{'Select item'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_failed: '{'Failed to add items.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', search: '{'Search...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', cancel: '{'Cancel'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', loading: '{'Loading...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', no_content: '{'No content found.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', open: '{'Open'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', load_failed: '{'Failed to load content.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}' {rdelim};</script>
+    <script>{literal}var explayoutsServerReturnTo = '{/literal}{$return_to|wash('javascript')}{literal}';{/literal}</script>
+    <script>{literal}var explayoutsSiteRoot = '{/literal}{'/'|ezurl('no')|wash('javascript')}{literal}';{/literal}</script>
+    <script>var explayoutsI18n = {ldelim} content: '{'Content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_to_collection: '{'Add content to collection'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_selected: '{'Add selected'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_content: '{'Select content'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select: '{'Select'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_label: '{'Select %label'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', select_item: '{'Select item'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', add_failed: '{'Failed to add items.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', search: '{'Search...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', cancel: '{'Cancel'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', loading: '{'Loading...'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', no_content: '{'No content found.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', open: '{'Open'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}', load_failed: '{'Failed to load content.'|i18n( 'design/standard/explayouts_ui_api/app' )|wash( javascript )}' {rdelim};</script>
     {include uri='design:explayouts_ui_api/spa_strings.tpl'}
     {literal}<script>
     // Where the editor returns to. Discard, Cancel and closing go to
     // localStorage.ngl_referrer (the bundle's fallback is "/", the domain
-    // root); the page's own scripts use nglayoutsReturnTo. Any same-site path
+    // root); the page's own scripts use explayoutsReturnTo. Any same-site path
     // outside this siteaccess is put back inside it: the admin's Layouts tab
     // stored /content/view/full/N without /admin, and pages still open keep
     // storing it until reloaded.
@@ -547,32 +547,32 @@
         function url(u) { try { return new URL(u, window.location.href); } catch (e) { return null; } }
         function sameSite(u) { var x = url(u); return !!x && x.origin === window.location.origin; }
         function isEditor(u) { return /\/explayouts_ui_api\/app/.test(u); }
-        var root = url(nglayoutsSiteRoot || '/');
+        var root = url(explayoutsSiteRoot || '/');
         var rootPath = root ? root.pathname.replace(/\/?$/, '/') : '/';
         function inSiteaccess(u) { var x = url(u); return !!x && sameSite(u) && (x.pathname + '/').indexOf(rootPath) === 0; }
-        window.nglayoutsInSiteaccess = function (u) {
+        window.explayoutsInSiteaccess = function (u) {
             var x = url(u);
             if (!x || !sameSite(u) || rootPath === '/' || inSiteaccess(u)) return x ? x.href : u;
             return window.location.origin + rootPath.replace(/\/$/, '') + x.pathname + x.search + x.hash;
         };
         var stored = null, kept = null;
-        try { stored = window.sessionStorage.getItem('nglayouts_return_to'); } catch (e) {}
+        try { stored = window.sessionStorage.getItem('explayouts_return_to'); } catch (e) {}
         try { kept = window.localStorage.getItem('ngl_referrer'); } catch (e) {}
-        var explicit = nglayoutsServerReturnTo || stored || null;
+        var explicit = explayoutsServerReturnTo || stored || null;
         if (!explicit && document.referrer && sameSite(document.referrer) && !isEditor(document.referrer)) explicit = document.referrer;
-        if (explicit) explicit = window.nglayoutsInSiteaccess(explicit);
-        window.nglayoutsReturnTo = explicit || '';
+        if (explicit) explicit = window.explayoutsInSiteaccess(explicit);
+        window.explayoutsReturnTo = explicit || '';
         var target = explicit;
         if (!target && kept && inSiteaccess(kept) && !isEditor(kept)) target = kept;
         if (!target) target = root ? root.href : '/';
         try { window.localStorage.setItem('ngl_referrer', target); } catch (e) {}
-        if (explicit) { try { window.sessionStorage.setItem('nglayouts_return_to', explicit); } catch (e) {} }
+        if (explicit) { try { window.sessionStorage.setItem('explayouts_return_to', explicit); } catch (e) {} }
     })();
     </script>{/literal}
     {literal}<script>
     (function(){
-        var returnTo = window.nglayoutsReturnTo;
-        if (returnTo) sessionStorage.setItem('nglayouts_return_to', returnTo);
+        var returnTo = window.explayoutsReturnTo;
+        if (returnTo) sessionStorage.setItem('explayouts_return_to', returnTo);
         if ( ( window.location.hash === '' || window.location.hash === '#' ) && returnTo )
         {
             window.location.replace( returnTo );
@@ -583,7 +583,7 @@
             var m = document.referrer.match( /\/content\/view\/full\/(\d+)/ );
             if ( m )
             {
-                window.location.replace( window.nglayoutsInSiteaccess( '/content/view/full/' + m[1] ) );
+                window.location.replace( window.explayoutsInSiteaccess( '/content/view/full/' + m[1] ) );
                 return;
             }
         }
@@ -597,7 +597,7 @@
     (function(){
         var link = document.getElementById('ng-cancel-link');
         if (!link) return;
-        var returnTo = window.nglayoutsReturnTo;
+        var returnTo = window.explayoutsReturnTo;
         if (returnTo) link.href = returnTo;
         link.addEventListener('click', function(e){
             if (!returnTo) {
@@ -634,9 +634,12 @@
         <script src="{$javascript|wash()}" defer></script>
     {/foreach}
 
+    {* The app bundle uses the page's jQuery and jQuery UI (ezjscore's), so they
+       load first: these run before the deferred scripts below. *}
+    {ezscript( array( 'ezjsc::jquery', 'ezjsc::jqueryUI' ) )}
     <script src="{'vendor/ckeditor/ckeditor.js'|ezdesign('no')}" defer></script>
     <script src="{'vendor/ace-editor/ace.js'|ezdesign('no')}" defer></script>
-    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20260929" defer></script>
+    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20261001" defer></script>
     {* After the app bundle: it waits for the app to draw itself before it
        touches anything. *}
     <script src="{'javascript/explayouts-mobile.js'|ezdesign('no')}?v=20260929" defer></script>
@@ -735,7 +738,7 @@
             body.append('definition_identifier', definition);
             var tokenMeta = document.querySelector('meta[name="ezxform-token"]');
             if (tokenMeta) body.append('ezxform_token', tokenMeta.content);
-            fetch(nglayoutsBase() + '/app/api/eng/blocks', { method: 'POST', body: body, credentials: 'same-origin' }).then(function(r){
+            fetch(explayoutsBase() + '/app/api/eng/blocks', { method: 'POST', body: body, credentials: 'same-origin' }).then(function(r){
                 if (r.ok) window.location.reload();
             });
         }, true);
@@ -743,14 +746,14 @@
     </script>{/literal}
     {literal}<script>
     (function(){
-        if (!sessionStorage.getItem('nglayouts_return_to') && document.referrer) {
-            sessionStorage.setItem('nglayouts_return_to', document.referrer);
+        if (!sessionStorage.getItem('explayouts_return_to') && document.referrer) {
+            sessionStorage.setItem('explayouts_return_to', document.referrer);
         }
 
         function checkRedirect() {
-            var returnTo = sessionStorage.getItem('nglayouts_return_to');
+            var returnTo = sessionStorage.getItem('explayouts_return_to');
             if (!returnTo) return;
-            sessionStorage.removeItem('nglayouts_return_to');
+            sessionStorage.removeItem('explayouts_return_to');
             setTimeout(function() { window.location.href = returnTo; }, 100);
         }
 
@@ -852,20 +855,20 @@
         var modalHtml = '<div class="modal fade" id="exp-content-browser-modal" tabindex="-1" role="dialog">' +
             '<div class="modal-dialog" role="document" style="width:700px;max-width:90vw;">' +
             '<div class="modal-content">' +
-            '<div class="modal-header"><h4 class="modal-title">' + $('<div>').text(nglayoutsI18n.add_to_collection).html() + '</h4></div>' +
+            '<div class="modal-header"><h4 class="modal-title">' + $('<div>').text(explayoutsI18n.add_to_collection).html() + '</h4></div>' +
             '<div class="modal-body">' +
-            '<div class="exp-cb-search form-group"><input type="text" class="form-control" placeholder="' + $('<div>').text(nglayoutsI18n.search).html() + '" /></div>' +
+            '<div class="exp-cb-search form-group"><input type="text" class="form-control" placeholder="' + $('<div>').text(explayoutsI18n.search).html() + '" /></div>' +
             '<div class="exp-cb-breadcrumbs" style="margin:0 0 10px;"></div>' +
             '<div class="exp-cb-list" style="max-height:400px;overflow:auto;"></div>' +
             '</div>' +
             '<div class="modal-footer">' +
-            '<button class="btn btn-default exp-cb-cancel" data-dismiss="modal">' + $('<div>').text(nglayoutsI18n.cancel).html() + '</button>' +
-            '<button class="btn btn-primary exp-cb-apply">' + $('<div>').text(nglayoutsI18n.add_selected).html() + '</button>' +
+            '<button class="btn btn-default exp-cb-cancel" data-dismiss="modal">' + $('<div>').text(explayoutsI18n.cancel).html() + '</button>' +
+            '<button class="btn btn-primary exp-cb-apply">' + $('<div>').text(explayoutsI18n.add_selected).html() + '</button>' +
             '</div>' +
             '</div></div></div>';
 
         var $modal;
-        var state = { parentId: 2, search: '', path: [{ node_id: 2, name: nglayoutsI18n.content }], singleSelect: false, callback: null };
+        var state = { parentId: 2, search: '', path: [{ node_id: 2, name: explayoutsI18n.content }], singleSelect: false, callback: null };
         var pendingView = null;
 
         function ensureModal() {
@@ -892,12 +895,12 @@
         }
 
         function load() {
-            var url = nglayoutsBase() + '/app/api/content_browser?parent_node_id=' + state.parentId + '&search=' + encodeURIComponent(state.search) + '&offset=0&limit=50';
-            $modal.find('.exp-cb-list').html($('<p>').text(nglayoutsI18n.loading));
+            var url = explayoutsBase() + '/app/api/content_browser?parent_node_id=' + state.parentId + '&search=' + encodeURIComponent(state.search) + '&offset=0&limit=50';
+            $modal.find('.exp-cb-list').html($('<p>').text(explayoutsI18n.loading));
             $.getJSON(url).done(function(data){
                 var html = '';
                 if (!data.values || data.values.length === 0) {
-                    html = $('<p>').text(nglayoutsI18n.no_content).prop('outerHTML');
+                    html = $('<p>').text(explayoutsI18n.no_content).prop('outerHTML');
                 } else {
                     html += '<table class="table table-condensed"><tbody>';
                     data.values.forEach(function(item){
@@ -909,7 +912,7 @@
                         html += '<label for="' + cbId + '">' + $('<div>').text(item.name).html() + ' <small>(' + item.class_name + ')</small></label></td>';
                         html += '<td style="width:100px;">';
                         if (item.is_container) {
-                            html += '<a href="#" class="js-cb-browse" data-node-id="' + item.node_id + '" data-name="' + $('<div>').text(item.name).html() + '">' + $('<div>').text(nglayoutsI18n.open).html() + '</a>';
+                            html += '<a href="#" class="js-cb-browse" data-node-id="' + item.node_id + '" data-name="' + $('<div>').text(item.name).html() + '">' + $('<div>').text(explayoutsI18n.open).html() + '</a>';
                         }
                         html += '</td></tr>';
                     });
@@ -918,7 +921,7 @@
                 $modal.find('.exp-cb-list').html(html);
                 renderBreadcrumbs();
             }).fail(function(){
-                $modal.find('.exp-cb-list').html($('<p>').text(nglayoutsI18n.load_failed));
+                $modal.find('.exp-cb-list').html($('<p>').text(explayoutsI18n.load_failed));
             });
         }
 
@@ -927,11 +930,11 @@
             state.singleSelect = false;
             state.callback = null;
             ensureModal();
-            $modal.find('.modal-title').text(nglayoutsI18n.add_to_collection);
-            $modal.find('.exp-cb-apply').text(nglayoutsI18n.add_selected);
+            $modal.find('.modal-title').text(explayoutsI18n.add_to_collection);
+            $modal.find('.exp-cb-apply').text(explayoutsI18n.add_selected);
             state.parentId = 2;
             state.search = '';
-            state.path = [{ node_id: 2, name: nglayoutsI18n.content }];
+            state.path = [{ node_id: 2, name: explayoutsI18n.content }];
             $modal.find('.exp-cb-search input').val('');
             load();
             $modal.modal('show');
@@ -943,11 +946,11 @@
             state.singleSelect = true;
             state.callback = callback;
             ensureModal();
-            $modal.find('.modal-title').text(options.title || nglayoutsI18n.select_content);
-            $modal.find('.exp-cb-apply').text(options.buttonText || nglayoutsI18n.select);
+            $modal.find('.modal-title').text(options.title || explayoutsI18n.select_content);
+            $modal.find('.exp-cb-apply').text(options.buttonText || explayoutsI18n.select);
             state.parentId = 2;
             state.search = '';
-            state.path = [{ node_id: 2, name: nglayoutsI18n.content }];
+            state.path = [{ node_id: 2, name: explayoutsI18n.content }];
             $modal.find('.exp-cb-search input').val('');
             load();
             $modal.modal('show');
@@ -986,7 +989,7 @@
             });
 
             $.ajax({
-                url: nglayoutsBase() + '/app/api/' + locale + '/blocks/' + blockId + '/collections/' + identifier + '/items',
+                url: explayoutsBase() + '/app/api/' + locale + '/blocks/' + blockId + '/collections/' + identifier + '/items',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({ items: items }),
@@ -996,7 +999,7 @@
                 if (model.fetch_results) model.fetch_results();
             }).fail(function(){
                 $modal.modal('hide');
-                alert(nglayoutsI18n.add_failed);
+                alert(explayoutsI18n.add_failed);
             });
         }
 
@@ -1030,29 +1033,29 @@
             var $name = $wrap.find('.js-name');
             var $row = $wrap.closest('.row-input');
             var $cms = $row.find('.js-view-cms');
-            var itemType = $wrap.find('input.js-item-type').val() || 'ibexa_content';
+            var itemType = $wrap.find('input.js-item-type').val() || 'exp_content';
 
             if (clear) {
                 $input.val('').trigger('change');
-                $name.text($name.data('empty-note') || nglayoutsI18n.select_item);
+                $name.text($name.data('empty-note') || explayoutsI18n.select_item);
                 $wrap.addClass('item-empty');
                 $cms.hide();
                 triggerBrowserChange($wrap);
                 return;
             }
 
-            var title = nglayoutsI18n.select_content;
+            var title = explayoutsI18n.select_content;
             var $label = $row.find('label').first();
-            if ($label.length) title = nglayoutsI18n.select_label.replace('%label', $label.text().trim());
+            if ($label.length) title = explayoutsI18n.select_label.replace('%label', $label.text().trim());
 
             openSingleSelectModal(function(data){
-                var value = (itemType === 'ibexa_location') ? data.nodeId : data.objectId;
+                var value = (itemType === 'exp_location') ? data.nodeId : data.objectId;
                 $input.val(value).trigger('change');
                 $name.text(data.name);
                 $wrap.removeClass('item-empty');
-                $cms.attr('href', window.nglayoutsInSiteaccess('/content/view/full/' + data.nodeId)).show();
+                $cms.attr('href', window.explayoutsInSiteaccess('/content/view/full/' + data.nodeId)).show();
                 triggerBrowserChange($wrap);
-            }, { title: title, buttonText: nglayoutsI18n.select });
+            }, { title: title, buttonText: explayoutsI18n.select });
         }, true);
 
 }

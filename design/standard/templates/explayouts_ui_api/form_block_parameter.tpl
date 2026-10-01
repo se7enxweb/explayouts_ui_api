@@ -55,7 +55,7 @@
         </div>
     </div>
 {elseif eq( $type, 'browse' )}
-    {def $item_type = cond( eq( $name, 'parent_location_id' ), 'ibexa_location', 'ibexa_content' )
+    {def $item_type = cond( eq( $name, 'parent_location_id' ), 'exp_location', 'exp_content' )
          $selected_node = false()
          $selected_object = false()
          $cms_node_id = 0
@@ -63,7 +63,7 @@
          $cms_url = ''
          $is_empty = true()}
     {if and( is_set( $value ), $value|ne('') )}
-        {if eq( $item_type, 'ibexa_location' )}
+        {if eq( $item_type, 'exp_location' )}
             {set $selected_node = fetch( 'content', 'node', hash( 'node_id', $value ) )}
             {if $selected_node}
                 {set $selected_name = $selected_node.name|wash()

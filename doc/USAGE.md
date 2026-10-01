@@ -11,8 +11,8 @@ The SPA is bootstrapped by the `app` module view:
 
 `modules/explayouts_ui_api/app.php` renders `design:explayouts_ui_api/app.tpl` with the meta tags the JavaScript reads:
 
-- `nglayouts-route-prefix` (set to `/explayouts_ui_api`)
-- `nglayouts-base-path`
+- `explayouts-route-prefix` (set to `/explayouts_ui_api`)
+- `explayouts-base-path`
 - `ngcb-base-path`
 - `ezxform-token`
 
