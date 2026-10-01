@@ -191,19 +191,19 @@ class expLayoutsUIApplicationApi
             'full_view' => 'blocks/icon-full_view.svg',
             'tpl_block' => 'blocks/icon-twig_block.svg',
 
-            // Components, and the ibexa_component_* twins of the same thing
+            // Components, and the exp_component_* blocks of the same thing
             'about' => 'components/icon-component-about.svg',
             'features' => 'components/icon-component-features.svg',
             'hero' => 'components/icon-component-hero.svg',
             'lead' => 'components/icon-component-lead.svg',
             'logos' => 'components/icon-component-logos.svg',
             'quote' => 'components/icon-component-quote.svg',
-            'ibexa_component_about' => 'components/icon-component-about.svg',
-            'ibexa_component_features' => 'components/icon-component-features.svg',
-            'ibexa_component_hero' => 'components/icon-component-hero.svg',
-            'ibexa_component_lead' => 'components/icon-component-lead.svg',
-            'ibexa_component_logos' => 'components/icon-component-logos.svg',
-            'ibexa_component_quote' => 'components/icon-component-quote.svg',
+            'exp_component_about' => 'components/icon-component-about.svg',
+            'exp_component_features' => 'components/icon-component-features.svg',
+            'exp_component_hero' => 'components/icon-component-hero.svg',
+            'exp_component_lead' => 'components/icon-component-lead.svg',
+            'exp_component_logos' => 'components/icon-component-logos.svg',
+            'exp_component_quote' => 'components/icon-component-quote.svg',
         );
     }
 
@@ -1016,7 +1016,7 @@ class expLayoutsUIApplicationApi
         {
             // Prefer the definition's configured Name. Falling back to the
             // identifier surfaced internals in the editor - a component block
-            // was labelled "Ibexa Component Hero" off ibexa_component_hero.
+            // was labelled with a name built from its identifier.
             $blockInfo = expLayoutsBlockHandlerFactory::getBlockInfo( $definition );
             if ( is_array( $blockInfo ) && isset( $blockInfo['name'] ) && (string)$blockInfo['name'] !== ''
                  && (string)$blockInfo['name'] !== $definition )
@@ -1083,6 +1083,7 @@ class expLayoutsUIApplicationApi
 
         $content = '';
         $isInlineDefinition = in_array( $definition, array( 'title', 'text', 'rich_text' ) );
+        $isCodeDefinition = in_array( $definition, array( 'html', 'html_snippet', 'markdown' ), true );
         if ( $definition === 'title' )
         {
             $level = isset( $values['level'] ) ? max( 1, min( 6, (int)$values['level'] ) ) : 2;
@@ -1108,13 +1109,23 @@ class expLayoutsUIApplicationApi
                 '<strong>' . htmlspecialchars( $blockName ) . '</strong>' .
             '</div>';
         }
+        elseif ( $isCodeDefinition )
+        {
+            // Mirrors the reference app/block/html_snippet.html.twig and
+            // markdown.html.twig: the editor builds its code editor on this
+            // element and saves it into the sidebar field named by data-attr.
+            // Without it the block had no editor, and opening its sidebar
+            // or the modal failed on the missing editor.
+            $code = isset( $values['content'] ) ? (string)$values['content'] : '';
+            $content .= '<div data-attr="content" class="ace-editor">' . htmlspecialchars( $code ) . '</div>';
+        }
         elseif ( $definition === 'text' )
         {
             $textContent = isset( $values['content'] ) ? (string)$values['content'] : '';
             $textHint = $textContent === '' ? ' data-hint="No content"' : '';
             $content .= '<span data-inline-child data-attr="content"' . $textHint . '>' . ( $textContent === '' ? '' : nl2br( htmlspecialchars( $textContent ) ) ) . '</span>';
         }
-        elseif ( strpos( $definition, 'ibexa_component_' ) === 0 || $definition === 'exp_component' )
+        elseif ( strpos( $definition, 'exp_component' ) === 0 || strpos( $definition, 'ibexa_component_' ) === 0 )
         {
             // Mirrors the reference app/block/ibexa_component.html.twig: the
             // referenced component rendered as a single list item, or a notice
@@ -1209,7 +1220,7 @@ class expLayoutsUIApplicationApi
             }
         }
 
-        if ( $content === '' || ( trim( strip_tags( $content ) ) === '' && !$isInlineDefinition ) )
+        if ( $content === '' || ( trim( strip_tags( $content ) ) === '' && !$isInlineDefinition && !$isCodeDefinition ) )
         {
             $content = '<p class="block-empty" style="color:#888; font-style:italic;">No content</p>';
         }
