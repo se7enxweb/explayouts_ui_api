@@ -14,7 +14,7 @@ class explayouts_ui_apiInfo
     public static function info()
     {
         return array( 'Name' => "Exponential Layouts UI API",
-                      'Version' => "1.3.9",
+                      'Version' => "1.3.10",
                       'Copyright' => "Copyright (C) 1998 - 2026 7x. All rights reserved.",
                       'License' => "GNU General Public License v2.0 (or any later version)",
                       'info_url' => "https://github.com/se7enxweb/explayouts_ui_api" );
