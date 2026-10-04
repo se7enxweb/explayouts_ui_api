@@ -82,6 +82,34 @@ class expLayoutsUIApplicationApi
         }
     }
 
+    /**
+     * Which group of layouts a list is about: 'site' (default), 'admin' or 'all'.
+     * The admin layouts are their own group in the editor: only listed when asked
+     * for, so the site's layout list never shows them and the other way round.
+     */
+    protected static function requestedGroup()
+    {
+        $group = isset( $_GET['group'] ) ? (string)$_GET['group'] : 'site';
+        return in_array( $group, array( 'site', 'admin', 'all' ), true ) ? $group : 'site';
+    }
+
+    protected static function layoutInGroup( $layout, $group )
+    {
+        if ( $group === 'all' )
+            return true;
+        return expLayoutsLayoutType::getGroup( $layout->attribute( 'layout_type' ) ) === $group;
+    }
+
+    protected static function ruleInGroup( $rule, $group )
+    {
+        if ( $group === 'all' )
+            return true;
+        $layout = expLayoutsLayout::fetch( (int)$rule->attribute( 'layout_id' ) );
+        if ( !$layout )
+            return $group === 'site';
+        return self::layoutInGroup( $layout, $group );
+    }
+
     protected static function loadLayoutForApi( $service, $layoutId, $fallback = 'load' )
     {
         $published = isset( $_GET['published'] ) ? (string)$_GET['published'] : '';
@@ -118,7 +146,8 @@ class expLayoutsUIApplicationApi
     protected static function layoutTypes()
     {
         $types = array();
-        foreach ( expLayoutsLayoutType::getAvailableTypes() as $type )
+        $group = self::requestedGroup();
+        foreach ( expLayoutsLayoutType::getAvailableTypes( $group === 'all' ? false : $group ) as $type )
         {
             $info = expLayoutsLayoutType::getTypeInfo( $type['identifier'] );
             $zones = array();
@@ -132,6 +161,7 @@ class expLayoutsUIApplicationApi
             $types[] = array(
                 'identifier' => $info['identifier'],
                 'name' => $info['name'],
+                'group' => $info['group'],
                 'zones' => $zones,
             );
         }
@@ -244,6 +274,13 @@ class expLayoutsUIApplicationApi
             if ( !$info )
                 continue;
 
+            // Admin blocks (Group=admin) are for admin layouts only.
+            $blockIni = eZINI::instance( 'explayouts.ini' );
+            if ( self::requestedGroup() === 'site'
+                && $blockIni->hasVariable( 'BlockDefinition_' . $identifier, 'Group' )
+                && $blockIni->variable( 'BlockDefinition_' . $identifier, 'Group' ) === 'admin' )
+                continue;
+
             $category = !empty( $info['category'] ) ? (string)$info['category'] : 'standard';
             $groupName = isset( $groupNames[$category] ) ? $groupNames[$category] : ucwords( str_replace( '_', ' ', $category ) );
 
@@ -345,7 +382,13 @@ class expLayoutsUIApplicationApi
             return self::response( $layout ? self::layoutToArray( $layout ) : array( 'error' => 'Layout not found.' ), $layout ? 200 : 404 );
         }
 
-        $layouts = $service->listAll();
+        $group = self::requestedGroup();
+        $layouts = array();
+        foreach ( $service->listAll() as $candidate )
+        {
+            if ( self::layoutInGroup( $candidate, $group ) )
+                $layouts[] = $candidate;
+        }
         return self::response( array( 'values' => array_map( array( __CLASS__, 'layoutToArray' ), $layouts ), 'total' => count( $layouts ) ) );
     }
 
@@ -357,7 +400,13 @@ class expLayoutsUIApplicationApi
      */
     protected static function handleSharedLayouts()
     {
-        $layouts = expLayoutsLayout::fetchShared( 2 );
+        $group = self::requestedGroup();
+        $layouts = array();
+        foreach ( expLayoutsLayout::fetchShared( 2 ) as $candidate )
+        {
+            if ( self::layoutInGroup( $candidate, $group ) )
+                $layouts[] = $candidate;
+        }
         return self::response( array(
             'values' => array_map( array( __CLASS__, 'layoutToArray' ), $layouts ),
             'total' => count( $layouts ),
@@ -2242,7 +2291,13 @@ class expLayoutsUIApplicationApi
                 return self::response( $rule ? self::ruleToArray( $rule ) : array( 'error' => 'Rule not found.' ), $rule ? 200 : 404 );
             }
 
-            $rules = $service->listAll();
+            $group = self::requestedGroup();
+            $rules = array();
+            foreach ( $service->listAll() as $candidate )
+            {
+                if ( self::ruleInGroup( $candidate, $group ) )
+                    $rules[] = $candidate;
+            }
             return self::response( array( 'values' => array_map( array( __CLASS__, 'ruleToArray' ), $rules ), 'total' => count( $rules ) ) );
         }
 
@@ -2339,8 +2394,11 @@ class expLayoutsUIApplicationApi
         $service = new expLayoutsCoreRuleService();
         $rules = $service->listAll();
         $counts = array();
+        $group = self::requestedGroup();
         foreach ( $rules as $rule )
         {
+            if ( !self::ruleInGroup( $rule, $group ) )
+                continue;
             $layoutId = (int)$rule->attribute( 'layout_id' );
             $counts[$layoutId] = isset( $counts[$layoutId] ) ? $counts[$layoutId] + 1 : 1;
         }
@@ -2460,6 +2518,7 @@ class expLayoutsUIApplicationApi
             'name' => (string)$layout->attribute( 'name' ),
             'type' => $layoutType,
             'layout_type' => $layoutType,
+            'group' => expLayoutsLayoutType::getGroup( $layoutType ),
             'description' => '',
             'status' => $status,
             'published' => $status === 2,
