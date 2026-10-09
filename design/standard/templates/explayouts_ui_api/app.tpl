@@ -639,7 +639,7 @@
     {ezscript( array( 'ezjsc::jquery', 'ezjsc::jqueryUI' ) )}
     <script src="{'vendor/ckeditor/ckeditor.js'|ezdesign('no')}" defer></script>
     <script src="{'vendor/ace-editor/ace.js'|ezdesign('no')}" defer></script>
-    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20261001" defer></script>
+    <script src="{'javascript/netgen-layouts.js'|ezdesign('no')}?v=20261009" defer></script>
     {* After the app bundle: it waits for the app to draw itself before it
        touches anything. *}
     <script src="{'javascript/explayouts-mobile.js'|ezdesign('no')}?v=20260929" defer></script>
