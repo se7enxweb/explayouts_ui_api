@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.3.32
+
+- Added: Chinese translations in Simplified (chi-CN) and Traditional (chi-TW) script; chi-HK falls back to chi-TW,
+  from ekked's pull request #18.
+- Added: Translations into seventeen languages from South Asia and Africa: Bengali, Urdu, Marathi, Telugu, Tamil,
+  Gujarati, Kannada, Malayalam, Punjabi, Odia, Hausa, Amharic, Yoruba, Igbo, isiZulu, Somali and isiXhosa, from
+  ekked's pull request #17.
+- Added: Russian, Catalan, Serbian (Cyrillic and Latin), Bulgarian, Lithuanian, Portuguese (Portugal) and Afrikaans
+  translations, from ekked's pull request #16.
+- Added: Translations into eighteen more administration languages: Hindi, Korean, Bosnian, Lower Sorbian, Estonian,
+  Irish, Icelandic, Greenlandic, Latvian, Hungarian, Maltese, Romanian, Albanian, Slovak, Slovenian, Japanese, Greek
+  and Finnish, from ekked's pull request #15.
+
 ## 1.3.31
 
 - **"+ Add items" is a button.** The trigger of the content browser in a collection of the sidebar was a `<div>`: it
