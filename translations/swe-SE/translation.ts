@@ -1661,4 +1661,335 @@
         <translation>Rutnät (första posten stor)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Grundläggande</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponenter</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Listor</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galleri</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Behållare</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Platshållare</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administration: sidhuvud</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administration: navigering</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administration: sida</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administration: sidofält</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Två kolumner</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolumn</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Mallblock</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-kodsnutt</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Formaterad text</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Bild</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Lista</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Enskilt innehåll</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Knapp / länk</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Mellanrum</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Avdelare</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kort</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Dragspel</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Flikar</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Rutnät</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Bildspel</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Miniatyrgalleri</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Rutnätsgalleri</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushibar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Sicksack (lista)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Dragspel (lista)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Varning</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Extern video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Märke</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Förloppsindikator</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Karta</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karusell</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Fullständig vy</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Huvudbanner</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Om oss</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Funktioner</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Ingress</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logotyper</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tre kolumner</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Fyra kolumner</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Huvudbannerkomponent</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Funktionskomponent</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Om oss-komponent</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logotypkomponent</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Citatkomponent</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Ingresskomponent</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administration: logotyp och förhandsvisning av webbplatsen</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administration: sökning</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administration: växlare för ljust och mörkt läge</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administration: menyknapp (telefonbredd)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administration: kontroller för sidofälten</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administration: menyknapp och kontroller för sidofälten (kombinerade)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administration: flikmeny</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administration: vänstermeny för navigeringsdelen</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administration: innehållsstruktur</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administration: töm cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administration: bokmärken</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administration: gränssnittsval (språk)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administration: aktuell användare</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administration: användarinställningar</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administration: snabbinställningar</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administration: högra verktygsfältet (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administration: utvecklarverktygsfältet (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administration: brödsmulor</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administration: modulresultat</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administration: sidfot och upphovsrätt</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administration: snabbmeny</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administration: överlägg och laddningsindikator</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administration: område för felsökningsrapport</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Framhävd produkt</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Innehållsfält</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV-evenemang</translation>
+    </message>
+</context>
 </TS>

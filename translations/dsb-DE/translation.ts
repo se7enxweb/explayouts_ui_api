@@ -1661,4 +1661,335 @@
         <translation>Kśidno (prědny zapisk wjeliki)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Zakłady</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponenty</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Lisćiny</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerija</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kontejnery</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Zastupne městna</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standardny</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administracija: głowowy wobcerk</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administracija: nawigacija</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administracija: bok</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administracija: bocna lejstwa</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Dwa słupa</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Słup</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Blok pśedłogi</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-wurězk</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Formatěrowany tekst</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Wobraz</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Lisćina</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Jadnotliwe wopśimjeśe</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Tłocašk / wótkaz</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Wótstawk</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Źěleńska linija</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Karta</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Rejtariki</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Kśidno</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Karusel</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galerija miniaturow</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Galerija w kśidnje</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi-bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Cikcak (lisćina)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordeon (lisćina)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Warnowanje</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Eksterny wideo</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Plaketa</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Lejstwa póstupa</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Krajna karta</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karusel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Połny naglěd</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Głowny banner</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Wó nas</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Kakosći</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Zawod</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Loga</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tśi słupy</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Styri słupy</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Komponenta głownego bannera</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Komponenta kakosćow</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponenta „Wó nas“</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Komponenta logow</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Komponenta citata</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Komponenta zawoda</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administracija: logo a naglěd sedła</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administracija: pytanje</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administracija: pśešaltowanje swětłego a śamnego modusa</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administracija: tłocašk menija (šyrokosć telefona)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administracija: wóźenje bocnych lejstwow</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administracija: tłocašk menija a wóźenje bocnych lejstwow (kombiněrowane)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administracija: meni rejtarikow</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administracija: lěwy meni nawigaciskego źěla</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administracija: struktura wopśimjeśa</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administracija: pufrowak wuprozniś</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administracija: cytańske znamjenja</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administracija: wuběrk pówjercha (rěc)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administracija: aktualny wužywaŕ</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administracija: wužywaŕske nastajenja</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administracija: malsne nastajenja</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administracija: pšawa lejstwa rědow (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administracija: lejstwa rědow za wuwijarjow (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administracija: nawigaciska drožka</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administracija: wuslědk modula</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administracija: nogowa smužka a awtorske pšawo</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administracija: kontekstowy meni</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administracija: pśekšyśe a pokazowak zacytanja</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administracija: wobcerk rozpšawy pytanja zmólkow</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Wuzwignjony produkt</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Pólo wopśimjeśa</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Zarědowanja TMV</translation>
+    </message>
+</context>
 </TS>

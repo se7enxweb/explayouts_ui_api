@@ -1661,4 +1661,335 @@
         <translation>Gitter (første element stort)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Grundlæggende</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponenter</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Lister</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galleri</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Containere</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Pladsholdere</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administration: sidehoved</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administration: navigation</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administration: side</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administration: sidepanel</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>To kolonner</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolonne</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Skabelonblok</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-uddrag</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Formateret tekst</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Billede</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Enkelt indhold</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Knap / link</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Afstand</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Skillelinje</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kort</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Harmonika</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Faner</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Gitter</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Slider</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Miniaturegalleri</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Gittergalleri</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushibar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigzag (liste)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Harmonika (liste)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Advarsel</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Ekstern video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Mærkat</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Statuslinje</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Landkort</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karrusel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Fuld visning</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Hero</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Om os</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Funktioner</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Indledning</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logoer</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tre kolonner</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Fire kolonner</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Hero-komponent</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Funktionskomponent</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Om os-komponent</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logokomponent</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Citatkomponent</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Indledningskomponent</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administration: logo og eksempel på webstedet</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administration: søgning</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administration: skift mellem lys og mørk tilstand</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administration: menuknap (telefonbredde)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administration: styring af sidepaneler</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administration: menuknap og styring af sidepaneler (kombineret)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administration: fanemenu</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administration: venstre menu i navigationsdelen</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administration: indholdsstruktur</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administration: ryd cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administration: bogmærker</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administration: valg af brugerflade (sprog)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administration: aktuel bruger</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administration: brugerindstillinger</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administration: hurtige indstillinger</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administration: højre værktøjslinje (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administration: udviklerværktøjslinje (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administration: brødkrummesti</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administration: modulresultat</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administration: sidefod og ophavsret</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administration: genvejsmenu</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administration: overlejring og indlæsningsindikator</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administration: område til fejlfindingsrapport</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Fremhævet produkt</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Indholdsfelt</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV-arrangementer</translation>
+    </message>
+</context>
 </TS>

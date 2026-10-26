@@ -1661,4 +1661,335 @@
         <translation>Grilă (primul element mare)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>De bază</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Componente</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerie</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Containere</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Substituenți</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administrare: antet</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administrare: navigare</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administrare: pagină</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administrare: bară laterală</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Două coloane</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Coloană</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Bloc de template</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titlu</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Fragment HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Text formatat</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Imagine</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Listă</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Conținut unic</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Buton / Link</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Spațiere</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Separator</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Card</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Acordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Grilă</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Glisor</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galerie cu miniaturi</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Galerie în grilă</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Bandă orizontală</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigzag (listă)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Acordeon (listă)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Avertizare</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Videoclip extern</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Insignă</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Bară de progres</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Hartă</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Carusel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Vizualizare completă</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Banner principal</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Despre</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Caracteristici</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Introducere</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logo-uri</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Trei coloane</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Patru coloane</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Componentă banner principal</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Componentă caracteristici</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Componentă Despre</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Componentă logo-uri</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Componentă citat</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Componentă introducere</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administrare: logo și previzualizarea site-ului</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administrare: căutare</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administrare: comutator mod luminos și întunecat</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administrare: buton de meniu (lățime de telefon)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administrare: comenzile barelor laterale</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administrare: buton de meniu și comenzile barelor laterale (combinate)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administrare: meniu cu file</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administrare: meniul din stânga al părții de navigare</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administrare: structura conținutului</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administrare: golire cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administrare: marcaje</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administrare: opțiuni de interfață (limbă)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administrare: utilizatorul curent</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administrare: preferințele utilizatorului</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administrare: setări rapide</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administrare: bara de instrumente din dreapta (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administrare: bara de instrumente pentru dezvoltatori (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administrare: traseu de navigare</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administrare: rezultatul modulului</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administrare: subsol și drepturi de autor</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administrare: meniu contextual</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administrare: suprapunere și indicator de încărcare</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administrare: zona raportului de depanare</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Produs evidențiat</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Câmp de conținut</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Evenimente TMV</translation>
+    </message>
+</context>
 </TS>

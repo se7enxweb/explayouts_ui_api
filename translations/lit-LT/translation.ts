@@ -1661,4 +1661,335 @@
         <translation>Tinklelis (pirmas elementas didelis)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Pagrindiniai</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponentai</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Sąrašai</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerija</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Konteineriai</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Vietos rezervavimo ženklai</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standartinis</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administravimas: antraštė</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administravimas: naršymas</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administravimas: puslapis</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administravimas: šoninė juosta</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Du stulpeliai</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Stulpelis</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Šablono blokas</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Tekstas</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Antraštė</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML fragmentas</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Formatuotas tekstas</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Paveikslėlis</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Sąrašas</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Vienas turinys</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Mygtukas / nuoroda</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Tarpas</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Skiriamoji linija</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kortelė</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordeonas</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Kortelės</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Tinklelis</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Skaidrių juosta</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Miniatiūrų galerija</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Tinklelio galerija</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigzagas (sąrašas)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordeonas (sąrašas)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citata</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Įspėjimas</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Išorinis vaizdo įrašas</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Ženklelis</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Eigos juosta</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Žemėlapis</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karuselė</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Visas rodinys</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Pagrindinė reklamjuostė</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Apie mus</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Galimybės</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Įžanga</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logotipai</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Trys stulpeliai</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Keturi stulpeliai</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Pagrindinės reklamjuostės komponentas</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Galimybių komponentas</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponentas „Apie mus“</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logotipų komponentas</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Citatos komponentas</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Įžangos komponentas</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administravimas: logotipas ir svetainės peržiūra</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administravimas: paieška</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administravimas: šviesaus ir tamsaus režimo jungiklis</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administravimas: meniu mygtukas (telefono plotis)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administravimas: šoninių juostų valdikliai</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administravimas: meniu mygtukas ir šoninių juostų valdikliai (kartu)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administravimas: kortelių meniu</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administravimas: naršymo dalies kairysis meniu</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administravimas: turinio struktūra</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administravimas: talpyklos išvalymas</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administravimas: žymės</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administravimas: sąsajos pasirinkimai (kalba)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administravimas: dabartinis naudotojas</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administravimas: naudotojo nuostatos</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administravimas: greitieji nustatymai</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administravimas: dešinioji įrankių juosta (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administravimas: kūrėjo įrankių juosta (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administravimas: naršymo kelias</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administravimas: modulio rezultatas</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administravimas: poraštė ir autorių teisės</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administravimas: kontekstinis meniu</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administravimas: perdanga ir įkėlimo indikatorius</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administravimas: derinimo ataskaitos sritis</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Išskirtas produktas</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Turinio laukas</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV renginiai</translation>
+    </message>
+</context>
 </TS>

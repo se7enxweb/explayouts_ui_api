@@ -1664,4 +1664,335 @@
         <translation>Cancelli (primum elementum magnum)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Fundamentalia</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Partes compositae</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Indices</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Pinacotheca</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Receptacula</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Loca reservata</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Solitum</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administratio: caput paginae</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administratio: navigatio</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administratio: pagina</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administratio: tabula lateralis</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Duae columnae</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Columna</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Truncus formae</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Textus</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titulus</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Fragmentum HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Textus ornatus</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Imago</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Index</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Contentum singulare</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Globulus / Nexus</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Spatium</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Linea divisoria</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Charta</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Plicatile</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Tabellae</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Cancelli</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Tabulae volubiles</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Pinacotheca imaguncularum</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Pinacotheca cancellata</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Taenia volubilis</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Flexuosum (index)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Plicatile (index)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citatio</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Monitum</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Pellicula externa</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Insigne</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Tabula progressus</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Charta geographica</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Orbis rotans</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Aspectus plenus</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Vexillum principale</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>De nobis</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Proprietates</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Prooemium</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Signa</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tres columnae</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Quattuor columnae</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Pars vexilli principalis</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Pars proprietatum</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Pars De nobis</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Pars signorum</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Pars citationis</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Pars prooemii</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administratio: signum et praevisio situs</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administratio: quaestio</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administratio: commutator modi lucidi et obscuri</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administratio: globulus indicis (latitudo telephoni)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administratio: moderamina tabularum lateralium</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administratio: globulus indicis et moderamina tabularum lateralium (coniuncta)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administratio: index tabellarum</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administratio: index sinister partis navigationis</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administratio: structura contenti</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administratio: memoriam celerem purgare</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administratio: signacula</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administratio: optiones interfaciei (lingua)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administratio: usor praesens</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administratio: optiones usoris</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administratio: optiones celeres</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administratio: tabula instrumentorum dextra (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administratio: tabula instrumentorum programmatoris (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administratio: semita navigationis</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administratio: effectus moduli</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administratio: pes paginae et ius auctoris</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administratio: index contextus</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administratio: velamen et index onerandi</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administratio: area relationis vitiorum</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Productum insigne</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Campus contenti</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Eventus TMV</translation>
+    </message>
+</context>
 </TS>

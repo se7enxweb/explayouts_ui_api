@@ -1661,4 +1661,335 @@
         <translation>Režģis (pirmais vienums liels)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Pamata</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponentes</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Saraksti</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerija</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Konteineri</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Vietturi</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standarta</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administrēšana: galvene</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administrēšana: navigācija</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administrēšana: lapa</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administrēšana: sānjosla</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Divas kolonnas</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolonna</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Veidnes bloks</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Teksts</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Virsraksts</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML fragments</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Formatēts teksts</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Attēls</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Saraksts</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Viens saturs</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Poga / saite</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Atstarpe</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Atdalītājs</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kartīte</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordeons</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Cilnes</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Režģis</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Slīdnis</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Sīktēlu galerija</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Režģa galerija</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Suši bārs</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigzags (saraksts)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordeons (saraksts)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citāts</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Brīdinājums</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Ārējs video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Žetons</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Progresa josla</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Karte</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karuselis</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Pilnais skats</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Galvenais baneris</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Par mums</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Iespējas</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Ievads</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logotipi</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Trīs kolonnas</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Četras kolonnas</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Galvenā banera komponente</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Iespēju komponente</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponente “Par mums”</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logotipu komponente</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Citāta komponente</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Ievada komponente</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administrēšana: logotips un vietnes priekšskatījums</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administrēšana: meklēšana</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administrēšana: gaišā un tumšā režīma slēdzis</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administrēšana: izvēlnes poga (tālruņa platums)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administrēšana: sānjoslu vadīklas</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administrēšana: izvēlnes poga un sānjoslu vadīklas (kopā)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administrēšana: cilņu izvēlne</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administrēšana: navigācijas daļas kreisā izvēlne</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administrēšana: satura struktūra</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administrēšana: kešatmiņas notīrīšana</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administrēšana: grāmatzīmes</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administrēšana: saskarnes izvēle (valoda)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administrēšana: pašreizējais lietotājs</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administrēšana: lietotāja preferences</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administrēšana: ātrie iestatījumi</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administrēšana: labā rīkjosla (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administrēšana: izstrādātāja rīkjosla (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administrēšana: navigācijas ceļš</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administrēšana: moduļa rezultāts</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administrēšana: kājene un autortiesības</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administrēšana: konteksta izvēlne</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administrēšana: pārklājums un ielādes indikators</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administrēšana: atkļūdošanas atskaites apgabals</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Izcelts produkts</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Satura lauks</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV pasākumi</translation>
+    </message>
+</context>
 </TS>

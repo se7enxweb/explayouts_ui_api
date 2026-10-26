@@ -1661,4 +1661,335 @@
         <translation>网格（第一项较大）</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>基础</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>组件</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>列表展示</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>图库</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>容器</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>占位符</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>标准</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>管理界面：页眉</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>管理界面：导航</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>管理界面：页面</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>管理界面：侧边栏</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>两栏</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>栏</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>模板区块</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>文本</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>标题</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML 片段</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>富文本</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>图片</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>列表</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>单个内容</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>按钮 / 链接</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>间距</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>分隔线</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>卡片</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>折叠面板</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>选项卡</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>网格</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>滑块</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>缩略图库</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>网格图库</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>寿司吧</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>之字形（列表）</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>折叠面板（列表）</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>引用</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>提示框</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>外部视频</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>徽章</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>进度条</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>地图</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>轮播</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>完整视图</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>主视觉横幅</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>关于我们</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>特色</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>导语</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>徽标</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>三栏</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>四栏</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>主视觉横幅组件</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>特色组件</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>“关于我们”组件</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>徽标组件</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>引用组件</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>导语组件</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>管理界面：徽标和站点预览</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>管理界面：搜索</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>管理界面：浅色和深色模式切换</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>管理界面：菜单按钮（手机宽度）</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>管理界面：侧边栏控件</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>管理界面：菜单按钮和侧边栏控件（组合）</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>管理界面：选项卡菜单</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>管理界面：导航部分的左侧菜单</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>管理界面：内容结构</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>管理界面：清除缓存</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>管理界面：书签</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>管理界面：界面选项（语言）</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>管理界面：当前用户</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>管理界面：用户首选项</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>管理界面：快速设置</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>管理界面：右侧工具栏（toolbar.ini admin_right）</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>管理界面：开发者工具栏（toolbar.ini admin_developer）</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>管理界面：面包屑路径</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>管理界面：模块结果</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>管理界面：页脚和版权</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>管理界面：快捷菜单</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>管理界面：遮罩层和加载指示器</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>管理界面：调试报告区域</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>产品亮点</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>内容字段</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV 活动</translation>
+    </message>
+</context>
 </TS>

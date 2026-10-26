@@ -1661,4 +1661,335 @@
         <translation>Gridi (kipengee cha kwanza kikubwa)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Msingi</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Vipengele</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Orodha</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Matunzio</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Vyombo</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Vishika nafasi</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Kawaida</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Usimamizi: kichwa</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Usimamizi: urambazaji</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Usimamizi: ukurasa</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Usimamizi: upau wa pembeni</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Safu wima mbili</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Safu wima</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Kizuizi cha kiolezo</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Maandishi</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Kichwa</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Kipande cha HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Maandishi yaliyoumbizwa</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Picha</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Orodha</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Maudhui moja</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Kitufe / Kiungo</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Nafasi</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Kitenganishi</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kadi</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akodioni</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Vichupo</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Gridi</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Kitelezi</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Matunzio ya vijipicha</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Matunzio ya gridi</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Mstari wa kutelezesha (sushi bar)</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigizaga (orodha)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akodioni (orodha)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Nukuu</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Tahadhari</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Video ya nje</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Beji</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Upau wa maendeleo</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Ramani</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Jukwa</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Mwonekano kamili</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Bango kuu</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Kutuhusu</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Vipengele maalum</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Utangulizi</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Nembo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Safu wima tatu</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Safu wima nne</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Kipengele cha bango kuu</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Kipengele cha vipengele maalum</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Kipengele cha Kutuhusu</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Kipengele cha nembo</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Kipengele cha nukuu</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Kipengele cha utangulizi</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Usimamizi: nembo na onyesho la tovuti</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Usimamizi: utafutaji</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Usimamizi: swichi ya hali ya mwanga na giza</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Usimamizi: kitufe cha menyu (upana wa simu)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Usimamizi: vidhibiti vya upau wa pembeni</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Usimamizi: kitufe cha menyu na vidhibiti vya upau wa pembeni (pamoja)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Usimamizi: menyu ya vichupo</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Usimamizi: menyu ya kushoto ya sehemu ya urambazaji</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Usimamizi: muundo wa maudhui</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Usimamizi: futa akiba</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Usimamizi: alamisho</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Usimamizi: chaguo za kiolesura (lugha)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Usimamizi: mtumiaji wa sasa</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Usimamizi: mapendeleo ya mtumiaji</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Usimamizi: mipangilio ya haraka</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Usimamizi: upau wa zana wa kulia (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Usimamizi: upau wa zana wa msanidi (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Usimamizi: njia ya urambazaji</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Usimamizi: matokeo ya moduli</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Usimamizi: kijachini na hakimiliki</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Usimamizi: menyu ya muktadha</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Usimamizi: kifuniko na kiashiria cha upakiaji</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Usimamizi: eneo la ripoti ya utatuzi</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Bidhaa iliyoangaziwa</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Sehemu ya maudhui</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Matukio ya TMV</translation>
+    </message>
+</context>
 </TS>

@@ -1661,4 +1661,335 @@
         <translation>Raster (erster Eintrag groß)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Grundlagen</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponenten</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Listen</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerie</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Container</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Platzhalter</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administration: Kopfbereich</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administration: Navigation</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administration: Seite</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administration: Seitenleiste</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Zwei Spalten</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Spalte</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Template-Block</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-Schnipsel</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Formatierter Text</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Bild</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Einzelner Inhalt</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Schaltfläche / Link</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Abstand</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Trennlinie</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Karte</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akkordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Reiter</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Raster</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Slider</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Thumbnail-Galerie</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Raster-Galerie</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi-Bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zickzack (Liste)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akkordeon (Liste)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Zitat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Warnhinweis</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Externes Video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Abzeichen</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Fortschrittsbalken</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Landkarte</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karussell</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Vollansicht</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Hero</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Über uns</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Merkmale</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Einleitung</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logos</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Drei Spalten</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Vier Spalten</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Hero-Komponente</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Merkmale-Komponente</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Über-uns-Komponente</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logos-Komponente</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Zitat-Komponente</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Einleitungs-Komponente</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administration: Logo und Website-Vorschau</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administration: Suche</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administration: Umschalter für hellen und dunklen Modus</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administration: Menüschaltfläche (Telefonbreite)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administration: Steuerung der Seitenleisten</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administration: Menüschaltfläche und Steuerung der Seitenleisten (kombiniert)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administration: Reitermenü</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administration: linkes Menü des Navigationsbereichs</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administration: Inhaltsstruktur</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administration: Cache leeren</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administration: Lesezeichen</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administration: Oberflächenauswahl (Sprache)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administration: aktueller Benutzer</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administration: Benutzereinstellungen</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administration: Kurzeinstellungen</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administration: rechte Werkzeugleiste (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administration: Entwickler-Werkzeugleiste (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administration: Brotkrumenpfad</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administration: Modulergebnis</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administration: Fußzeile und Copyright</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administration: Kontextmenü</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administration: Überlagerung und Ladeanzeige</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administration: Bereich des Debug-Berichts</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Produkt-Highlight</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Inhaltsfeld</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV-Veranstaltungen</translation>
+    </message>
+</context>
 </TS>

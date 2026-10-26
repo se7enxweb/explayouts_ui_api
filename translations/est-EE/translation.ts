@@ -1661,4 +1661,335 @@
         <translation>Ruudustik (esimene üksus suur)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Põhilised</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponendid</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Loendid</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerii</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Konteinerid</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Kohatäited</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standardne</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Haldus: päis</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Haldus: navigeerimine</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Haldus: leht</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Haldus: külgriba</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Kaks veergu</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Veerg</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Malliplokk</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Pealkiri</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-katkend</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Vormindatud tekst</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Pilt</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Loend</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Üksik sisu</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Nupp / link</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Vahe</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Eraldusjoon</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kaart</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordion</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Vahekaardid</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Ruudustik</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Liugur</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Pisipiltide galerii</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Ruudustikgalerii</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sušibaar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Siksak (loend)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordion (loend)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Tsitaat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Hoiatus</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Väline video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Märk</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Edenemisriba</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Maakaart</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karussell</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Täisvaade</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Põhibänner</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Meist</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Omadused</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Sissejuhatus</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logod</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Kolm veergu</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Neli veergu</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Põhibänneri komponent</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Omaduste komponent</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponent „Meist“</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logode komponent</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Tsitaadi komponent</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Sissejuhatuse komponent</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Haldus: logo ja saidi eelvaade</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Haldus: otsing</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Haldus: heleda ja tumeda režiimi lüliti</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Haldus: menüünupp (telefoni laius)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Haldus: külgribade juhtelemendid</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Haldus: menüünupp ja külgribade juhtelemendid (koos)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Haldus: vahekaartide menüü</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Haldus: navigeerimisosa vasak menüü</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Haldus: sisu struktuur</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Haldus: vahemälu tühjendamine</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Haldus: järjehoidjad</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Haldus: liidese valikud (keel)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Haldus: praegune kasutaja</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Haldus: kasutaja eelistused</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Haldus: kiirsätted</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Haldus: parem tööriistariba (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Haldus: arendaja tööriistariba (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Haldus: navigeerimisrada</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Haldus: mooduli tulemus</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Haldus: jalus ja autoriõigus</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Haldus: kontekstimenüü</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Haldus: ülekate ja laadimisnäidik</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Haldus: silumisaruande ala</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Esiletõstetud toode</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Sisuväli</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV sündmused</translation>
+    </message>
+</context>
 </TS>

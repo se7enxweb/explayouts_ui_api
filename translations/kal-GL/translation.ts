@@ -1661,4 +1661,335 @@
         <translation>Qallunaatsiaasat (allattugaq siulleq angisuujuvoq)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Tunngaviusut</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponentit</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Allattorsimaffiit</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Assit katersugaat</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Imaqarfiit</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Sinniisut</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Nalinginnaasoq</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Aqutsineq: qaavani immikkoortoq</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Aqutsineq: navigationi</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Aqutsineq: quppernerq</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Aqutsineq: saniatigut immikkoortoq</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Kolonnit marluk</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolonni</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Skabelonip blokkia</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Allagaq</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Qulequtaq</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-ip ilaa</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Allagaq ilusilersugaq</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Assi</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Allattorsimaffik</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Imarisaq ataasiusoq</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Toortagaq / innersuussut</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Ammaneq</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Titarneq avissaartitsissut</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kortitut</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Ammartartut</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Tabit</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Qallunaatsiaasat</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Assit ingerlaartut</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Assikinnguit katersugaat</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Assit katersugaat qallunaatsiaqqatut</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi-bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigzag (allattorsimaffik)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akkordeoni (allattorsimaffik)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Issuaaneq</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Mianersoqqussut</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Silamiit videoi</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Ilisarnaat</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Ingerlanerata titarnera</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Nunap assinga</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karruseli</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Tamakkiisumik takuneq</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Bannerip pingaarnersaa</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Uagut pillugut</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Pissusii</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Aallaqqaasiut</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logoot</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Kolonnit pingasut</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Kolonnit sisamat</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Bannerip pingaarnersaata komponentia</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Pissusiisa komponentiat</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Uagut pillugut komponentia</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logoot komponentiat</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Issuaanerup komponentia</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Aallaqqaasiutip komponentia</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Aqutsineq: logo aamma nittartakkap siumoortumik takuneqarnera</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Aqutsineq: ujarlerneq</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Aqutsineq: qaamasumut taartumullu nikerartitsissut</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Aqutsineq: menup toortagaa (oqarasuaatip silissusia)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Aqutsineq: saniatigut immikkoortut aqutsissutai</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Aqutsineq: menup toortagaa aamma saniatigut immikkoortut aqutsissutai (ataatsimoortut)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Aqutsineq: tabit menuat</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Aqutsineq: navigationip ilaata menua saamerleq</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Aqutsineq: imarisat aaqqissugaanerat</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Aqutsineq: cache-ip saliinera</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Aqutsineq: nalunaaqutat</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Aqutsineq: atuisup saqqaata toqqagassai (oqaatsit)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Aqutsineq: atuisoq maannakkut</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Aqutsineq: atuisup kissaatai</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Aqutsineq: aaqqissuussinerit sukkasut</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Aqutsineq: sakkut titarnerat talerperleq (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Aqutsineq: ineriartortitsisut sakkuisa titarnerat (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Aqutsineq: aqqutip ersersinnera</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Aqutsineq: modulip inernera</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Aqutsineq: ataani immikkoortoq aamma copyright</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Aqutsineq: atassuteqarfiup menua</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Aqutsineq: qallersuut aamma aallartinnerata takutitsissutaa</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Aqutsineq: kukkunersiuinermi nalunaarusiap immikkoortua</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Tunisassiaq erseqqissagaq</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Imarisap immikkoortua</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV-mi pisut</translation>
+    </message>
+</context>
 </TS>

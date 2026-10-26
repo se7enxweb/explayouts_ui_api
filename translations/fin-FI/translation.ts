@@ -1661,4 +1661,335 @@
         <translation>Ruudukko (ensimmäinen kohde suuri)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Perus</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponentit</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Luettelot</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galleria</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Säilöt</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Paikkamerkit</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Vakio</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Hallinta: ylätunniste</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Hallinta: navigointi</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Hallinta: sivu</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Hallinta: sivupalkki</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Kaksi saraketta</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Sarake</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Mallilohko</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Teksti</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Otsikko</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-katkelma</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Muotoiltu teksti</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Kuva</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Luettelo</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Yksittäinen sisältö</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Painike / linkki</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Väli</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Erotinviiva</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kortti</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Haitari</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Välilehdet</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Ruudukko</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Kuvaesitys</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Pikkukuvagalleria</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Ruudukkogalleria</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushibaari</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Siksak (luettelo)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Haitari (luettelo)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Lainaus</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Ilmoitus</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Ulkoinen video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Merkki</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Edistymispalkki</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Kartta</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karuselli</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Koko näkymä</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Pääbanneri</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Tietoa meistä</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Ominaisuudet</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Johdanto</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logot</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Kolme saraketta</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Neljä saraketta</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Pääbannerikomponentti</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Ominaisuuskomponentti</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Tietoa meistä -komponentti</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logokomponentti</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Lainauskomponentti</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Johdantokomponentti</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Hallinta: logo ja sivuston esikatselu</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Hallinta: haku</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Hallinta: vaalean ja tumman tilan valitsin</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Hallinta: valikkopainike (puhelimen leveys)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Hallinta: sivupalkkien säätimet</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Hallinta: valikkopainike ja sivupalkkien säätimet (yhdistetty)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Hallinta: välilehtivalikko</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Hallinta: navigointiosan vasen valikko</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Hallinta: sisältörakenne</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Hallinta: välimuistin tyhjennys</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Hallinta: kirjanmerkit</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Hallinta: käyttöliittymän valinnat (kieli)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Hallinta: nykyinen käyttäjä</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Hallinta: käyttäjän asetukset</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Hallinta: pika-asetukset</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Hallinta: oikea työkalurivi (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Hallinta: kehittäjän työkalurivi (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Hallinta: murupolku</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Hallinta: moduulin tulos</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Hallinta: alatunniste ja tekijänoikeus</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Hallinta: pikavalikko</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Hallinta: peittokerros ja latausilmaisin</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Hallinta: virheenkorjausraportin alue</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Nostettu tuote</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Sisältökenttä</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV-tapahtumat</translation>
+    </message>
+</context>
 </TS>

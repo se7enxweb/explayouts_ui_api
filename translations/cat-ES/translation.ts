@@ -1661,4 +1661,335 @@
         <translation>Quadrícula (primer element gran)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Bàsics</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Components</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Llistes</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galeria</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Contenidors</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Marcadors de posició</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Estàndard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administració: capçalera</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administració: navegació</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administració: pàgina</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administració: barra lateral</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Dues columnes</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Columna</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Bloc de plantilla</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Títol</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Fragment HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Text enriquit</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Imatge</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Llista</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Contingut únic</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Botó / enllaç</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Espaiador</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Línia divisòria</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Targeta</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Acordió</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Pestanyes</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Quadrícula</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Control lliscant</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galeria de miniatures</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Galeria en quadrícula</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Ziga-zaga (llista)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Acordió (llista)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Cita</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Avís</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Vídeo extern</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Insígnia</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Barra de progrés</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Mapa</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Carrusel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Vista completa</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Bàner principal</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Qui som</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Característiques</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Entradeta</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logotips</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tres columnes</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Quatre columnes</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Component de bàner principal</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Component de característiques</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Component «Qui som»</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Component de logotips</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Component de cita</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Component d'entradeta</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administració: logotip i vista prèvia del lloc</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administració: cerca</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administració: commutador de mode clar i fosc</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administració: botó de menú (amplada de telèfon)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administració: controls de les barres laterals</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administració: botó de menú i controls de les barres laterals (combinats)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administració: menú de pestanyes</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administració: menú esquerre de la part de navegació</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administració: estructura de continguts</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administració: buidatge de la memòria cau</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administració: adreces d'interès</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administració: opcions de la interfície (idioma)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administració: usuari actual</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administració: preferències de l'usuari</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administració: paràmetres ràpids</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administració: barra d'eines dreta (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administració: barra d'eines de desenvolupament (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administració: ruta de navegació</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administració: resultat del mòdul</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administració: peu de pàgina i drets d'autor</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administració: menú contextual</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administració: capa superposada i indicador de càrrega</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administració: àrea de l'informe de depuració</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Producte destacat</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Camp de contingut</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Esdeveniments TMV</translation>
+    </message>
+</context>
 </TS>

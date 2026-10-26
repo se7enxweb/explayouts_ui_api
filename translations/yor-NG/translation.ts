@@ -1661,4 +1661,335 @@
         <translation>Àwọ̀n (ohun àkọ́kọ́ tóbi)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Ìpìlẹ̀</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Àwọn èròjà</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Àwọn àtòjọ</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Àwòrán àkójọ</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Àwọn àpótí</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Àwọn olùdi-àyè</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Déédé</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Ìṣàkóso: orí ojú-ìwé</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Ìṣàkóso: ìrìnkiri</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Ìṣàkóso: ojú-ìwé</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Ìṣàkóso: ọ̀pá ẹ̀gbẹ́</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Ọ̀wọ̀n méjì</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Ọ̀wọ̀n</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Búlọ́ọ̀kù àwòṣe</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Ọ̀rọ̀</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Àkọlé</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Àjákù HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Ọ̀rọ̀ onírúurú àwòrán</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Àwòrán</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Àtòjọ</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Àkóónú kan ṣoṣo</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Bọ́tìnnì / Ìjápọ̀</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Àlàfo</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Ìpínyà</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Káàdì</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Àkọṣẹ́ ìṣípayá</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Àwọn táàbù</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Àwọ̀n</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Atẹ̀síwájú-sẹ́yìn</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Àwòrán kékeré</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Àwòrán onígun</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Ṣíṣẹ́-wọ́ (àtòjọ)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akọ́díọ̀nù (àtòjọ)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Àyọlò</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Ìkìlọ̀</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Fídíò ìta</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Báàjì</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Ọ̀pá ìlọsíwájú</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Máàpù</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Àyípo</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Ìwò kíkún</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Àsíá àkọ́kọ́</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Nípa wa</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Àwọn ẹ̀yà</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Ìfáàrà</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Àwọn àmì-ìdámọ̀</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Ọ̀wọ̀n mẹ́ta</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Ọ̀wọ̀n mẹ́rin</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Èròjà àsíá àkọ́kọ́</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Èròjà àwọn ẹ̀yà</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Èròjà Nípa wa</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Èròjà àwọn àmì-ìdámọ̀</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Èròjà àyọlò</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Èròjà ìfáàrà</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Ìṣàkóso: àmì-ìdámọ̀ àti àwòtẹ́lẹ̀ ojú-òpó</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Ìṣàkóso: ìwádìí</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Ìṣàkóso: ìyípadà ipò ìmọ́lẹ̀ àti òkùnkùn</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Ìṣàkóso: bọ́tìnnì àkójọ (ìbú fóònù)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Ìṣàkóso: àwọn ìdarí ọ̀pá ẹ̀gbẹ́</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Ìṣàkóso: bọ́tìnnì àkójọ àti àwọn ìdarí ọ̀pá ẹ̀gbẹ́ (papọ̀)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Ìṣàkóso: àkójọ táàbù</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Ìṣàkóso: àkójọ òsì ti apá ìrìnkiri</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Ìṣàkóso: ètò àkóónú</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Ìṣàkóso: pa kaṣẹ̀ rẹ́</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Ìṣàkóso: àwọn bukumaaki</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Ìṣàkóso: àwọn àṣàyàn ojú-ìbáṣepọ̀ (èdè)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Ìṣàkóso: oníṣe lọ́wọ́lọ́wọ́</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Ìṣàkóso: àwọn ààyò oníṣe</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Ìṣàkóso: ètò kíákíá</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Ìṣàkóso: ọ̀pá irinṣẹ́ ọ̀tún (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Ìṣàkóso: ọ̀pá irinṣẹ́ olùgbéejáde (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Ìṣàkóso: ipa ọ̀nà ìrìnkiri</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Ìṣàkóso: àbájáde mọ́dúùlù</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Ìṣàkóso: ẹsẹ̀ ojú-ìwé àti ẹ̀tọ́ àdàkọ</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Ìṣàkóso: àkójọ àyíká</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Ìṣàkóso: ìbòjú àti àmì ìgbéwọlé</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Ìṣàkóso: agbègbè ìjábọ̀ àtúnṣe àṣìṣe</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Ọjà tí a ṣàfihàn</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Pápá àkóónú</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Àwọn ìṣẹ̀lẹ̀ TMV</translation>
+    </message>
+</context>
 </TS>

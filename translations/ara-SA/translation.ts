@@ -1661,4 +1661,335 @@
         <translation>شبكة (العنصر الأول كبير)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>أساسيات</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>المكونات</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>القوائم</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>معرض</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>الحاويات</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>العناصر النائبة</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>قياسي</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>الإدارة: الترويسة</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>الإدارة: التنقل</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>الإدارة: الصفحة</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>الإدارة: الشريط الجانبي</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>عمودان</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>عمود</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>كتلة قالب</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>النص</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>العنوان</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>مقتطف HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>نص منسق</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>صورة</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>قائمة</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>محتوى منفرد</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>زر / رابط</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>مسافة فاصلة</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>خط فاصل</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>بطاقة</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>أكورديون</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>علامات تبويب</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>شبكة</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>شرائح متحركة</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>معرض الصور المصغّرة</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>معرض شبكي</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>شريط تمرير أفقي</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>متعرج (قائمة)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>أكورديون (قائمة)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>اقتباس</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>تنبيه</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>فيديو خارجي</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>شارة</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>شريط التقدم</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>خريطة</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>عرض دوّار</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>عرض كامل</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>لافتة رئيسية</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>من نحن</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>الميزات</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>مقدمة</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>الشعارات</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>ثلاثة أعمدة</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>أربعة أعمدة</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>مكون اللافتة الرئيسية</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>مكون الميزات</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>مكون «من نحن»</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>مكون الشعارات</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>مكون الاقتباس</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>مكون المقدمة</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>الإدارة: الشعار ومعاينة الموقع</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>الإدارة: البحث</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>الإدارة: مبدّل الوضع الفاتح والداكن</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>الإدارة: زر القائمة (عرض الهاتف)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>الإدارة: عناصر التحكم في الأشرطة الجانبية</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>الإدارة: زر القائمة وعناصر التحكم في الأشرطة الجانبية (مجمّعة)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>الإدارة: قائمة علامات التبويب</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>الإدارة: القائمة اليسرى لجزء التنقل</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>الإدارة: بنية المحتوى</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>الإدارة: مسح ذاكرة التخزين المؤقت</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>الإدارة: الإشارات المرجعية</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>الإدارة: خيارات الواجهة (اللغة)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>الإدارة: المستخدم الحالي</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>الإدارة: تفضيلات المستخدم</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>الإدارة: الإعدادات السريعة</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>الإدارة: شريط الأدوات الأيمن (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>الإدارة: شريط أدوات المطور (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>الإدارة: مسار التنقل</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>الإدارة: نتيجة الوحدة</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>الإدارة: التذييل وحقوق النشر</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>الإدارة: قائمة السياق</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>الإدارة: الطبقة المتراكبة ومؤشر التحميل</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>الإدارة: منطقة تقرير التصحيح</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>منتج مميز</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>حقل المحتوى</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>فعاليات TMV</translation>
+    </message>
+</context>
 </TS>

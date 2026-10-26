@@ -1661,4 +1661,335 @@
         <translation>Igridi (into yokuqala inkulu)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Okusisiseko</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Amacandelo</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Uluhlu</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Igalari</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Izikhongozeli</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Iindawo zokubamba</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Esiqhelekileyo</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Ulawulo: intloko</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Ulawulo: ukuhamba</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Ulawulo: iphepha</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Ulawulo: ibha esecaleni</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Iikholam ezimbini</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Ikholam</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Ibhloko yetemplethi</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Isicatshulwa</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Isihloko</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Iqhekeza le-HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Isicatshulwa esityebileyo</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Umfanekiso</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Uluhlu</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Umxholo omnye</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Iqhosha / Ikhonkco</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Isithuba</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Isahluli</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Ikhadi</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>I-Accordion</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Iithebhu</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Igridi</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Isilayidi</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Igalari yemifanekiso emincinci</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Igalari yegridi</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Ujikojiko (uluhlu)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>I-akhodiyoni (uluhlu)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Isicatshulwa</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Isilumkiso</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Ividiyo yangaphandle</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Ibheji</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Ibha yenkqubela</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Imaphu</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Ijikelezo</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Umbono opheleleyo</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Ibhena ephambili</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Malunga nathi</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Iimpawu</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Intshayelelo</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Iilogo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Iikholam ezintathu</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Iikholam ezine</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Icandelo lebhena ephambili</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Icandelo leempawu</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Icandelo elithi Malunga nathi</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Icandelo leelogo</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Icandelo lesicatshulwa</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Icandelo lentshayelelo</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Ulawulo: ilogo nembonakalo yangaphambili yesayithi</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Ulawulo: ukukhangela</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Ulawulo: iswitshi yemowudi ekhanyayo nemnyama</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Ulawulo: iqhosha lemenyu (ububanzi befowuni)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Ulawulo: izilawuli zebha esecaleni</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Ulawulo: iqhosha lemenyu nezilawuli zebha esecaleni (zidityanisiwe)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Ulawulo: imenyu yeethebhu</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Ulawulo: imenyu yasekhohlo yecandelo lokuhamba</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Ulawulo: ubume bomxholo</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Ulawulo: cima i-cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Ulawulo: iibhukhmakhi</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Ulawulo: ukhetho lojongano (ulwimi)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Ulawulo: umsebenzisi wangoku</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Ulawulo: izinto ezikhethwa ngumsebenzisi</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Ulawulo: iisetingi ezikhawulezayo</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Ulawulo: ibha yezixhobo yasekunene (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Ulawulo: ibha yezixhobo yomphuhlisi (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Ulawulo: umkhondo wokuhamba</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Ulawulo: isiphumo semodyuli</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Ulawulo: isiphelo sephepha nelungelo lokushicilela</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Ulawulo: imenyu yomxholo</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Ulawulo: isigqubuthelo nesalathisi sokulayisha</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Ulawulo: indawo yengxelo yokulungisa iimpazamo</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Imveliso egqamileyo</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Intsimi yomxholo</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Iminyhadala ye-TMV</translation>
+    </message>
+</context>
 </TS>

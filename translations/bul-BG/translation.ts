@@ -1661,4 +1661,335 @@
         <translation>Мрежа (първият елемент е голям)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Основни</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Компоненти</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Списъци</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Галерия</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Контейнери</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Заместители</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Стандартен</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Администрация: заглавна част</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Администрация: навигация</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Администрация: страница</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Администрация: странична лента</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Две колони</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Колона</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Блок от шаблон</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Текст</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Заглавие</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML фрагмент</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Форматиран текст</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Изображение</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Списък</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Единично съдържание</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Бутон / връзка</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Разстояние</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Разделителна линия</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Карта</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Акордеон</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Раздели</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Мрежа</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Слайдер</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Галерия с миниатюри</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Галерия с мрежа</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Суши бар</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Зигзаг (списък)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Акордеон (списък)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Цитат</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Предупреждение</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Външно видео</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Значка</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Лента за напредък</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Географска карта</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Въртележка</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Пълен изглед</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Основен банер</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>За нас</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Характеристики</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Въведение</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Лога</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Три колони</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Четири колони</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Компонент „Основен банер“</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Компонент „Характеристики“</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Компонент „За нас“</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Компонент „Лога“</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Компонент „Цитат“</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Компонент „Въведение“</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Администрация: лого и преглед на сайта</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Администрация: търсене</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Администрация: превключвател за светъл и тъмен режим</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Администрация: бутон за меню (ширина на телефон)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Администрация: управление на страничните ленти</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Администрация: бутон за меню и управление на страничните ленти (комбинирано)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Администрация: меню с раздели</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Администрация: ляво меню на навигационната част</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Администрация: структура на съдържанието</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Администрация: изчистване на кеша</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Администрация: отметки</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Администрация: избор на интерфейс (език)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Администрация: текущ потребител</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Администрация: потребителски предпочитания</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Администрация: бързи настройки</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Администрация: дясна лента с инструменти (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Администрация: лента с инструменти за разработчици (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Администрация: навигационна пътека</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Администрация: резултат от модула</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Администрация: долен колонтитул и авторски права</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Администрация: контекстно меню</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Администрация: наслагване и индикатор за зареждане</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Администрация: област на отчета за отстраняване на грешки</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Акцентиран продукт</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Поле за съдържание</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV събития</translation>
+    </message>
+</context>
 </TS>

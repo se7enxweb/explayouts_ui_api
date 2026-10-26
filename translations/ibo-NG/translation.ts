@@ -1661,4 +1661,335 @@
         <translation>Grid (ihe mbụ buru ibu)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Ndị bụ isi</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Akụrụngwa</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Ndepụta dị iche iche</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Ebe ngosi foto</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Ihe njide</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Ihe nnọchi ọnọdụ</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Ọkọlọtọ</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Nchịkwa: isi ibe</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Nchịkwa: ndụzi</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Nchịkwa: ibe</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Nchịkwa: ogwe akụkụ</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Kọlụm abụọ</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kọlụm</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Mgbochi ndebiri</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Ederede</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Ntụziaka isiokwu</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Mpempe HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Ederede bara ụba</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Foto</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Ndepụta</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Otu ọdịnaya</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Bọtịnụ / njikọ</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Oghere</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Ahịrị nkewa</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kaadị</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Accordion</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Taabụ</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Grid</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Slaida</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Ọgbakọ foto obere</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Ọgbakọ foto grid</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zig-zag (ndepụta)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akọdiọn (ndepụta)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Nhota</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Ịdọ aka na ntị</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Vidiyo mpụga</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Baajị</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Ogwe ọganihu</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Maapụ</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karosel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Nlele zuru ezu</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Isi banar</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Gbasara anyị</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Njirimara</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Okwu mmalite</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Kọlụm atọ</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Kọlụm anọ</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Akụrụngwa isi banar</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Akụrụngwa njirimara</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Akụrụngwa “Gbasara anyị”</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Akụrụngwa logo</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Akụrụngwa nhota</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Akụrụngwa okwu mmalite</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Nchịkwa: logo na nlele mbụ saịtị</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Nchịkwa: ọchụchọ</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Nchịkwa: mgba ọkụ ọnọdụ ìhè na ọchịchịrị</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Nchịkwa: bọtịnụ menu (obosara ekwentị)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Nchịkwa: njikwa ogwe akụkụ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Nchịkwa: bọtịnụ menu na njikwa ogwe akụkụ (jikọtara ọnụ)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Nchịkwa: menu taabụ</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Nchịkwa: menu aka ekpe nke akụkụ ndụzi</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Nchịkwa: nhazi ọdịnaya</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Nchịkwa: ihichapụ cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Nchịkwa: akara ibe</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Nchịkwa: nhọrọ ntanetị (asụsụ)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Nchịkwa: onye ọrụ ugbu a</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Nchịkwa: mmasị onye ọrụ</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Nchịkwa: ntọala ngwa ngwa</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Nchịkwa: ogwe ngwaọrụ aka nri (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Nchịkwa: ogwe ngwaọrụ onye mmepe (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Nchịkwa: ụzọ ndụzi</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Nchịkwa: nsonaazụ modul</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Nchịkwa: ala ibe na ikike nwebiisinka</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Nchịkwa: menu ọnọdụ</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Nchịkwa: mkpuchi na ihe ngosi nbudata</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Nchịkwa: ebe akụkọ ndozi ahịrị</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Ngwaahịa pụtara ìhè</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Ubi ọdịnaya</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Mmemme TMV</translation>
+    </message>
+</context>
 </TS>

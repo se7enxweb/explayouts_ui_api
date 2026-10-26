@@ -1663,4 +1663,335 @@
         <translation>רשת (הפריט הראשון גדול)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>בסיסי</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>רכיבים</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>רשימות</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>גלריה</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>מכלים</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>מצייני מיקום</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>רגיל</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>ניהול: כותרת עליונה</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>ניהול: ניווט</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>ניהול: דף</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>ניהול: סרגל צד</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>שתי עמודות</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>עמודה</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>בלוק תבנית</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>טקסט</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>כותרת</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>קטע HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>טקסט עשיר</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>תמונה</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>רשימה</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>תוכן יחיד</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>לחצן / קישור</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>מרווח</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>קו מפריד</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>כרטיס</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>אקורדיון</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>כרטיסיות</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>רשת</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>מצגת</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>גלריית תמונות ממוזערות</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>גלריית רשת</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>פס גלילה</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>זיגזג (רשימה)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>אקורדיון (רשימה)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ציטוט</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>התראה</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>סרטון חיצוני</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>תג</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>סרגל התקדמות</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>מפה</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>קרוסלה</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>תצוגה מלאה</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>באנר ראשי</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>אודות</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>תכונות</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>פתיח</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>סמלי לוגו</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>שלוש עמודות</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>ארבע עמודות</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>רכיב באנר ראשי</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>רכיב תכונות</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>רכיב אודות</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>רכיב סמלי לוגו</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>רכיב ציטוט</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>רכיב פתיח</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>ניהול: לוגו ותצוגה מקדימה של האתר</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>ניהול: חיפוש</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>ניהול: מתג מצב בהיר וכהה</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>ניהול: לחצן תפריט (רוחב טלפון)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>ניהול: פקדי סרגלי הצד</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>ניהול: לחצן תפריט ופקדי סרגלי הצד (משולב)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>ניהול: תפריט כרטיסיות</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>ניהול: התפריט השמאלי של חלק הניווט</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>ניהול: מבנה התוכן</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>ניהול: ניקוי מטמון</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>ניהול: סימניות</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>ניהול: בחירות ממשק (שפה)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>ניהול: משתמש נוכחי</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>ניהול: העדפות משתמש</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>ניהול: הגדרות מהירות</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>ניהול: סרגל כלים ימני (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>ניהול: סרגל כלים למפתחים (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>ניהול: נתיב ניווט</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>ניהול: תוצאת המודול</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>ניהול: כותרת תחתונה וזכויות יוצרים</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>ניהול: תפריט הקשר</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>ניהול: שכבת כיסוי ומחוון טעינה</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>ניהול: אזור דוח ניפוי הבאגים</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>מוצר מודגש</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>שדה תוכן</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>אירועי TMV</translation>
+    </message>
+</context>
 </TS>

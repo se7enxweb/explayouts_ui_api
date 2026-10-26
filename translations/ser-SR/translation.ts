@@ -1661,4 +1661,335 @@
         <translation>Mreža (prva stavka velika)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Osnovno</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponente</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerija</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kontejneri</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Čuvari mesta</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standardno</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administracija: zaglavlje</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administracija: navigacija</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administracija: stranica</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administracija: bočna traka</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Dve kolone</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolona</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Blok šablona</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Naslov</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML isečak</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Obogaćeni tekst</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Slika</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Lista</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Pojedinačni sadržaj</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Dugme / veza</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Razmak</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Razdelnik</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kartica</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Harmonika</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Kartice</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Mreža</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Klizač</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galerija sličica</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Galerija u mreži</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Suši bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Cik-cak (lista)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Harmonika (lista)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Upozorenje</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Spoljni video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Značka</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Traka napretka</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Mapa</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Vrteška</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Pun prikaz</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Glavni baner</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>O nama</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Mogućnosti</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Uvod</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logotipi</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tri kolone</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Četiri kolone</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Komponenta glavnog banera</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Komponenta mogućnosti</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponenta „O nama”</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Komponenta logotipa</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Komponenta citata</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Komponenta uvoda</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administracija: logotip i pregled sajta</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administracija: pretraga</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administracija: prekidač svetlog i tamnog režima</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administracija: dugme menija (širina telefona)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administracija: kontrole bočnih traka</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administracija: dugme menija i kontrole bočnih traka (zajedno)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administracija: meni kartica</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administracija: levi meni navigacionog dela</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administracija: struktura sadržaja</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administracija: brisanje keša</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administracija: obeleživači</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administracija: izbor interfejsa (jezik)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administracija: trenutni korisnik</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administracija: korisnička podešavanja</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administracija: brza podešavanja</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administracija: desna traka sa alatkama (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administracija: traka sa alatkama za programere (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administracija: putanja navigacije</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administracija: rezultat modula</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administracija: podnožje i autorska prava</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administracija: kontekstni meni</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administracija: preklop i indikator učitavanja</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administracija: oblast izveštaja o otklanjanju grešaka</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Istaknuti proizvod</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Polje sadržaja</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV događaji</translation>
+    </message>
+</context>
 </TS>

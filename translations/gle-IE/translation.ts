@@ -1661,4 +1661,335 @@
         <translation>Greille (an chéad mhír mhór)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Bunúsach</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Comhpháirteanna</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Liostaí</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Gailearaí</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Coimeádáin</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Ionadchoinneálaithe</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Caighdeánach</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Riarachán: ceanntásc</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Riarachán: nascleanúint</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Riarachán: leathanach</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Riarachán: barra taoibh</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Dhá cholún</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Colún</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Bloc teimpléid</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Téacs</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Teideal</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Blúire HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Téacs saibhir</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Íomhá</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Liosta</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Ábhar aonair</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Cnaipe / nasc</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Spásaire</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Líne roinnte</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Cárta</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Bosca ceoil</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Cluaisíní</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Greille</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Sleamhnán</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Gailearaí mionsamhlacha</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Gailearaí greille</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Barra sushi</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Sigsag (liosta)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Cairdín (liosta)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Athfhriotal</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Foláireamh</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Físeán seachtrach</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Suaitheantas</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Barra dul chun cinn</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Léarscáil</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Carósal</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Amharc iomlán</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Príomhmheirge</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Fúinn</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Gnéithe</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Réamhrá</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Lógónna</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Trí cholún</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Ceithre cholún</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Comhpháirt an phríomhmheirge</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Comhpháirt na ngnéithe</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Comhpháirt “Fúinn”</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Comhpháirt na lógónna</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Comhpháirt an athfhriotail</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Comhpháirt an réamhrá</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Riarachán: lógó agus réamhamharc an tsuímh</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Riarachán: cuardach</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Riarachán: lasc an mhóid gheal agus dhorcha</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Riarachán: cnaipe roghchláir (leithead fóin)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Riarachán: rialuithe na mbarraí taoibh</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Riarachán: cnaipe roghchláir agus rialuithe na mbarraí taoibh (le chéile)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Riarachán: roghchlár cluaisíní</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Riarachán: roghchlár ar chlé na coda nascleanúna</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Riarachán: struchtúr an ábhair</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Riarachán: glanadh na taisce</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Riarachán: leabharmharcanna</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Riarachán: roghanna comhéadain (teanga)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Riarachán: úsáideoir reatha</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Riarachán: sainroghanna úsáideora</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Riarachán: socruithe tapa</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Riarachán: barra uirlisí ar dheis (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Riarachán: barra uirlisí forbróra (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Riarachán: conair bhrioscarnach</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Riarachán: toradh an mhodúil</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Riarachán: buntásc agus cóipcheart</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Riarachán: roghchlár comhthéacs</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Riarachán: forleagan agus táscaire luchtaithe</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Riarachán: limistéar na tuarascála dífhabhtaithe</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Buaicphointe táirge</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Réimse ábhair</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Imeachtaí TMV</translation>
+    </message>
+</context>
 </TS>

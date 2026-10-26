@@ -276,6 +276,24 @@ class expLayoutsUIApplicationApi
         return self::BLOCK_ICON_BASE . $file;
     }
 
+    /**
+     * The translation context of the names the editor shows for block types and their groups: the Name= of a
+     * [BlockDefinition_*] section of explayouts.ini and the group names below. A name without a translation is
+     * shown as configured.
+     */
+    const BLOCK_TYPE_NAME_CONTEXT = 'design/standard/explayouts_ui_api/block_types';
+
+    /**
+     * The name of a block type (or of a group of block types) in the interface language.
+     */
+    public static function blockTypeName( $name )
+    {
+        $name = (string)$name;
+        if ( $name === '' || !class_exists( 'ezpI18n' ) )
+            return $name;
+        return (string)ezpI18n::tr( self::BLOCK_TYPE_NAME_CONTEXT, $name );
+    }
+
     protected static function blockTypes()
     {
         $groupNames = array(
@@ -312,7 +330,7 @@ class expLayoutsUIApplicationApi
             {
                 $groups[$category] = array(
                     'identifier' => $category,
-                    'name' => $groupName,
+                    'name' => self::blockTypeName( $groupName ),
                     'enabled' => true,
                     'block_types' => array(),
                 );
@@ -321,7 +339,7 @@ class expLayoutsUIApplicationApi
             $groups[$category]['block_types'][] = (string)$identifier;
             $blockTypes[] = array(
                 'identifier' => (string)$identifier,
-                'name' => (string)$info['name'],
+                'name' => self::blockTypeName( $info['name'] ),
                 'definition_identifier' => (string)$identifier,
                 'group_name' => $category,
                 'enabled' => true,
@@ -1214,11 +1232,11 @@ class expLayoutsUIApplicationApi
             if ( is_array( $blockInfo ) && isset( $blockInfo['name'] ) && (string)$blockInfo['name'] !== ''
                  && (string)$blockInfo['name'] !== $definition )
             {
-                $name = (string)$blockInfo['name'];
+                $name = self::blockTypeName( $blockInfo['name'] );
             }
             elseif ( $definition === 'tpl_block' )
             {
-                $name = 'Template block';
+                $name = self::blockTypeName( 'Template block' );
             }
             else
             {

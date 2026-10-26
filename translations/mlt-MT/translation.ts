@@ -1661,4 +1661,335 @@
         <translation>Grilja (l-ewwel element kbir)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Bażiku</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponenti</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Listi</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Gallerija</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kontenituri</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Postijiet riżervati</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Amministrazzjoni: intestatura</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Amministrazzjoni: navigazzjoni</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Amministrazzjoni: paġna</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Amministrazzjoni: virga tal-ġenb</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Żewġ kolonni</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolonna</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Blokk tal-mudell</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Test</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titlu</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Silta HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Test formattjat</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Stampa</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Lista</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Kontenut wieħed</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Buttuna / Link</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Spazju</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Diviżur</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Karta</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akkordjon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Tabs</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Grilja</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Slajder</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Gallerija tal-minjaturi</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Gallerija fi grilja</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Bar tas-sushi</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Żigżag (lista)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akkordjun (lista)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Kwotazzjoni</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Twissija</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Vidjo estern</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Badge</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Bar tal-progress</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Mappa</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karużell</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Veduta sħiħa</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Banner ewlieni</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Dwarna</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Karatteristiċi</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Introduzzjoni</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logos</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tliet kolonni</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Erba' kolonni</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Komponent tal-banner ewlieni</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Komponent tal-karatteristiċi</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponent Dwarna</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Komponent tal-logos</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Komponent tal-kwotazzjoni</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Komponent tal-introduzzjoni</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Amministrazzjoni: logo u previżjoni tas-sit</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Amministrazzjoni: tfittxija</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Amministrazzjoni: swiċċ tal-modalità ċara u skura</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Amministrazzjoni: buttuna tal-menu (wisa' tat-telefon)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Amministrazzjoni: kontrolli tal-virgi tal-ġenb</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Amministrazzjoni: buttuna tal-menu u kontrolli tal-virgi tal-ġenb (flimkien)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Amministrazzjoni: menu tat-tabs</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Amministrazzjoni: menu tax-xellug tal-parti tan-navigazzjoni</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Amministrazzjoni: struttura tal-kontenut</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Amministrazzjoni: tbattil tal-cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Amministrazzjoni: bookmarks</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Amministrazzjoni: għażliet tal-interfaċċja (lingwa)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Amministrazzjoni: utent attwali</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Amministrazzjoni: preferenzi tal-utent</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Amministrazzjoni: settings rapidi</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Amministrazzjoni: toolbar tal-lemin (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Amministrazzjoni: toolbar tal-iżviluppatur (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Amministrazzjoni: mogħdija tan-navigazzjoni</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Amministrazzjoni: riżultat tal-modulu</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Amministrazzjoni: footer u drittijiet tal-awtur</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Amministrazzjoni: menu tal-kuntest</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Amministrazzjoni: overlay u indikatur tat-tagħbija</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Amministrazzjoni: żona tar-rapport tad-debug</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Prodott enfasizzat</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Qasam tal-kontenut</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Avvenimenti TMV</translation>
+    </message>
+</context>
 </TS>

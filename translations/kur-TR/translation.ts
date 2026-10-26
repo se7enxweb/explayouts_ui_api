@@ -1661,4 +1661,335 @@
         <translation>Tor (hêmana yekem mezin)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Bingehîn</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Pêkhate</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Lîste</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerî</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Konteyner</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Cihgir</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Rêveberî: serî</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Rêveberî: navîgasyon</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Rêveberî: rûpel</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Rêveberî: darika kêlekê</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Du stûn</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Stûn</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Bloka şablonê</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Nivîs</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Sernav</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Perçeya HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Nivîsa dewlemend</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Wêne</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Lîste</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Naveroka yekane</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Bişkok / Girêdan</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Valahî</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Xeta veqetandinê</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kart</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Tor</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Slayder</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galeriya wêneyên biçûk</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Galeriya torê</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Şerîda horizontal</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zîkzak (lîste)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordiyon (lîste)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Gotinvegotin</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Hişyarî</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Vîdyoya derve</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Nîşan</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Darika pêşketinê</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Nexşe</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karûsel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Dîtina tevahî</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Bannera sereke</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Derbarê me de</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Taybetmendî</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Destpêk</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Sê stûn</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Çar stûn</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Pêkhateya bannera sereke</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Pêkhateya taybetmendiyan</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Pêkhateya Derbarê me de</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Pêkhateya logoyan</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Pêkhateya gotinvegotinê</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Pêkhateya destpêkê</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Rêveberî: logo û pêşdîtina malperê</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Rêveberî: lêgerîn</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Rêveberî: guhêrbara moda ronî û tarî</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Rêveberî: bişkoka menûyê (firehiya telefonê)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Rêveberî: kontrolên darikên kêlekê</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Rêveberî: bişkoka menûyê û kontrolên darikên kêlekê (bi hev re)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Rêveberî: menûya taban</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Rêveberî: menûya çepê ya beşa navîgasyonê</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Rêveberî: avahiya naverokê</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Rêveberî: valakirina cacheyê</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Rêveberî: nîşankirî</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Rêveberî: vebijarkên navrûyê (ziman)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Rêveberî: bikarhênerê niha</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Rêveberî: tercîhên bikarhêner</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Rêveberî: mîhengên bilez</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Rêveberî: darika amûran a rastê (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Rêveberî: darika amûran a pêşdebiran (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Rêveberî: rêça navîgasyonê</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Rêveberî: encama modulê</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Rêveberî: binî û mafê weşanê</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Rêveberî: menûya çarçoveyê</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Rêveberî: rûpoş û nîşana barkirinê</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Rêveberî: qada rapora xeletiyan</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Berhema berçav</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Qada naverokê</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Bûyerên TMV</translation>
+    </message>
+</context>
 </TS>

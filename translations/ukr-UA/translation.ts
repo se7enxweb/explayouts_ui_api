@@ -1661,4 +1661,335 @@
         <translation>Сітка (перший елемент великий)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Основні</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Компоненти</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Списки</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Галерея</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Контейнери</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Заповнювачі</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Стандартний</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Адміністрування: шапка</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Адміністрування: навігація</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Адміністрування: сторінка</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Адміністрування: бічна панель</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Дві колонки</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Колонка</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Блок шаблону</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Текст</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Заголовок</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Фрагмент HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Форматований текст</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Зображення</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Список</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Окремий вміст</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Кнопка / посилання</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Відступ</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Роздільник</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Картка</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Акордеон</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Вкладки</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Сітка</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Слайдер</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Галерея мініатюр</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Галерея-сітка</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Горизонтальна стрічка</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Зигзаг (список)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Акордеон (список)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Цитата</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Попередження</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Зовнішнє відео</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Значок</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Індикатор виконання</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Мапа</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Карусель</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Повний вигляд</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Головний банер</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Про нас</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Можливості</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Вступ</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Логотипи</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Три колонки</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Чотири колонки</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Компонент головного банера</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Компонент можливостей</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Компонент «Про нас»</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Компонент логотипів</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Компонент цитати</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Компонент вступу</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Адміністрування: логотип і попередній перегляд сайту</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Адміністрування: пошук</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Адміністрування: перемикач світлої та темної теми</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Адміністрування: кнопка меню (ширина телефона)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Адміністрування: керування бічними панелями</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Адміністрування: кнопка меню та керування бічними панелями (разом)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Адміністрування: меню вкладок</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Адміністрування: ліве меню розділу навігації</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Адміністрування: структура вмісту</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Адміністрування: очищення кешу</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Адміністрування: закладки</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Адміністрування: вибір інтерфейсу (мова)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Адміністрування: поточний користувач</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Адміністрування: налаштування користувача</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Адміністрування: швидкі налаштування</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Адміністрування: права панель інструментів (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Адміністрування: панель інструментів розробника (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Адміністрування: ланцюжок навігації</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Адміністрування: результат модуля</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Адміністрування: нижній колонтитул і авторські права</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Адміністрування: контекстне меню</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Адміністрування: накладка та індикатор завантаження</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Адміністрування: область звіту налагодження</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Обраний товар</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Поле вмісту</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Події TMV</translation>
+    </message>
+</context>
 </TS>

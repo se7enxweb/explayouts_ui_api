@@ -1661,4 +1661,335 @@
         <translation>グリッド（最初の項目を大きく表示）</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>基本</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>コンポーネント</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>リスト表示</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>ギャラリー</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>コンテナー</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>プレースホルダー</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>標準</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>管理画面: ヘッダー</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>管理画面: ナビゲーション</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>管理画面: ページ</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>管理画面: サイドバー</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>2カラム</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>カラム</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>テンプレートブロック</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>テキスト</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>タイトル</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTMLスニペット</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>リッチテキスト</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>画像</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>一覧</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>単一コンテンツ</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>ボタン / リンク</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>スペーサー</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>区切り線</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>カード</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>アコーディオン</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>タブ</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>グリッド</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>スライダー</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>サムネイルギャラリー</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>グリッドギャラリー</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>回転寿司</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>ジグザグ（リスト）</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>アコーディオン（リスト）</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>引用</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>アラート</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>外部動画</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>バッジ</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>プログレスバー</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>地図</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>カルーセル</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>全体表示</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>ヒーロー</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>概要</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>特長</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>リード文</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>ロゴ</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>3カラム</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>4カラム</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>ヒーローコンポーネント</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>特長コンポーネント</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>概要コンポーネント</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>ロゴコンポーネント</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>引用コンポーネント</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>リード文コンポーネント</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>管理画面: ロゴとサイトのプレビュー</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>管理画面: 検索</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>管理画面: ライトモードとダークモードの切り替え</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>管理画面: メニューボタン（スマートフォン幅）</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>管理画面: サイドバーのコントロール</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>管理画面: メニューボタンとサイドバーのコントロール（統合）</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>管理画面: タブメニュー</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>管理画面: ナビゲーション部分の左メニュー</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>管理画面: コンテンツ構造</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>管理画面: キャッシュのクリア</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>管理画面: ブックマーク</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>管理画面: インターフェイスの選択（言語）</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>管理画面: 現在のユーザー</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>管理画面: ユーザー設定</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>管理画面: クイック設定</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>管理画面: 右ツールバー（toolbar.ini admin_right）</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>管理画面: 開発者ツールバー（toolbar.ini admin_developer）</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>管理画面: 階層リンク</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>管理画面: モジュールの結果</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>管理画面: フッターと著作権表示</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>管理画面: コンテキストメニュー</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>管理画面: オーバーレイとローダー</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>管理画面: デバッグレポート領域</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>注目の製品</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>コンテンツフィールド</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMVイベント</translation>
+    </message>
+</context>
 </TS>

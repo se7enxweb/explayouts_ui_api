@@ -1661,4 +1661,335 @@
         <translation>Hnitanet (fyrsta atriði stórt)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Grunnatriði</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Íhlutir</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Listar</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Myndasafn</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Ílát</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Staðgenglar</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Staðlað</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Stjórnun: haus</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Stjórnun: leiðsögn</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Stjórnun: síða</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Stjórnun: hliðarstika</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Tveir dálkar</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Dálkur</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Sniðmátsbálkur</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Texti</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titill</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-bútur</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Sniðinn texti</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Mynd</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Listi</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Stakt efni</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Hnappur / tengill</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Bil</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Skillína</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Spjald</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Harmonikka</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Flipar</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Hnitanet</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Rennibraut</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Smámyndasafn</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Hnitanetssafn</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi-bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Sikksakk (listi)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Harmonikka (listi)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Tilvitnun</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Viðvörun</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Ytra myndskeið</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Merki</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Framvindustika</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Kort</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Hringekja</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Full sýn</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Aðalborði</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Um okkur</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Eiginleikar</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Inngangur</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Lógó</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Þrír dálkar</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Fjórir dálkar</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Aðalborðaíhlutur</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Eiginleikaíhlutur</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Íhluturinn „Um okkur“</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Lógóíhlutur</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Tilvitnunaríhlutur</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Inngangsíhlutur</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Stjórnun: lógó og forskoðun vefs</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Stjórnun: leit</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Stjórnun: rofi fyrir ljósa og dökka stillingu</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Stjórnun: valmyndarhnappur (símabreidd)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Stjórnun: stýringar hliðarstika</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Stjórnun: valmyndarhnappur og stýringar hliðarstika (sameinað)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Stjórnun: flipavalmynd</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Stjórnun: vinstri valmynd leiðsagnarhlutans</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Stjórnun: efnisskipan</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Stjórnun: hreinsun skyndiminnis</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Stjórnun: bókamerki</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Stjórnun: val á viðmóti (tungumál)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Stjórnun: núverandi notandi</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Stjórnun: kjörstillingar notanda</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Stjórnun: flýtistillingar</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Stjórnun: hægri tækjastika (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Stjórnun: forritaratækjastika (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Stjórnun: brauðmolaslóð</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Stjórnun: niðurstaða einingar</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Stjórnun: síðufótur og höfundarréttur</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Stjórnun: flýtivalmynd</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Stjórnun: yfirlag og hleðsluvísir</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Stjórnun: svæði villuleitarskýrslu</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Vara í brennidepli</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Efnisreitur</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV-viðburðir</translation>
+    </message>
+</context>
 </TS>

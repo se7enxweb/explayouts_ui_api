@@ -1661,4 +1661,335 @@
         <translation>Grid (abu na farko babba)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Na asali</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Sassa</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Jerin abubuwa</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Gidan hotuna</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kwantena</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Masu riƙe wuri</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Daidaitacce</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Gudanarwa: kan shafi</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Gudanarwa: kewayawa</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Gudanarwa: shafi</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Gudanarwa: sandar gefe</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Ginshiƙai biyu</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Ginshiƙi</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Toshen samfuri</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Rubutu</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Take</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Guntun HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Rubutu mai wadata</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Hoto</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Jeri</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Abun ciki guda</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Maɓalli / hanyar haɗi</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Tazara</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Layin rarrabawa</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kati</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Accordion</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Shafuka ƙanana</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Grid</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Mai zamiya</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Hotunan ƙanana</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Hotunan jeri-jeri</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zig-zag (jeri)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akodiyon (jeri)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Zance</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Faɗakarwa</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Bidiyo na waje</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Alama</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Sandar ci gaba</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Taswira</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Mai juyawa</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Cikakken gani</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Babban tuta</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Game da mu</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Fasaloli</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Gabatarwa</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Tambura</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Ginshiƙai uku</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Ginshiƙai huɗu</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Sashen babban tuta</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Sashen fasaloli</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Sashen “Game da mu”</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Sashen tambura</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Sashen zance</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Sashen gabatarwa</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Gudanarwa: tambari da samfotin shafin</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Gudanarwa: bincike</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Gudanarwa: maɓallin sauya yanayin haske da duhu</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Gudanarwa: maɓallin menu (faɗin waya)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Gudanarwa: sarrafa sandunan gefe</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Gudanarwa: maɓallin menu da sarrafa sandunan gefe (a haɗe)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Gudanarwa: menu na shafuka ƙanana</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Gudanarwa: menu na hagu na sashen kewayawa</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Gudanarwa: tsarin abun ciki</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Gudanarwa: share ma'ajiyar ɗan lokaci</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Gudanarwa: alamomin shafi</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Gudanarwa: zaɓuɓɓukan mu'amala (harshe)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Gudanarwa: mai amfani na yanzu</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Gudanarwa: zaɓin mai amfani</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Gudanarwa: saituna masu sauri</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Gudanarwa: sandar kayan aiki ta dama (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Gudanarwa: sandar kayan aikin masu haɓakawa (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Gudanarwa: hanyar kewayawa</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Gudanarwa: sakamakon tsarin sashe</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Gudanarwa: ƙafar shafi da haƙƙin mallaka</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Gudanarwa: menu na mahallin</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Gudanarwa: lulluɓi da alamar lodawa</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Gudanarwa: wurin rahoton gyaran kurakurai</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Fitaccen samfur</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Filin abun ciki</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Taruka na TMV</translation>
+    </message>
+</context>
 </TS>

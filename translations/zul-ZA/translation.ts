@@ -1661,4 +1661,335 @@
         <translation>Igridi (into yokuqala inkulu)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Okuyisisekelo</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Izingxenye</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Izinhlu</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Igalari</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Iziqukathi</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Izindawo zokubamba</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Okujwayelekile</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Ukuphatha: ikhanda</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Ukuphatha: ukuzulazula</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Ukuphatha: ikhasi</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Ukuphatha: ibha eseceleni</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Amakholomu amabili</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Ikholomu</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Ibhulokhi yesifanekiso</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Umbhalo</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Isihloko</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Isiqeshana se-HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Umbhalo ocludile</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Isithombe</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Uhlu</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Okuqukethwe okukodwa</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Inkinobho / Isixhumanisi</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Isikhala</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Isihlukanisi</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Ikhadi</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>I-Accordion</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Amathebhu</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Igridi</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Isilayidi</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Igalari yezithombe ezincane</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Igalari yegridi</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Ibha yesushi</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Uzigizagi (uhlu)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>I-akhodiyoni (uhlu)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Isicaphuno</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Isexwayiso</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Ividiyo yangaphandle</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Ibheji</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Ibha yenqubekelaphambili</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Imephu</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Ijikelezo</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Ukubuka okugcwele</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Ibhanela elikhulu</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Mayelana nathi</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Izici</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Isingeniso</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Amalogo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Amakholomu amathathu</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Amakholomu amane</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Ingxenye yebhanela elikhulu</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Ingxenye yezici</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Ingxenye ethi Mayelana nathi</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Ingxenye yamalogo</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Ingxenye yesicaphuno</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Ingxenye yesingeniso</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Ukuphatha: ilogo nokubuka kuqala isayithi</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Ukuphatha: ukusesha</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Ukuphatha: iswishi yemodi ekhanyayo nemnyama</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Ukuphatha: inkinobho yemenyu (ububanzi befoni)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Ukuphatha: izilawuli zebha eseceleni</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Ukuphatha: inkinobho yemenyu nezilawuli zebha eseceleni (kuhlanganisiwe)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Ukuphatha: imenyu yamathebhu</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Ukuphatha: imenyu engakwesobunxele yengxenye yokuzulazula</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Ukuphatha: ukwakheka kokuqukethwe</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Ukuphatha: sula i-cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Ukuphatha: amabhukhimakhi</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Ukuphatha: ukukhetha kokusebenzisana (ulimi)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Ukuphatha: umsebenzisi wamanje</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Ukuphatha: okuncanyelwa umsebenzisi</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Ukuphatha: izilungiselelo ezisheshayo</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Ukuphatha: ibha yamathuluzi engakwesokudla (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Ukuphatha: ibha yamathuluzi yonjiniyela (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Ukuphatha: umzila wokuzulazula</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Ukuphatha: umphumela wemojuli</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Ukuphatha: unyawo lwekhasi nelungelo lokushicilela</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Ukuphatha: imenyu yokuqukethwe</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Ukuphatha: isembozo nesikhombi sokulayisha</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Ukuphatha: indawo yombiko wokulungisa amaphutha</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Umkhiqizo ogqamile</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Inkambu yokuqukethwe</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Imicimbi ye-TMV</translation>
+    </message>
+</context>
 </TS>

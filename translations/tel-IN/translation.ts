@@ -1661,4 +1661,335 @@
         <translation>గ్రిడ్ (మొదటి అంశం పెద్దది)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>ప్రాథమిక</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>భాగాలు</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>జాబితాలు</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>గ్యాలరీ</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>కంటైనర్లు</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>ప్లేస్‌హోల్డర్లు</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>ప్రామాణికం</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>నిర్వహణ: శీర్షిక</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>నిర్వహణ: నావిగేషన్</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>నిర్వహణ: పేజీ</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>నిర్వహణ: సైడ్‌బార్</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>రెండు నిలువు వరుసలు</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>నిలువు వరుస</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>టెంప్లేట్ బ్లాక్</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>టెక్స్ట్</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>శీర్షిక</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML భాగం</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>రిచ్ టెక్స్ట్</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>చిత్రం</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>జాబితా</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>ఒకే కంటెంట్</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>బటన్ / లింక్</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ఖాళీ</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>విభాజకం</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>కార్డ్</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>అకార్డియన్</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>ట్యాబ్‌లు</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>గ్రిడ్</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>స్లైడర్</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>థంబ్ గ్యాలరీ</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>గ్రిడ్ గ్యాలరీ</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>సుషీ బార్</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>జిగ్‌జాగ్ (జాబితా)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>అకార్డియన్ (జాబితా)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ఉల్లేఖనం</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>హెచ్చరిక</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>బాహ్య వీడియో</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>బ్యాడ్జ్</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>ప్రగతి పట్టీ</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>మ్యాప్</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>కరోసెల్</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>పూర్తి వీక్షణ</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>ప్రధాన బ్యానర్</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>మా గురించి</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>ఫీచర్లు</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>పరిచయం</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>లోగోలు</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>మూడు నిలువు వరుసలు</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>నాలుగు నిలువు వరుసలు</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>ప్రధాన బ్యానర్ భాగం</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>ఫీచర్ల భాగం</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>మా గురించి భాగం</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>లోగోల భాగం</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>ఉల్లేఖన భాగం</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>పరిచయ భాగం</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>నిర్వహణ: లోగో మరియు సైట్ ప్రివ్యూ</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>నిర్వహణ: శోధన</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>నిర్వహణ: లైట్ మరియు డార్క్ మోడ్ స్విచ్</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>నిర్వహణ: మెనూ బటన్ (ఫోన్ వెడల్పు)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>నిర్వహణ: సైడ్‌బార్ నియంత్రణలు</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>నిర్వహణ: మెనూ బటన్ మరియు సైడ్‌బార్ నియంత్రణలు (కలిపి)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>నిర్వహణ: ట్యాబ్ మెనూ</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>నిర్వహణ: నావిగేషన్ భాగం యొక్క ఎడమ మెనూ</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>నిర్వహణ: కంటెంట్ నిర్మాణం</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>నిర్వహణ: కాష్‌ను ఖాళీ చేయండి</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>నిర్వహణ: బుక్‌మార్క్‌లు</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>నిర్వహణ: ఇంటర్‌ఫేస్ ఎంపికలు (భాష)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>నిర్వహణ: ప్రస్తుత వినియోగదారు</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>నిర్వహణ: వినియోగదారు ప్రాధాన్యతలు</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>నిర్వహణ: త్వరిత సెట్టింగ్‌లు</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>నిర్వహణ: కుడి టూల్‌బార్ (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>నిర్వహణ: డెవలపర్ టూల్‌బార్ (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>నిర్వహణ: బ్రెడ్‌క్రంబ్ మార్గం</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>నిర్వహణ: మాడ్యూల్ ఫలితం</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>నిర్వహణ: ఫుటర్ మరియు కాపీరైట్</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>నిర్వహణ: సందర్భ మెనూ</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>నిర్వహణ: ఓవర్‌లే మరియు లోడర్</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>నిర్వహణ: డీబగ్ నివేదిక ప్రాంతం</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ప్రత్యేక ఉత్పత్తి</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>కంటెంట్ ఫీల్డ్</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV కార్యక్రమాలు</translation>
+    </message>
+</context>
 </TS>

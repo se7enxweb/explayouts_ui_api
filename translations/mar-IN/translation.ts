@@ -1661,4 +1661,335 @@
         <translation>ग्रिड (पहिला आयटम मोठा)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>मूलभूत</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>घटक</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>याद्या</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>गॅलरी</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>कंटेनर</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>प्लेसहोल्डर</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>मानक</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>प्रशासन: शीर्षभाग</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>प्रशासन: नेव्हिगेशन</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>प्रशासन: पृष्ठ</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>प्रशासन: बाजूपट्टी</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>दोन स्तंभ</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>स्तंभ</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>टेम्पलेट ब्लॉक</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>मजकूर</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>शीर्षक</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML तुकडा</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>रिच टेक्स्ट</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>प्रतिमा</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>सूची</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>एकल मजकूर</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>बटण / दुवा</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>अंतर</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>विभाजक</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>कार्ड</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>अकॉर्डियन</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>टॅब</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>ग्रिड</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>स्लायडर</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>थंब गॅलरी</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>ग्रिड गॅलरी</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>सुशी बार</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>झिगझॅग (यादी)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>अ‍ॅकॉर्डियन (यादी)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>अवतरण</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>सूचना</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>बाह्य व्हिडिओ</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>बॅज</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>प्रगती पट्टी</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>नकाशा</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>कॅरोसेल</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>पूर्ण दृश्य</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>मुख्य बॅनर</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>आमच्याबद्दल</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>वैशिष्ट्ये</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>प्रस्तावना</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>लोगो</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>तीन स्तंभ</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>चार स्तंभ</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>मुख्य बॅनर घटक</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>वैशिष्ट्ये घटक</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>आमच्याबद्दल घटक</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>लोगो घटक</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>अवतरण घटक</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>प्रस्तावना घटक</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>प्रशासन: लोगो आणि साइट पूर्वावलोकन</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>प्रशासन: शोध</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>प्रशासन: फिकट आणि गडद मोड स्विच</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>प्रशासन: मेनू बटण (फोनची रुंदी)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>प्रशासन: बाजूपट्टी नियंत्रणे</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>प्रशासन: मेनू बटण आणि बाजूपट्टी नियंत्रणे (एकत्रित)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>प्रशासन: टॅब मेनू</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>प्रशासन: नेव्हिगेशन भागाचा डावा मेनू</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>प्रशासन: मजकूर रचना</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>प्रशासन: कॅशे रिकामा करा</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>प्रशासन: बुकमार्क</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>प्रशासन: इंटरफेस निवडी (भाषा)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>प्रशासन: सध्याचा वापरकर्ता</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>प्रशासन: वापरकर्ता प्राधान्ये</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>प्रशासन: द्रुत सेटिंग्ज</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>प्रशासन: उजवी टूलबार (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>प्रशासन: विकसक टूलबार (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>प्रशासन: ब्रेडक्रंब मार्ग</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>प्रशासन: मॉड्यूल परिणाम</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>प्रशासन: तळटीप आणि कॉपीराइट</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>प्रशासन: संदर्भ मेनू</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>प्रशासन: आच्छादन आणि लोडर</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>प्रशासन: डीबग अहवाल क्षेत्र</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ठळक उत्पादन</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>मजकूर फील्ड</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV कार्यक्रम</translation>
+    </message>
+</context>
 </TS>

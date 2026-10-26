@@ -1661,4 +1661,335 @@
         <translation>ଗ୍ରିଡ୍ (ପ୍ରଥମ ଆଇଟମ୍ ବଡ଼)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>ମୌଳିକ</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>ଉପାଦାନ</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>ତାଲିକା</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>ଗ୍ୟାଲେରୀ</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>କଣ୍ଟେନର</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>ପ୍ଲେସହୋଲ୍ଡର</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>ମାନକ</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>ପ୍ରଶାସନ: ଶୀର୍ଷ ଭାଗ</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>ପ୍ରଶାସନ: ନେଭିଗେସନ</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>ପ୍ରଶାସନ: ପୃଷ୍ଠା</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>ପ୍ରଶାସନ: ପାର୍ଶ୍ୱପଟି</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>ଦୁଇ ସ୍ତମ୍ଭ</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>ସ୍ତମ୍ଭ</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>ଟେମ୍ପଲେଟ ବ୍ଲକ</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>ପାଠ୍ୟ</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>ଶୀର୍ଷକ</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML ଖଣ୍ଡ</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>ରିଚ୍ ଟେକ୍ସଟ୍</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>ଛବି</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>ତାଲିକା</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>ଏକକ ବିଷୟବସ୍ତୁ</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>ବଟନ / ଲିଙ୍କ</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ବ୍ୟବଧାନ</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>ବିଭାଜକ</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>କାର୍ଡ</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>ଆକର୍ଡିଅନ୍</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>ଟାବ</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>ଗ୍ରିଡ୍</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>ସ୍ଲାଇଡର୍</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>ଥମ୍ବ ଗ୍ୟାଲେରୀ</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>ଗ୍ରିଡ୍ ଗ୍ୟାଲେରୀ</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>ସୁଶି ବାର୍</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>ଜିଗଜାଗ (ତାଲିକା)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>ଆକର୍ଡିଅନ (ତାଲିକା)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ଉଦ୍ଧୃତି</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>ସତର୍କତା</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>ବାହ୍ୟ ଭିଡିଓ</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>ବ୍ୟାଜ</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>ପ୍ରଗତି ପଟି</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>ମାନଚିତ୍ର</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>କାରୋସେଲ</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>ସମ୍ପୂର୍ଣ୍ଣ ଦୃଶ୍ୟ</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>ମୁଖ୍ୟ ବ୍ୟାନର</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>ଆମ ବିଷୟରେ</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>ବୈଶିଷ୍ଟ୍ୟ</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>ଉପକ୍ରମ</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>ଲୋଗୋ</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>ତିନି ସ୍ତମ୍ଭ</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>ଚାରି ସ୍ତମ୍ଭ</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>ମୁଖ୍ୟ ବ୍ୟାନର ଉପାଦାନ</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>ବୈଶିଷ୍ଟ୍ୟ ଉପାଦାନ</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>ଆମ ବିଷୟରେ ଉପାଦାନ</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>ଲୋଗୋ ଉପାଦାନ</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>ଉଦ୍ଧୃତି ଉପାଦାନ</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>ଉପକ୍ରମ ଉପାଦାନ</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>ପ୍ରଶାସନ: ଲୋଗୋ ଏବଂ ସାଇଟ ପୂର୍ବାବଲୋକନ</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>ପ୍ରଶାସନ: ସନ୍ଧାନ</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>ପ୍ରଶାସନ: ହାଲୁକା ଏବଂ ଗାଢ଼ ମୋଡ ସୁଇଚ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>ପ୍ରଶାସନ: ମେନୁ ବଟନ (ଫୋନ ଓସାର)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>ପ୍ରଶାସନ: ପାର୍ଶ୍ୱପଟି ନିୟନ୍ତ୍ରଣ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>ପ୍ରଶାସନ: ମେନୁ ବଟନ ଏବଂ ପାର୍ଶ୍ୱପଟି ନିୟନ୍ତ୍ରଣ (ମିଳିତ)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>ପ୍ରଶାସନ: ଟାବ ମେନୁ</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>ପ୍ରଶାସନ: ନେଭିଗେସନ ଭାଗର ବାମ ମେନୁ</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>ପ୍ରଶାସନ: ବିଷୟବସ୍ତୁ ଗଠନ</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>ପ୍ରଶାସନ: କ୍ୟାଶ ଖାଲି କରନ୍ତୁ</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>ପ୍ରଶାସନ: ବୁକମାର୍କ</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>ପ୍ରଶାସନ: ଇଣ୍ଟରଫେସ ବିକଳ୍ପ (ଭାଷା)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>ପ୍ରଶାସନ: ବର୍ତ୍ତମାନର ଉପଯୋଗକର୍ତ୍ତା</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>ପ୍ରଶାସନ: ଉପଯୋଗକର୍ତ୍ତା ପସନ୍ଦ</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>ପ୍ରଶାସନ: ଦ୍ରୁତ ସେଟିଂସ</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>ପ୍ରଶାସନ: ଡାହାଣ ଟୁଲବାର (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>ପ୍ରଶାସନ: ଡେଭେଲପର ଟୁଲବାର (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>ପ୍ରଶାସନ: ବ୍ରେଡକ୍ରମ୍ବ ପଥ</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>ପ୍ରଶାସନ: ମଡ୍ୟୁଲ ଫଳାଫଳ</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>ପ୍ରଶାସନ: ଫୁଟର ଏବଂ କପିରାଇଟ</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>ପ୍ରଶାସନ: ପ୍ରସଙ୍ଗ ମେନୁ</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>ପ୍ରଶାସନ: ଓଭରଲେ ଏବଂ ଲୋଡର</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>ପ୍ରଶାସନ: ଡିବଗ ରିପୋର୍ଟ କ୍ଷେତ୍ର</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ବିଶେଷ ଉତ୍ପାଦ</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>ବିଷୟବସ୍ତୁ କ୍ଷେତ୍ର</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV କାର୍ଯ୍ୟକ୍ରମ</translation>
+    </message>
+</context>
 </TS>

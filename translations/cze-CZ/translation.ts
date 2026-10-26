@@ -1661,4 +1661,335 @@
         <translation>Mřížka (první položka velká)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Základní</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponenty</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Výpisy</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerie</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kontejnery</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Zástupné symboly</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standardní</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administrace: záhlaví</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administrace: navigace</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administrace: stránka</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administrace: postranní panel</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Dva sloupce</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Sloupec</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Blok šablony</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Text</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Název</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Úryvek HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Formátovaný text</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Obrázek</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Seznam</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Jednotlivý obsah</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Tlačítko / odkaz</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Mezera</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Oddělovač</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Karta</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Záložky</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Mřížka</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Posuvník</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galerie miniatur</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Mřížková galerie</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Cik-cak (seznam)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordeon (seznam)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citace</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Upozornění</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Externí video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Odznak</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Ukazatel průběhu</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Mapa</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karusel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Úplné zobrazení</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Hlavní banner</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>O nás</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Vlastnosti</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Úvod</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Loga</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tři sloupce</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Čtyři sloupce</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Komponenta hlavního banneru</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Komponenta vlastností</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponenta „O nás“</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Komponenta log</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Komponenta citace</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Komponenta úvodu</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administrace: logo a náhled webu</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administrace: hledání</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administrace: přepínač světlého a tmavého režimu</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administrace: tlačítko nabídky (šířka telefonu)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administrace: ovládání postranních panelů</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administrace: tlačítko nabídky a ovládání postranních panelů (kombinované)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administrace: nabídka záložek</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administrace: levá nabídka navigační části</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administrace: struktura obsahu</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administrace: vymazání mezipaměti</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administrace: záložky</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administrace: volby rozhraní (jazyk)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administrace: aktuální uživatel</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administrace: uživatelské předvolby</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administrace: rychlá nastavení</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administrace: pravý panel nástrojů (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administrace: vývojářský panel nástrojů (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administrace: drobečková navigace</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administrace: výsledek modulu</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administrace: zápatí a copyright</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administrace: místní nabídka</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administrace: překryv a indikátor načítání</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administrace: oblast ladicí zprávy</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Zvýrazněný produkt</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Pole obsahu</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Události TMV</translation>
+    </message>
+</context>
 </TS>

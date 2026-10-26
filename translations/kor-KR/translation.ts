@@ -1661,4 +1661,335 @@
         <translation>격자(첫 항목 크게)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>기본</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>컴포넌트</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>목록</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>갤러리</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>컨테이너</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>자리 표시자</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>표준</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>관리: 헤더</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>관리: 탐색</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>관리: 페이지</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>관리: 사이드바</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>2열</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>열</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>템플릿 블록</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>텍스트</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>제목</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML 조각</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>서식 있는 텍스트</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>이미지</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>목록</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>단일 콘텐츠</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>버튼 / 링크</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>여백</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>구분선</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>카드</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>아코디언</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>탭</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>격자</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>슬라이더</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>축소판 갤러리</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>격자 갤러리</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>스시 바</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>지그재그(목록)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>아코디언(목록)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>인용</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>경고</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>외부 동영상</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>배지</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>진행률 표시줄</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>지도</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>캐러셀</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>전체 보기</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>히어로 배너</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>소개</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>기능</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>리드</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>로고</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>3열</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>4열</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>히어로 컴포넌트</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>기능 컴포넌트</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>소개 컴포넌트</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>로고 컴포넌트</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>인용 컴포넌트</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>리드 컴포넌트</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>관리: 로고 및 사이트 미리 보기</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>관리: 검색</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>관리: 밝은 모드와 어두운 모드 전환</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>관리: 메뉴 버튼(휴대폰 너비)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>관리: 사이드바 컨트롤</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>관리: 메뉴 버튼 및 사이드바 컨트롤(통합)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>관리: 탭 메뉴</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>관리: 탐색 영역의 왼쪽 메뉴</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>관리: 콘텐츠 구조</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>관리: 캐시 비우기</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>관리: 북마크</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>관리: 인터페이스 선택(언어)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>관리: 현재 사용자</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>관리: 사용자 환경 설정</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>관리: 빠른 설정</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>관리: 오른쪽 도구 모음(toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>관리: 개발자 도구 모음(toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>관리: 이동 경로</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>관리: 모듈 결과</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>관리: 바닥글 및 저작권</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>관리: 컨텍스트 메뉴</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>관리: 오버레이 및 로딩 표시</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>관리: 디버그 보고서 영역</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>추천 상품</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>콘텐츠 필드</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV 행사</translation>
+    </message>
+</context>
 </TS>

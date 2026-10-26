@@ -1661,4 +1661,335 @@
         <translation>شبکه (مورد اول بزرگ)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>پایه</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>اجزا</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>فهرست‌ها</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>گالری</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>نگه‌دارنده‌ها</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>جای‌نگهدارها</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>استاندارد</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>مدیریت: سرصفحه</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>مدیریت: پیمایش</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>مدیریت: صفحه</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>مدیریت: نوار کناری</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>دو ستون</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>ستون</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>بلوک قالب</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>متن</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>عنوان</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>قطعهٔ HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>متن غنی</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>تصویر</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>فهرست</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>محتوای تکی</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>دکمه / پیوند</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>فاصله</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>خط جداکننده</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>کارت</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>آکاردئون</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>زبانه‌ها</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>شبکه</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>اسلایدر</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>گالری تصاویر کوچک</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>گالری شبکه‌ای</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>نوار افقی</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>زیگزاگ (فهرست)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>آکاردئون (فهرست)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>نقل‌قول</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>هشدار</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>ویدیوی خارجی</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>نشان</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>نوار پیشرفت</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>نقشه</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>کاروسل</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>نمای کامل</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>بنر اصلی</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>دربارهٔ ما</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>ویژگی‌ها</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>مقدمه</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>لوگوها</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>سه ستون</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>چهار ستون</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>جزء بنر اصلی</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>جزء ویژگی‌ها</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>جزء «دربارهٔ ما»</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>جزء لوگوها</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>جزء نقل‌قول</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>جزء مقدمه</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>مدیریت: لوگو و پیش‌نمایش سایت</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>مدیریت: جستجو</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>مدیریت: کلید حالت روشن و تیره</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>مدیریت: دکمهٔ منو (عرض تلفن)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>مدیریت: کنترل‌های نوار کناری</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>مدیریت: دکمهٔ منو و کنترل‌های نوار کناری (ترکیبی)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>مدیریت: منوی زبانه‌ها</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>مدیریت: منوی چپ بخش پیمایش</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>مدیریت: ساختار محتوا</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>مدیریت: پاک کردن حافظهٔ پنهان</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>مدیریت: نشانک‌ها</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>مدیریت: گزینه‌های رابط کاربری (زبان)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>مدیریت: کاربر فعلی</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>مدیریت: ترجیحات کاربر</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>مدیریت: تنظیمات سریع</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>مدیریت: نوار ابزار راست (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>مدیریت: نوار ابزار توسعه‌دهنده (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>مدیریت: مسیر راهنما</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>مدیریت: نتیجهٔ ماژول</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>مدیریت: پانویس و حق نشر</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>مدیریت: منوی زمینه</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>مدیریت: لایهٔ پوششی و نشانگر بارگذاری</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>مدیریت: ناحیهٔ گزارش اشکال‌زدایی</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>محصول برجسته</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>فیلد محتوا</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>رویدادهای TMV</translation>
+    </message>
+</context>
 </TS>

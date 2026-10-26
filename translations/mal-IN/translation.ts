@@ -1661,4 +1661,335 @@
         <translation>ഗ്രിഡ് (ആദ്യ ഇനം വലുത്)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>അടിസ്ഥാനം</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>ഘടകങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>പട്ടികകൾ</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>ഗാലറി</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>കണ്ടെയ്നറുകൾ</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>പ്ലേസ്‌ഹോൾഡറുകൾ</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>സ്റ്റാൻഡേർഡ്</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: തലക്കെട്ട്</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: നാവിഗേഷൻ</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: പേജ്</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: സൈഡ്‌ബാർ</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>രണ്ട് കോളങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>കോളം</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>ടെംപ്ലേറ്റ് ബ്ലോക്ക്</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>ടെക്സ്റ്റ്</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>ശീർഷകം</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML ഭാഗം</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>റിച്ച് ടെക്സ്റ്റ്</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>ചിത്രം</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>ലിസ്റ്റ്</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>ഒറ്റ ഉള്ളടക്കം</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>ബട്ടൺ / ലിങ്ക്</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ഇടം</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>വിഭജകം</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>കാർഡ്</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>അക്കോർഡിയൻ</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>ടാബുകൾ</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>ഗ്രിഡ്</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>സ്ലൈഡർ</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>തംബ് ഗ്യാലറി</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>ഗ്രിഡ് ഗ്യാലറി</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>സുഷി ബാർ</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>സിഗ്‌സാഗ് (പട്ടിക)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>അക്കോർഡിയൻ (പട്ടിക)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ഉദ്ധരണി</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>മുന്നറിയിപ്പ്</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>ബാഹ്യ വീഡിയോ</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>ബാഡ്ജ്</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>പുരോഗതി ബാർ</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>മാപ്പ്</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>കറൗസൽ</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>പൂർണ്ണ കാഴ്ച</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>പ്രധാന ബാനർ</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>ഞങ്ങളെക്കുറിച്ച്</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>സവിശേഷതകൾ</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>ആമുഖം</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>ലോഗോകൾ</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>മൂന്ന് കോളങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>നാല് കോളങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>പ്രധാന ബാനർ ഘടകം</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>സവിശേഷതകൾ ഘടകം</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>ഞങ്ങളെക്കുറിച്ച് ഘടകം</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>ലോഗോ ഘടകം</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>ഉദ്ധരണി ഘടകം</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>ആമുഖ ഘടകം</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ലോഗോയും സൈറ്റ് പ്രിവ്യൂവും</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: തിരയൽ</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ലൈറ്റ്, ഡാർക്ക് മോഡ് സ്വിച്ച്</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: മെനു ബട്ടൺ (ഫോൺ വീതി)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: സൈഡ്‌ബാർ നിയന്ത്രണങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: മെനു ബട്ടണും സൈഡ്‌ബാർ നിയന്ത്രണങ്ങളും (സംയോജിതം)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ടാബ് മെനു</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: നാവിഗേഷൻ ഭാഗത്തിന്റെ ഇടത് മെനു</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ഉള്ളടക്ക ഘടന</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: കാഷെ മായ്ക്കുക</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ബുക്ക്‌മാർക്കുകൾ</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ഇന്റർഫേസ് തിരഞ്ഞെടുപ്പുകൾ (ഭാഷ)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: നിലവിലെ ഉപയോക്താവ്</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ഉപയോക്തൃ മുൻഗണനകൾ</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ദ്രുത ക്രമീകരണങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: വലത് ടൂൾബാർ (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ഡെവലപ്പർ ടൂൾബാർ (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ബ്രെഡ്‌ക്രംബ് പാത</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: മൊഡ്യൂൾ ഫലം</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ഫൂട്ടറും പകർപ്പവകാശവും</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: സന്ദർഭ മെനു</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ഓവർലേയും ലോഡറും</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>അഡ്മിനിസ്ട്രേഷൻ: ഡീബഗ് റിപ്പോർട്ട് ഏരിയ</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ശ്രദ്ധേയമായ ഉൽപ്പന്നം</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>ഉള്ളടക്ക ഫീൽഡ്</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV പരിപാടികൾ</translation>
+    </message>
+</context>
 </TS>

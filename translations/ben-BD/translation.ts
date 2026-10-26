@@ -1661,4 +1661,335 @@
         <translation>গ্রিড (প্রথম আইটেম বড়)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>মৌলিক</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>কম্পোনেন্ট</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>তালিকাসমূহ</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>গ্যালারি</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>কনটেইনার</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>প্লেসহোল্ডার</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>স্ট্যান্ডার্ড</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>প্রশাসন: হেডার</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>প্রশাসন: নেভিগেশন</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>প্রশাসন: পৃষ্ঠা</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>প্রশাসন: সাইডবার</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>দুই কলাম</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>কলাম</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>টেমপ্লেট ব্লক</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>টেক্সট</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>শিরোনাম</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML স্নিপেট</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>রিচ টেক্সট</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>ছবি</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>তালিকা</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>একক কনটেন্ট</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>বোতাম / লিংক</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ফাঁকা স্থান</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>বিভাজক রেখা</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>কার্ড</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>অ্যাকর্ডিয়ন</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>ট্যাব</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>গ্রিড</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>স্লাইডার</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>থাম্ব গ্যালারি</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>গ্রিড গ্যালারি</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>সুশি বার</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>জিগজ্যাগ (তালিকা)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>অ্যাকর্ডিয়ন (তালিকা)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>উদ্ধৃতি</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>সতর্কবার্তা</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>বাহ্যিক ভিডিও</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>ব্যাজ</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>অগ্রগতি বার</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>মানচিত্র</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>ক্যারোসেল</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>পূর্ণ দৃশ্য</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>হিরো ব্যানার</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>আমাদের সম্পর্কে</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>বৈশিষ্ট্য</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>ভূমিকা</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>লোগো</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>তিন কলাম</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>চার কলাম</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>হিরো ব্যানার কম্পোনেন্ট</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>বৈশিষ্ট্য কম্পোনেন্ট</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>“আমাদের সম্পর্কে” কম্পোনেন্ট</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>লোগো কম্পোনেন্ট</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>উদ্ধৃতি কম্পোনেন্ট</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>ভূমিকা কম্পোনেন্ট</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>প্রশাসন: লোগো ও সাইটের পূর্বরূপ</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>প্রশাসন: অনুসন্ধান</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>প্রশাসন: হালকা ও গাঢ় মোডের সুইচ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>প্রশাসন: মেনু বোতাম (ফোনের প্রস্থ)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>প্রশাসন: সাইডবার নিয়ন্ত্রণ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>প্রশাসন: মেনু বোতাম ও সাইডবার নিয়ন্ত্রণ (সম্মিলিত)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>প্রশাসন: ট্যাব মেনু</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>প্রশাসন: নেভিগেশন অংশের বাম মেনু</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>প্রশাসন: কনটেন্ট কাঠামো</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>প্রশাসন: ক্যাশে পরিষ্কার</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>প্রশাসন: বুকমার্ক</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>প্রশাসন: ইন্টারফেস পছন্দ (ভাষা)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>প্রশাসন: বর্তমান ব্যবহারকারী</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>প্রশাসন: ব্যবহারকারীর পছন্দসমূহ</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>প্রশাসন: দ্রুত সেটিংস</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>প্রশাসন: ডান টুলবার (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>প্রশাসন: ডেভেলপার টুলবার (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>প্রশাসন: ব্রেডক্রাম্ব পথ</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>প্রশাসন: মডিউলের ফলাফল</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>প্রশাসন: ফুটার ও কপিরাইট</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>প্রশাসন: প্রসঙ্গ মেনু</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>প্রশাসন: ওভারলে ও লোডার</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>প্রশাসন: ডিবাগ প্রতিবেদনের এলাকা</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>পণ্যের হাইলাইট</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>কনটেন্ট ক্ষেত্র</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV ইভেন্ট</translation>
+    </message>
+</context>
 </TS>

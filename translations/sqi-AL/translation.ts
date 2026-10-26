@@ -1661,4 +1661,335 @@
         <translation>Rrjetë (elementi i parë i madh)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Bazë</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponentë</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Lista</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galeri</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kontejnerë</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Vendmbajtës</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Administrimi: koka</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Administrimi: navigimi</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Administrimi: faqja</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Administrimi: shiriti anësor</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Dy kolona</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolonë</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Bllok shablloni</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titulli</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Fragment HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Tekst i pasur</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Figurë</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Listë</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Përmbajtje e vetme</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Buton / Lidhje</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Hapësirë</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Ndarës</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kartë</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Fizarmonikë</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Skeda</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Rrjetë</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Rrëshqitës</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galeri me miniatura</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Galeri në rrjetë</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Shirit sushi</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigzag (listë)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Fizarmonikë (listë)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citim</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Sinjalizim</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Video e jashtme</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Distinktiv</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Shirit progresi</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Hartë</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karusel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Pamje e plotë</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Banderolë kryesore</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Rreth nesh</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Veçori</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Hyrje</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tri kolona</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Katër kolona</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Komponent i banderolës kryesore</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Komponent i veçorive</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponent Rreth nesh</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Komponent i logove</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Komponent i citimit</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Komponent i hyrjes</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Administrimi: logoja dhe paraparja e sajtit</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Administrimi: kërkimi</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Administrimi: çelësi i mënyrës së çelët dhe të errët</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Administrimi: butoni i menysë (gjerësi telefoni)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Administrimi: kontrollet e shiritave anësorë</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Administrimi: butoni i menysë dhe kontrollet e shiritave anësorë (të kombinuara)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Administrimi: menyja e skedave</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Administrimi: menyja e majtë e pjesës së navigimit</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Administrimi: struktura e përmbajtjes</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Administrimi: pastrimi i fshehtinës</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Administrimi: faqerojtësit</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Administrimi: zgjedhjet e ndërfaqes (gjuha)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Administrimi: përdoruesi aktual</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Administrimi: parapëlqimet e përdoruesit</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Administrimi: rregullimet e shpejta</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Administrimi: shiriti i djathtë i mjeteve (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Administrimi: shiriti i mjeteve për zhvilluesit (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Administrimi: shtegu i navigimit</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Administrimi: rezultati i modulit</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Administrimi: fundfaqja dhe të drejtat e autorit</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Administrimi: menyja e kontekstit</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Administrimi: mbulesa dhe treguesi i ngarkimit</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Administrimi: zona e raportit të diagnostikimit</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Produkt i theksuar</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Fushë përmbajtjeje</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Ngjarje TMV</translation>
+    </message>
+</context>
 </TS>

@@ -1661,4 +1661,335 @@
         <translation>Πλέγμα (μεγάλο πρώτο στοιχείο)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Βασικά</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Στοιχεία</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Λίστες</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Συλλογή εικόνων</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Κοντέινερ</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Σύμβολα κράτησης θέσης</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Τυπικό</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Διαχείριση: κεφαλίδα</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Διαχείριση: περιήγηση</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Διαχείριση: σελίδα</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Διαχείριση: πλευρική γραμμή</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Δύο στήλες</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Στήλη</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Μπλοκ προτύπου</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Κείμενο</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Τίτλος</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Απόσπασμα HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Εμπλουτισμένο κείμενο</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Εικόνα</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Λίστα</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Μεμονωμένο περιεχόμενο</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Κουμπί / σύνδεση</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Κενό διάστημα</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Διαχωριστική γραμμή</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Κάρτα</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Ακορντεόν</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Καρτέλες</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Πλέγμα</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Ρυθμιστικό διαφανειών</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Συλλογή μικρογραφιών</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Συλλογή σε πλέγμα</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Κυλιόμενη ταινία</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Ζιγκ-ζαγκ (λίστα)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Ακορντεόν (λίστα)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Παράθεση</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Ειδοποίηση</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Εξωτερικό βίντεο</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Σήμα</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Γραμμή προόδου</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Χάρτης</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Καρουζέλ</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Πλήρης προβολή</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Κεντρικό πανό</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Σχετικά με εμάς</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Χαρακτηριστικά</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Εισαγωγή</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Λογότυπα</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Τρεις στήλες</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Τέσσερις στήλες</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Στοιχείο κεντρικού πανό</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Στοιχείο χαρακτηριστικών</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Στοιχείο «Σχετικά με εμάς»</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Στοιχείο λογοτύπων</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Στοιχείο παράθεσης</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Στοιχείο εισαγωγής</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Διαχείριση: λογότυπο και προεπισκόπηση τοποθεσίας</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Διαχείριση: αναζήτηση</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Διαχείριση: εναλλαγή φωτεινής και σκοτεινής λειτουργίας</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Διαχείριση: κουμπί μενού (πλάτος τηλεφώνου)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Διαχείριση: στοιχεία ελέγχου πλευρικών γραμμών</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Διαχείριση: κουμπί μενού και στοιχεία ελέγχου πλευρικών γραμμών (συνδυασμένα)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Διαχείριση: μενού καρτελών</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Διαχείριση: αριστερό μενού του τμήματος περιήγησης</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Διαχείριση: δομή περιεχομένου</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Διαχείριση: εκκαθάριση προσωρινής μνήμης</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Διαχείριση: σελιδοδείκτες</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Διαχείριση: επιλογές περιβάλλοντος (γλώσσα)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Διαχείριση: τρέχων χρήστης</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Διαχείριση: προτιμήσεις χρήστη</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Διαχείριση: γρήγορες ρυθμίσεις</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Διαχείριση: δεξιά γραμμή εργαλείων (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Διαχείριση: γραμμή εργαλείων προγραμματιστή (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Διαχείριση: διαδρομή πλοήγησης</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Διαχείριση: αποτέλεσμα λειτουργικής μονάδας</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Διαχείριση: υποσέλιδο και πνευματικά δικαιώματα</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Διαχείριση: μενού περιβάλλοντος</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Διαχείριση: επικάλυψη και ένδειξη φόρτωσης</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Διαχείριση: περιοχή αναφοράς εντοπισμού σφαλμάτων</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Προβεβλημένο προϊόν</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Πεδίο περιεχομένου</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Εκδηλώσεις TMV</translation>
+    </message>
+</context>
 </TS>

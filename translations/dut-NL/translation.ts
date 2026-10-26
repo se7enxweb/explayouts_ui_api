@@ -1661,4 +1661,335 @@
         <translation>Raster (eerste item groot)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Basis</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Componenten</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Lijsten</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galerij</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Containers</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Tijdelijke aanduidingen</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standaard</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Beheer: kopgedeelte</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Beheer: navigatie</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Beheer: pagina</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Beheer: zijbalk</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Twee kolommen</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolom</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Templateblok</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Tekst</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-fragment</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Opgemaakte tekst</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Afbeelding</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Lijst</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Enkele inhoud</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Knop / link</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Witruimte</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Scheidingslijn</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kaart</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Accordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Tabbladen</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Raster</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Slider</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Miniaturengalerij</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Rastergalerij</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushibar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zigzag (lijst)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Accordeon (lijst)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Citaat</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Melding</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Externe video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Badge</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Voortgangsbalk</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Landkaart</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Carrousel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Volledige weergave</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Hero</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Over ons</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Kenmerken</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Inleiding</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logo's</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Drie kolommen</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Vier kolommen</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Hero-component</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Kenmerkencomponent</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Over ons-component</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logocomponent</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Citaatcomponent</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Inleidingscomponent</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Beheer: logo en sitevoorbeeld</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Beheer: zoeken</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Beheer: schakelaar voor lichte en donkere modus</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Beheer: menuknop (telefoonbreedte)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Beheer: zijbalkbediening</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Beheer: menuknop en zijbalkbediening (gecombineerd)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Beheer: tabbladmenu</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Beheer: linkermenu van het navigatiegedeelte</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Beheer: inhoudsstructuur</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Beheer: cache legen</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Beheer: favorieten</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Beheer: interfacekeuzes (taal)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Beheer: huidige gebruiker</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Beheer: gebruikersvoorkeuren</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Beheer: snelle instellingen</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Beheer: rechterwerkbalk (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Beheer: ontwikkelaarswerkbalk (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Beheer: kruimelpad</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Beheer: moduleresultaat</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Beheer: voettekst en copyright</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Beheer: contextmenu</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Beheer: overlay en laadindicator</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Beheer: gebied voor het debugrapport</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Uitgelicht product</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Inhoudsveld</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV-evenementen</translation>
+    </message>
+</context>
 </TS>

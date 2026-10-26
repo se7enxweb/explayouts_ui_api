@@ -1661,4 +1661,335 @@
         <translation>Izgara (ilk öğe büyük)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Temel</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Bileşenler</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Listeler</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galeri</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kapsayıcılar</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Yer tutucular</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standart</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Yönetim: üst bilgi</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Yönetim: gezinme</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Yönetim: sayfa</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Yönetim: kenar çubuğu</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>İki sütun</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Sütun</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Şablon bloğu</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Metin</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Başlık</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML parçacığı</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Zengin metin</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Görsel</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Tek içerik</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Düğme / Bağlantı</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Boşluk</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Ayırıcı</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kart</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Sekmeler</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Izgara</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Kaydırıcı</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Küçük resim galerisi</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Izgara galerisi</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Suşi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zikzak (liste)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordeon (liste)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Alıntı</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Uyarı</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Harici video</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Rozet</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>İlerleme çubuğu</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Harita</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Döngüsel galeri</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Tam görünüm</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Ana afiş</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Hakkımızda</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Özellikler</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Giriş</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logolar</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Üç sütun</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Dört sütun</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Ana afiş bileşeni</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Özellikler bileşeni</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Hakkımızda bileşeni</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Logolar bileşeni</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Alıntı bileşeni</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Giriş bileşeni</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Yönetim: logo ve site önizlemesi</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Yönetim: arama</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Yönetim: açık ve koyu mod anahtarı</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Yönetim: menü düğmesi (telefon genişliği)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Yönetim: kenar çubuğu denetimleri</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Yönetim: menü düğmesi ve kenar çubuğu denetimleri (birleşik)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Yönetim: sekme menüsü</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Yönetim: gezinme bölümünün sol menüsü</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Yönetim: içerik yapısı</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Yönetim: önbelleği temizle</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Yönetim: yer imleri</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Yönetim: arayüz seçenekleri (dil)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Yönetim: geçerli kullanıcı</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Yönetim: kullanıcı tercihleri</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Yönetim: hızlı ayarlar</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Yönetim: sağ araç çubuğu (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Yönetim: geliştirici araç çubuğu (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Yönetim: içerik yolu</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Yönetim: modül sonucu</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Yönetim: alt bilgi ve telif hakkı</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Yönetim: bağlam menüsü</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Yönetim: kaplama ve yükleme göstergesi</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Yönetim: hata ayıklama raporu alanı</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Öne çıkan ürün</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>İçerik alanı</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV etkinlikleri</translation>
+    </message>
+</context>
 </TS>

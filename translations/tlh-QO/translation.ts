@@ -1664,4 +1664,335 @@
         <translation>mIllogh ghom (wa'DIch Doch tIn)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>bopbogh</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>'aymey</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>tetlhmey</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>mIllogh Qorwagh</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>ngaSwI'mey</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Daq polwI'mey</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>motlh</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>loH: nach</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>loH: He SammeH</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>loH: nav</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>loH: retlh tlhegh</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>cha' tut</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>tut</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>mIw 'echlet ngogh</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>ghItlh</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Huv</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML 'ay'</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>ghItlh naQ</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>mIllogh</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>tetlh</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>wa' De'</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>leQ / rar</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>chIm Daq</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>ngoDwI'</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>chaw'</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>tlhegh boS</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>nav 'ay'mey</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>mIllogh ghom</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>SIrgh</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>mIllogh mach Qorwagh</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>mIllogh tlhegh Qorwagh</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi qal</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>ngoq'e' (tetlh)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>tlhegh boS (tetlh)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>per</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>ghuHmoHghach</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Hur HaSta</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Degh</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>ghoch tlhegh</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>pu'jIn</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>jIrmoHwI'</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Hoch legh</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>'aqroS'a'</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>maH'e'</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>pIlmey</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>ghItlh wa'DIch</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Deghmey</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>wej tut</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>loS tut</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>'aqroS'a' 'ay'</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>pIlmey 'ay'</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>maH'e' 'ay'</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Deghmey 'ay'</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>per 'ay'</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>ghItlh wa'DIch 'ay'</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>loH: Degh 'ej Daq nungbogh mIllogh</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>loH: nejghach</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>loH: wov 'ej Hurgh Dotlh choHwI'</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>loH: HIjmeH leQ (ghogh HablI' juch)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>loH: retlh tlhegh SeHlaw</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>loH: HIjmeH leQ 'ej retlh tlhegh SeHlaw (muv)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>loH: nav 'ay' HIjmeH</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>loH: He SammeH 'ay' poS HIjmeH</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>loH: De' qach</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>loH: De' polwI' yIchImmoH</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>loH: qawmeH Daqmey</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>loH: rarwI' wIv (Hol)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>loH: DaH lo'wI'</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>loH: lo'wI' DuHmey</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>loH: nom DuHmey</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>loH: nIH jan tlhegh (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>loH: chenmoHwI' jan tlhegh (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>loH: He' tlhegh</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>loH: ngoq 'ay' ghot</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>loH: 'aqroS bIng 'ej ghItlh DIb</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>loH: ghu' HIjmeH</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>loH: tuQDoq 'ej yuvmeH Degh</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>loH: Qagh ja'meH Daq</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ngevlu'bogh Doch ngoDHom</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>De' yotlh</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV wanI'mey</translation>
+    </message>
+</context>
 </TS>

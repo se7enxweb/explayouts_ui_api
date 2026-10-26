@@ -1661,4 +1661,335 @@
         <translation>கட்டம் (முதல் உருப்படி பெரியது)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>அடிப்படை</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>கூறுகள்</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>பட்டியல்கள்</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>படத்தொகுப்பு</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>கொள்கலன்கள்</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>ஒதுக்கிடங்கள்</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>நிலையான</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>நிர்வாகம்: தலைப்புப் பகுதி</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>நிர்வாகம்: வழிசெலுத்தல்</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>நிர்வாகம்: பக்கம்</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>நிர்வாகம்: பக்கப்பட்டி</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>இரண்டு நெடுவரிசைகள்</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>நெடுவரிசை</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>வார்ப்புரு தொகுதி</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>உரை</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>தலைப்பு</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML துணுக்கு</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>வளமான உரை</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>படம்</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>பட்டியல்</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>ஒற்றை உள்ளடக்கம்</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>பொத்தான் / இணைப்பு</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>இடைவெளி</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>பிரிப்பான்</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>அட்டை</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>அக்கார்டியன்</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>தாவல்கள்</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>கட்டம்</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>ஸ்லைடர்</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>சிறுபடக் காட்சியகம்</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>கட்டக் காட்சியகம்</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>கோணல்மாணல் (பட்டியல்)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>அகார்டியன் (பட்டியல்)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>மேற்கோள்</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>எச்சரிக்கை</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>வெளிப்புற காணொளி</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>பதக்கம்</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>முன்னேற்றப் பட்டை</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>வரைபடம்</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>சுழல் காட்சி</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>முழுக் காட்சி</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>முதன்மைப் பதாகை</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>எங்களைப் பற்றி</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>அம்சங்கள்</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>முன்னுரை</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>சின்னங்கள்</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>மூன்று நெடுவரிசைகள்</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>நான்கு நெடுவரிசைகள்</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>முதன்மைப் பதாகைக் கூறு</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>அம்சங்கள் கூறு</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>எங்களைப் பற்றி கூறு</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>சின்னங்கள் கூறு</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>மேற்கோள் கூறு</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>முன்னுரைக் கூறு</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>நிர்வாகம்: சின்னமும் தள முன்னோட்டமும்</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>நிர்வாகம்: தேடல்</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>நிர்வாகம்: ஒளி மற்றும் இருள் பயன்முறை மாற்றி</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>நிர்வாகம்: பட்டி பொத்தான் (தொலைபேசி அகலம்)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>நிர்வாகம்: பக்கப்பட்டிக் கட்டுப்பாடுகள்</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>நிர்வாகம்: பட்டி பொத்தானும் பக்கப்பட்டிக் கட்டுப்பாடுகளும் (இணைந்தவை)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>நிர்வாகம்: தாவல் பட்டி</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>நிர்வாகம்: வழிசெலுத்தல் பகுதியின் இடப் பட்டி</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>நிர்வாகம்: உள்ளடக்கக் கட்டமைப்பு</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>நிர்வாகம்: தற்காலிக நினைவகத்தை அழி</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>நிர்வாகம்: புத்தகக்குறிகள்</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>நிர்வாகம்: இடைமுகத் தேர்வுகள் (மொழி)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>நிர்வாகம்: தற்போதைய பயனர்</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>நிர்வாகம்: பயனர் விருப்பங்கள்</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>நிர்வாகம்: விரைவு அமைப்புகள்</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>நிர்வாகம்: வலது கருவிப்பட்டை (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>நிர்வாகம்: உருவாக்குநர் கருவிப்பட்டை (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>நிர்வாகம்: வழித்தடம்</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>நிர்வாகம்: தொகுதி முடிவு</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>நிர்வாகம்: அடிக்குறிப்பும் பதிப்புரிமையும்</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>நிர்வாகம்: சூழல் பட்டி</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>நிர்வாகம்: மேலடுக்கும் ஏற்றக் குறியும்</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>நிர்வாகம்: பிழைத்திருத்த அறிக்கைப் பகுதி</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>சிறப்புத் தயாரிப்பு</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>உள்ளடக்கப் புலம்</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV நிகழ்வுகள்</translation>
+    </message>
+</context>
 </TS>

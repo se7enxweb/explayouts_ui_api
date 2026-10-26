@@ -1661,4 +1661,335 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

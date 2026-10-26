@@ -1661,4 +1661,335 @@
         <translation>ፍርግርግ (የመጀመሪያው ንጥል ትልቅ)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>መሠረታዊ</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>ክፍሎች</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>ዝርዝሮች</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>ማዕከለ ስዕል</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>መያዣዎች</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>ቦታ ያዢዎች</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>መደበኛ</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>አስተዳደር: ራስጌ</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>አስተዳደር: አሰሳ</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>አስተዳደር: ገጽ</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>አስተዳደር: የጎን አሞሌ</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>ሁለት አምዶች</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>አምድ</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>የአብነት ብሎክ</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>ጽሑፍ</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>ርዕስ</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>የHTML ቁራጭ</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>ሀብታም ጽሑፍ</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>ምስል</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>ዝርዝር</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>ነጠላ ይዘት</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>አዝራር / አገናኝ</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ክፍተት</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>መለያ መስመር</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>ካርድ</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>አኮርዲዮን</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>ትሮች</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>ፍርግርግ</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>ተንሸራታች</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>የድንክዬ ማዕከል</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>የፍርግርግ ማዕከል</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>ዚግዛግ (ዝርዝር)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>አኮርዲዮን (ዝርዝር)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ጥቅስ</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>ማስጠንቀቂያ</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>ውጫዊ ቪዲዮ</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>ባጅ</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>የሂደት አሞሌ</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>ካርታ</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>ካሩሰል</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>ሙሉ እይታ</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>ዋና ባነር</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>ስለ እኛ</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>ባህሪያት</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>መግቢያ</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>አርማዎች</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>ሦስት አምዶች</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>አራት አምዶች</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>የዋና ባነር ክፍል</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>የባህሪያት ክፍል</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>የስለ እኛ ክፍል</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>የአርማዎች ክፍል</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>የጥቅስ ክፍል</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>የመግቢያ ክፍል</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>አስተዳደር: አርማ እና የድረ-ገጽ ቅድመ እይታ</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>አስተዳደር: ፍለጋ</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>አስተዳደር: የብሩህ እና ጨለማ ሁነታ መቀየሪያ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>አስተዳደር: የምናሌ አዝራር (የስልክ ስፋት)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>አስተዳደር: የጎን አሞሌ መቆጣጠሪያዎች</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>አስተዳደር: የምናሌ አዝራር እና የጎን አሞሌ መቆጣጠሪያዎች (የተጣመሩ)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>አስተዳደር: የትር ምናሌ</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>አስተዳደር: የአሰሳ ክፍሉ ግራ ምናሌ</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>አስተዳደር: የይዘት አወቃቀር</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>አስተዳደር: መሸጎጫ ማጽዳት</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>አስተዳደር: ዕልባቶች</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>አስተዳደር: የበይነገጽ ምርጫዎች (ቋንቋ)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>አስተዳደር: የአሁኑ ተጠቃሚ</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>አስተዳደር: የተጠቃሚ ምርጫዎች</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>አስተዳደር: ፈጣን ቅንብሮች</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>አስተዳደር: የቀኝ የመሣሪያ አሞሌ (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>አስተዳደር: የገንቢ የመሣሪያ አሞሌ (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>አስተዳደር: የአሰሳ ዱካ</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>አስተዳደር: የሞጁል ውጤት</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>አስተዳደር: ግርጌ እና የቅጂ መብት</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>አስተዳደር: የአውድ ምናሌ</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>አስተዳደር: ተደራቢ እና የመጫኛ ጠቋሚ</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>አስተዳደር: የስህተት ማረሚያ ሪፖርት ቦታ</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>የምርት ድምቀት</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>የይዘት መስክ</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>የTMV ዝግጅቶች</translation>
+    </message>
+</context>
 </TS>

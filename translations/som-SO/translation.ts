@@ -1661,4 +1661,335 @@
         <translation>Shabakad (shayga ugu horreeya waa weyn yahay)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Aasaasi</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Qaybaha</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Liisas</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Matxaf sawirro</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Weelal</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Meel-hayayaal</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Caadi</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Maamulka: madaxa</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Maamulka: hagidda</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Maamulka: bogga</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Maamulka: dhinaca-bar</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Laba tiir</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Tiir</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Xannibaadda qaabka</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Qoraal</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Cinwaan</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Jajab HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Qoraal hodan ah</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Sawir</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Liis</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Nuxur keli ah</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Badhan / Xiriir</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Bannaan</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Kala-qeybiye</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kaarka</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akoordiyoon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Tabs</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Shabakad</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Sliider</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Matxaf sawirro yaryar</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Matxaf sawirro shabakad ah</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Bar suushi</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Qalloocan (liis)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordiyoon (liis)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Xigasho</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Digniin</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Muuqaal dibadeed</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Calaamad</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Barta horumarka</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Khariidad</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Wareeg</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Muuqaal buuxa</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Calan weyn</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Annaga ku saabsan</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Astaamaha</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Hordhac</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Calaamado</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Saddex tiir</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Afar tiir</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Qaybta calanka weyn</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Qaybta astaamaha</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Qaybta Annaga ku saabsan</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Qaybta calaamadaha</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Qaybta xigashada</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Qaybta hordhaca</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Maamulka: calaamadda iyo horu-eegga goobta</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Maamulka: raadin</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Maamulka: beddelaha habka iftiinka iyo mugdiga</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Maamulka: badhanka liiska (ballaca taleefanka)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Maamulka: xakamaynta dhinaca-barka</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Maamulka: badhanka liiska iyo xakamaynta dhinaca-barka (la isku daray)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Maamulka: liiska tabs-ka</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Maamulka: liiska bidix ee qaybta hagidda</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Maamulka: qaab-dhismeedka nuxurka</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Maamulka: nadiifi kaydka</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Maamulka: calaamadaha bogagga</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Maamulka: doorashooyinka interface-ka (luqadda)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Maamulka: isticmaalaha hadda</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Maamulka: dookhyada isticmaalaha</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Maamulka: dejinta degdegga ah</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Maamulka: barta qalabka midig (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Maamulka: barta qalabka horumariyaha (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Maamulka: jidka hagidda</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Maamulka: natiijada moduleka</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Maamulka: cagta iyo xuquuqda daabacaadda</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Maamulka: liiska macnaha</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Maamulka: dahaarka iyo muujiyaha soo-dejinta</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Maamulka: aagga warbixinta cilad-raadinta</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Badeecad la muujiyay</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Goobta nuxurka</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Dhacdooyinka TMV</translation>
+    </message>
+</context>
 </TS>

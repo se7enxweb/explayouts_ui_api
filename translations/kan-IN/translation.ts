@@ -1661,4 +1661,335 @@
         <translation>ಗ್ರಿಡ್ (ಮೊದಲ ಐಟಂ ದೊಡ್ಡದು)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>ಮೂಲಭೂತ</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>ಘಟಕಗಳು</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>ಪಟ್ಟಿಗಳು</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>ಗ್ಯಾಲರಿ</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>ಕಂಟೇನರ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>ಪ್ಲೇಸ್‌ಹೋಲ್ಡರ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>ಪ್ರಮಾಣಿತ</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>ನಿರ್ವಹಣೆ: ಶಿರೋಭಾಗ</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>ನಿರ್ವಹಣೆ: ನ್ಯಾವಿಗೇಶನ್</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>ನಿರ್ವಹಣೆ: ಪುಟ</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>ನಿರ್ವಹಣೆ: ಪಕ್ಕಪಟ್ಟಿ</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>ಎರಡು ಕಾಲಮ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>ಕಾಲಮ್</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>ಟೆಂಪ್ಲೇಟ್ ಬ್ಲಾಕ್</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>ಪಠ್ಯ</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>ಶೀರ್ಷಿಕೆ</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML ತುಣುಕು</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>ರಿಚ್ ಟೆಕ್ಸ್ಟ್</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>ಚಿತ್ರ</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>ಪಟ್ಟಿ</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>ಏಕ ವಿಷಯ</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>ಬಟನ್ / ಲಿಂಕ್</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ಅಂತರ</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>ವಿಭಜಕ</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>ಕಾರ್ಡ್</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>ಅಕಾರ್ಡಿಯನ್</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>ಟ್ಯಾಬ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>ಗ್ರಿಡ್</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>ಸ್ಲೈಡರ್</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>ಥಂಬ್ ಗ್ಯಾಲರಿ</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>ಗ್ರಿಡ್ ಗ್ಯಾಲರಿ</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>ಸುಶಿ ಬಾರ್</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>ಅಂಕುಡೊಂಕು (ಪಟ್ಟಿ)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>ಅಕಾರ್ಡಿಯನ್ (ಪಟ್ಟಿ)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ಉಲ್ಲೇಖ</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>ಎಚ್ಚರಿಕೆ</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>ಬಾಹ್ಯ ವೀಡಿಯೊ</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>ಬ್ಯಾಡ್ಜ್</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>ಪ್ರಗತಿ ಪಟ್ಟಿ</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>ನಕ್ಷೆ</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>ಕರೋಸೆಲ್</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>ಪೂರ್ಣ ವೀಕ್ಷಣೆ</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>ಮುಖ್ಯ ಬ್ಯಾನರ್</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>ನಮ್ಮ ಬಗ್ಗೆ</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>ವೈಶಿಷ್ಟ್ಯಗಳು</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>ಪೀಠಿಕೆ</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>ಲೋಗೋಗಳು</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>ಮೂರು ಕಾಲಮ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>ನಾಲ್ಕು ಕಾಲಮ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>ಮುಖ್ಯ ಬ್ಯಾನರ್ ಘಟಕ</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>ವೈಶಿಷ್ಟ್ಯಗಳ ಘಟಕ</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>ನಮ್ಮ ಬಗ್ಗೆ ಘಟಕ</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>ಲೋಗೋಗಳ ಘಟಕ</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>ಉಲ್ಲೇಖ ಘಟಕ</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>ಪೀಠಿಕೆ ಘಟಕ</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>ನಿರ್ವಹಣೆ: ಲೋಗೋ ಮತ್ತು ಸೈಟ್ ಮುನ್ನೋಟ</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>ನಿರ್ವಹಣೆ: ಹುಡುಕಾಟ</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>ನಿರ್ವಹಣೆ: ತಿಳಿ ಮತ್ತು ಗಾಢ ಮೋಡ್ ಸ್ವಿಚ್</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>ನಿರ್ವಹಣೆ: ಮೆನು ಬಟನ್ (ಫೋನ್ ಅಗಲ)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>ನಿರ್ವಹಣೆ: ಪಕ್ಕಪಟ್ಟಿ ನಿಯಂತ್ರಣಗಳು</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>ನಿರ್ವಹಣೆ: ಮೆನು ಬಟನ್ ಮತ್ತು ಪಕ್ಕಪಟ್ಟಿ ನಿಯಂತ್ರಣಗಳು (ಸಂಯೋಜಿತ)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>ನಿರ್ವಹಣೆ: ಟ್ಯಾಬ್ ಮೆನು</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>ನಿರ್ವಹಣೆ: ನ್ಯಾವಿಗೇಶನ್ ಭಾಗದ ಎಡ ಮೆನು</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>ನಿರ್ವಹಣೆ: ವಿಷಯ ರಚನೆ</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>ನಿರ್ವಹಣೆ: ಕ್ಯಾಶ್ ತೆರವುಗೊಳಿಸಿ</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>ನಿರ್ವಹಣೆ: ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>ನಿರ್ವಹಣೆ: ಇಂಟರ್ಫೇಸ್ ಆಯ್ಕೆಗಳು (ಭಾಷೆ)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>ನಿರ್ವಹಣೆ: ಪ್ರಸ್ತುತ ಬಳಕೆದಾರ</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>ನಿರ್ವಹಣೆ: ಬಳಕೆದಾರ ಆದ್ಯತೆಗಳು</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>ನಿರ್ವಹಣೆ: ತ್ವರಿತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>ನಿರ್ವಹಣೆ: ಬಲ ಟೂಲ್‌ಬಾರ್ (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>ನಿರ್ವಹಣೆ: ಡೆವಲಪರ್ ಟೂಲ್‌ಬಾರ್ (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>ನಿರ್ವಹಣೆ: ಬ್ರೆಡ್‌ಕ್ರಂಬ್ ಮಾರ್ಗ</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>ನಿರ್ವಹಣೆ: ಮಾಡ್ಯೂಲ್ ಫಲಿತಾಂಶ</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>ನಿರ್ವಹಣೆ: ಅಡಿಟಿಪ್ಪಣಿ ಮತ್ತು ಹಕ್ಕುಸ್ವಾಮ್ಯ</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>ನಿರ್ವಹಣೆ: ಸಂದರ್ಭ ಮೆನು</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>ನಿರ್ವಹಣೆ: ಓವರ್‌ಲೇ ಮತ್ತು ಲೋಡರ್</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>ನಿರ್ವಹಣೆ: ಡೀಬಗ್ ವರದಿ ಪ್ರದೇಶ</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ವಿಶೇಷ ಉತ್ಪನ್ನ</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>ವಿಷಯ ಕ್ಷೇತ್ರ</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV ಕಾರ್ಯಕ್ರಮಗಳು</translation>
+    </message>
+</context>
 </TS>
