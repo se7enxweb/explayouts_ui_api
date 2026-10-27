@@ -1661,4 +1661,335 @@
         <translation>גיטער (דער ערשטער עלעמענט גרויס)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>יסודות</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>קאָמפּאָנענטן</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>ליסטעס</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>גאַלעריע</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>קאָנטיינערס</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>פלאַץ-האַלטערס</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>נאָרמאַל</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>אַדמין: קאָפּ</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>אַדמין: נאַוויגאַציע</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>אַדמין: בלאַט</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>אַדמין: זײַט-שטאַנג</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>צוויי שפאַלטן</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>קאָלאָנע</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>טעמפּלייט-בלאָק</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>טעקסט</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>טיטל</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>HTML-שטיקל</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>פֿאָרמאַטירטער טעקסט</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>בילד</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>רשימה</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>איינציקער אינהאַלט</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>קנאָפּ / לינק</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ראַום</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>טיילער</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>קאַרטע</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>אַקאָרדיאָן</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>טאַבן</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>גיטער</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>סלייַדער</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>מיניאַטור־גאַלעריע</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>גיטער־גאַלעריע</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>סושי־באַר</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>זיגזאַג (ליסטע)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>אַקארדיאָן (ליסטע)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ציטאַט</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>ווארענונג</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>אויסערלעכער ווידעאָ</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>באַדזש</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>פּראָגרעס-שטאַנג</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>מאַפּע</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>קארוסעל</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>פולער אָנזען</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>העלד-באַנער</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>וועגן</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>מעגלעכקייטן</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>אָנפֿירער</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>לאָגאָס</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>דרײַ שפאַלטן</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>פיר שפאַלטן</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>העראָו-קאָמפּאָנענט</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>פֿעיִקייטן-קאָמפּאָנענט</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>וועגן-קאָמפּאָנענט</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>לאָגאָס-קאָמפּאָנענט</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>ציטאַט-קאָמפּאָנענט</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>הקדמה-קאָמפּאָנענט</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>אַדמין: לאָגאָ און זײַט-פֿאָרשפּיל</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>אַדמין: זוכן</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>אַדמין: שאַלטער פֿאַר העלן און פֿינצטערן מאָדוס</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>אַדמין: מעניו-קנאָפּ (טעלעפֿאָן-ברייט)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>אַדמין: קאָנטראָלן פֿון זײַט-שטאַנגען</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>אַדמין: מעניו-קנאָפּ און קאָנטראָלן פֿון זײַט-שטאַנגען (קאָמבינירט)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>אַדמין: טאַב-מעניו</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>אַדמין: לינקער מעניו פֿונעם נאַוויגאַציע-טייל</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>אַדמין: אינהאַלט-סטרוקטור</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>אַדמין: רייניקן דעם קעש</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>אַדמין: בוכצייכנס</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>אַדמין: אינטערפֿייס-אויסוואַל (שפּראַך)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>אַדמין: איצטיקער באַניצער</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>אַדמין: באַניצער-פּרעפֿערענצן</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>אַדמין: שנעלע באַשטימונגען</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>אַדמין: רעכטע געצייג-שטאַנג (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>אַדמין: אַנטוויקלער-געצייג-שטאַנג (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>אַדמין: ברעדקראַמב-שליאַך</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>אַדמין: מאָדול-רעזולטאַט</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>אַדמין: פֿוטער און קאָפּירעכט</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>אַדמין: קאָנטעקסט-מעניו</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>אַדמין: אָוווערלײַ און לאָדער</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>אַדמין: דעבאָג-באַריכט געגנט</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>פּראָדוקט-הויכפּונקט</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>אינהאַלט-פֿעלד</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>TMV געשעענישן</translation>
+    </message>
+</context>
 </TS>

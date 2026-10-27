@@ -1661,4 +1661,335 @@
         <translation>Lưới (mục đầu tiên lớn)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Cơ bản</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Thành phần</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Danh sách</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Thư viện</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Vùng chứa</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Phần giữ chỗ</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Tiêu chuẩn</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Quản trị: Đầu trang</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Quản trị: Điều hướng</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Quản trị: Trang</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Quản trị: Thanh bên</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Hai cột</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Cột</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Khối mẫu giao diện</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Văn bản</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Tiêu đề</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Đoạn mã HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Văn bản định dạng</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Hình ảnh</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Danh sách</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Nội dung đơn</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Nút / Liên kết</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Khoảng cách</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Đường phân cách</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Thẻ</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Accordion</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Thẻ</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Lưới</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Thanh trượt</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Thư viện ảnh thu nhỏ</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Thư viện dạng lưới</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Thanh sushi</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zíc zắc (Danh sách)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Accordion (Danh sách)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Trích dẫn</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Cảnh báo</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Video bên ngoài</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Huy hiệu</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Thanh tiến trình</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Bản đồ</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Băng chuyền</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Xem toàn bộ</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Hero</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Giới thiệu</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Tính năng</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Trưởng nhóm</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Ba cột</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Bốn cột</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Thành phần Hero</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Thành phần Tính năng</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Thành phần Giới thiệu</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Thành phần Logo</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Thành phần Trích dẫn</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Thành phần Mở đầu</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Quản trị: logo và xem trước trang web</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Quản trị: tìm kiếm</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Quản trị: nút chuyển chế độ sáng và tối</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Quản trị: nút menu (chiều rộng điện thoại)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Quản trị: điều khiển thanh bên</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Quản trị: nút menu và điều khiển thanh bên (kết hợp)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Quản trị: menu thẻ</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Quản trị: menu bên trái của phần điều hướng</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Quản trị: cấu trúc nội dung</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Quản trị: xóa bộ nhớ đệm</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Quản trị: dấu trang</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Quản trị: lựa chọn giao diện (ngôn ngữ)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Quản trị: người dùng hiện tại</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Quản trị: tùy chọn người dùng</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Quản trị: cài đặt nhanh</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Quản trị: thanh công cụ bên phải (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Quản trị: thanh công cụ nhà phát triển (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Quản trị: đường dẫn breadcrumb</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Quản trị: kết quả của mô-đun</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Quản trị: chân trang và bản quyền</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Quản trị: menu ngữ cảnh</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Quản trị: lớp phủ và bộ tải</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Quản trị: vùng báo cáo gỡ lỗi</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Sản phẩm nổi bật</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Trường nội dung</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Sự kiện TMV</translation>
+    </message>
+</context>
 </TS>

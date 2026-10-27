@@ -1661,4 +1661,335 @@
         <translation>ตาราง (รายการแรกใหญ่)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>พื้นฐาน</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>คอมโพเนนต์</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>รายการ</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>แกลเลอรี</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>คอนเทนเนอร์</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>ตัวแทนที่</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>มาตรฐาน</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>ผู้ดูแล: ส่วนหัว</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>ผู้ดูแล: การนำทาง</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>ผู้ดูแล: หน้า</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>ผู้ดูแล: แถบด้านข้าง</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>สองคอลัมน์</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>คอลัมน์</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>บล็อกเทมเพลต</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>ข้อความ</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>ชื่อเรื่อง</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>ส่วนย่อย HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>ข้อความแบบจัดรูปแบบ</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>รูปภาพ</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>รายการ</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>เนื้อหาเดี่ยว</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>ปุ่ม / ลิงก์</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ช่องว่าง</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>เส้นแบ่ง</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>การ์ด</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>อะคอร์เดียน</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>แท็บ</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>ตาราง</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>สไลเดอร์</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>แกลเลอรีภาพขนาดย่อ</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>แกลเลอรีแบบตาราง</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>ซูชิบาร์</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>ซิกแซก (รายการ)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>แอคคอร์เดียน (รายการ)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>คำอ้างอิง</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>การแจ้งเตือน</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>วิดีโอภายนอก</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>ป้ายสัญลักษณ์</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>แถบความคืบหน้า</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>แผนที่</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>สไลด์วนภาพ</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>มุมมองเต็ม</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>แบนเนอร์หลัก</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>เกี่ยวกับ</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>ฟีเจอร์</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>หัวหน้า</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>โลโก้</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>สามคอลัมน์</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>สี่คอลัมน์</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>คอมโพเนนต์แบนเนอร์หลัก</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>คอมโพเนนต์คุณลักษณะ</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>คอมโพเนนต์เกี่ยวกับ</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>คอมโพเนนต์โลโก้</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>คอมโพเนนต์คำอ้างอิง</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>คอมโพเนนต์บทนำ</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>ผู้ดูแล: โลโก้และตัวอย่างเว็บไซต์</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>ผู้ดูแล: ค้นหา</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>ผู้ดูแล: ตัวสลับโหมดสว่างและมืด</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>ผู้ดูแล: ปุ่มเมนู (ความกว้างโทรศัพท์)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>ผู้ดูแล: ตัวควบคุมแถบด้านข้าง</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>ผู้ดูแล: ปุ่มเมนูและตัวควบคุมแถบด้านข้าง (รวม)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>ผู้ดูแล: เมนูแท็บ</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>ผู้ดูแล: เมนูด้านซ้ายของส่วนการนำทาง</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>ผู้ดูแล: โครงสร้างเนื้อหา</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>ผู้ดูแล: ล้างแคช</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>ผู้ดูแล: บุ๊กมาร์ก</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>ผู้ดูแล: ตัวเลือกอินเทอร์เฟซ (ภาษา)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>ผู้ดูแล: ผู้ใช้ปัจจุบัน</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>ผู้ดูแล: ค่ากำหนดของผู้ใช้</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>ผู้ดูแล: การตั้งค่าด่วน</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>ผู้ดูแล: แถบเครื่องมือด้านขวา (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>ผู้ดูแล: แถบเครื่องมือนักพัฒนา (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>ผู้ดูแล: เส้นทางเบรดครัมบ์</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>ผู้ดูแล: ผลลัพธ์ของโมดูล</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>ผู้ดูแล: ส่วนท้ายและลิขสิทธิ์</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>ผู้ดูแล: เมนูบริบท</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>ผู้ดูแล: การซ้อนทับและตัวโหลด</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>ผู้ดูแล: พื้นที่รายงานดีบัก</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ผลิตภัณฑ์เด่น</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>ฟิลด์เนื้อหา</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>กิจกรรม TMV</translation>
+    </message>
+</context>
 </TS>

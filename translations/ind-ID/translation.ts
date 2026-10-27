@@ -1661,4 +1661,335 @@
         <translation>Kisi (item pertama besar)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>Dasar</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>Komponen</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>Daftar</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>Galeri</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>Kontainer</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>Placeholder</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>Standar</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>Admin: Header</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>Admin: Navigasi</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>Admin: Halaman</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>Admin: Bilah samping</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>Dua kolom</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>Kolom</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>Blok template</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>Teks</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>Judul</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>Cuplikan HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>Teks kaya</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>Gambar</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>Daftar</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>Konten tunggal</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>Tombol / Tautan</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>Spasi</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>Pembatas</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>Kartu</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>Akordeon</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>Tab</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>Kisi</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>Penggeser</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>Galeri gambar mini</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>Galeri kisi</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>Sushi bar</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>Zig-zag (Daftar)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>Akordeon (Daftar)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>Kutipan</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>Peringatan</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>Video eksternal</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>Lencana</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>Bilah kemajuan</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>Peta</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>Karusel</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>Tampilan penuh</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>Hero</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Tentang</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>Fitur</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>Pemimpin</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>Logo</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>Tiga kolom</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>Empat kolom</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>Komponen Hero</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>Komponen Fitur</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>Komponen Tentang</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>Komponen Logo</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>Komponen Kutipan</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>Komponen Pengantar</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>Admin: logo dan pratinjau situs</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>Admin: pencarian</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>Admin: pengalih mode terang dan gelap</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>Admin: tombol menu (lebar ponsel)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>Admin: kontrol bilah samping</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>Admin: tombol menu dan kontrol bilah samping (gabungan)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>Admin: menu tab</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>Admin: menu kiri bagian navigasi</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>Admin: struktur konten</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>Admin: hapus cache</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>Admin: bookmark</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>Admin: pilihan antarmuka (bahasa)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>Admin: pengguna saat ini</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>Admin: preferensi pengguna</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>Admin: pengaturan cepat</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>Admin: toolbar kanan (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>Admin: toolbar pengembang (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>Admin: jalur breadcrumb</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>Admin: hasil modul</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>Admin: footer dan hak cipta</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>Admin: menu konteks</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>Admin: lapisan penutup dan pemuat</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>Admin: area laporan debug</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>Sorotan produk</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>Bidang konten</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>Acara TMV</translation>
+    </message>
+</context>
 </TS>

@@ -1661,4 +1661,335 @@
         <translation>ຕາຕະລາງ (ລາຍການທຳອິດໃຫຍ່)</translation>
     </message>
 </context>
+<context>
+    <name>design/standard/explayouts_ui_api/block_types</name>
+    <message>
+        <source>Basic</source>
+        <translation>ພື້ນຖານ</translation>
+    </message>
+    <message>
+        <source>Components</source>
+        <translation>ອົງປະກອບ</translation>
+    </message>
+    <message>
+        <source>Listing</source>
+        <translation>ລາຍການ</translation>
+    </message>
+    <message>
+        <source>Gallery</source>
+        <translation>ຄັງຮູບພາບ</translation>
+    </message>
+    <message>
+        <source>Containers</source>
+        <translation>ຕົວບັນຈຸ</translation>
+    </message>
+    <message>
+        <source>Placeholders</source>
+        <translation>ຕົວແທນທີ່</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>ມາດຕະຖານ</translation>
+    </message>
+    <message>
+        <source>Admin Header</source>
+        <translation>ຜູ້ດູແລ: ສ່ວນຫົວ</translation>
+    </message>
+    <message>
+        <source>Admin Navigation</source>
+        <translation>ຜູ້ດູແລ: ການນຳທາງ</translation>
+    </message>
+    <message>
+        <source>Admin Page</source>
+        <translation>ຜູ້ດູແລ: ໜ້າ</translation>
+    </message>
+    <message>
+        <source>Admin Sidebar</source>
+        <translation>ຜູ້ດູແລ: ແຖບຂ້າງ</translation>
+    </message>
+    <message>
+        <source>Two columns</source>
+        <translation>ສອງຄໍລຳ</translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation>ຖັນ</translation>
+    </message>
+    <message>
+        <source>Template block</source>
+        <translation>ບລັອກແມ່ແບບ</translation>
+    </message>
+    <message>
+        <source>Text</source>
+        <translation>ຂໍ້ຄວາມ</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation>ຫົວຂໍ້</translation>
+    </message>
+    <message>
+        <source>HTML snippet</source>
+        <translation>ສ່ວນຍ່ອຍ HTML</translation>
+    </message>
+    <message>
+        <source>Rich text</source>
+        <translation>ຂໍ້ຄວາມແບບຈັດຮູບແບບ</translation>
+    </message>
+    <message>
+        <source>Image</source>
+        <translation>ຮູບພາບ</translation>
+    </message>
+    <message>
+        <source>List</source>
+        <translation>ລາຍການ</translation>
+    </message>
+    <message>
+        <source>Single content</source>
+        <translation>ເນື້ອຫາດຽວ</translation>
+    </message>
+    <message>
+        <source>Button / Link</source>
+        <translation>ປຸ່ມ / ລິ້ງ</translation>
+    </message>
+    <message>
+        <source>Spacer</source>
+        <translation>ໄລຍະຫວ່າງ</translation>
+    </message>
+    <message>
+        <source>Divider</source>
+        <translation>ເສັ້ນແບ່ງ</translation>
+    </message>
+    <message>
+        <source>Card</source>
+        <translation>ບັດ</translation>
+    </message>
+    <message>
+        <source>Accordion</source>
+        <translation>ອາໂກດຽນ</translation>
+    </message>
+    <message>
+        <source>Tabs</source>
+        <translation>ແຖບ</translation>
+    </message>
+    <message>
+        <source>Grid</source>
+        <translation>ຕາຕະລາງ</translation>
+    </message>
+    <message>
+        <source>Slider</source>
+        <translation>ສະໄລເດີ</translation>
+    </message>
+    <message>
+        <source>Thumb gallery</source>
+        <translation>ຄັງຮູບຫຍໍ້</translation>
+    </message>
+    <message>
+        <source>Grid gallery</source>
+        <translation>ຄັງຮູບພາບແບບຕາຕະລາງ</translation>
+    </message>
+    <message>
+        <source>Sushi bar</source>
+        <translation>ຊູຊິບາ</translation>
+    </message>
+    <message>
+        <source>Zig-Zag (List)</source>
+        <translation>ຊິກແຊັກ (ລາຍການ)</translation>
+    </message>
+    <message>
+        <source>Accordion (List)</source>
+        <translation>ແອັກຄໍເດຍນ (ລາຍການ)</translation>
+    </message>
+    <message>
+        <source>Quote</source>
+        <translation>ຄຳອ້າງອີງ</translation>
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation>ການແຈ້ງເຕືອນ</translation>
+    </message>
+    <message>
+        <source>External video</source>
+        <translation>ວິດີໂອພາຍນອກ</translation>
+    </message>
+    <message>
+        <source>Badge</source>
+        <translation>ປ້າຍສັນຍາລັກ</translation>
+    </message>
+    <message>
+        <source>Progress bar</source>
+        <translation>ແຖບຄວາມຄືບໜ້າ</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>ແຜນທີ່</translation>
+    </message>
+    <message>
+        <source>Carousel</source>
+        <translation>ສະໄລດ໌ໝູນພາບ</translation>
+    </message>
+    <message>
+        <source>Markdown</source>
+        <translation>Markdown</translation>
+    </message>
+    <message>
+        <source>Full view</source>
+        <translation>ມຸມມອງເຕັມ</translation>
+    </message>
+    <message>
+        <source>Hero</source>
+        <translation>ແບນເນີຫຼັກ</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>ກ່ຽວກັບ</translation>
+    </message>
+    <message>
+        <source>Features</source>
+        <translation>ຄຸນສົມບັດ</translation>
+    </message>
+    <message>
+        <source>Lead</source>
+        <translation>ຫົວໜ້າ</translation>
+    </message>
+    <message>
+        <source>Logos</source>
+        <translation>ໂລໂກ້</translation>
+    </message>
+    <message>
+        <source>Three columns</source>
+        <translation>ສາມຄໍລຳ</translation>
+    </message>
+    <message>
+        <source>Four columns</source>
+        <translation>ສີ່ຄໍລຳ</translation>
+    </message>
+    <message>
+        <source>Hero component</source>
+        <translation>ອົງປະກອບແບນເນີຫຼັກ</translation>
+    </message>
+    <message>
+        <source>Features component</source>
+        <translation>ອົງປະກອບຄຸນສົມບັດ</translation>
+    </message>
+    <message>
+        <source>About component</source>
+        <translation>ອົງປະກອບກ່ຽວກັບ</translation>
+    </message>
+    <message>
+        <source>Logos component</source>
+        <translation>ອົງປະກອບໂລໂກ້</translation>
+    </message>
+    <message>
+        <source>Quote component</source>
+        <translation>ອົງປະກອບຄຳອ້າງອີງ</translation>
+    </message>
+    <message>
+        <source>Lead component</source>
+        <translation>ອົງປະກອບບົດນຳ</translation>
+    </message>
+    <message>
+        <source>Admin: logo and site preview</source>
+        <translation>ຜູ້ດູແລ: ໂລໂກ້ ແລະ ຕົວຢ່າງເວັບໄຊ</translation>
+    </message>
+    <message>
+        <source>Admin: search</source>
+        <translation>ຜູ້ດູແລ: ຄົ້ນຫາ</translation>
+    </message>
+    <message>
+        <source>Admin: light and dark mode switch</source>
+        <translation>ຜູ້ດູແລ: ຕົວສະລັບໂໝດສະຫວ່າງ ແລະ ມືດ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button (phone width)</source>
+        <translation>ຜູ້ດູແລ: ປຸ່ມເມນູ (ຄວາມກວ້າງໂທລະສັບ)</translation>
+    </message>
+    <message>
+        <source>Admin: sidebar controls</source>
+        <translation>ຜູ້ດູແລ: ຕົວຄວບຄຸມແຖບຂ້າງ</translation>
+    </message>
+    <message>
+        <source>Admin: menu button and sidebar controls (combined)</source>
+        <translation>ຜູ້ດູແລ: ປຸ່ມເມນູ ແລະ ຕົວຄວບຄຸມແຖບຂ້າງ (ລວມ)</translation>
+    </message>
+    <message>
+        <source>Admin: tab menu</source>
+        <translation>ຜູ້ດູແລ: ເມນູແທັບ</translation>
+    </message>
+    <message>
+        <source>Admin: left menu of the navigation part</source>
+        <translation>ຜູ້ດູແລ: ເມນູຊ້າຍຂອງສ່ວນການນຳທາງ</translation>
+    </message>
+    <message>
+        <source>Admin: content structure</source>
+        <translation>ຜູ້ດູແລ: ໂຄງສ້າງເນື້ອຫາ</translation>
+    </message>
+    <message>
+        <source>Admin: clear cache</source>
+        <translation>ຜູ້ດູແລ: ລ້າງແຄຊ</translation>
+    </message>
+    <message>
+        <source>Admin: bookmarks</source>
+        <translation>ຜູ້ດູແລ: ບຸກມາກ</translation>
+    </message>
+    <message>
+        <source>Admin: interface choices (language)</source>
+        <translation>ຜູ້ດູແລ: ຕົວເລືອກອິນເຕີເຟສ (ພາສາ)</translation>
+    </message>
+    <message>
+        <source>Admin: current user</source>
+        <translation>ຜູ້ດູແລ: ຜູ້ໃຊ້ປັດຈຸບັນ</translation>
+    </message>
+    <message>
+        <source>Admin: user preferences</source>
+        <translation>ຜູ້ດູແລ: ການຕັ້ງຄ່າຂອງຜູ້ໃຊ້</translation>
+    </message>
+    <message>
+        <source>Admin: quick settings</source>
+        <translation>ຜູ້ດູແລ: ການຕັ້ງຄ່າດ່ວນ</translation>
+    </message>
+    <message>
+        <source>Admin: right toolbar (toolbar.ini admin_right)</source>
+        <translation>ຜູ້ດູແລ: ແຖບເຄື່ອງມືດ້ານຂວາ (toolbar.ini admin_right)</translation>
+    </message>
+    <message>
+        <source>Admin: developer toolbar (toolbar.ini admin_developer)</source>
+        <translation>ຜູ້ດູແລ: ແຖບເຄື່ອງມືນັກພັດທະນາ (toolbar.ini admin_developer)</translation>
+    </message>
+    <message>
+        <source>Admin: breadcrumb path</source>
+        <translation>ຜູ້ດູແລ: ເສັ້ນທາງເບຣດຄຣັມ</translation>
+    </message>
+    <message>
+        <source>Admin: module result</source>
+        <translation>ຜູ້ດູແລ: ຜົນລັບຂອງໂມດູນ</translation>
+    </message>
+    <message>
+        <source>Admin: footer and copyright</source>
+        <translation>ຜູ້ດູແລ: ສ່ວນທ້າຍ ແລະ ລິຂະສິດ</translation>
+    </message>
+    <message>
+        <source>Admin: context menu</source>
+        <translation>ຜູ້ດູແລ: ເມນູບໍລິບົດ</translation>
+    </message>
+    <message>
+        <source>Admin: overlay and loader</source>
+        <translation>ຜູ້ດູແລ: ການຊ້ອນທັບ ແລະ ຕົວໂຫຼດ</translation>
+    </message>
+    <message>
+        <source>Admin: debug report area</source>
+        <translation>ຜູ້ດູແລ: ພື້ນທີ່ລາຍງານດີບັກ</translation>
+    </message>
+    <message>
+        <source>Product highlight</source>
+        <translation>ຜະລິດຕະພັນເດັ່ນ</translation>
+    </message>
+    <message>
+        <source>Content field</source>
+        <translation>ຟີລດ໌ເນື້ອຫາ</translation>
+    </message>
+    <message>
+        <source>TMV events</source>
+        <translation>ກິດຈະກຳ TMV</translation>
+    </message>
+</context>
 </TS>
