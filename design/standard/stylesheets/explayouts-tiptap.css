@@ -368,14 +368,14 @@ html[data-explayouts-admin4] .ngc .exp-tt-rich .exp-tt-content a {
 .exp-tt-code .hljs-section,
 .exp-tt-code .hljs-title {
     color: var(--exp-tt-code-heading);
-    font-weight: 600;
+    font-weight: var(--a4-weight-strong, 600);
 }
 .exp-tt-code .hljs-meta,
 .exp-tt-code .hljs-symbol {
     color: var(--exp-tt-code-meta);
 }
 .exp-tt-code .hljs-strong {
-    font-weight: 700;
+    font-weight: var(--a4-weight-bold, 700);
 }
 .exp-tt-code .hljs-emphasis {
     font-style: italic;
