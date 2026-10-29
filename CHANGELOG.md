@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.34 (2026-10-29)
+
+- Updated: The admin stylesheets use the shared admin tokens for weights, durations, radii, table headers and muted text, with the old values as fallbacks where a design has no tokens.
+
 ## 1.3.33 (2026-10-28)
 
 - Added: Translations into 59 more languages: aka-GH, arc-IQ, asm-IN, aze-AZ, bel-BY, bho-IN, bod-CN, ceb-PH, che-RU,
