@@ -1,7 +1,7 @@
 <?php
 //
 // explayouts_ui_api - JSON HTTP API and SPA shell for the Exponential Layouts admin UI, served under /explayouts_ui_api/app.
-// Copyright (C) 1998 - 2026 7x. All rights reserved.
+// Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ class explayouts_ui_apiInfo
     {
         return array( 'Name' => "Exponential Layouts UI API",
                       'Version' => "1.3.34",
-                      'Copyright' => "Copyright (C) 1998 - 2026 7x. All rights reserved.",
+                      'Copyright' => "Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.",
                       'License' => "GNU General Public License v2.0 (or any later version)",
                       'Info_url' => "https://github.com/se7enxweb/explayouts_ui_api" );
     }
