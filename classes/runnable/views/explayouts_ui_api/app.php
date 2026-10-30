@@ -261,13 +261,18 @@ class App extends \Exponential\Runnable\ModuleView
             $tpl->setVariable( 'block_name', (string)$block->attribute( 'name' ) );
             $tpl->setVariable( 'action_url', $expLayoutsUrl( "/explayouts_ui_api/app/api/$locale/blocks/$blockId" ) );
             $tpl->setVariable( 'ezxform_token', \ezxFormToken::getToken() );
+            // The item view types of the definition: the handler's own list and the ones the settings add
+            // (ItemViewTypes[] of [BlockDefinition_*]), from explayouts' factory where it has itemViewTypes().
             // $handler is false when the block's definition has no BlockDefinition_*
             // group in explayouts.ini. method_exists() throws on false under PHP 8, so
             // the whole sidebar request died and the editor span forever instead of
             // showing an empty form.
-            $itemViewTypes = is_object( $handler ) && method_exists( $handler, 'getItemViewTypes' )
-                ? $handler->getItemViewTypes()
-                : array();
+            if ( method_exists( 'expLayoutsBlockHandlerFactory', 'itemViewTypes' ) )
+                $itemViewTypes = \expLayoutsBlockHandlerFactory::itemViewTypes( (string)$block->attribute( 'definition_identifier' ) );
+            else
+                $itemViewTypes = is_object( $handler ) && method_exists( $handler, 'getItemViewTypes' )
+                    ? $handler->getItemViewTypes()
+                    : array();
 
             $tpl->setVariable( 'view_types', $viewTypes );
             $tpl->setVariable( 'view_type_names', $form['view_type_names'] );
