@@ -35,6 +35,17 @@ class App extends \Exponential\Runnable\ModuleView
             $apiPath = isset( $m[1] ) ? $m[1] : '';
         }
 
+        // The block definitions of the site the editor previews in, for the whole request (forms, the block list,
+        // the checks of a save): in an administration the editor would read the administration's settings, while a
+        // design keeps the block settings it adds in its own siteaccess (explayouts' factory, where it has
+        // useSiteAccess()). An administration is a siteaccess whose SiteDesign begins with "admin", as
+        // expLayoutsPreviewSiteAccess tells them apart; on a public siteaccess the editor keeps its own settings.
+        // Only in a request that runs in a siteaccess (the editor's tests run the view without one).
+        $access = class_exists( 'eZSiteAccess' ) ? \eZSiteAccess::current() : null;
+        if ( is_array( $access ) && method_exists( 'expLayoutsBlockHandlerFactory', 'useSiteAccess' ) && class_exists( 'expLayoutsPreviewSiteAccess' )
+             && strpos( (string)\eZINI::instance()->variable( 'DesignSettings', 'SiteDesign' ), 'admin' ) === 0 )
+            \expLayoutsBlockHandlerFactory::useSiteAccess( \expLayoutsPreviewSiteAccess::resolve() );
+
         if ( strpos( $apiPath, 'api/' ) === 0 )
         {
             $parts = explode( '/', substr( $apiPath, 4 ) );
