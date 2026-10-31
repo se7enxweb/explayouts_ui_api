@@ -134,7 +134,7 @@ class expLayoutsUIApplicationApi
             $draft = $service->loadDraft( $layoutId );
             // Opt-in for the editor: a layout without a draft answers with its published version ("published": true)
             // instead of a 404, which the browser logs as an error although "no draft" is expected. Without the
-            // parameter the answer stays a 404, as callers of the Netgen Layouts API expect.
+            // parameter the answer stays a 404, as callers of the upstream layouts API expect.
             if ( !$draft && isset( $_GET['fallback'] ) && $_GET['fallback'] === 'published' )
                 return $service->loadPublished( $layoutId );
             return $draft;
