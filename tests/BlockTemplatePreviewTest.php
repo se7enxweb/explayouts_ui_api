@@ -44,8 +44,8 @@ class BlockTemplatePreviewTest extends TestCase
         eZTemplate::$templates['design:explayouts/block/about.tpl'] = function ( $tpl )
         {
             $block = $tpl->variable( 'block' );
-            return '<section class="slb slb-about" onclick="x()"><h2>' . htmlspecialchars( $block['values']['title'] ) . '</h2>'
-                . '<script>alert(1)</script><p>' . htmlspecialchars( $block['values']['content'] ) . '</p></section>';
+            return '<section class="slb slb-about" onclick="x()"><h2>' . htmlspecialchars( $block['values']['title'], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</h2>'
+                . '<script>alert(1)</script><p>' . htmlspecialchars( $block['values']['content'], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</p></section>';
         };
 
         $html = expLayoutsUIApplicationApi::renderBlockHtml( $this->block( 'about' ) );
