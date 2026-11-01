@@ -38,6 +38,10 @@ if ( !class_exists( 'expLayoutsBlockHandlerFactory', false ) )
     }
 }
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class BlockCanvasPreviewTest extends TestCase
 {
@@ -46,6 +50,9 @@ class BlockCanvasPreviewTest extends TestCase
         return array( 'HTML5 (\Dom\HTMLDocument where PHP has it)' => array( false ), 'libxml HTML (DOMDocument)' => array( true ) );
     }
 
+    /**
+     * @dataProvider parsers
+     */
     #[\PHPUnit\Framework\Attributes\DataProvider('parsers')]
     public function testTheFrontendMarkupIsMadeInert( bool $legacyParser )
     {
@@ -105,6 +112,9 @@ class BlockCanvasPreviewTest extends TestCase
         return $data;
     }
 
+    /**
+     * @dataProvider bypasses
+     */
     #[\PHPUnit\Framework\Attributes\DataProvider('bypasses')]
     public function testNoBypassReachesTheEditor( string $markup, bool $legacyParser )
     {

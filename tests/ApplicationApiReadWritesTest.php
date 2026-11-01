@@ -14,6 +14,10 @@ class expLayoutsUIApplicationApiProbe extends expLayoutsUIApplicationApi
     public static function collectionsOf( $block, $blockInfo ) { return self::blockCollections( $block, $blockInfo ); }
 }
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class ApplicationApiReadWritesTest extends TestCase
 {

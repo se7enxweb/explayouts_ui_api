@@ -12,6 +12,10 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class ApplicationApiAccessTest extends TestCase
 {
@@ -40,6 +44,9 @@ class ApplicationApiAccessTest extends TestCase
         return array( 'GET' => array( 'GET' ), 'HEAD' => array( 'HEAD' ), 'OPTIONS' => array( 'OPTIONS' ), 'PUT' => array( 'PUT' ), 'DELETE' => array( 'DELETE' ) );
     }
 
+    /**
+     * @dataProvider importMethodsOtherThanPost
+     */
     #[DataProvider( 'importMethodsOtherThanPost' )]
     public function testAnImportNeedsPostAndImportsNothingOtherwise( string $method )
     {
@@ -94,6 +101,9 @@ class ApplicationApiAccessTest extends TestCase
         return array( 'POST' => array( 'POST' ), 'PUT' => array( 'PUT' ), 'PATCH' => array( 'PATCH' ), 'DELETE' => array( 'DELETE' ), 'lower case' => array( 'post' ) );
     }
 
+    /**
+     * @dataProvider changingMethods
+     */
     #[DataProvider( 'changingMethods' )]
     public function testAChangeWithoutEditIsRefusedBeforeAnythingIsTouched( string $method )
     {
@@ -116,6 +126,9 @@ class ApplicationApiAccessTest extends TestCase
         return array( 'GET' => array( 'GET' ), 'HEAD' => array( 'HEAD' ), 'OPTIONS' => array( 'OPTIONS' ) );
     }
 
+    /**
+     * @dataProvider readingMethods
+     */
     #[DataProvider( 'readingMethods' )]
     public function testReadingNeedsNoEdit( string $method )
     {
