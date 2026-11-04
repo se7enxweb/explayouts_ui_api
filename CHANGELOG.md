@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.36 (2026-11-03)
+
+- Updated: Every settings file closes its PHP comment, so php -l passes on PHP 8.0 and later and a direct request no longer answers with a server error.
+- Updated: The product is called Exponential Layouts in the documentation.
+
 ## 1.3.35 (2026-10-29)
 
 - Updated: One copyright notice, Exponential Foundation and 7x.
