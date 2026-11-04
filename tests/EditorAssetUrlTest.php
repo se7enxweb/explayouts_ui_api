@@ -1,48 +1,57 @@
 <?php
 /**
  * The editor's own files (block type icons, favicons) and the preview images of collection items when the
- * installation is served from a sub path (/exponential6/).
+ * installation is served from a sub path (/sub/path here).
  *
  * The block type icons were given as /extension/..., the preview images as /var/..., and app.tpl named the favicons
- * the same way: the browser asked the server root for them, where an installation in a sub path has nothing (nginx
- * answered 500, 116 requests from the editor on 2026-10-30). They now carry the web root as the template operator
- * ezroot gives it. The favicon manifest named the Symfony bundle path of the reference installation
- * (/bundles/netgenlayoutsadmin/...), which no Exponential installation has; it now names its icons beside it.
+ * the same way: the browser asked the server root for them, where an installation in a sub path has none of them.
+ * They now carry the web root as the template operator ezroot gives it. The favicon manifest named the path of the
+ * Symfony bundle of Netgen Layouts (/bundles/netgenlayoutsadmin/...), which no Exponential installation has; it now
+ * names its icons beside it.
  *
  * @license GPL-2.0-or-later
  */
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PHPUnit\Framework\TestCase;
 
-// eZURI::transformURI() of the kernel puts eZSys::wwwDir() in front when its second argument is true (ezroot), else
-// the index dir with the siteaccess (ezurl), and leaves an address with a scheme alone. The stand-in does the same
-// with a fixed web root and records each call.
-if ( !class_exists( 'eZURI', false ) )
+/**
+ * Declares the stand-ins of the kernel classes the helpers call. setUp() calls it, so they exist only in the process
+ * of each test (RunTestsInSeparateProcesses), never in the process that collects the tests: declared at the top of
+ * this file they replaced the stand-ins of tests loaded after it (the eZURI of GalleryBlockPreviewTest).
+ *
+ * eZURI::transformURI() of the kernel puts eZSys::wwwDir() in front when its second argument is true (ezroot), else
+ * the index dir with the siteaccess (ezurl), and leaves an address with a scheme alone. The stand-in does the same
+ * with a fixed web root and records each call.
+ */
+function editorAssetUrlTestStandIns()
 {
-    class eZURI
+    if ( !class_exists( 'eZURI', false ) )
     {
-        public static $wwwDir = '/exponential6';
-        public static $calls = array();
-        public static function transformURI( &$href, $ignoreIndexDir = false, $serverURL = null, $htmlEscape = true )
+        class eZURI
         {
-            self::$calls[] = array( $href, $ignoreIndexDir, $serverURL, $htmlEscape );
-            if ( strpos( $href, 'http://' ) === 0 || strpos( $href, 'https://' ) === 0 )
-                return false;
-            if ( $href === '' || $href[0] !== '/' )
-                $href = '/' . $href;
-            $href = ( $ignoreIndexDir ? self::$wwwDir : self::$wwwDir . '/index.php/admin' ) . $href;
-            return true;
+            public static $wwwDir = '/sub/path';
+            public static $calls = array();
+            public static function transformURI( &$href, $ignoreIndexDir = false, $serverURL = null, $htmlEscape = true )
+            {
+                self::$calls[] = array( $href, $ignoreIndexDir, $serverURL, $htmlEscape );
+                if ( strpos( $href, 'http://' ) === 0 || strpos( $href, 'https://' ) === 0 )
+                    return false;
+                if ( $href === '' || $href[0] !== '/' )
+                    $href = '/' . $href;
+                $href = ( $ignoreIndexDir ? self::$wwwDir : self::$wwwDir . '/index.php/admin' ) . $href;
+                return true;
+            }
         }
     }
-}
-if ( !class_exists( 'eZClusterFileHandler', false ) )
-{
-    class eZClusterFileHandler
+    if ( !class_exists( 'eZClusterFileHandler', false ) )
     {
-        /** paths fileExists() knows, as the image alias list stores them */
-        public static $existing = array();
-        public static function instance() { return new self(); }
-        public function fileExists( $path ) { return in_array( $path, self::$existing, true ); }
+        class eZClusterFileHandler
+        {
+            /** paths fileExists() knows, as the image alias list stores them */
+            public static $existing = array();
+            public static function instance() { return new self(); }
+            public function fileExists( $path ) { return in_array( $path, self::$existing, true ); }
+        }
     }
 }
 
@@ -70,9 +79,14 @@ class EditorAssetUrlTestApi extends expLayoutsUIApplicationApi
 #[RunTestsInSeparateProcesses]
 class EditorAssetUrlTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        editorAssetUrlTestStandIns();
+    }
+
     public function testBlockTypeIconsCarryTheWebRoot()
     {
-        $base = '/exponential6/extension/explayouts_ui_api/design/standard/images/';
+        $base = '/sub/path/extension/explayouts_ui_api/design/standard/images/';
         $this->assertSame( $base . 'blocks/icon-title.svg', EditorAssetUrlTestApi::icon( 'title' ) );
         $this->assertSame( $base . 'components/icon-component-quote.svg', EditorAssetUrlTestApi::icon( 'exp_component_quote' ) );
         $this->assertSame( $base . 'components/icon-component-generic.svg', EditorAssetUrlTestApi::icon( 'no_such_block' ) );
@@ -95,13 +109,13 @@ class EditorAssetUrlTest extends TestCase
         // from the stored alias list, which keeps the path relative to the web root and without a leading slash
         $handler = new EditorAssetUrlTestAliasHandler();
         $handler->aliasList = array( 'small' => array( 'url' => 'var/site/storage/images/a/1-1-eng-GB/a_small.jpg' ) );
-        $this->assertSame( '/exponential6/var/site/storage/images/a/1-1-eng-GB/a_small.jpg',
+        $this->assertSame( '/sub/path/var/site/storage/images/a/1-1-eng-GB/a_small.jpg',
                            EditorAssetUrlTestApi::aliasUrl( $handler, array( 'small', 'medium' ) ) );
 
         // a variation imageAlias() has just written
         $handler = new EditorAssetUrlTestAliasHandler();
         $handler->generated = array( 'medium' => array( 'url' => 'var/site/storage/images/b/2-1-eng-GB/b_medium.jpg' ) );
-        $this->assertSame( '/exponential6/var/site/storage/images/b/2-1-eng-GB/b_medium.jpg',
+        $this->assertSame( '/sub/path/var/site/storage/images/b/2-1-eng-GB/b_medium.jpg',
                            EditorAssetUrlTestApi::aliasUrl( $handler, array( 'small', 'medium' ) ) );
 
         // no variation on disk: no image

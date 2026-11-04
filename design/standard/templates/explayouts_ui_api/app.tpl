@@ -13,7 +13,7 @@
 
     <title>{$page_title|wash()}</title>
 
-    {* Through ezroot: an installation served from a sub path (/exponential6/) has the files below it. *}
+    {* Through ezroot: an installation served from a sub path has the files below it. *}
     <link rel="apple-touch-icon" sizes="180x180" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/apple-touch-icon.png'|ezroot('no')}">
     <link rel="icon" type="image/png" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/favicon-32x32.png'|ezroot('no')}" sizes="32x32">
     <link rel="icon" type="image/png" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/favicon-16x16.png'|ezroot('no')}" sizes="16x16">

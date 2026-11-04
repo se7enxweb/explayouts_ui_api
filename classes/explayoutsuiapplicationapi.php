@@ -282,7 +282,7 @@ class expLayoutsUIApplicationApi
     /**
      * A file below the installation's web root as the browser has to ask for
      * it, as the template operator ezroot('no') gives it: the web root in
-     * front (an installation served from /exponential6/ has its files there,
+     * front (an installation served from a sub path has its files there,
      * not at /extension/...), or the address of the cluster's file server
      * where one is configured. An absolute http(s) address stays as it is.
      */
