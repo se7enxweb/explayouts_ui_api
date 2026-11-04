@@ -2,3 +2,4 @@
 
 [ExtensionSettings]
 DesignExtensions[]=explayouts_ui_api
+*/ ?>
