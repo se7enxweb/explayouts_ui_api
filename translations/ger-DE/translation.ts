@@ -148,6 +148,10 @@
         <source>Item view type</source>
         <translation>Ansichtstyp der Elemente</translation>
     </message>
+    <message>
+        <source>Default of the view type</source>
+        <translation>Vorgabe des Ansichtstyps</translation>
+    </message>
 </context>
 <context>
     <name>design/standard/explayouts_ui_api/form_block_parameter</name>

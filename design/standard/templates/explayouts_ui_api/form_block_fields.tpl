@@ -26,6 +26,10 @@
                    The fixed switch of the list block's view types that stood here hid the items of other view types,
                    grid_tiles of a design among them. *}
                 {def $master_list = $view_types|implode( ',' )}
+                {* No item view type, the default of a new block: the design draws the view type's own (the media
+                   design reads '' so). Without this option the browser selected the first one, and saving a new block
+                   stored it unasked, a gallery's slider then drew standard teasers instead of its slides. *}
+                <option value="" data-master="{$master_list|wash()}" {if first_set( $block.item_view_type, '' )|eq( '' )}selected="selected"{/if}>{'Default of the view type'|i18n( 'design/standard/explayouts_ui_api/form_block_fields' )|wash()}</option>
                 {foreach $item_view_types as $item_view_type => $item_view_label}
                     <option value="{$item_view_type|wash()}" data-master="{$master_list|wash()}" {if eq( $item_view_type, $block.item_view_type )}selected="selected"{/if}>{$item_view_label|i18n( 'design/standard/explayouts_ui_api/parameters' )|wash()}</option>
                 {/foreach}
