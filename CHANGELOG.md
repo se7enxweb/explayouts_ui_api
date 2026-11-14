@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.37 (2026-11-14)
+
+- Updated: The block editor offers every item view type of a definition (the handler's list and `ItemViewTypes[]`) for every view type, with "Default of the view type" first, and keeps a stored one the list does not offer (from Marco-JAC's pull request #20).
+- Updated: The layout editor reads the block definitions of the site it previews in, in an administration.
+- Updated: The block type list reads a definition's group (`Group=admin`) from the same settings.
+- Fixed: The block API stores only an item view type of the block's definition, none or the one the block has; anything else answers 400 "Unknown item view type for this block.". The block JSON carries `item_view_type`.
+- Fixed: The layout editor finds its icons, favicons and preview images when the installation is served from a sub path; the favicon manifest and browserconfig.xml name their icons beside them (from Marco-JAC's pull request #22).
+- Fixed: The tests run under PHPUnit 9, the last PHPUnit for PHP 8.0, as under PHPUnit 10 and later, and HTML escaping gives the same output on PHP 8.0 as on 8.1+ (from Marco-JAC's pull request #21).
+- Fixed: The settings files close their PHP comment (from Marco-JAC's pull request #19; the change itself shipped in 1.3.36).
+- Updated: The documentation describes item view types in the editor and its API, the settings of the previewed site, sub paths and the tests; README and INSTALL name PHP 8.0 as the lowest PHP.
+
 ## 1.3.36 (2026-11-03)
 
 - Updated: Every settings file closes its PHP comment, so php -l passes on PHP 8.0 and later and a direct request no longer answers with a server error.
