@@ -4235,6 +4235,16 @@ END;",
         if ( $status !== 200 )
             http_response_code( $status );
 
+        // An answer of the API is never reused: the kernel's defaults (Last-Modified of now, "no-cache,
+        // must-revalidate") let the browser revalidate a repeated GET with If-Modified-Since, and the web server
+        // answers that with 304 within the same second, so the browser showed its earlier copy, e.g. the published
+        // layout right after its draft was created.
+        if ( !headers_sent() )
+        {
+            header( 'Cache-Control: no-store, max-age=0' );
+            header_remove( 'Last-Modified' );
+        }
+
         $Result = array();
         $Result['pagelayout'] = false;
         $Result['content'] = json_encode( $data );

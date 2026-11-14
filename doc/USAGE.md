@@ -85,6 +85,12 @@ DELETE /app/api/layouts/<id>/draft
 
 The identifier is generated from the name if not provided. The created layout is a draft (`status=1`) and its zones are created from the layout type definition. `publish` sets `status=2`; `DELETE .../draft` removes the layout with its zones and blocks.
 
+`POST /app/api/layouts/<id>/draft` creates the draft of a published layout, or answers with the draft it has already.
+The editor sends it once per opening of a layout without a draft and then keeps the draft from that answer; it does not
+read the layout again. Every answer of the API is sent with `Cache-Control: no-store` and without `Last-Modified`, so a
+browser never revalidates an answer and shows its earlier copy (a repeated read within the same second was answered
+with 304 before, and the editor then saw the published layout right after creating its draft).
+
 ### Blocks
 
 ```

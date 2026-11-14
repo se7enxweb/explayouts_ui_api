@@ -303,7 +303,8 @@
       "original_sha256": "0807fab7fe274b5ad200867ee164b90a983aa31fc8f283badb071a0608b611fc",
       "changes": [
         "Interface texts through nglT()/nglTh(), translated from window.explayoutsSpaI18n (d4a02cf)",
-        "Publish and continue opens the new draft with its own blocks (e1e787f)"
+        "Publish and continue opens the new draft with its own blocks (e1e787f)",
+        "create_new_draft remembers the layout (the route's id) it made the draft for, as fresh_draft, once the draft answers"
       ]
     },
     {
@@ -321,7 +322,8 @@
       "file": "modules/045-application.js",
       "original_sha256": "8c27e363c62e89f725ca27a1b19d7e02c58f8f1352bf7d7f8abf5f0952fadb75",
       "changes": [
-        "The editor asks for the draft with fallback=published: a layout without a draft answers with its published version (200) instead of a 404 the browser logs as an error, and the editor creates the draft as it did after the 404."
+        "The editor asks for the draft with fallback=published: a layout without a draft answers with its published version (200) instead of a 404 the browser logs as an error, and the editor creates the draft as it did after the 404.",
+        "Right after create_new_draft (fresh_draft is the route's layout) the page keeps the draft the POST answered with instead of reading the layout again: that read could still answer with the published layout (a revalidation the server answered 304 within the same second), and the editor then asked for the draft again, three to six times per opening. One draft request per opening now."
       ]
     },
     {
