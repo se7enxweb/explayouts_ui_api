@@ -5,9 +5,9 @@
  *
  * The block type icons were given as /extension/..., the preview images as /var/..., and app.tpl named the favicons
  * the same way: the browser asked the server root for them, where an installation in a sub path has none of them.
- * They now carry the web root as the template operator ezroot gives it. The favicon manifest named the path of the
- * Symfony bundle of Netgen Layouts (/bundles/netgenlayoutsadmin/...), which no Exponential installation has; it now
- * names its icons beside it.
+ * They now carry the web root as the template operator ezroot gives it. The favicon manifest and browserconfig.xml
+ * named the path of the upstream Symfony admin bundle (/bundles/netgenlayoutsadmin/...), which no Exponential
+ * installation has; they now name their icons beside them.
  *
  * @license GPL-2.0-or-later
  */
@@ -168,6 +168,18 @@ class EditorAssetUrlTest extends TestCase
             $this->assertStringStartsNotWith( '/', $icon['src'] );
             $this->assertStringNotContainsString( '://', $icon['src'] );
             $this->assertFileExists( $dir . $icon['src'] );
+        }
+    }
+
+    public function testBrowserConfigNamesItsTileBesideIt()
+    {
+        $dir = dirname( __DIR__ ) . '/design/standard/images/favicon/';
+        $this->assertSame( 1, preg_match_all( '/\bsrc="([^"]*)"/', (string)file_get_contents( $dir . 'browserconfig.xml' ), $m ) );
+        foreach ( $m[1] as $src )
+        {
+            $this->assertStringStartsNotWith( '/', $src );
+            $this->assertStringNotContainsString( '://', $src );
+            $this->assertFileExists( $dir . $src );
         }
     }
 }
