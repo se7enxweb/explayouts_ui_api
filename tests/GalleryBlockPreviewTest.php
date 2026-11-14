@@ -64,6 +64,9 @@ if ( !class_exists( 'expLayoutsBlockHandlerFactory', false ) )
     {
         public static $info = array( 'name' => 'Grid gallery', 'view_types' => array( 'grid_gallery', 'gallery', 'slider', 'thumb_gallery', 'sushi_bar' ) );
         public static function getBlockInfo( $identifier ) { return self::$info; }
+        /** the handler's list and ItemViewTypes[] of the definition, as explayouts' factory gives them */
+        public static $itemViewTypes = array( 'standard' => 'Standard', 'card' => 'Card', 'polaroid' => 'Polaroid' );
+        public static function itemViewTypes( $identifier ) { return self::$itemViewTypes; }
     }
 }
 
@@ -173,6 +176,66 @@ class GalleryBlockPreviewTest extends TestCase
 
         $this->assertNotSame( 400, http_response_code() );
         $this->assertSame( 'default', $block->attribute( 'view_type' ) );
+    }
+
+    protected function putItemViewType( $itemViewType, $storedItemViewType )
+    {
+        eZUser::$functions = array( 'explayouts_ui_api/read', 'explayouts_ui_api/edit' );
+        expLayoutsBlock::reset();
+        $block = new expLayoutsBlock( array( 'id' => 3, 'status' => 1, 'name' => '', 'definition_identifier' => 'grid_gallery',
+                                             'view_type' => 'grid_gallery', 'item_view_type' => $storedItemViewType, 'zone_id' => 0 ) );
+        expLayoutsBlock::$returns['fetch'] = $block;
+        expLayoutsBlockParameter::$returns['fetchByBlock'] = array();
+        expLayoutsCollection::$returns['fetchByBlock'] = null;
+        expLayoutsZone::$returns['fetch'] = null;
+        expLayoutsRenderer::$prepared = array( 'parameters' => array(), 'values' => array() );
+        $_SERVER['REQUEST_METHOD'] = 'PUT';
+        $_POST = array( 'item_view_type' => $itemViewType );
+
+        $result = expLayoutsUIApplicationApi::handle( array( 'eng', 'blocks', '3' ) );
+        return array( $block, $result );
+    }
+
+    public function testAnItemViewTypeTheDefinitionDoesNotHaveIsRefused()
+    {
+        // The frontend templates include the template named by the item view type, as they do with the view type.
+        list( $block, $result ) = $this->putItemViewType( '../line', 'card' );
+
+        $this->assertSame( 400, http_response_code() );
+        $this->assertStringContainsString( 'Unknown item view type', json_encode( $result ) );
+        $this->assertSame( 'card', $block->attribute( 'item_view_type' ) );
+        $this->assertSame( 0, $block->stored );
+    }
+
+    public function testAnItemViewTypeThatIsNotTextIsRefused()
+    {
+        list( $block, $result ) = $this->putItemViewType( array( 'card' ), 'card' );
+
+        $this->assertSame( 400, http_response_code() );
+        $this->assertSame( 0, $block->stored );
+    }
+
+    public function testAnItemViewTypeOfTheDefinitionIsSaved()
+    {
+        // polaroid comes from ItemViewTypes[] of the settings, not from the handler's list
+        list( $block, $result ) = $this->putItemViewType( 'polaroid', 'card' );
+
+        $this->assertNotSame( 400, http_response_code() );
+        $this->assertSame( 'polaroid', $block->attribute( 'item_view_type' ) );
+        $this->assertSame( 'polaroid', json_decode( $result['content'], true )['item_view_type'], 'the answer carries it' );
+        $this->assertSame( 1, $block->stored );
+    }
+
+    public function testNoItemViewTypeAndTheOneABlockAlreadyHasAreSaved()
+    {
+        list( $block, ) = $this->putItemViewType( '', 'card' );
+        $this->assertNotSame( 400, http_response_code() );
+        $this->assertSame( '', $block->attribute( 'item_view_type' ) );
+
+        // a stored item view type the list no longer offers is sent back with every other change
+        list( $block, ) = $this->putItemViewType( 'zigzag', 'zigzag' );
+        $this->assertNotSame( 400, http_response_code() );
+        $this->assertSame( 'zigzag', $block->attribute( 'item_view_type' ) );
     }
 
     public function testTheDesignTabDropsTheFieldsOfTheQueryParametersNotOnlyTheirValues()

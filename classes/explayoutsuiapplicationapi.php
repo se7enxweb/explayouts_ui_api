@@ -293,6 +293,33 @@ class expLayoutsUIApplicationApi
     }
 
     /**
+     * The item view types of a block definition, as identifier => label:
+     * explayouts' factory's itemViewTypes() (the handler's list, then
+     * ItemViewTypes[] of [BlockDefinition_<identifier>]); with an explayouts
+     * that has no itemViewTypes() yet, the handler's own list.
+     */
+    protected static function blockItemViewTypes( $definitionIdentifier )
+    {
+        if ( method_exists( 'expLayoutsBlockHandlerFactory', 'itemViewTypes' ) )
+            return (array)expLayoutsBlockHandlerFactory::itemViewTypes( (string)$definitionIdentifier );
+
+        $handler = expLayoutsBlockHandlerFactory::get( (string)$definitionIdentifier );
+        return is_object( $handler ) && method_exists( $handler, 'getItemViewTypes' ) ? (array)$handler->getItemViewTypes() : array();
+    }
+
+    /**
+     * explayouts.ini the block definitions are read from: the one explayouts'
+     * factory reads (the settings of the siteaccess the editor previews in,
+     * see useSiteAccess()), or the current siteaccess's.
+     */
+    protected static function blockSettings()
+    {
+        return method_exists( 'expLayoutsBlockHandlerFactory', 'settings' )
+            ? expLayoutsBlockHandlerFactory::settings()
+            : eZINI::instance( 'explayouts.ini' );
+    }
+
+    /**
      * The translation context of the names the editor shows for block types and their groups: the Name= of a
      * [BlockDefinition_*] section of explayouts.ini and the group names below. A name without a translation is
      * shown as configured.
@@ -905,12 +932,26 @@ class expLayoutsUIApplicationApi
                     if ( $requestedViewType !== (string)$block->attribute( 'view_type' ) && !in_array( $requestedViewType, $allowedViewTypes, true ) )
                         return self::response( array( 'error' => 'Unknown view type for this block.' ), 400 );
                 }
+                // Only an item view type of the definition (the handler's list
+                // and ItemViewTypes[], offered by every view type), none ('',
+                // the view type's own), or the one the block already has. The
+                // frontend templates include the template named by it, as they
+                // do with the view type.
+                if ( isset( $data['item_view_type'] ) )
+                {
+                    $requestedItemViewType = is_string( $data['item_view_type'] ) ? trim( $data['item_view_type'] ) : false;
+                    if ( $requestedItemViewType === false
+                         || ( $requestedItemViewType !== ''
+                              && $requestedItemViewType !== (string)$block->attribute( 'item_view_type' )
+                              && !isset( self::blockItemViewTypes( (string)$block->attribute( 'definition_identifier' ) )[$requestedItemViewType] ) ) )
+                        return self::response( array( 'error' => 'Unknown item view type for this block.' ), 400 );
+                }
                 if ( isset( $data['name'] ) )
                     $block->setAttribute( 'name', trim( $data['name'] ) );
                 if ( isset( $data['view_type'] ) )
                     $block->setAttribute( 'view_type', $requestedViewType );
                 if ( isset( $data['item_view_type'] ) )
-                    $block->setAttribute( 'item_view_type', trim( $data['item_view_type'] ) );
+                    $block->setAttribute( 'item_view_type', $requestedItemViewType );
                 $requestedPosition = isset( $data['position'] ) ? (int)$data['position'] : null;
                 if ( $requestedPosition !== null )
                     $block->setAttribute( 'position', $requestedPosition );
@@ -2379,6 +2420,7 @@ class expLayoutsUIApplicationApi
             'definition_identifier' => $definitionIdentifier,
             'name' => (string)$block->attribute( 'name' ),
             'view_type' => (string)$block->attribute( 'view_type' ),
+            'item_view_type' => (string)$block->attribute( 'item_view_type' ),
             'position' => (int)$block->attribute( 'position' ),
             'locale' => 'eng',
             'zone_identifier' => $zoneIdentifier,
