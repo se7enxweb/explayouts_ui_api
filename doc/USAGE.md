@@ -18,6 +18,16 @@ The SPA is bootstrapped by the `app` module view:
 
 The bundled CSS/JS is loaded from this extension's `design/standard` directory.
 
+### An installation served from a sub path
+
+Every file the editor names carries the installation's web root, as the template operator `ezroot('no')` writes it,
+so an installation served from a sub path (`https://example.org/sub/path/`) finds them: the favicons of `app.tpl`, the
+block type icons of `GET .../config/block_types` (`/sub/path/extension/explayouts_ui_api/design/standard/images/...`)
+and the preview images of collection items (`/sub/path/var/<site>/storage/images/...`, or the address of the cluster's
+file server where one is configured). The favicon `manifest.json` and `browserconfig.xml` name their icons beside them,
+relative to their own address. The gallery and carousel previews come from explayouts' block handlers, which write
+their images the same way (`expLayoutsSafeValue::webRootUrl()`).
+
 ## API base path
 
 All API responses are `application/json` (debug output is disabled in the dispatcher so responses stay clean):
@@ -30,7 +40,7 @@ List responses use the `values` / `total` shape the app expects.
 
 ### Authentication and CSRF
 
-The app runs inside the authenticated eZ Publish admin session. `POST`, `PUT`, `PATCH` and `DELETE` requests must carry the eZ form token, either as:
+The app runs inside the authenticated Exponential admin session. `POST`, `PUT`, `PATCH` and `DELETE` requests must carry the eZ form token, either as:
 
 1. `X-CSRF-Token` HTTP header, or
 2. `ezxform_token` form field.
@@ -98,7 +108,41 @@ Create body:
 }
 ```
 
-Update accepts `name`, `view_type`, `position` and `parameters` (object keyed by parameter name).
+Update accepts `name`, `view_type`, `item_view_type`, `position` and `parameters` (object keyed by parameter name).
+A block's JSON carries its `view_type` and `item_view_type`.
+
+- `view_type` must be a view type of the block's definition (`ViewTypes[]`) or the one the block already has; anything
+  else answers `400 {"error":"Unknown view type for this block."}`.
+- `item_view_type` must be an item view type of the definition, `""` (none: the design draws the view type's own) or
+  the one the block already has; anything else, a value that is not text among it, answers
+  `400 {"error":"Unknown item view type for this block."}` and changes nothing. The list is explayouts'
+  `expLayoutsBlockHandlerFactory::itemViewTypes()`: the handler's own list, then `ItemViewTypes[<item view type>]=<label>`
+  of `[BlockDefinition_<identifier>]`. Every view type offers all of them.
+
+The frontend templates include the templates named by both values, which is why nothing else is stored.
+
+### Block definitions of the previewed site
+
+In an administration (a siteaccess whose `SiteDesign` begins with `admin`), the editor reads the block definitions from
+the settings of the siteaccess it previews in (`[PreviewSettings] SiteAccess`, see explayouts'
+`expLayoutsPreviewSiteAccess`), through explayouts' `expLayoutsBlockHandlerFactory::useSiteAccess()`: the block types
+it offers (including the `Group=admin` check), the view types and item view types of the block form and the checks of a
+save. A design keeps the block settings it adds in its own siteaccess, so this is where the editor finds them:
+
+```ini
+# extension/mytheme/settings/siteaccess/mysite/explayouts.ini.append.php
+[BlockSettings]
+AvailableBlocks[]=my_block
+
+[BlockDefinition_list]
+ViewTypes[]=grid_tiles
+ViewTypeNames[grid_tiles]=Tiles
+ItemViewTypes[tile]=Tile
+```
+
+The block form's "Item view type" select offers every item view type for every view type, with "Default of the view
+type" first; a stored item view type the list does not offer stays selected, so saving the block does not change it
+unasked.
 
 ### Rules and mappings
 

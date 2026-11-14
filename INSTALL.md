@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Exponential Legacy / Exponential 6, PHP 8.1+
+- Exponential Legacy / Exponential 6, PHP 8.0+
 - `extension/explayouts` — value objects, `explayouts_*` tables, `explayouts.ini` block/layout type definitions
 - `extension/explayouts_core` — service classes the API handlers call
 - `extension/ezformtoken` — CSRF token validation for modifying requests

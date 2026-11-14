@@ -103,10 +103,10 @@ Requirements
 The following requirements exists for using the Exponential Layouts UI API extension:
 
 Exponential version
-- Make sure you use Exponential 6 / eZ Publish Legacy (required) or higher.
+- Make sure you use Exponential 6 / Exponential Legacy (required) or higher.
 
 PHP version
-- Make sure you have PHP 8.1 or higher.
+- Make sure you have PHP 8.0 or higher.
 
 Sibling extensions
 - `extension/explayouts` — value objects, `explayouts_*` tables, `explayouts.ini` block/layout type definitions.
@@ -335,6 +335,19 @@ npm test          # node --test tests/js/*.test.mjs (happy-dom)
 ```
 
 `node_modules/` is not committed. The bundles are linked without a version query; a hard reload fetches a rebuilt one.
+
+Tests
+-----
+
+The PHP tests need no database and no kernel (stand-ins in `tests/bootstrap.php`). They carry their metadata both as
+docblock annotations and as attributes, so they run under PHPUnit 9, the last PHPUnit for PHP 8.0, as under PHPUnit
+10 and later. From the installation's root:
+
+```bash
+vendor/bin/phpunit --bootstrap extension/explayouts_ui_api/tests/bootstrap.php extension/explayouts_ui_api/tests/
+```
+
+The JavaScript tests run with `npm test` (above).
 
 Documentation
 -------------

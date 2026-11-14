@@ -10,7 +10,7 @@ One: `explayouts_share` (layout share tokens), created on demand by the share en
 
 ## How is the API authenticated?
 
-Requests run in the normal authenticated eZ Publish admin session (cookies). Modifying requests additionally require the eZ form token from the `ezformtoken` extension, sent as an `X-CSRF-Token` header or `ezxform_token` form field. Fetch the current token from `GET /app/api/config`.
+Requests run in the normal authenticated Exponential admin session (cookies). Modifying requests additionally require the eZ form token from the `ezformtoken` extension, sent as an `X-CSRF-Token` header or `ezxform_token` form field. Fetch the current token from `GET /app/api/config`.
 
 ## Why do my POSTs return a CSRF error?
 
