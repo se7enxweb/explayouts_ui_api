@@ -360,7 +360,7 @@ class expLayoutsUIApplicationApi
                 continue;
 
             // Admin blocks (Group=admin) are for admin layouts only.
-            $blockIni = eZINI::instance( 'explayouts.ini' );
+            $blockIni = self::blockSettings();
             if ( self::requestedGroup() === 'site'
                 && $blockIni->hasVariable( 'BlockDefinition_' . $identifier, 'Group' )
                 && $blockIni->variable( 'BlockDefinition_' . $identifier, 'Group' ) === 'admin' )
