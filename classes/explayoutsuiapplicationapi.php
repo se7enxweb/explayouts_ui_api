@@ -206,6 +206,9 @@ class expLayoutsUIApplicationApi
      * ai/bin/one/copy_nexus_block_icons_into_explayouts_ui_api.sh. Three
      * identifiers are named differently here than upstream: video is
      * external_video, html is html_snippet, and tpl_block is twig_block.
+     *
+     * The base is relative to the installation's web root; blockIcon() puts
+     * the root in front (rootUrl()), as the bundle uses the value as it is.
      */
     const BLOCK_ICON_BASE = '/extension/explayouts_ui_api/design/standard/images/';
 
@@ -273,7 +276,20 @@ class expLayoutsUIApplicationApi
     {
         $map = self::blockIconMap();
         $file = isset( $map[$identifier] ) ? $map[$identifier] : self::BLOCK_ICON_FALLBACK;
-        return self::BLOCK_ICON_BASE . $file;
+        return self::rootUrl( self::BLOCK_ICON_BASE . $file );
+    }
+
+    /**
+     * A file below the installation's web root as the browser has to ask for
+     * it, as the template operator ezroot('no') gives it: the web root in
+     * front (an installation served from a sub path has its files there,
+     * not at /extension/...), or the address of the cluster's file server
+     * where one is configured. An absolute http(s) address stays as it is.
+     */
+    protected static function rootUrl( $path )
+    {
+        eZURI::transformURI( $path, true, 'relative', false );
+        return $path;
     }
 
     /**
@@ -1866,14 +1882,16 @@ class expLayoutsUIApplicationApi
     }
 
     /**
-     * First of the given aliases that actually exists on disk, as a
-     * root-relative URL.
+     * First of the given aliases that actually exists on disk, as the browser
+     * has to ask for it (rootUrl()).
      *
      * imageAlias() generates a missing variation, and the stored alias list can
      * name files that were never written, so each candidate is checked through
      * the cluster file handler - the same treatment the theme's image operator
-     * applies. Alias URLs are stored without a leading slash, which would
-     * otherwise resolve against /explayouts_ui_api/app in the editor.
+     * applies. Alias URLs are stored relative to the web root and without a
+     * leading slash, which would otherwise resolve against
+     * /explayouts_ui_api/app in the editor; a slash alone missed the web root
+     * of an installation served from a sub path.
      */
     protected static function imageAliasUrl( $handler, $aliases )
     {
@@ -1901,8 +1919,8 @@ class expLayoutsUIApplicationApi
             }
         }
 
-        if ( $url !== '' && strpos( $url, '/' ) !== 0 && strpos( $url, 'http' ) !== 0 )
-            $url = '/' . $url;
+        if ( $url !== '' && strpos( $url, 'http' ) !== 0 )
+            $url = self::rootUrl( $url );
 
         return $url;
     }

@@ -13,13 +13,14 @@
 
     <title>{$page_title|wash()}</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/extension/explayouts_ui_api/design/standard/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/extension/explayouts_ui_api/design/standard/images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/extension/explayouts_ui_api/design/standard/images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/extension/explayouts_ui_api/design/standard/images/favicon/manifest.json">
-    <link rel="mask-icon" href="/extension/explayouts_ui_api/design/standard/images/favicon/safari-pinned-tab.svg" color="#a477fc">
-    <link rel="shortcut icon" href="/extension/explayouts_ui_api/design/standard/images/favicon/favicon.ico">
-    <meta name="msapplication-config" content="/extension/explayouts_ui_api/design/standard/images/favicon/browserconfig.xml">
+    {* Through ezroot: an installation served from a sub path has the files below it. *}
+    <link rel="apple-touch-icon" sizes="180x180" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/apple-touch-icon.png'|ezroot('no')}">
+    <link rel="icon" type="image/png" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/favicon-32x32.png'|ezroot('no')}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/favicon-16x16.png'|ezroot('no')}" sizes="16x16">
+    <link rel="manifest" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/manifest.json'|ezroot('no')}">
+    <link rel="mask-icon" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/safari-pinned-tab.svg'|ezroot('no')}" color="#a477fc">
+    <link rel="shortcut icon" href="{'/extension/explayouts_ui_api/design/standard/images/favicon/favicon.ico'|ezroot('no')}">
+    <meta name="msapplication-config" content="{'/extension/explayouts_ui_api/design/standard/images/favicon/browserconfig.xml'|ezroot('no')}">
     <meta name="theme-color" content="#ffffff">
 
     {foreach $custom_stylesheets as $stylesheet}
