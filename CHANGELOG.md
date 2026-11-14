@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.38 (2026-11-14)
+
+- Fixed: The layout editor asks for a layout's draft once per opening. It read the layout again right after creating the draft, the browser could answer that read with its copy of the published layout, and the editor then asked for the draft again: three to six draft requests per opening on some layouts. It keeps the draft the request answered with now; a layout that has a draft opens as before, without a draft request.
+- Fixed: Every answer of the API is sent with `Cache-Control: no-store` and without `Last-Modified`, so a browser never shows an earlier copy of an answer (a repeated read within the same second was answered with 304).
+- Added: `tests/js/draft-once.test.mjs` counts the draft requests of an opening.
+
 ## 1.3.37 (2026-11-14)
 
 - Updated: The block editor offers every item view type of a definition (the handler's list and `ItemViewTypes[]`) for every view type, with "Default of the view type" first, and keeps a stored one the list does not offer (from Marco-JAC's pull request #20).
