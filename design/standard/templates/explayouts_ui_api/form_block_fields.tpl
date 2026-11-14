@@ -21,27 +21,24 @@
         <div class="row-input">
             <label for="design_edit_item_view_type">{'Item view type'|i18n( 'design/standard/explayouts_ui_api/form_block_fields' )}</label>
             <select id="design_edit_item_view_type" name="item_view_type" class="slave">
+                {* Item view types are an axis of their own: every view type of the definition offers all of them (the
+                   handler's list and ItemViewTypes[] of [BlockDefinition_*]), so data-master names every view type.
+                   The fixed switch of the list block's view types that stood here hid the items of other view types,
+                   grid_tiles of a design among them. *}
+                {def $master_list = $view_types|implode( ',' )}
+                {* No item view type, the default of a new block: the design draws the view type's own (the media
+                   design reads '' so). Without this option the browser selected the first one, and saving a new block
+                   stored it unasked, a gallery's slider then drew standard teasers instead of its slides. *}
+                <option value="" data-master="{$master_list|wash()}" {if first_set( $block.item_view_type, '' )|eq( '' )}selected="selected"{/if}>{'Default of the view type'|i18n( 'design/standard/explayouts_ui_api/form_block_fields' )|wash()}</option>
                 {foreach $item_view_types as $item_view_type => $item_view_label}
-                    {def $master_list = 'list,list_numbered,grid,grid_featured'}
-                    {switch match=$item_view_type}
-                        {case in=array('line','mini','listitem','listitem_with_intro')}
-                            {set $master_list = 'list,list_numbered'}
-                        {/case}
-                        {case in=array('zigzag')}
-                            {set $master_list = 'list_zigzag'}
-                        {/case}
-                        {case in=array('accordion')}
-                            {set $master_list = 'list_accordion'}
-                        {/case}
-                        {case}
-                            {set $master_list = 'list,list_numbered,grid,grid_featured'}
-                        {/case}
-                    {/switch}
-                    {def $is_in_master = $master_list|contains( $block.view_type )}
-                    <option value="{$item_view_type|wash()}" data-master="{$master_list|wash()}" {if eq( $item_view_type, $block.item_view_type )}selected="selected"{/if} {if not( $is_in_master )}class="hidden"{/if}>{$item_view_label|i18n( 'design/standard/explayouts_ui_api/parameters' )|wash()}</option>
-                    {undef $is_in_master}
-                    {undef $master_list}
+                    <option value="{$item_view_type|wash()}" data-master="{$master_list|wash()}" {if eq( $item_view_type, $block.item_view_type )}selected="selected"{/if}>{$item_view_label|i18n( 'design/standard/explayouts_ui_api/parameters' )|wash()}</option>
                 {/foreach}
+                {* A stored item view type the list does not offer stays selected as it is: without this option the
+                   browser selected the first one and saving the block changed its item view unasked. *}
+                {if and( $block.item_view_type|ne( '' ), is_set( $item_view_types[$block.item_view_type] )|not )}
+                    <option value="{$block.item_view_type|wash()}" data-master="{$master_list|wash()}" selected="selected">{$block.item_view_type|wash()}</option>
+                {/if}
+                {undef $master_list}
             </select>
         </div>
     </div>
