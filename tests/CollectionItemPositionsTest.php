@@ -15,6 +15,10 @@ class expLayoutsUIApplicationApiPositionProbe extends expLayoutsUIApplicationApi
     public static function place( $collection, $item, $position ) { self::placeCollectionItem( $collection, $item, $position ); }
 }
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class CollectionItemPositionsTest extends TestCase
 {

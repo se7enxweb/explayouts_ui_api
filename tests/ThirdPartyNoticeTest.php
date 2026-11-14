@@ -25,6 +25,9 @@ class ThirdPartyNoticeTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider noticeProvider
+     */
     #[\PHPUnit\Framework\Attributes\DataProvider('noticeProvider')]
     public function testNetgenCodeShipsWithTheMitNotice( string $code, string $notice, string $package )
     {
@@ -50,6 +53,9 @@ class ThirdPartyNoticeTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider materialIconsProvider
+     */
     #[\PHPUnit\Framework\Attributes\DataProvider('materialIconsProvider')]
     public function testMaterialIconsShipWithTheApacheLicense( string $dir )
     {

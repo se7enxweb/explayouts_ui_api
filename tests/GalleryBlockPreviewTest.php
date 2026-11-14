@@ -67,6 +67,10 @@ if ( !class_exists( 'expLayoutsBlockHandlerFactory', false ) )
     }
 }
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class GalleryBlockPreviewTest extends TestCase
 {

@@ -23,6 +23,10 @@ class expLayoutsUIApplicationApiImportProbe extends expLayoutsUIApplicationApi
     public static function conditions( $data ) { return self::normalizeRuleConditions( $data ); }
 }
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class ImportLayoutTest extends TestCase
 {

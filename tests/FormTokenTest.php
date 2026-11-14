@@ -12,6 +12,10 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class FormTokenTest extends TestCase
 {
@@ -45,6 +49,9 @@ class FormTokenTest extends TestCase
         return (string)$body['error']['reason'];
     }
 
+    /**
+     * @dataProvider changingMethods
+     */
     #[DataProvider( 'changingMethods' )]
     public function testAChangeWithoutTheTokenIsRefusedBeforeTheLayouts( string $method )
     {
@@ -58,6 +65,9 @@ class FormTokenTest extends TestCase
         $this->assertSame( array(), eZUser::$asked, 'the token is checked before the policy' );
     }
 
+    /**
+     * @dataProvider changingMethods
+     */
     #[DataProvider( 'changingMethods' )]
     public function testAChangeWithAWrongTokenIsRefused( string $method )
     {

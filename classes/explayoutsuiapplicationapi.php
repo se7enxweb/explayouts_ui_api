@@ -1251,7 +1251,7 @@ class expLayoutsUIApplicationApi
 
             foreach ( $placeholders as $placeholder )
             {
-                $identifier = htmlspecialchars( (string)$placeholder['identifier'] );
+                $identifier = htmlspecialchars( (string)$placeholder['identifier'], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 );
                 $style = '';
                 if ( $definition === 'two_columns' )
                 {
@@ -1275,8 +1275,8 @@ class expLayoutsUIApplicationApi
             return
                 '<div class="block-header">' .
                     '<div class="handle" title="Move block"><i class="material-icons">drag_handle</i></div>' .
-                    '<div class="template_name">' . htmlspecialchars( $viewType ) . '</div>' .
-                    '<div class="name">' . htmlspecialchars( $name ) . '</div>' .
+                    '<div class="template_name">' . htmlspecialchars( $viewType, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</div>' .
+                    '<div class="name">' . htmlspecialchars( $name, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</div>' .
                     '<div class="dropdown">' .
                         '<button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' .
                             '<i class="material-icons">more_horiz</i>' .
@@ -1317,7 +1317,7 @@ class expLayoutsUIApplicationApi
             $content .= '<div class="tpl-block-info" data-attr="block_name">' .
                 '<span class="tpl-block-icon"><i class="material-icons">code</i></span>' .
                 '<span class="tpl-block-label">Template block:</span> ' .
-                '<strong>' . htmlspecialchars( $blockName ) . '</strong>' .
+                '<strong>' . htmlspecialchars( $blockName, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</strong>' .
             '</div>';
         }
         elseif ( $isCodeDefinition )
@@ -1328,13 +1328,13 @@ class expLayoutsUIApplicationApi
             // Without it the block had no editor, and opening its sidebar
             // or the modal failed on the missing editor.
             $code = isset( $values['content'] ) ? (string)$values['content'] : '';
-            $content .= '<div data-attr="content" class="ace-editor">' . htmlspecialchars( $code ) . '</div>';
+            $content .= '<div data-attr="content" class="ace-editor">' . htmlspecialchars( $code, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</div>';
         }
         elseif ( $definition === 'text' )
         {
             $textContent = isset( $values['content'] ) ? (string)$values['content'] : '';
             $textHint = $textContent === '' ? ' data-hint="No content"' : '';
-            $content .= '<span data-inline-child data-attr="content"' . $textHint . '>' . ( $textContent === '' ? '' : nl2br( htmlspecialchars( $textContent ) ) ) . '</span>';
+            $content .= '<span data-inline-child data-attr="content"' . $textHint . '>' . ( $textContent === '' ? '' : nl2br( htmlspecialchars( $textContent, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) ) ) . '</span>';
         }
         elseif ( strpos( $definition, 'exp_component' ) === 0 || strpos( $definition, 'ibexa_component_' ) === 0 )
         {
@@ -1355,7 +1355,7 @@ class expLayoutsUIApplicationApi
                 $notice = $contentId > 0
                     ? 'Component ' . $contentId . ' could not be resolved'
                     : 'No component selected';
-                $content .= '<p class="block-notice">' . htmlspecialchars( $notice ) . '</p>';
+                $content .= '<p class="block-notice">' . htmlspecialchars( $notice, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</p>';
             }
         }
         elseif ( isset( $values['items'] ) && is_array( $values['items'] ) && !empty( $values['items'] ) )
@@ -1450,13 +1450,13 @@ class expLayoutsUIApplicationApi
         }
 
         $viewType = (string)$block->attribute( 'view_type' );
-        $viewTypeName = htmlspecialchars( $viewType === 'tpl_block' ? 'TPL_BLOCK' : $viewType );
+        $viewTypeName = htmlspecialchars( $viewType === 'tpl_block' ? 'TPL_BLOCK' : $viewType, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 );
 
         $header =
             '<div class="block-header">' .
                 '<div class="handle" title="Move block"><i class="material-icons">drag_handle</i></div>' .
                 '<div class="template_name">' . $viewTypeName . '</div>' .
-                '<div class="name">' . htmlspecialchars( $name ) . '</div>' .
+                '<div class="name">' . htmlspecialchars( $name, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</div>' .
                 '<div class="dropdown">' .
                     '<button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' .
                         '<i class="material-icons">more_horiz</i>' .
@@ -1773,14 +1773,14 @@ class expLayoutsUIApplicationApi
 
         $html = '';
         if ( $image !== '' && preg_match( '#^(/[^/]|https?://)#i', $image ) )
-            $html .= '<div class="image"><img src="' . htmlspecialchars( $image ) . '" alt="" loading="lazy" /></div>';
+            $html .= '<div class="image"><img src="' . htmlspecialchars( $image, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '" alt="" loading="lazy" /></div>';
         if ( $title !== '' )
-            $html .= '<p class="block-preview-title"><strong>' . htmlspecialchars( self::shorten( strip_tags( $title ), 120 ) ) . '</strong></p>';
+            $html .= '<p class="block-preview-title"><strong>' . htmlspecialchars( self::shorten( strip_tags( $title ), 120 ), ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</strong></p>';
         if ( $text !== '' )
         {
             $plain = trim( preg_replace( '/\s+/u', ' ', html_entity_decode( strip_tags( $text ), ENT_QUOTES | ENT_HTML5, 'UTF-8' ) ) );
             if ( $plain !== '' )
-                $html .= '<p class="block-preview-text">' . htmlspecialchars( self::shorten( $plain, 240 ) ) . '</p>';
+                $html .= '<p class="block-preview-text">' . htmlspecialchars( self::shorten( $plain, 240 ), ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</p>';
         }
 
         return $html === '' ? '' : '<div class="block-short-preview">' . $html . '</div>';
@@ -1919,8 +1919,8 @@ class expLayoutsUIApplicationApi
         $imageUrl = self::itemPreviewImageUrl( $node );
         if ( $imageUrl !== '' )
         {
-            $html .= '<div class="image"><img src="' . htmlspecialchars( $imageUrl ) .
-                '" alt="' . htmlspecialchars( $title ) . '" loading="lazy" /></div>';
+            $html .= '<div class="image"><img src="' . htmlspecialchars( $imageUrl, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) .
+                '" alt="' . htmlspecialchars( $title, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '" loading="lazy" /></div>';
         }
 
         $url = '';
@@ -1942,18 +1942,18 @@ class expLayoutsUIApplicationApi
         $html .= '<div class="name"><p>';
         if ( $url !== '' )
         {
-            $html .= '<a href="' . htmlspecialchars( $url ) .
-                '" target="_blank" rel="noopener noreferrer">' . htmlspecialchars( $title ) . '</a>';
+            $html .= '<a href="' . htmlspecialchars( $url, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) .
+                '" target="_blank" rel="noopener noreferrer">' . htmlspecialchars( $title, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . '</a>';
         }
         else
         {
-            $html .= htmlspecialchars( $title );
+            $html .= htmlspecialchars( $title, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 );
         }
         $html .= '</p></div>';
 
         if ( $typeName !== '' )
         {
-            $html .= '<div class="value-type"><p>Location (' . htmlspecialchars( $typeName ) . ')</p></div>';
+            $html .= '<div class="value-type"><p>Location (' . htmlspecialchars( $typeName, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401 ) . ')</p></div>';
         }
 
         return $html;

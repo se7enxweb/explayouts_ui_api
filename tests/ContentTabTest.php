@@ -47,6 +47,10 @@ class ctHandler
     }
 }
 
+/**
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
 #[RunTestsInSeparateProcesses]
 class ContentTabTest extends TestCase
 {
