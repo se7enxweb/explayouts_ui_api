@@ -40,11 +40,14 @@ class App extends \Exponential\Runnable\ModuleView
         // design keeps the block settings it adds in its own siteaccess (explayouts' factory, where it has
         // useSiteAccess()). An administration is a siteaccess whose SiteDesign begins with "admin", as
         // expLayoutsPreviewSiteAccess tells them apart; on a public siteaccess the editor keeps its own settings.
+        // The site of the layout the request is about where it names one (previewSiteAccessOfRequest()), as an
+        // administration may serve several sites: the API (api/...) and the block forms (eng/blocks/<id>/form, ...).
         // Only in a request that runs in a siteaccess (the editor's tests run the view without one).
         $access = class_exists( 'eZSiteAccess' ) ? \eZSiteAccess::current() : null;
         if ( is_array( $access ) && method_exists( 'expLayoutsBlockHandlerFactory', 'useSiteAccess' ) && class_exists( 'expLayoutsPreviewSiteAccess' )
              && strpos( (string)\eZINI::instance()->variable( 'DesignSettings', 'SiteDesign' ), 'admin' ) === 0 )
-            \expLayoutsBlockHandlerFactory::useSiteAccess( \expLayoutsPreviewSiteAccess::resolve() );
+            \expLayoutsBlockHandlerFactory::useSiteAccess( \expLayoutsUIApplicationApi::previewSiteAccessOfRequest(
+                \expLayoutsUIApplicationApi::requestParts( $apiPath ), $_GET ) );
 
         if ( strpos( $apiPath, 'api/' ) === 0 )
         {

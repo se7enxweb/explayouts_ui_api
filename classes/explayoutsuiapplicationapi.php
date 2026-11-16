@@ -2,6 +2,69 @@
 class expLayoutsUIApplicationApi
 {
     /**
+     * The layout a request of the editor is about: layouts/<id>/..., the layout of blocks/<id>/... (also the block
+     * forms below app/, eng/blocks/<id>/form), or ?layout=<id> (the block types, which the editor asks for with the
+     * layout it opens). 0 when the request names none.
+     *
+     * @param array $parts the path below app/api/, or below app/
+     * @param array $query the query of the request ($_GET)
+     * @return int
+     */
+    public static function layoutIdOfRequest( array $parts, array $query = array() )
+    {
+        $layoutsIndex = array_search( 'layouts', $parts, true );
+        if ( $layoutsIndex !== false && isset( $parts[$layoutsIndex + 1] ) && ctype_digit( (string)$parts[$layoutsIndex + 1] ) )
+            return (int)$parts[$layoutsIndex + 1];
+
+        $blocksIndex = array_search( 'blocks', $parts, true );
+        if ( $blocksIndex !== false && isset( $parts[$blocksIndex + 1] ) && ctype_digit( (string)$parts[$blocksIndex + 1] ) )
+        {
+            $block = expLayoutsBlock::fetch( (int)$parts[$blocksIndex + 1] );
+            if ( is_object( $block ) && (int)$block->attribute( 'layout_id' ) > 0 )
+                return (int)$block->attribute( 'layout_id' );
+        }
+
+        if ( isset( $query['layout'] ) && is_scalar( $query['layout'] ) && ctype_digit( (string)$query['layout'] ) )
+            return (int)$query['layout'];
+
+        return 0;
+    }
+
+    /**
+     * The parts of the editor's path below app/ that tell which layout a request is about (layoutIdOfRequest()):
+     * below app/api/ for the API, below app/ for the block forms (eng/blocks/<id>/form, ...); none for the editor's
+     * page itself.
+     *
+     * @param string $appPath the path below app/ (api/layouts/7, eng/blocks/41/form, '')
+     * @return array
+     */
+    public static function requestParts( $appPath )
+    {
+        $appPath = (string)$appPath;
+        if ( $appPath === '' )
+            return array();
+        return explode( '/', strpos( $appPath, 'api/' ) === 0 ? substr( $appPath, 4 ) : $appPath );
+    }
+
+    /**
+     * The siteaccess whose block settings the editor reads for a request (expLayoutsBlockHandlerFactory::
+     * useSiteAccess()): the site of the layout the request is about, so an administration that serves several sites
+     * offers each layout the view types of its own site (se7enxweb/exponential#364); the preview siteaccess of the
+     * administration for a request about no layout, or with an explayouts that cannot tell a layout's site.
+     *
+     * @param array $parts the path below app/api/, empty for the editor's page
+     * @param array $query the query of the request ($_GET)
+     * @return string|false
+     */
+    public static function previewSiteAccessOfRequest( array $parts, array $query = array() )
+    {
+        $layoutId = empty( $parts ) ? 0 : self::layoutIdOfRequest( $parts, $query );
+        if ( $layoutId > 0 && method_exists( 'expLayoutsPreviewSiteAccess', 'resolveForLayout' ) )
+            return expLayoutsPreviewSiteAccess::resolveForLayout( $layoutId );
+        return expLayoutsPreviewSiteAccess::resolve();
+    }
+
+    /**
      * @param array     $parts            the path below app/api/
      * @param bool|null $showErrorDetails whether a 500 answer may carry the error's message, file and line: true
      *                                    only when debug output is on for the request. The view switches debug
