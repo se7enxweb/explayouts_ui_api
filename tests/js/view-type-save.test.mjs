@@ -118,3 +118,35 @@ test( 'the master select saves its change when the new view type leaves no item 
     assert.match( saves[ 0 ], /(^|&)view_type=list_zigzag/ );
     assert.equal( dom( '#ivt option:not(.hidden)' ).length, 0, 'no item view type left to choose' );
 } );
+
+test( 'a view type the settings limit to one item view type hides the select and saves that one', async () => {
+    // a gallery as form_block_fields.tpl draws it with ViewTypeItemViewTypes[carousel]=carousel (itemViewTypeChoices()):
+    // carousel offers only carousel, no "Default of the view type"; sushi_bar offers two
+    document.body.innerHTML =
+        '<div class="layouts-form"><form method="post" class="block-form" name="design_edit">' +
+        '<div class="master-slave-selects">' +
+        '<div class="row-input"><select id="vt" name="view_type" class="master view-type js-skip-on-change">' +
+        '<option value="sushi_bar" selected>sushi_bar</option><option value="carousel">carousel</option></select></div>' +
+        '<div class="row-input" id="ivt-row"><select id="ivt" name="item_view_type" class="slave">' +
+        '<option value="carousel" data-master="carousel">carousel</option>' +
+        '<option value="overlay" data-master="sushi_bar" selected>overlay</option>' +
+        '<option value="line" data-master="sushi_bar">line</option></select></div>' +
+        '</div></form></div>';
+    saves = [];
+    const form = dom( 'form' );
+    const view = Object.assign( Object.create( Form ), {
+        $: ( selector ) => form.find( selector ), is_query_form: false, form_id: 'design_edit',
+        model: { save_via_form: () => saves.push( dom( 'form' ).serialize() ) }
+    } );
+    dom( '.layouts-form' ).on( 'submit', 'form', ( e ) => view.$submit( e ) ).on( 'change', ( e ) => view.$submit( e ) );
+    core.ui.master_slave_selects( document.querySelectorAll( '.master-slave-selects .master' ) );
+    assert.equal( dom( '#ivt option:not(.hidden)' ).length, 2, 'sushi_bar: its two item view types' );
+
+    choose( 'vt', 'carousel' );
+    await wait( 450 );
+    assert.deepEqual( Array.from( document.querySelectorAll( '#ivt option:not(.hidden)' ), ( o ) => o.value ), [ 'carousel' ] );
+    assert.equal( document.getElementById( 'ivt' ).value, 'carousel', 'the one left is chosen' );
+    assert.equal( getComputedStyle( document.getElementById( 'ivt-row' ) ).display, 'none', 'and its select hidden' );
+    assert.ok( saves.length >= 1 );
+    assert.match( saves[ saves.length - 1 ], /view_type=carousel&item_view_type=carousel|item_view_type=carousel.*view_type=carousel/ );
+} );
