@@ -1257,7 +1257,7 @@
         <translation>स्वतः चलना (ms, अक्षम करने के लिए 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>टेम्पलेट का नाम</translation>
     </message>
     <message>

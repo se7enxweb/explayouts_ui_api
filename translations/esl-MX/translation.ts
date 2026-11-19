@@ -1257,7 +1257,7 @@
         <translation>Reproducción automática (ms, 0 para desactivar)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nombre de la plantilla</translation>
     </message>
     <message>

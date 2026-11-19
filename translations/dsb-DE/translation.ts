@@ -1257,7 +1257,7 @@
         <translation>Awtomatiske wótgraśe (ms, 0 znjemóžnijo)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Mě pśedłogi</translation>
     </message>
     <message>

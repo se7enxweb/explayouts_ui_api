@@ -1257,7 +1257,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

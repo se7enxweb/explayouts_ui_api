@@ -1257,7 +1257,7 @@
         <translation>Automatska reprodukcija (ms, 0 za isključivanje)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Naziv predloška</translation>
     </message>
     <message>

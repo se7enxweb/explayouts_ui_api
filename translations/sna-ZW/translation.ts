@@ -1257,7 +1257,7 @@
         <translation>Kutamba otomatiki (ms, 0 kudzima)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Zita retembureti</translation>
     </message>
     <message>

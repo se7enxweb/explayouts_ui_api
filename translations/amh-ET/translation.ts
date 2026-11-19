@@ -1257,7 +1257,7 @@
         <translation>ራስ-ሰር ማጫወት (ሚሴ፣ ለማሰናከል 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>የአብነት ስም</translation>
     </message>
     <message>

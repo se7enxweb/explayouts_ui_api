@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 mpo na kobomá)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nkómbó ya modèle</translation>
     </message>
     <message>

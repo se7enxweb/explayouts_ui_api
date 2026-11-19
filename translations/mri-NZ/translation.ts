@@ -1257,7 +1257,7 @@
         <translation>Mahi aunoa (ms, 0 hei whakaweto)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Ingoa tātauira</translation>
     </message>
     <message>

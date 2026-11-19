@@ -1257,7 +1257,7 @@
         <translation>Аўтапрайграванне (мс, 0 — выключыць)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Назва шаблона</translation>
     </message>
     <message>

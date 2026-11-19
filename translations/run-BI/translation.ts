@@ -1257,7 +1257,7 @@
         <translation>Kuja ubwayo (ms, 0 kugira bihagarare)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Izina ry&apos;icitegererezo</translation>
     </message>
     <message>

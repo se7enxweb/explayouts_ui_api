@@ -1257,7 +1257,7 @@
         <translation>Автоматско репродуцирање (ms, 0 за исклучување)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Име на шаблонот</translation>
     </message>
     <message>

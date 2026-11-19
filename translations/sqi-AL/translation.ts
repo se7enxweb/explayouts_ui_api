@@ -1257,7 +1257,7 @@
         <translation>Luajtje automatike (ms, 0 për ta çaktivizuar)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Emri i shabllonit</translation>
     </message>
     <message>

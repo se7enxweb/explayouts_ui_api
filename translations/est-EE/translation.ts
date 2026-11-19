@@ -1257,7 +1257,7 @@
         <translation>Automaatesitus (ms, 0 keelab)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Malli nimi</translation>
     </message>
     <message>

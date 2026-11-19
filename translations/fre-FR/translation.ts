@@ -1257,7 +1257,7 @@
         <translation>Lecture automatique (ms, 0 pour désactiver)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nom du modèle</translation>
     </message>
     <message>

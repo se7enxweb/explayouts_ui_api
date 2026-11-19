@@ -1257,7 +1257,7 @@
         <translation>Mulai otomatis (ms, 0 pikeun mareuman)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Ngaran citakan</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Automātiskā atskaņošana (ms, 0 – atspējot)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Veidnes nosaukums</translation>
     </message>
     <message>

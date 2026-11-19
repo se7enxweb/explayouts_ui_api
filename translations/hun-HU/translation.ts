@@ -1257,7 +1257,7 @@
         <translation>Automatikus lejátszás (ms, 0 = kikapcsolva)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Sablon neve</translation>
     </message>
     <message>

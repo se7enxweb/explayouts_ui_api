@@ -1257,7 +1257,7 @@
         <translation>အလိုအလျောက်ဖွင့် (ms၊ ပိတ်ရန် 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ပုံစံပြား အမည်</translation>
     </message>
     <message>

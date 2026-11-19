@@ -1257,7 +1257,7 @@
         <translation>Automatisch afspelen (ms, 0 om uit te schakelen)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Templatenaam</translation>
     </message>
     <message>

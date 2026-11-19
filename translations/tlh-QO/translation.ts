@@ -1260,7 +1260,7 @@
         <translation>nIteb Qoy (ms, 0 chu'Ha')</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ghantoH pong</translation>
     </message>
     <message>

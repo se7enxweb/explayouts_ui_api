@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 ma wɔato mu)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nhwɛsoɔ din</translation>
     </message>
     <message>

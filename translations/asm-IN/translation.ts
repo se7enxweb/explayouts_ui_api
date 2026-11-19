@@ -1257,7 +1257,7 @@
         <translation>স্বয়ংক্ৰিয় প্লে (ms, অক্ষম কৰিবলৈ 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>টেমপ্লেটৰ নাম</translation>
     </message>
     <message>

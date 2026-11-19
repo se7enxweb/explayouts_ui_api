@@ -1257,7 +1257,7 @@
         <translation>རང་འགུལ་གཏོང་། (ms, 0 ཡིས་སྤྱོད་མཚམས་འཇོག)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>མ་དཔེའི་མིང་།</translation>
     </message>
     <message>

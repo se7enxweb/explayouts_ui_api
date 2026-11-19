@@ -1257,7 +1257,7 @@
         <translation>தானியங்கு இயக்கம் (மி.வி., முடக்க 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>வார்ப்புருவின் பெயர்</translation>
     </message>
     <message>

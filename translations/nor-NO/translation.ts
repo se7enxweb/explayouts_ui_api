@@ -1257,7 +1257,7 @@
         <translation>Automatisk avspilling (ms, 0 for å deaktivere)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Malnavn</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Sjálfvirk spilun (ms, 0 til að gera óvirkt)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Heiti sniðmáts</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 para i-disable)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Pangalan ng template</translation>
     </message>
     <message>
