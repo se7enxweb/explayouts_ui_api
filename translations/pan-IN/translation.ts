@@ -1257,7 +1257,7 @@
         <translation>ਆਟੋਪਲੇ (ms, ਅਯੋਗ ਕਰਨ ਲਈ 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ਟੈਮਪਲੇਟ ਦਾ ਨਾਂ</translation>
     </message>
     <message>

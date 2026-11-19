@@ -1257,7 +1257,7 @@
         <translation>Of-danuu taphachuu (ms, 0 dhaabuuf)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Maqaa unka</translation>
     </message>
     <message>

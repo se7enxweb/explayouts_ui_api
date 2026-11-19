@@ -1257,7 +1257,7 @@
         <translation>ئاپتوماتىك قويۇش (ms، 0 چەكلەيدۇ)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>قېلىپ ئىسمى</translation>
     </message>
     <message>

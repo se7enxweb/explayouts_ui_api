@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 don kashewa)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Sunan samfuri</translation>
     </message>
     <message>

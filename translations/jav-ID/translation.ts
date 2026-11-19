@@ -1257,7 +1257,7 @@
         <translation>Putar otomatis (ms, 0 kanggo mateni)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Jeneng cithakan</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>تشغيل تلقائي (ms، 0 للتعطيل)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>اسم القالب</translation>
     </message>
     <message>

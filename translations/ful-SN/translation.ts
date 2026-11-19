@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 ngam ñifude)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Innde modèle</translation>
     </message>
     <message>

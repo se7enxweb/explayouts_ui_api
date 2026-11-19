@@ -1257,7 +1257,7 @@
         <translation>Nammineq ingerlaarneq (ms, 0 atorunnaarsitsivoq)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Skabelonip aqqa</translation>
     </message>
     <message>

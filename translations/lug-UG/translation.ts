@@ -1257,7 +1257,7 @@
         <translation>Okuzannya mu ngeri ey&apos;obwa kyonna (ms, 0 okuzikiza)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Erinnya lya tempuleeti</translation>
     </message>
     <message>

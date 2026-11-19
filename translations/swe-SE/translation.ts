@@ -1257,7 +1257,7 @@
         <translation>Automatisk uppspelning (ms, 0 för att stänga av)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Mallnamn</translation>
     </message>
     <message>

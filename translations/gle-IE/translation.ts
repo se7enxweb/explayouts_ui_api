@@ -1257,7 +1257,7 @@
         <translation>Seinn go huathoibríoch (ms, 0 chun díchumasú)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Ainm an teimpléid</translation>
     </message>
     <message>

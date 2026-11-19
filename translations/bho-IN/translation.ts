@@ -1257,7 +1257,7 @@
         <translation>ऑटोप्ले (ms, बंद करे खातिर 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>टेम्पलेट के नाँव</translation>
     </message>
     <message>

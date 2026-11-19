@@ -1257,7 +1257,7 @@
         <translation>Chwarae awtomatig (ms, 0 i analluogi)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Enw&apos;r templed</translation>
     </message>
     <message>

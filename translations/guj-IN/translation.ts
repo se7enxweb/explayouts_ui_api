@@ -1257,7 +1257,7 @@
         <translation>ઓટોપ્લે (ms, અક્ષમ કરવા માટે 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ટેમ્પલેટનું નામ</translation>
     </message>
     <message>

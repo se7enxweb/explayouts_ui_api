@@ -1257,7 +1257,7 @@
         <translation>Αυτόματη αναπαραγωγή (ms, 0 για απενεργοποίηση)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Όνομα προτύπου</translation>
     </message>
     <message>

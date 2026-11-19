@@ -1257,7 +1257,7 @@
         <translation>Redare automată (ms, 0 pentru dezactivare)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Numele șablonului</translation>
     </message>
     <message>

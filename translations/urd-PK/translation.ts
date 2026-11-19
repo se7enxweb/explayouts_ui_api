@@ -1257,7 +1257,7 @@
         <translation>خودکار پلے (ms، غیر فعال کرنے کے لیے 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ٹیمپلیٹ کا نام</translation>
     </message>
     <message>

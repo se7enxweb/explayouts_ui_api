@@ -90,6 +90,28 @@ class ContentTabTest extends TestCase
         $this->assertArrayNotHasKey( 'title', $form['values'] );
     }
 
+    public function testHiddenParametersAreInNeitherTab()
+    {
+        // HiddenParameters[] of the definition: a parameter the design's templates do not read
+        expLayoutsBlockHandlerFactory::$info['hidden_parameters'] = array( 'tag', 'use_link' );
+        $this->assertSame( array( 'title', 'node_id' ),
+            array_keys( expLayoutsUIApplicationApi::blockFormParameters( $this->block(), 'content' )['parameters'] ) );
+        $design = expLayoutsUIApplicationApi::blockFormParameters( $this->block(), 'design' );
+        $this->assertSame( array( 'css_class' ), array_keys( $design['parameters'] ) );
+        $this->assertArrayNotHasKey( 'tag', $design['values'], 'not posted, so its stored value stays' );
+    }
+
+    public function testAParameterHiddenForAViewTypeIsShownOnlyForTheOthers()
+    {
+        // ViewTypeHiddenParameters[] (Netgen Layouts' valid_parameters): default does not offer tag, grid not columns
+        expLayoutsBlockHandlerFactory::$info['view_types'] = array( 'default', 'grid', 'wide' );
+        expLayoutsBlockHandlerFactory::$info['view_type_hidden_parameters'] = array( 'default' => array( 'tag' ), 'grid' => array( 'columns' ) );
+        $parameters = expLayoutsUIApplicationApi::blockFormParameters( $this->block(), 'design' )['parameters'];
+        $this->assertSame( 'grid,wide', $parameters['tag']['view_type'], 'shown for the view types that offer it' );
+        $this->assertArrayNotHasKey( 'columns', $parameters, 'only grid offered it, and grid hides it' );
+        $this->assertArrayNotHasKey( 'view_type', $parameters['css_class'], 'a parameter no view type hides stays as it is' );
+    }
+
     public function testADefinitionWithoutContentParametersKeepsAllInTheDesignTab()
     {
         expLayoutsBlockHandlerFactory::$info = array( 'view_types' => array( 'default' ) );

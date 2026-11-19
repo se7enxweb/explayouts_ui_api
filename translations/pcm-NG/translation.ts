@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 to switch off)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Template name</translation>
     </message>
     <message>

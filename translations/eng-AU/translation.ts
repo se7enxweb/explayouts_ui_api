@@ -1257,8 +1257,8 @@
         <translation>Autoplay (ms, 0 to disable)</translation>
     </message>
     <message>
-        <source>Template name</source>
-        <translation>Template name</translation>
+        <source>Template block name</source>
+        <translation>Template block name</translation>
     </message>
     <message>
         <source>Show name</source>

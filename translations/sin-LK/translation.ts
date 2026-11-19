@@ -1257,7 +1257,7 @@
         <translation>ස්වයංක්‍රීය ධාවනය (ms, අබල කිරීමට 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>අච්චුවේ නම</translation>
     </message>
     <message>

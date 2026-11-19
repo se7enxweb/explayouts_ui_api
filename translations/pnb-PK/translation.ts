@@ -1257,7 +1257,7 @@
         <translation>آٹو پلے (ms، بند کرݨ لئی 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ٹیمپلیٹ دا ناں</translation>
     </message>
     <message>

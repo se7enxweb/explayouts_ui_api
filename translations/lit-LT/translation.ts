@@ -1257,7 +1257,7 @@
         <translation>Automatinis paleidimas (ms, 0 – išjungti)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Šablono pavadinimas</translation>
     </message>
     <message>

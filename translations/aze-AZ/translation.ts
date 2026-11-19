@@ -1257,7 +1257,7 @@
         <translation>Avtooxutma (ms, söndürmək üçün 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Şablonun adı</translation>
     </message>
     <message>

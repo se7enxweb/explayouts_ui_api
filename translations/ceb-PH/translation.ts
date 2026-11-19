@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 aron i-disable)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Ngalan sa template</translation>
     </message>
     <message>

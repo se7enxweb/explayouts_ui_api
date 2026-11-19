@@ -1259,7 +1259,7 @@
         <translation>ניגון אוטומטי (מילישניות, 0 לכיבוי)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>שם התבנית</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Fandehanana ho azy (ms, 0 mba hanasaraka)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Anaran&apos;ny modely</translation>
     </message>
     <message>
