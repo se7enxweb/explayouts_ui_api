@@ -1244,6 +1244,45 @@ class expLayoutsUIApplicationApi
     }
 
     /**
+     * The number of placeholder rows the editor draws for a block whose collection is a query on the page the layout is
+     * shown on (use_current_location, or the topic of the current content): the editor shows no page, so the query finds
+     * nothing there. The collection's limit, at most 12; 12 without one, as the reference editor draws them. 0 for any
+     * other block.
+     *
+     * @param int $blockId
+     * @return int
+     */
+    public static function contextualQueryPlaceholders( $blockId )
+    {
+        if ( $blockId <= 0 || !class_exists( 'expLayoutsCollection' ) || !class_exists( 'expLayoutsCollectionQuery' ) )
+            return 0;
+        $collection = expLayoutsCollection::fetchByBlock( (int)$blockId );
+        if ( !is_object( $collection ) || (string)$collection->attribute( 'collection_type' ) !== 'dynamic' )
+            return 0;
+        $query = expLayoutsCollectionQuery::fetchByCollection( (int)$collection->attribute( 'id' ), true );
+        $parameters = is_object( $query ) ? json_decode( (string)$query->attribute( 'parameters' ), true ) : null;
+        if ( !is_array( $parameters ) || ( empty( $parameters['use_current_location'] ) && empty( $parameters['use_topic_from_current_content'] ) ) )
+            return 0;
+        $limit = (int)$collection->attribute( 'limit_value' );
+        return $limit > 0 ? min( $limit, 12 ) : 12;
+    }
+
+    /**
+     * Placeholder rows for the items a query on the current page will find (contextualQueryPlaceholders()): a grey
+     * thumbnail and two grey lines each, as the reference editor draws them.
+     *
+     * @param int $rows
+     * @return string
+     */
+    public static function contextualPlaceholderHtml( $rows )
+    {
+        $html = '<div class="contextual-placeholder" role="img" aria-label="Items of the page this layout is shown on">';
+        for ( $i = 0; $i < (int)$rows; $i++ )
+            $html .= '<div class="contextual-placeholder-row"><span class="image"></span><span class="lines"><span></span><span></span></span></div>';
+        return $html . '</div>';
+    }
+
+    /**
      * Puts a stored item of a collection at $position (see collectionItemPositions()) and stores every item whose
      * position changes.
      */
@@ -1503,7 +1542,12 @@ class expLayoutsUIApplicationApi
 
         if ( $content === '' || ( trim( strip_tags( $content, '<img>' ) ) === '' && !$isInlineDefinition && !$isCodeDefinition ) )
         {
-            $content = '<p class="block-empty">No content</p>';
+            // A query on the page the layout is shown on finds nothing in the editor, which shows no page: placeholder
+            // rows, as the reference editor draws them, say that items come there
+            $placeholderRows = self::contextualQueryPlaceholders( (int)$block->attribute( 'id' ) );
+            $content = $placeholderRows > 0
+                ? self::contextualPlaceholderHtml( $placeholderRows )
+                : '<p class="block-empty">No content</p>';
         }
 
         $viewType = (string)$block->attribute( 'view_type' );

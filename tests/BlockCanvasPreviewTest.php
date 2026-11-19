@@ -211,6 +211,8 @@ class BlockCanvasPreviewTest extends TestCase
         expLayoutsRenderer::$prepared = array( 'parameters' => array(), 'values' => array( 'title' => '', 'height' => 0 ) );
         $block = new expLayoutsBlock( array( 'id' => 9, 'name' => '', 'definition_identifier' => 'spacer', 'view_type' => 'default' ) );
 
+        // no collection (a query on the current page would draw placeholder rows, ContextualQueryPlaceholderTest)
+        expLayoutsCollection::$returns['fetchByBlock'] = false;
         $html = expLayoutsUIApplicationApi::renderBlockHtml( $block );
 
         $this->assertMatchesRegularExpression( '#<p class="block-empty"[^>]*>No content</p>#', $html );
