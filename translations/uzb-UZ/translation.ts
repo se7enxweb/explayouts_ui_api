@@ -1257,7 +1257,7 @@
         <translation>Avtoijro (ms, 0 oʻchiradi)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Shablon nomi</translation>
     </message>
     <message>

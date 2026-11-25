@@ -1257,7 +1257,7 @@
         <translation>Автовідтворення (мс, 0 — вимкнути)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Назва шаблону</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Автоматически ловзар (мс, 0 — дӀасацо)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Кепан цӀе</translation>
     </message>
     <message>

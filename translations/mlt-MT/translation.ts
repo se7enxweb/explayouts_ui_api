@@ -1257,7 +1257,7 @@
         <translation>Daqq awtomatiku (ms, 0 biex tiddiżattiva)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Isem tal-mudell</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>ܦܠܚܐ ܐܘܛܘܡܛܝܐ (ms، 0 ܠܡܒܛܠܘ)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ܫܡܐ ܕܛܘܦܣܐ</translation>
     </message>
     <message>

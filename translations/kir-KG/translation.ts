@@ -1257,7 +1257,7 @@
         <translation>Автоматтык ойнотуу (мс, 0 өчүрүү үчүн)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Шаблондун аты</translation>
     </message>
     <message>

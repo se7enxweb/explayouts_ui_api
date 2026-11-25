@@ -1257,7 +1257,7 @@
         <translation>פלחא אוטומטיא (ms, 0 למבטלו)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>שמא דטופסא</translation>
     </message>
     <message>

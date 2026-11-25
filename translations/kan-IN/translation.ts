@@ -1257,7 +1257,7 @@
         <translation>ಸ್ವಯಂಪ್ಲೇ (ms, ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ಟೆಂಪ್ಲೇಟ್ ಹೆಸರು</translation>
     </message>
     <message>

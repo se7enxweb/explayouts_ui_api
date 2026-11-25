@@ -1257,7 +1257,7 @@
         <translation>אויטאָמאַטיש אָפּשפּילן (מס, 0 צום דעאַקטיווירן)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>נאָמען פֿונעם מוסטער</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>پاڻمرادو هلائڻ (ms، 0 بند ڪرڻ لاءِ)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ٽيمپليٽ جو نالو</translation>
     </message>
     <message>

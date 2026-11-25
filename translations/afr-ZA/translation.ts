@@ -1257,7 +1257,7 @@
         <translation>Outospeel (ms, 0 om te deaktiveer)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Sjabloonnaam</translation>
     </message>
     <message>

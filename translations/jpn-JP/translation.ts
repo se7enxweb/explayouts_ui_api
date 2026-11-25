@@ -1257,7 +1257,7 @@
         <translation>自動再生（ミリ秒、0 で無効）</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>テンプレート名</translation>
     </message>
     <message>

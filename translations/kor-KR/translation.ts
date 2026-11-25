@@ -1257,7 +1257,7 @@
         <translation>자동 재생(ms, 0이면 사용 안 함)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>템플릿 이름</translation>
     </message>
     <message>

@@ -1260,7 +1260,7 @@
         <translation>Sponte ludere (ms, 0 ad sistendum)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nomen exemplaris</translation>
     </message>
     <message>

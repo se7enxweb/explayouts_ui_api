@@ -1257,7 +1257,7 @@
         <translation>پخش خودکار (ms، 0 برای غیرفعال کردن)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>نام قالب</translation>
     </message>
     <message>

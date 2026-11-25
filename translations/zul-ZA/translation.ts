@@ -1257,7 +1257,7 @@
         <translation>Ukudlala okuzenzakalelayo (ms, 0 ukuze kuvinjelwe)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Igama lesifanekiso</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Ìṣeré àdáṣe (ms, 0 láti mú dúró)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Orúkọ àpẹẹrẹ</translation>
     </message>
     <message>

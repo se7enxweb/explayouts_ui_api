@@ -1257,7 +1257,7 @@
         <translation>Автоойнату (мс, өшіру үшін 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Үлгі атауы</translation>
     </message>
     <message>

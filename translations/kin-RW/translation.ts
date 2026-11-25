@@ -1257,7 +1257,7 @@
         <translation>Gukina ubwako (ms, 0 kugira ngo bifungwe)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Izina ry&apos;inyandikorugero</translation>
     </message>
     <message>

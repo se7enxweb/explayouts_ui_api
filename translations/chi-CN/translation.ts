@@ -1257,7 +1257,7 @@
         <translation>自动播放（毫秒，0 表示禁用）</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>模板名称</translation>
     </message>
     <message>

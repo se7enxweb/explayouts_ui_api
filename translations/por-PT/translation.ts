@@ -1257,7 +1257,7 @@
         <translation>Reprodução automática (ms, 0 para desativar)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nome do modelo</translation>
     </message>
     <message>

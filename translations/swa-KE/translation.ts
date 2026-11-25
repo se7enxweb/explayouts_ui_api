@@ -1257,7 +1257,7 @@
         <translation>Kucheza kiotomatiki (ms, 0 kuzima)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Jina la kiolezo</translation>
     </message>
     <message>

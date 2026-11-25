@@ -1257,7 +1257,7 @@
         <translation>Автовоспроизведение (мс, 0 — отключить)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Название шаблона</translation>
     </message>
     <message>

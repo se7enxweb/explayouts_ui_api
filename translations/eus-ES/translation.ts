@@ -1257,7 +1257,7 @@
         <translation>Erreprodukzio automatikoa (ms, 0 desgaitzeko)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Txantiloiaren izena</translation>
     </message>
     <message>

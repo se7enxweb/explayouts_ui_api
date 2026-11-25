@@ -1257,7 +1257,7 @@
         <translation>Automatické prehrávanie (ms, 0 = vypnuté)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Názov šablóny</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Fèin-chluich (ms, 0 gus a chur à comas)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Ainm na teamplaid</translation>
     </message>
     <message>

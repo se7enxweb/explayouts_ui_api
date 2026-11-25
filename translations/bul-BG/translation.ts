@@ -1257,7 +1257,7 @@
         <translation>Автоматично възпроизвеждане (ms, 0 за забрана)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Име на шаблона</translation>
     </message>
     <message>

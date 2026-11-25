@@ -1257,7 +1257,7 @@
         <translation>خپلکاره غږول (ms، 0 د بندولو لپاره)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>د کېنډۍ نوم</translation>
     </message>
     <message>

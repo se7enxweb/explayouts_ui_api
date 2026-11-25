@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 ukuze ukhubaze)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Igama letemplethi</translation>
     </message>
     <message>

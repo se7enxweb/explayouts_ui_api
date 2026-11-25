@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 iji gbanyụọ)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Aha ndebiri</translation>
     </message>
     <message>
