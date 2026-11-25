@@ -1,6 +1,11 @@
 # Changelog
 
-## 1.3.39 (2026-11-25)
+## 1.3.40 (2026-11-25)
+
+The release of pull requests 23 and 24. The tag v1.3.39 was set by mistake on a commit outside main that holds
+the same code (both pull requests merged) but neither this changelog, nor the CI workflow, nor the version 1.3.39 in
+ezinfo.php and extension.xml (they still say 1.3.38). Tags are permanent, so 1.3.39 stays as it is; use 1.3.40.
+
 
 - Updated: The layout editor reads the block definitions of the site the layout belongs to (explayouts 1.4.52 resolveForLayout()), so an administration serving several sites offers each layout its own site's blocks (pull request #23).
 - Updated: The Design tab offers a view type only its own item view types where the settings list them, and leaves hidden parameters out; the layout editor draws placeholder rows for a query on the page the layout is shown on; the template block's parameter is called Template block name (pull request #24).
