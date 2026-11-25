@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.39 (2026-11-25)
+
+- Updated: The layout editor reads the block definitions of the site the layout belongs to (explayouts 1.4.52 resolveForLayout()), so an administration serving several sites offers each layout its own site's blocks (pull request #23).
+- Updated: The Design tab offers a view type only its own item view types where the settings list them, and leaves hidden parameters out; the layout editor draws placeholder rows for a query on the page the layout is shown on; the template block's parameter is called Template block name (pull request #24).
+- Verified: design/standard/javascript/netgen-layouts.js is rebuilt byte for byte from src/app-patches (node src/app-patches/apply.mjs) after both pull requests.
+- Added: A CI workflow (php -l on PHP 7.4 and 8.0 to 8.5, extension.xml, version parity, PHPUnit on 8.4 and 8.5).
+
 ## 1.3.38 (2026-11-14)
 
 - Fixed: The layout editor asks for a layout's draft once per opening. It read the layout again right after creating the draft, the browser could answer that read with its copy of the published layout, and the editor then asked for the draft again: three to six draft requests per opening on some layouts. It keeps the draft the request answered with now; a layout that has a draft opens as before, without a draft request.
