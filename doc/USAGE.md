@@ -133,7 +133,15 @@ In an administration (a siteaccess whose `SiteDesign` begins with `admin`), the 
 the settings of the siteaccess it previews in (`[PreviewSettings] SiteAccess`, see explayouts'
 `expLayoutsPreviewSiteAccess`), through explayouts' `expLayoutsBlockHandlerFactory::useSiteAccess()`: the block types
 it offers (including the `Group=admin` check), the view types and item view types of the block form and the checks of a
-save. A design keeps the block settings it adds in its own siteaccess, so this is where the editor finds them:
+save. A design keeps the block settings it adds in its own siteaccess, so this is where the editor finds them.
+
+Which siteaccess that is follows the layout, as one administration may serve several sites: for a request about a
+layout (`layouts/<id>/...`, a block of it, or the block types, which the editor asks for as
+`config/block_types?layout=<id>` and again when another layout is opened) the editor takes the site of that layout
+from its rules (explayouts' `expLayoutsPreviewSiteAccess::resolveForLayout()`: their siteaccess condition, else the site
+whose root node lies above the nodes they map); for any other request, and with an explayouts without
+`resolveForLayout()`, the preview siteaccess of the administration (`expLayoutsPreviewSiteAccess::resolve()`).
+`expLayoutsUIApplicationApi::previewSiteAccessOfRequest()` makes that choice. The settings of a design's siteaccess, for example:
 
 ```ini
 # extension/mytheme/settings/siteaccess/mysite/explayouts.ini.append.php
