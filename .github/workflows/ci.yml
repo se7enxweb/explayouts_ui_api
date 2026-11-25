@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: PHP ${{ matrix.php }} syntax
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: none
+      - name: php -l on every PHP file
+        run: |
+          status=0
+          while IFS= read -r -d '' f; do
+            php -l "$f" > /dev/null || { echo "::error file=$f::syntax error on PHP ${{ matrix.php }}"; status=1; }
+          done < <(git ls-files -z '*.php')
+          exit $status
+
+  package:
+    name: extension.xml and version parity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: xmllint extension.xml
+        run: |
+          sudo apt-get install -y -qq libxml2-utils > /dev/null
+          xmllint --noout extension.xml
+      - name: ezinfo.php and extension.xml state the same version
+        run: |
+          x=$(sed -n 's:.*<version>\(.*\)</version>.*:\1:p' extension.xml | head -1)
+          e=$(grep -oE "'Version'[^,]*" ezinfo.php | grep -oE '[0-9]+(\.[0-9]+)+' | head -1)
+          echo "extension.xml: $x  ezinfo.php: $e"
+          if [ -n "$e" ] && [ "$x" != "$e" ]; then echo "::error::versions differ"; exit 1; fi
+
+  tests:
+    name: PHPUnit (PHP ${{ matrix.php }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.4', '8.5']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: phpunit:12
+      - name: The tests that need no database (tests/bootstrap.php stands in for the kernel)
+        run: phpunit --do-not-cache-result --bootstrap tests/bootstrap.php tests
