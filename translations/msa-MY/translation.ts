@@ -1257,7 +1257,7 @@
         <translation>Main automatik (ms, 0 untuk menyahdayakan)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nama templat</translation>
     </message>
     <message>

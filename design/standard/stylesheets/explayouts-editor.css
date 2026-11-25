@@ -594,3 +594,11 @@
 #exp-content-browser-modal .exp-cb-breadcrumbs { margin: 0 0 10px; }
 #exp-content-browser-modal .exp-cb-list { max-height: 400px; overflow: auto; }
 #exp-content-browser-modal .exp-cb-actions { width: 100px; }
+
+/* Placeholder rows of a query on the page the layout is shown on (contextualQueryPlaceholders()), as in the reference
+   editor: a grey thumbnail and two grey lines per item */
+.contextual-placeholder-row { display: flex; align-items: center; gap: .75rem; padding: .375rem; margin-bottom: 2px; background: #f4f4f4; }
+.contextual-placeholder-row .image { flex: 0 0 4rem; height: 2.25rem; background: #dedede; }
+.contextual-placeholder-row .lines { flex: 1 1 auto; display: flex; flex-direction: column; gap: .5rem; }
+.contextual-placeholder-row .lines span { display: block; height: .5rem; background: #dedede; }
+.contextual-placeholder-row .lines span + span { width: 98%; }

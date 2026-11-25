@@ -1261,8 +1261,8 @@
         <translation>Automatisch abspielen (ms, 0 schaltet ab)</translation>
     </message>
     <message>
-        <source>Template name</source>
-        <translation>Template-Name</translation>
+        <source>Template block name</source>
+        <translation>Name des Template-Blocks</translation>
     </message>
     <message>
         <source>Show name</source>

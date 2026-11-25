@@ -124,6 +124,8 @@ class GalleryBlockPreviewTest extends TestCase
             'thumbnail_size' => 'small',
         ) );
 
+        // no collection (a query on the current page would draw placeholder rows, ContextualQueryPlaceholderTest)
+        expLayoutsCollection::$returns['fetchByBlock'] = false;
         $html = expLayoutsUIApplicationApi::renderBlockHtml( $this->block() );
 
         $this->assertMatchesRegularExpression( '#<p class="block-empty"[^>]*>No content</p>#', $html );

@@ -1257,7 +1257,7 @@
         <translation>ចាក់ស្វ័យប្រវត្តិ (មីលីវិនាទី 0 ដើម្បីបិទ)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ឈ្មោះគំរូ</translation>
     </message>
     <message>

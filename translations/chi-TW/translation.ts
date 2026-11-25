@@ -1257,7 +1257,7 @@
         <translation>自動播放 (毫秒，0 表示停用)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>範本名稱</translation>
     </message>
     <message>

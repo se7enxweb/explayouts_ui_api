@@ -1257,7 +1257,7 @@
         <translation>Hoʻokani ʻakomi (ms, 0 e hoʻopio)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Inoa anakuhi</translation>
     </message>
     <message>

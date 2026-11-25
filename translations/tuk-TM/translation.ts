@@ -1257,7 +1257,7 @@
         <translation>Awtomatiki oýnatmak (ms, öçürmek üçin 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Şablonyň ady</translation>
     </message>
     <message>

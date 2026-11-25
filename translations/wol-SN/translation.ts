@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 ngir taxawal)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Turu tampale bi</translation>
     </message>
     <message>

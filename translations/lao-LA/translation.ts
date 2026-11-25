@@ -1257,7 +1257,7 @@
         <translation>ຫຼິ້ນອັດຕະໂນມັດ (ms, 0 ເພື່ອປິດໃຊ້ງານ)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ຊື່ແມ່ແບບ</translation>
     </message>
     <message>

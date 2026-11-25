@@ -1257,7 +1257,7 @@
         <translation>Gũthiĩ wĩ wiki (ms, 0 nĩguo ũhinge)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Rĩĩtwa rĩa mũhiano</translation>
     </message>
     <message>

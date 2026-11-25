@@ -1257,7 +1257,7 @@
         <translation>Autoodtwarzanie (ms, 0 wyłącza)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Nazwa szablonu</translation>
     </message>
     <message>

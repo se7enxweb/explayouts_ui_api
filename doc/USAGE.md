@@ -123,7 +123,15 @@ A block's JSON carries its `view_type` and `item_view_type`.
   the one the block already has; anything else, a value that is not text among it, answers
   `400 {"error":"Unknown item view type for this block."}` and changes nothing. The list is explayouts'
   `expLayoutsBlockHandlerFactory::itemViewTypes()`: the handler's own list, then `ItemViewTypes[<item view type>]=<label>`
-  of `[BlockDefinition_<identifier>]`. Every view type offers all of them.
+  of `[BlockDefinition_<identifier>]`. Every view type offers all of them, unless `ViewTypeItemViewTypes[<view type>]`
+  of the definition limits it (explayouts' `viewTypeItemViewTypes()`): the Design tab then offers that view type only
+  the item view types listed and no "Default of the view type", and hides the select where one is left, choosing it
+  (`expLayoutsUIApplicationApi::itemViewTypeChoices()`). A block whose stored item view type its view type does not
+  list gets the first listed one when it is saved.
+- `HiddenParameters[]` of the definition (explayouts' `hiddenParameters()`) leaves those parameters out of the Content
+  and Design tabs; they keep the value stored for them, as only the parameters a form posts are saved.
+  `ViewTypeHiddenParameters[<view type>]` (explayouts' `viewTypeHiddenParameters()`) hides them for one view type, as
+  Netgen Layouts' `valid_parameters`: the tab shows such a parameter only while a view type that offers it is selected.
 
 The frontend templates include the templates named by both values, which is why nothing else is stored.
 

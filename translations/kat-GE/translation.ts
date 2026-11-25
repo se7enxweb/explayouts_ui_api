@@ -1257,7 +1257,7 @@
         <translation>ავტომატური დაკვრა (მწ, 0 გამოსართავად)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>შაბლონის სახელი</translation>
     </message>
     <message>

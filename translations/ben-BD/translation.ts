@@ -1257,7 +1257,7 @@
         <translation>অটোপ্লে (ms, নিষ্ক্রিয় করতে 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>টেমপ্লেটের নাম</translation>
     </message>
     <message>

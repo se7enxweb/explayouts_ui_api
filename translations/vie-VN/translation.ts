@@ -1257,7 +1257,7 @@
         <translation>Tự động phát (ms, 0 để tắt)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Tên mẫu</translation>
     </message>
     <message>

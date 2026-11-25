@@ -1307,6 +1307,45 @@ class expLayoutsUIApplicationApi
     }
 
     /**
+     * The number of placeholder rows the editor draws for a block whose collection is a query on the page the layout is
+     * shown on (use_current_location, or the topic of the current content): the editor shows no page, so the query finds
+     * nothing there. The collection's limit, at most 12; 12 without one, as the reference editor draws them. 0 for any
+     * other block.
+     *
+     * @param int $blockId
+     * @return int
+     */
+    public static function contextualQueryPlaceholders( $blockId )
+    {
+        if ( $blockId <= 0 || !class_exists( 'expLayoutsCollection' ) || !class_exists( 'expLayoutsCollectionQuery' ) )
+            return 0;
+        $collection = expLayoutsCollection::fetchByBlock( (int)$blockId );
+        if ( !is_object( $collection ) || (string)$collection->attribute( 'collection_type' ) !== 'dynamic' )
+            return 0;
+        $query = expLayoutsCollectionQuery::fetchByCollection( (int)$collection->attribute( 'id' ), true );
+        $parameters = is_object( $query ) ? json_decode( (string)$query->attribute( 'parameters' ), true ) : null;
+        if ( !is_array( $parameters ) || ( empty( $parameters['use_current_location'] ) && empty( $parameters['use_topic_from_current_content'] ) ) )
+            return 0;
+        $limit = (int)$collection->attribute( 'limit_value' );
+        return $limit > 0 ? min( $limit, 12 ) : 12;
+    }
+
+    /**
+     * Placeholder rows for the items a query on the current page will find (contextualQueryPlaceholders()): a grey
+     * thumbnail and two grey lines each, as the reference editor draws them.
+     *
+     * @param int $rows
+     * @return string
+     */
+    public static function contextualPlaceholderHtml( $rows )
+    {
+        $html = '<div class="contextual-placeholder" role="img" aria-label="Items of the page this layout is shown on">';
+        for ( $i = 0; $i < (int)$rows; $i++ )
+            $html .= '<div class="contextual-placeholder-row"><span class="image"></span><span class="lines"><span></span><span></span></span></div>';
+        return $html . '</div>';
+    }
+
+    /**
      * Puts a stored item of a collection at $position (see collectionItemPositions()) and stores every item whose
      * position changes.
      */
@@ -1566,7 +1605,12 @@ class expLayoutsUIApplicationApi
 
         if ( $content === '' || ( trim( strip_tags( $content, '<img>' ) ) === '' && !$isInlineDefinition && !$isCodeDefinition ) )
         {
-            $content = '<p class="block-empty">No content</p>';
+            // A query on the page the layout is shown on finds nothing in the editor, which shows no page: placeholder
+            // rows, as the reference editor draws them, say that items come there
+            $placeholderRows = self::contextualQueryPlaceholders( (int)$block->attribute( 'id' ) );
+            $content = $placeholderRows > 0
+                ? self::contextualPlaceholderHtml( $placeholderRows )
+                : '<p class="block-empty">No content</p>';
         }
 
         $viewType = (string)$block->attribute( 'view_type' );
@@ -2830,6 +2874,64 @@ class expLayoutsUIApplicationApi
     }
 
     /**
+     * The options of the item view type select of the Design tab and the one selected. netgen-layouts.js shows an
+     * option only for the view types its data-master names, and hides the select (choosing the one left) when one
+     * option is left for the selected view type.
+     *
+     * Every view type offers every item view type (and "Default of the view type", ''), except a view type the
+     * settings limit (ViewTypeItemViewTypes[], $limits): it offers only the ones listed, and no ''. Selected is the
+     * stored item view type, unless the block's view type is limited and does not list it: then its first one, which
+     * saving the block stores.
+     *
+     * @param string[] $viewTypes the view types of the definition
+     * @param array $itemViewTypes item view type => label (explayouts' itemViewTypes())
+     * @param array $limits view type => item view types (explayouts' viewTypeItemViewTypes())
+     * @param string $viewType the block's view type
+     * @param string $stored the block's item view type
+     * @return array array( 'options' => list of array( 'value', 'label', 'masters' ), 'selected' => value ); 'label' is
+     *               false for the '' option and for a stored item view type the definition does not know
+     */
+    public static function itemViewTypeChoices( array $viewTypes, array $itemViewTypes, array $limits, $viewType, $stored )
+    {
+        $viewTypes = array_values( array_map( 'strval', $viewTypes ) );
+        $limits = array_intersect_key( $limits, array_flip( $viewTypes ) );
+        $unlimited = array_values( array_diff( $viewTypes, array_keys( $limits ) ) );
+        $stored = (string)$stored;
+
+        // a listed item view type the definition does not name is offered by its identifier
+        foreach ( $limits as $listed )
+            foreach ( $listed as $itemViewType )
+                if ( !isset( $itemViewTypes[$itemViewType] ) )
+                    $itemViewTypes[$itemViewType] = $itemViewType;
+
+        $options = array();
+        if ( !empty( $unlimited ) )
+            $options[] = array( 'value' => '', 'label' => false, 'masters' => $unlimited );
+        foreach ( $itemViewTypes as $itemViewType => $label )
+        {
+            $itemViewType = (string)$itemViewType;
+            $masters = $unlimited;
+            foreach ( $limits as $limitedViewType => $listed )
+                if ( in_array( $itemViewType, $listed, true ) )
+                    $masters[] = (string)$limitedViewType;
+            if ( !empty( $masters ) )
+                $options[] = array( 'value' => $itemViewType, 'label' => (string)$label, 'masters' => array_values( array_intersect( $viewTypes, $masters ) ) );
+        }
+
+        if ( isset( $limits[(string)$viewType] ) )
+            $selected = in_array( $stored, $limits[(string)$viewType], true ) ? $stored : (string)$limits[(string)$viewType][0];
+        else
+            $selected = $stored;
+
+        // A stored item view type the list does not offer stays selectable as it is where it is selected: without
+        // this option the browser selected the first one and saving the block changed its item view unasked.
+        if ( $selected !== '' && !isset( $itemViewTypes[$selected] ) && !empty( $unlimited ) )
+            $options[] = array( 'value' => $selected, 'label' => false, 'masters' => $unlimited );
+
+        return array( 'options' => $options, 'selected' => $selected );
+    }
+
+    /**
      * The parameters of a block for one tab of the editor's sidebar, with their stored values: 'content' (the
      * reference's group "content", [BlockDefinition_<id>] ContentParameters[] of explayouts) or 'design' (every
      * other parameter, and the standard design parameters every block has). Left out are the legacy query
@@ -2855,8 +2957,21 @@ class expLayoutsUIApplicationApi
             ? $blockInfo['content_parameters']
             : array();
         $legacyQueryParams = array( 'query_type', 'parent_node_id', 'node_id', 'limit', 'offset', 'class_filter', 'sort' );
+        // HiddenParameters[] of the definition (explayouts' factory): parameters the design's templates do not read,
+        // left out of both tabs; they keep their stored value, as only the parameters a form posts are saved
+        $hiddenParameters = is_array( $blockInfo ) && isset( $blockInfo['hidden_parameters'] ) && is_array( $blockInfo['hidden_parameters'] )
+            ? $blockInfo['hidden_parameters']
+            : array();
+        $viewTypeHiddenParameters = is_array( $blockInfo ) && isset( $blockInfo['view_type_hidden_parameters'] ) && is_array( $blockInfo['view_type_hidden_parameters'] )
+            ? $blockInfo['view_type_hidden_parameters']
+            : array();
         foreach ( $parameters as $name => $definition )
         {
+            if ( in_array( (string)$name, $hiddenParameters, true ) )
+            {
+                unset( $parameters[$name] );
+                continue;
+            }
             $inContent = in_array( (string)$name, $contentParameters, true );
             // node_id is a query parameter of the list blocks, but the content of a "Single content" block
             if ( ( in_array( $name, $legacyQueryParams, true ) && !$inContent )
@@ -2867,7 +2982,28 @@ class expLayoutsUIApplicationApi
             }
             if ( is_array( $definition ) && isset( $definition['view_type'] ) && (string)$definition['view_type'] !== ''
                  && !array_intersect( array_map( 'trim', explode( ',', (string)$definition['view_type'] ) ), $viewTypes ) )
+            {
                 unset( $parameters[$name] );
+                continue;
+            }
+            // ViewTypeHiddenParameters[] of the definition (explayouts' factory): the view types that do not offer this
+            // parameter, as Netgen Layouts' valid_parameters. Its view_type then names the others, and the editor shows
+            // it only while one of them is selected (data-view-type); offered by none, it is left out.
+            $hiddenFor = array();
+            foreach ( $viewTypeHiddenParameters as $hidingViewType => $hiddenNames )
+                if ( in_array( (string)$name, (array)$hiddenNames, true ) )
+                    $hiddenFor[] = (string)$hidingViewType;
+            if ( !empty( $hiddenFor ) && is_array( $definition ) )
+            {
+                $offeredBy = isset( $definition['view_type'] ) && (string)$definition['view_type'] !== ''
+                    ? array_values( array_intersect( array_map( 'trim', explode( ',', (string)$definition['view_type'] ) ), $viewTypes ) )
+                    : $viewTypes;
+                $offeredBy = array_values( array_diff( $offeredBy, $hiddenFor ) );
+                if ( empty( $offeredBy ) )
+                    unset( $parameters[$name] );
+                else
+                    $parameters[$name]['view_type'] = implode( ',', $offeredBy );
+            }
         }
 
         $values = array();

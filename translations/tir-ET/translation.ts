@@ -1257,7 +1257,7 @@
         <translation>ባዕሉ ምጽዋት (ms፣ 0 ንምጥፋእ)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ስም ቅጥዒ</translation>
     </message>
     <message>

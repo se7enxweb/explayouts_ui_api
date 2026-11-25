@@ -1257,7 +1257,7 @@
         <translation>لێدانی خۆکار (ms، 0 بۆ ناچالاککردن)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ناوی قاڵب</translation>
     </message>
     <message>

@@ -1257,7 +1257,7 @@
         <translation>Ինքնախաղարկում (ms, 0՝ անջատելու համար)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Ձևանմուշի անուն</translation>
     </message>
     <message>

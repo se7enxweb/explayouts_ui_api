@@ -291,6 +291,13 @@ class App extends \Exponential\Runnable\ModuleView
             $tpl->setVariable( 'view_types', $viewTypes );
             $tpl->setVariable( 'view_type_names', $form['view_type_names'] );
             $tpl->setVariable( 'item_view_types', $itemViewTypes );
+            // The options of the item view type select per view type: ViewTypeItemViewTypes[] of the definition limits a
+            // view type to the item views it draws (explayouts' factory, where it has viewTypeItemViewTypes())
+            $limits = method_exists( 'expLayoutsBlockHandlerFactory', 'viewTypeItemViewTypes' )
+                ? \expLayoutsBlockHandlerFactory::viewTypeItemViewTypes( (string)$block->attribute( 'definition_identifier' ) )
+                : array();
+            $tpl->setVariable( 'item_view_choices', \expLayoutsUIApplicationApi::itemViewTypeChoices(
+                $viewTypes, $itemViewTypes, $limits, (string)$block->attribute( 'view_type' ), (string)$block->attribute( 'item_view_type' ) ) );
             $tpl->setVariable( 'parameters', $parameters );
             $tpl->setVariable( 'parameter_values', $parameterValues );
             $tpl->setVariable( 'collection_items', $collectionItems );

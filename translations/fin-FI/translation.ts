@@ -1257,7 +1257,7 @@
         <translation>Automaattinen toisto (ms, 0 poistaa käytöstä)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Mallin nimi</translation>
     </message>
     <message>

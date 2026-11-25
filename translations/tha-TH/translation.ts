@@ -1257,7 +1257,7 @@
         <translation>เล่นอัตโนมัติ (มิลลิวินาที 0 เพื่อปิด)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ชื่อเทมเพลต</translation>
     </message>
     <message>

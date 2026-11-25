@@ -1257,7 +1257,7 @@
         <translation>ഓട്ടോപ്ലേ (ms, പ്രവർത്തനരഹിതമാക്കാൻ 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>ടെംപ്ലേറ്റിന്റെ പേര്</translation>
     </message>
     <message>

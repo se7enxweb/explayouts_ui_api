@@ -1257,7 +1257,7 @@
         <translation>Автомат уйнату (мс, 0 сүндерү өчен)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Шаблон исеме</translation>
     </message>
     <message>

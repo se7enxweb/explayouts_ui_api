@@ -1257,7 +1257,7 @@
         <translation>Пахши худкор (ms, 0 барои хомӯш кардан)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Номи қолиб</translation>
     </message>
     <message>

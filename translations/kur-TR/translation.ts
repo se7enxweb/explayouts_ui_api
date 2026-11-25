@@ -1257,7 +1257,7 @@
         <translation>Lêxistina xweber (ms, 0 ji bo neçalakkirinê)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Navê şablonê</translation>
     </message>
     <message>

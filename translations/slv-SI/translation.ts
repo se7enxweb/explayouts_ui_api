@@ -1257,7 +1257,7 @@
         <translation>Samodejno predvajanje (ms, 0 za izklop)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Ime predloge</translation>
     </message>
     <message>

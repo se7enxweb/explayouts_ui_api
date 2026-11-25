@@ -1257,7 +1257,7 @@
         <translation>Autoplay (ms, 0 si loo Disable gareeyo)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Magaca Template-ka</translation>
     </message>
     <message>

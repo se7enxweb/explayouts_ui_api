@@ -1257,7 +1257,7 @@
         <translation>Automatisk afspilning (ms, 0 for at slå fra)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Skabelonnavn</translation>
     </message>
     <message>

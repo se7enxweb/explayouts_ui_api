@@ -1257,7 +1257,7 @@
         <translation>Otomatik oynat (ms, devre dışı bırakmak için 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Şablon adı</translation>
     </message>
     <message>

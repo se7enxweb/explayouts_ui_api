@@ -1257,7 +1257,7 @@
         <translation>स्वतः प्ले (ms, असक्षम गर्न 0)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>टेम्प्लेटको नाम</translation>
     </message>
     <message>

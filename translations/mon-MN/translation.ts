@@ -1257,7 +1257,7 @@
         <translation>Автоматаар тоглуулах (мс, 0 бол унтраана)</translation>
     </message>
     <message>
-        <source>Template name</source>
+        <source>Template block name</source>
         <translation>Загварын нэр</translation>
     </message>
     <message>
